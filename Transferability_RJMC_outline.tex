@@ -26,7 +26,7 @@
 
 \section*{Purpose}
 
-The aim of this study is to demonstrate, with Bayesian inference, that a Mie potential cannot adequately predict VLE and compressed liquid pressures for alkanes. We then use simple Bayes factors (if not RJMC)  to determine the optimal value of lambda for predicting compressed liquid pressures. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA models or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6.
+The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and compressed liquid pressures for normal and branched alkanes. We then use simple Bayes factors (if not RJMC)  to determine the optimal value of lambda for predicting compressed liquid pressures. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA models or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6.
 
 \section*{Outline}
 
@@ -78,95 +78,183 @@ The aim of this study is to demonstrate, with Bayesian inference, that a Mie pot
 
 \begin{enumerate}
 	\item Introduction
-	\item Simulation details
-	\item Force field
-	\item Case Study for alkanes, show TraPPE and Mie (perhaps I could show the AUA models here as well)
-	\item Bayesian Theory
+	\item Methods I
 	\begin{enumerate}
-		\item Posterior
-		\item MCMC
-		\item RJMC
+		\item Simulation details
+		\item Force field
 	\end{enumerate}
-	\item MBAR as surrogate model
-	\item Higher pressure PoU
-	\item Different values of lambda cannot reconcile (already done for ethane, probably need to do for other alkanes)
-	\item AUA, AUA Mie, Exp-6	
+	\item Case Study for alkanes
+	\item Methods II
+	\begin{enumerate}
+		\item Bayesian Analysis
+		\item Surrogate Model
+		\item Propagation of Uncertainty
+	\end{enumerate}
+	\item Results
+	\begin{enumerate}
+		\item VLE and Compressed
+		\begin{enumerate}
+			\item Parameter uncertainties
+			\item Propagation of uncertainties
+		\end{enumerate}
+	    \item Optimal $\lambda$ for high pressures
+	\end{enumerate}
+	\item Future Work
+	\item Conclusions	
 \end{enumerate}
+
+%	\item Higher pressure PoU
+%	\item Different values of lambda cannot reconcile (already done for ethane, probably need to do for other alkanes)
+%	\item AUA, AUA Mie, Exp-6
 
 \section*{Detailed Outline}
 
 \section{Introduction}
 
 \begin{enumerate}
-	\item Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
-	\item Reliable predictions for high pressure systems are important but have not been tested using the Mie potential
+	\item Developing reliable fundamental equations of state (REFPROP) is an arduous task that relies on having high accuracy data over a wide range of state points
+	\item Reliable predictions for high pressure systems are important for many industrial applications
+	\item Recently, molecular simulation results have supplemented experimental data when developing fundamental equations of state
+	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
+	\item The UA Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
+	\item However, the impact that modifying the repulsive exponent has on the higher pressure states has not been tested
+	\item The purpose of this study is to perform a rigorous Bayesian analysis as to the adequacy of a UA Mie potential for predicting both VLE and compressed liquid/supercritical pressures
 \end{enumerate}
 
-\section{Simulation Details}
+
+\section{Methods I}
+
+\subsection{Simulation Details}
 
 \begin{enumerate}
-	\item Perform NVT simulations in GROMACS
-	\item ITIC used to convert Udep and Z to rhol and Pvsat
+	\item The compounds simulated in this study are ethane, propane, \textit{n}-butane, \textit{n}-octane, isobutane, isopropane, isohexane, isooctane, and neopentane
+	\item These compounds were selected as a sample set for 2,2,4-trimethylhexane, the compound studied in the 10th Industrial Fluid Properties Simulation Challenge
+	\item We perform NVT simulations in GROMACS along a supercritical isotherm and five isochores that correspond to saturated liquid densities
+	\item We use ITIC to convert the Udep and Z values obtained from the NVT simulations to rholsat and Pvsat
+	\item The specific state points are provided in supporting information
+	\item The GROMACS settings are provided in supporting information
 \end{enumerate}
 
-\section{Force field}
+\subsection{Force field}
 
 \begin{enumerate}
-	\item United-atom representation of alkanes (CH3, CH2, CH, and C sites)
-	\item Mie potential and Lennard-Jones potential (maybe include Exp-6 and extended Lennard-Jones, i.e. 12-10-8-6)
+	\item For each compound studied, we use a united-atom representation as defined by the TraPPE (and Mie) force fields. For normal and branched alkanes this consists of CH3, CH2, CH, and C sites.
+	\item We use fixed bond-lengths, harmonic angles, cosine series for torsions, and exclude 1-4 nonbonded interactions 
+	\item Bonded parameters are provided in supporting information
+	\item Nonbonded interactions for intermolecular and intramolecular sites separated by more than 3 bonds are represented using a Mie potential, which can be viewed as a generalized Lennard-Jones
+	\item (Maybe include Exp-6 and extended Lennard-Jones, i.e. 12-10-8-6)
 \end{enumerate}
 
 \section{Case Study for alkanes}
 
 \begin{enumerate}
 	\item Several force fields in the literature have been optimized to agree with VLE properties (TraPPE, Potoff, TraPPE-2, TAMie, Errington)
-	\item PVT trends are inaccurate for both TraPPE and Potoff at high pressures
-	\item 12-6 under predicts while 16-6 over predicts
-	\item However, since TraPPE and Potoff use slightly different objective functions we want to perform an equivalent analysis for different values of lambda
-	\item Hypothesis that we want to test is whether there exists a value of lambda that provides reasonable VLE and supersatured (however, for ethane this is not feasible)
+	\item TraPPE and Potoff have parameters for each compound studies, while TraPPE-2 only has parameters for ethane, and TAMie and ErrExp-6 only have parameters for the \textit{n}-alkanes
+	\item Figure: Z vs 1000/T for ethane, propane, n-butane, and n-octane
+	\item Figure: Z vs 1000/T for isobutane, isopropane, isohexane, isooctane and neopentane 
+	\item PVT (Z) trends are inaccurate for both TraPPE and Potoff at high pressures, i.e. non-VLE conditions. Specifically, the TraPPE 12-6 under predicts while 16-6 over predicts
+	\item Although these results might suggest that a 14-6 potential would work best, recall that the TraPPE 12-6 does not accurately predict Pvsat. 
+	\item Since TraPPE and Potoff use slightly different objective functions we want to perform an equivalent analysis for different values of lambda
+	\item Hypothesis that we want to test is that there does not exist a set of epsilon, sigma, and lambda that provides reasonable VLE, supercritical, and compressed liquid (for ethane I already know this is not feasible. For n-alkanes I know that the 16-6 cannot accomplish this, but I am not sure about 14-6 or 15-6.)
 	\item AUA LJ 12-6 is much more accurate for ethane
 	\item AUA Mie 14-6 potential is not much better than UA Mie 16-6
 	\item AUA Exp-6 force field is not much better than UA Mie 16-6
 \end{enumerate}
 
-\section{Bayesian Analysis}
+\section{Methods II}
 
 \begin{enumerate}
-	\item Rigorous approach to determine that the 16-6 is inadequate for reproducing VLE and compressed liquid pressures
+	\item We use Bayesian inference with MCMC to quantify the uncertainty in the force field parameters
+	\item We perform direct molecular simulation for several reference force field parameter sets
+	\item We use MBAR-ITIC to predict rholsat and Pvsat with non-simulated force field parameters
+	\item We use MBAR to propagate the parameter uncertainties from VLE to Z of compressed liquids/supercritical
+	\item We perform this analysis for CH3, CH2, CH, and C sequentially and independently. In other words, the Markov Chain only samples a 2-dimensional space.
+\end{enumerate}
+
+\subsection{Bayesian Analysis}
+
+\begin{enumerate}
+	\item By quantifying the uncertainty in epsilon and sigma for a given lambda, we can determine if the Mie potential is adequate for reproducing VLE and compressed liquid/supercritical pressures
 	\item Posterior includes saturated liquid density and vapor pressure
 	\item Markov Chain Monte Carlo is used to sample
-	\item Uncertainty is propagated for pressures
-	\item Determine optimal value of lambda for compressed liquid pressures by modifying posterior to include only saturated liquid density and compressed liquid pressures
+	\item Details for MCMC are provided in supporting information (i.e. number of steps for burn-in and production, frequency that step sizes are updated, resulting acceptance percentages, etc.)
+	\item The parameter uncertainty is propagated when predicting high pressures
+	\item To determine the optimal value of lambda for compressed liquid pressures, we redefine the posterior using only saturated liquid density and compressed liquid pressures  
 \end{enumerate}
 
-\section{Surrogate Model}
+\subsection{Surrogate Model}
 
 \begin{enumerate}
-	\item MBAR is used to predict Udep and Z
-	\item ITIC is used to convert Udep and Z to rhol and Pvsat
-	\item ITIC state points are fit to rectilinear and antoine equation to interpolate rhol and Pvsat
-	\item Uncertainties in analysis are included in posterior
-	\item Very conservative estimates of uncertainty
+	\item A Bayesian analysis is computationally too expensive if direct molecular simulations are performed for every MCMC step
+	\item As demonstrated in a previous publication, MBAR can reweight the configurations that are sampled from different force fields without direct simulation
+	\item In other words, a set of reference force fields are simulated for each molecule and MBAR is used instead of direct simulation for each MCMC step
+	\item As demonstrated in a previous publication, MBAR is used to predict Udep and Z while ITIC is used to convert Udep and Z to rholsat and Pvsat
+	\item ITIC state points are fit to rectilinear and Antoine equation to interpolate rholsat and Pvsat, this allows for comparison with experimental data at hundreds of temperatures
+	\item The likelihood includes the experimental uncertainties but, more importantly, the numerical uncertainties. In other words, the numerical uncertainties account for the uncertainties that arise from the simulations themselves, the MBAR reweighting, the ITIC algorithm, and fitting to rectilinear and Antoine.
+	\item To leave no room for doubt in our conclusions, we use very conservative (and empirical) estimates of numerical uncertainty for rholsat and Pvsat (see Supporting Information)
 \end{enumerate}
 
-\section{Propagation of Uncertainty}
+\subsection{Propagation of Uncertainty}
 
 \begin{enumerate}
-	\item The 16-6 potential is not able to predict both VLE and compressed liquid pressures
-	\item Repeat this process for 14-6 and 15-6
+	\item From the MCMC parameter sets, we randomly sample a subset of 100-1000 parameter sets
+	\item We use MBAR to predict Z for each of those parameter sets
+	\item We plot these results as a histogram to determine the 95\% credible interval for Z at each state point
+\end{enumerate}
+
+\section{Results}
+
+\subsection{VLE and Compressed}
+
+\subsubsection{Parameter uncertainties}
+
+\begin{enumerate}
+	\item Figure: The uncertainty regions for CH3, CH2, CH, and C. I can include 14-6, 15-6, and 16-6. Perhaps I will only do this rigorous analysis for CH3 or for CH3 and CH2. Probably not for all. I could include the results from the alternative posterior (excluding Pvsat and including high pressures) but then it might be out of place in this section.
+	\item Bayes factors demonstrate that, for VLE, a 15-6 or 16-6 potential are favored significantly more than a 14-6 (could include 17-6 or 18-6 as well)
+	\item CH2 credible regions overlap considerably between propane, n-butane, and n-octane
+	\item By comparing the Bayes factor of a transferable CH2 site and three independent CH2 sites we observe that the CH2 sites are indistinguishable
+	\item Statement about CH credible regions for isobutane, isopentane, and isohexane
+	\item Statement about C credible region for isooctane and neopentane
+\end{enumerate}
+
+\subsubsection{Propagation of uncertainties}
+
+\begin{enumerate}
+	\item Figure: Uncertainties in rholsat and Pvsat for n-alkanes. Include 14-6, 15-6, 16-6.
+	\item Figure: Uncertainties in rholsat and Pvsat for branched alkanes. Include only 16-6.
+	\item Clearly the uncertainties are fairly conservative due to the relatively large numerical uncertainties we assigned in the posterior
+	\item Figure: Z vs 1000/T for n-alkanes where the error bars represent the Bayesian uncertainties from VLE. Include 14-6, 15-6, and 16-6 results.
+	\item The 16-6 potential is not able to predict both VLE and compressed liquid/supercritical pressures
 	\item VLE is much worse for 14-6, about the same for 15-6
 	\item Condensed liquid pressures are slightly better for 14-6 and 15-6 but still over predict
+	\item Figure: Z vs 1000/T for branched alkanes. Results are only included for the 16-6 potential.
+	\item Same results as for normal alkanes.
+\end{enumerate}
+
+\subsection{Optimal $\lambda$ for high pressures}
+
+\begin{enumerate}
+	\item We modify the posterior by excluding the Pvsat data and including the REFPROP correlations at high pressures
+	\item Figure: I can either include the parameter uncertainties here or back in the Parameter Uncertainties section. I could even move this to supporting information
+	\item Bayes ratios show the evidence for different values of $\lambda$
+	\item We recommend that lower values of $\lambda$ be favored
 \end{enumerate}
 
 \section{Future Work}
 
 \begin{enumerate}
-	\item Show that the AUA LJ model is much more reliable, even more so than the AUA Exp-6 and AUA Mie. This must have to do with the larger shifted value.
-	\item At higher pressures you need the hydrogens, the higher the shift the better.
-	\item Alternative method is to use an extended Lennard-Jones potential, 12-10-8-6, that has the flexibility of a Mie potential but without the steep barrier
+	\item As observed in the case study, the AUA approach typically provides more reliable estimates at high pressures.
+	\item At higher pressures you need the hydrogens, the higher the shift in the bond-length the better.
+	\item For example, notice that the AUA LJ (TraPPE-2) model is better than the AUA Mie (TAMie) and AUA Exp-6 (ErrExp-6), despite having fewer fitting parameters. This is because they use a much larger bond displacement.	
+	\item An alternative method to AUA is to use an extended Lennard-Jones potential, 12-10-8-6, that has the flexibility of a Mie potential but without the steep barrier
 \end{enumerate}
  
+\section{Conclusions}
 
+\begin{enumerate}
+	\item Although the UA Mie potential provides great improvement over the UA LJ 12-6 potential for VLE, it drastically over predicts pressures for supercritical fluids and compressed liquids (actually for supercritical fluids it over predicts at high densities and under predicts at low densities. Not sure I want to open up that can of worms.)
+	\item By performing a rigorous statistical analysis, we verify that no set of $\epsilon$ and $\sigma$ can adequately predict VLE and high pressures (I need a better way to refer to this) for a 16-6, 15-6, or 14-6 potential.
+\end{enumerate}
 
 %%% This was taken from previous drafts of the first manuscript. These paragraphs will probably not go in this manuscript.
 %%%% The next few paragraphs probably belong in Part II where we focus on parameterization. I think it suffices in this paper to just say that we need surrogate models for computational reasons.
