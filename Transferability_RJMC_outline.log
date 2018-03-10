@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  8 MAR 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  9 MAR 2018 15:42
 entering extended mode
 **./Transferability_RJMC_outline.tex
 (Transferability_RJMC_outline.tex
@@ -609,10 +609,10 @@ No file Transferability_RJMC_outline.bbl.
 No file Transferability_RJMC_outline.bbl.
 [10] (Transferability_RJMC_outline.aux) ) 
 Here is how much of TeX's memory you used:
- 14793 strings out of 493333
- 281479 string characters out of 3139198
+ 14794 strings out of 493333
+ 281490 string characters out of 3139198
  342655 words of memory out of 3000000
- 18046 multiletter control sequences out of 15000+200000
+ 18047 multiletter control sequences out of 15000+200000
  12198 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,69p,1343b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -627,7 +627,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on Transferability_RJMC_outline.pdf (10 pages, 145660 bytes).
+Output written on Transferability_RJMC_outline.pdf (10 pages, 145823 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
