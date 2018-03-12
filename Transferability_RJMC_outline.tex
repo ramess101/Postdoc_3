@@ -12,6 +12,7 @@
 \title{Bayesian inference analysis of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes. To be submitted to the Journal of Physical Chemistry, B.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
 %MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
+% Bayesian inference demonstrates limitations at high pressures of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes
 \author{Richard A. Messerly}
 \email{richard.messerly@nist.gov}
 \affiliation{Thermodynamics Research Center, National Institute of Standards and Technology, Boulder, Colorado, 80305}
@@ -26,7 +27,7 @@
 
 \section*{Purpose}
 
-The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and compressed liquid pressures for normal and branched alkanes. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA models or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6. %We then use simple Bayes factors (if not RJMC) to determine the optimal value of lambda for predicting compressed liquid pressures. 
+The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and PVT of compressed liquids and supercritical fluids for normal and branched alkanes. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA or AA models. % or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6. %We then use simple Bayes factors (if not RJMC) to determine the optimal value of lambda for predicting compressed liquid pressures. 
 %%%% RAM: Andrei and I think that we don't really need to find the best lambda value since most people would not be willing to sacrifice Pvsat just to match high pressures. Also Andrei wants to minimize the amount of effort/time required to get this paper ready.
 %%%% MRS: ``since most people would not be willing to sacrifice Pvsat'': right, then just state the reasonings for not including it, that you don't think people would care.
 %MRS: is it just VLE at high pressures, or everywhere?
@@ -122,7 +123,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item Reliable predictions for high pressure systems are important for many industrial applications
 	\item Recently, molecular simulation results have supplemented experimental data when developing fundamental equations of state
 %MRS: I wouldn't inlcude on the fluid properties simulation challenge.  It might the reason you are interested, but it isn't the reason the readers would be interested. 
-	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
+%	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
 	\item The UA Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
 	\item However, the impact that modifying the repulsive exponent has on the higher pressure states has not been tested
 %MRS: you didn't say earlier the importance was properties at supercritical pressures as well.  You did say compressed; make languate consistent throughout.
@@ -139,7 +140,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item These compounds were selected as a sample set for 2,2,4-trimethylhexane, the compound studied in the 10th Industrial Fluid Properties Simulation Challenge
 	\item We perform NVT simulations in GROMACS along a supercritical isotherm and five isochores that correspond to saturated liquid densities
 	\item We use ITIC to convert the Udep and Z values obtained from the NVT simulations to rholsat and Pvsat
-	\item The specific state points are provided in supporting information
+	\item The specific state points are depicted in Figure, tabulated values are provided in supporting information
 %MRS: probably should give main settings in the text. 
 	\item The GROMACS settings are provided in supporting information
 \end{enumerate}

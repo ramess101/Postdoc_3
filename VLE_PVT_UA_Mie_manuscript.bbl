@@ -1,0 +1,117 @@
+\providecommand{\latin}[1]{#1}
+\makeatletter
+\providecommand{\doi}
+  {\begingroup\let\do\@makeother\dospecials
+  \catcode`\{=1 \catcode`\}=2 \doi@aux}
+\providecommand{\doi@aux}[1]{\endgroup\texttt{#1}}
+\makeatother
+\providecommand*\mcitethebibliography{\thebibliography}
+\csname @ifundefined\endcsname{endmcitethebibliography}
+  {\let\endmcitethebibliography\endthebibliography}{}
+\begin{mcitethebibliography}{12}
+\providecommand*\natexlab[1]{#1}
+\providecommand*\mciteSetBstSublistMode[1]{}
+\providecommand*\mciteSetBstMaxWidthForm[2]{}
+\providecommand*\mciteBstWouldAddEndPuncttrue
+  {\def\EndOfBibitem{\unskip.}}
+\providecommand*\mciteBstWouldAddEndPunctfalse
+  {\let\EndOfBibitem\relax}
+\providecommand*\mciteSetBstMidEndSepPunct[3]{}
+\providecommand*\mciteSetBstSublistLabelBeginEnd[3]{}
+\providecommand*\EndOfBibitem{}
+\mciteSetBstSublistMode{f}
+\mciteSetBstMaxWidthForm{subitem}{(\alph{mcitesubitemcount})}
+\mciteSetBstSublistLabelBeginEnd
+  {\mcitemaxwidthsubitemform\space}
+  {\relax}
+  {\relax}
+
+\bibitem[Thol \latin{et~al.}(2016)Thol, Dubberke, Rutkai, Windmann, K{\"o}ster,
+  Span, and Vrabec]{Thol2016_siloxane_first}
+Thol,~M.; Dubberke,~F.; Rutkai,~G.; Windmann,~T.; K{\"o}ster,~A.; Span,~R.;
+  Vrabec,~J. \emph{Fluid Phase Equilibria} \textbf{2016}, \emph{418}, 133 --
+  151, Special Issue covering the Nineteenth Symposium on Thermophysical
+  Properties\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Thol \latin{et~al.}(2016)Thol, Rutkai, K{\"o}ster, Dubberke, Windmann,
+  Span, and Vrabec]{Thol2016_siloxane}
+Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Dubberke,~F.~H.; Windmann,~T.; Span,~R.;
+  Vrabec,~J. \emph{Journal of Chemical \& Engineering Data} \textbf{2016},
+  \emph{61}, 2580--2595\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Thol \latin{et~al.}(2017)Thol, Rutkai, K{\"o}ster, Miroshnichenko,
+  Wagner, Vrabec, and Span]{Thol2017}
+Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Miroshnichenko,~S.; Wagner,~W.;
+  Vrabec,~J.; Span,~R. \emph{Molecular Physics} \textbf{2017}, \emph{115},
+  1166--1185\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[St{\"o}bener \latin{et~al.}(2016)St{\"o}bener, Klein, Horsch, Kufer,
+  and Hasse]{Pareto_LJPQ}
+St{\"o}bener,~K.; Klein,~P.; Horsch,~M.; Kufer,~K.; Hasse,~H. \emph{Fluid Phase
+  Equilibria} \textbf{2016}, \emph{411}, 33 -- 42\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Messerly \latin{et~al.}(2017)Messerly, KnottsIV, and Wilding]{Mess4}
+Messerly,~R.~A.; KnottsIV,~T.~A.; Wilding,~W.~V. \emph{The Journal of Chemical
+  Physics} \textbf{2017}, \emph{146}, 194110\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Martin and Siepmann(1998)Martin, and Siepmann]{TraPPE}
+Martin,~M.~G.; Siepmann,~J.~I. \emph{The Journal of Physical Chemistry B}
+  \textbf{1998}, \emph{102}, 2569--2577\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Abraham \latin{et~al.}()Abraham, van~der Spoel, Lindahl, B.Hess, and
+  the GROMACS~development team]{GROMACS_2018}
+Abraham,~M.; van~der Spoel,~D.; Lindahl,~E.; B.Hess,; the GROMACS~development
+  team, GROMACS User Manual version 2018, www.gromacs.org (2018)\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Razavi(2016)]{Mostafa_Diss}
+Razavi,~S.~M. Optimization of a Transferable Shifted Force Field for Interfaces
+  and Inhomogenous Fluids using Thermodynamic Integration. M.Sc.\ thesis, The
+  University of Akron, 2016\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Messerly and Shirts(2018)Messerly, and Shirts]{Postdoc_1}
+Messerly,~R.~A.; Shirts,~M.~R. \emph{Journal of Chemical Theory and
+  Computation} \textbf{2018}, \relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Allen and Tildesley(1987)Allen, and Tildesley]{Allen1987}
+Allen,~M.~P.; Tildesley,~D.~J. \emph{Computer simulation of liquids}; Clarendon
+  Press ; Oxford University Press: Oxford England New York, 1987; pp xix, 385
+  p.\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Potoff and Bernard-Brunel(2009)Potoff, and Bernard-Brunel]{Mie}
+Potoff,~J.~J.; Bernard-Brunel,~D.~A. \emph{The Journal of Physical Chemistry B}
+  \textbf{2009}, \emph{113}, 14725--14731\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\end{mcitethebibliography}
