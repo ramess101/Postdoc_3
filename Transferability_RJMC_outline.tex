@@ -11,7 +11,7 @@
 
 \title{Bayesian inference analysis of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes. To be submitted to the Journal of Physical Chemistry, B.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
-%MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?''.     
+%MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
 \author{Richard A. Messerly}
 \email{richard.messerly@nist.gov}
 \affiliation{Thermodynamics Research Center, National Institute of Standards and Technology, Boulder, Colorado, 80305}
@@ -26,9 +26,13 @@
 
 \section*{Purpose}
 
-The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and compressed liquid pressures for normal and branched alkanes. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA models or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6. %We then use simple Bayes factors (if not RJMC) to determine the optimal value of lambda for predicting compressed liquid pressures. %%%% RAM: Andrei and I think that we don't really need to find the best lambda value since most people would not be willing to sacrifice Pvsat just to match high pressures. Also Andrei wants to minimize the amount of effort/time required to get this paper ready.
-
+The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and compressed liquid pressures for normal and branched alkanes. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA models or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6. %We then use simple Bayes factors (if not RJMC) to determine the optimal value of lambda for predicting compressed liquid pressures. 
+%%%% RAM: Andrei and I think that we don't really need to find the best lambda value since most people would not be willing to sacrifice Pvsat just to match high pressures. Also Andrei wants to minimize the amount of effort/time required to get this paper ready.
+%%%% MRS: ``since most people would not be willing to sacrifice Pvsat'': right, then just state the reasonings for not including it, that you don't think people would care.
+%MRS: is it just VLE at high pressures, or everywhere?
 \section*{Outline}
+%MRS: if no data on 12-10-8-6, don't recommend.
+%MRS: if you say people should use AUA, then the questions is whether you need to do simulations.  It depends what the current thinking on the field is.  If AUA and Mie are thought to work, then showing that Mie doesn't is sufficient for the thesis.
 
 %%% These were some of my thoughts before meeting with Andrei. Skip this section.
 
@@ -90,6 +94,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 		\item Surrogate Model
 		\item Propagation of Uncertainty
 		%%%% RAM: Do we want to consider performing a Pareto front analysis to show that no set of eps, sig, lam can match all three? %%%%
+                %%%% MRS: probably would be good; I don't think it would require performing additional simulations? Also, bec clear which three properties.   
 	\end{enumerate}
 	\item Results
 	\begin{enumerate}
@@ -98,7 +103,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 			\item Parameter uncertainties
 			\item Propagation of uncertainties
 		\end{enumerate}
-	    %\item Optimal $\lambda$ for high pressures %%% RAM: This distracts from the main purpose, that the Mie potential cannot match all three properties
+	    %\item Optimal $\lambda$ for high pressures %%% RAM: This distracts from the main purpose, that the Mie potential cannot match all three properties %%%MRS: keep it simple.
 	\end{enumerate}
 	\item Future Work
 	\item Conclusions	
@@ -116,9 +121,11 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item Developing reliable fundamental equations of state (REFPROP) is an arduous task that relies on having high accuracy data over a wide range of state points
 	\item Reliable predictions for high pressure systems are important for many industrial applications
 	\item Recently, molecular simulation results have supplemented experimental data when developing fundamental equations of state
+%MRS: I wouldn't inlcude on the fluid properties simulation challenge.  It might the reason you are interested, but it isn't the reason the readers would be interested. 
 	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
 	\item The UA Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
 	\item However, the impact that modifying the repulsive exponent has on the higher pressure states has not been tested
+%MRS: you didn't say earlier the importance was properties at supercritical pressures as well.  You did say compressed; make languate consistent throughout.
 	\item The purpose of this study is to perform a rigorous Bayesian analysis as to the adequacy of a UA Mie potential for predicting both VLE and compressed liquid/supercritical pressures
 \end{enumerate}
 
@@ -133,6 +140,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item We perform NVT simulations in GROMACS along a supercritical isotherm and five isochores that correspond to saturated liquid densities
 	\item We use ITIC to convert the Udep and Z values obtained from the NVT simulations to rholsat and Pvsat
 	\item The specific state points are provided in supporting information
+%MRS: probably should give main settings in the text. 
 	\item The GROMACS settings are provided in supporting information
 \end{enumerate}
 
@@ -143,7 +151,11 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item We use fixed bond-lengths, harmonic angles, cosine series for torsions, and exclude 1-4 nonbonded interactions 
 	\item Bonded parameters are provided in supporting information
 	\item Nonbonded interactions for intermolecular and intramolecular sites separated by more than 3 bonds are represented using a Mie potential, which can be viewed as a generalized Lennard-Jones
+%MRS: need to make it clearer what your hypothesis is, then.  If it's just ``Mie not good'', then restrict it.  If the goal is to find something better, which might be more impactful. But it can be a short paper. If its ``nothing existing is good'', then will need to include others.
+%MRS: Looking more carefully, I think your main idea is not that Mie isn't that good, but NONE of the existing UA isotropic functional forms are not that good. That is a more general conclusion, but doesn't force you to posit a new one within the scope of this paper. It does make a stronger statement; if you say ``Mie isn't good'', then people will wonder, why don't you just say what is good.  If you say none of the ``standard UA approaches are good'' that's more important.   You MIGHT need to say ``But this approach can work''.  That might require more work than there is time for this time.
 	\item (Maybe include Exp-6 and extended Lennard-Jones, i.e. 12-10-8-6)
+%MRS: when you say ``rigorous bayesian'', you should be more specific what analysis doing.
+%MRS: My instinct, if ``anisotropic'' UA works for this system, it might not be worth it that much to develop a new functional form.  Unless there's strong reason it might be useful more generally.  we can discuss goals a bit; it really depends on goals. 
 \end{enumerate}
 
 \section{Case Study for alkanes}
@@ -151,6 +163,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 \begin{enumerate}
 	\item Several force fields in the literature have been optimized to agree with VLE properties (TraPPE, Potoff, TraPPE-2, TAMie, Errington, AUA4)
 	\item TraPPE, Potoff, and AUA4 have parameters for each compound studied, while TraPPE-2 only has parameters for ethane, TAMie has parameters for all except isooctane and neopentane (containing a C group), and ErrExp-6 only has parameters for the \textit{n}-alkanes
+%MRS: for figures: be more explicit about what point the data in the figures are supposed to support.
 	\item Figure: Z vs 1000/T for ethane, propane, n-butane, and n-octane
 	\item Figure: Z vs 1000/T for isobutane, isopropane, isohexane, isooctane and neopentane 
 	\item PVT (Z) trends are inaccurate for both TraPPE and Potoff at high pressures, i.e. non-VLE conditions. Specifically, the TraPPE 12-6 under predicts while 16-6 over predicts
@@ -158,6 +171,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item Since TraPPE and Potoff use slightly different objective functions we want to perform an equivalent analysis for different values of lambda
 	\item Hypothesis that we want to test is that there does not exist a set of epsilon, sigma, and lambda that provides reasonable VLE, supercritical fluid, and compressed liquid (for ethane I already know this is not feasible. For n-alkanes I know that the 16-6 cannot accomplish this, but I am not sure about 14-6 or 15-6.)
 	%%% RAM: Do we want to include results for the AUA models in the case study, future work, or supporting information?
+        %%% MRS: it changes the scope a lot.  You have to decide.  ``Not mie'' is simpler, can get out faster.  
 	\item AUA LJ 12-6 is much more accurate for ethane
 	\item AUA Mie 14-6 potential is not much better than UA Mie 16-6 for n-alkanes
 	\item AUA Exp-6 force field is not much better than UA Mie 16-6 for n-alkanes
@@ -169,10 +183,14 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 \begin{enumerate}
 	\item We use Bayesian inference with MCMC to quantify the uncertainty in the force field parameters
 	%%%% RAM: Do we even need to perform an MCMC analysis? It is kind of overkill. We could just plot the credible regions by scanning the parameter space.
+        %%%% MRS: agreed.
 	\item We perform direct molecular simulation for several reference force field parameter sets
 	\item We use MBAR-ITIC to predict rholsat and Pvsat with non-simulated force field parameters
 	\item We use MBAR to propagate the parameter uncertainties from VLE to Z of compressed liquids/supercritical
-	\item We perform this analysis for CH3 and CH2 sequentially and independently. In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andrei and I feel like doing this for CH and C is more work than necessary
+	\item We perform this analysis for CH3 and CH2 sequentially and independently. 
+%MRS: Not sure this is a Markov Chain? Unless doing MCMC. Would suggest avoiding MCMC for now; we don't know how long it would take.
+In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andrei and I feel like doing this for CH and C is more work than necessary
+%MRS: not sure what you are saying here. Seems like you do need to do some optimization with C and CH if you are making blanket claims about whether Mie (or other potentials) work or not.  I guess you could justify by saying that if CH2 and CH3 don't work for normal alkanes, no point in proving it for branched alkanes.
 \end{enumerate}
 
 \subsection{Bayesian Analysis}
@@ -181,6 +199,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 	\item By quantifying the uncertainty in epsilon and sigma for a given lambda, we can determine if the Mie potential is adequate for reproducing VLE and compressed liquid/supercritical pressures
 	\item Posterior includes saturated liquid density and vapor pressure
 	%%% RAM: Or should we compare several different posteriors? I.e. include rholsat and Pvsat, or rholsat and highP, or all three?
+        %%% MRS: which experiments to incldue are a design choice.  You either specify the experiments you require, or you could show which models are valid for predicting which proprerties.  
 	\item Markov Chain Monte Carlo is used to sample % RAM: Again, do we need to do MCMC or can we simplify things by just performing a 2-D scan
 	\item Details for MCMC are provided in supporting information (i.e. number of steps for burn-in and production, frequency that step sizes are updated, resulting acceptance percentages, etc.)
 	\item The parameter uncertainty is propagated when predicting high pressures
@@ -200,7 +219,7 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 \end{enumerate}
 
 \subsection{Propagation of Uncertainty}
-
+%MRS: not sure what you mean by propagation of uncertainty here. Uncertainty in credible region? 
 \begin{enumerate}
 	\item From the MCMC parameter sets, we randomly sample a subset of 100-1000 parameter sets
 	\item We use MBAR to predict Z for each of those parameter sets
@@ -214,9 +233,18 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 \subsubsection{Parameter uncertainties}
 
 \begin{enumerate}
-	\item Figure: The uncertainty regions for CH3, CH2, CH, and C. I can include 14-6, 15-6, and 16-6. Perhaps I will only do this rigorous analysis for CH3 or for CH3 and CH2. Probably not for all. I could include the results from the alternative posterior (excluding Pvsat and including high pressures) but then it might be out of place in this section.
+	\item Figure: The uncertainty regions for CH3, CH2, CH, and C. I can include 14-6, 15-6, and 16-6. Perhaps I will only do this rigorous analysis for CH3 or for CH3 and CH2. Probably not for all. 
+%MRS: might be weaker to say it's a rigorous bayesian analysis if only done for 2; people could always say ``but maybe it will work for C and CH'', though obviously, it C and CH parmeters are irrelevant for n-alkanes.  
+%MRS: so one could optimize CH3 and CH2, and then optimize for C and CH given CH2 and CH3. Importantly, you can back-calcuate the confidence regions for different CH2 and CH3 parameters for n-alkanes, alone, since that just affects the posteriors when adding C and CH data.  
+%MRS: is the reason not for all the computational expense?
+%MRS: it could be with the constraints on CH2 and CH3 from the n-alkanes, you can do a restricted 3D search with CH (not bothering to do already low probability regions of CH3 and CH3, and then do a restricted 4D search with the constraints on CH3/CH2/CH''.  Not many molecules that have C and CH, so fewer simulations to do.  
+%MRS: or could just say ``doesn't work for normal, so no point in worrying about C and CH''.
+I could include the results from the alternative posterior (excluding Pvsat and including high pressures) but then it might be out of place in this section.
 	\item Bayes factors demonstrate that, for VLE, a 15-6 or 16-6 potential are favored significantly more than a 14-6 (could include 17-6 or 18-6 as well)
+%MRS: probably want to go until the probability turns down again. 
 	\item CH2 credible regions overlap considerably between propane, n-butane, and n-octane
+%MRS: You want to show the combined region as well, though; muliplying the probabilities. 
+%MRS: Do you want to include data showing that separate CH2 and CH3 parameters are necessary? Would be nice to use Bayesian analysis to show more dimensions are necessary. Is that already established?  Might be a nice way to demonstrate Bayesian approach to show things already established like this.
 	\item By comparing the Bayes factor of a transferable CH2 site and three independent CH2 sites we observe that the CH2 sites are indistinguishable
 	\item Statement about CH credible regions for isobutane, isopentane, and isohexane
 	\item Statement about C credible region for isooctane and neopentane
@@ -225,10 +253,13 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 \subsubsection{Propagation of uncertainties}
 
 \begin{enumerate}
+%MRS: be more precise about what you mean by propagation of uncertainties. 95% confidence intervals?  Standard deivations? What is the point that you are proving with this data?
 	\item Figure: Uncertainties in rholsat and Pvsat for n-alkanes. Include 14-6, 15-6, 16-6.
 	\item Figure: Uncertainties in rholsat and Pvsat for branched alkanes. Include only 16-6.
 	\item Clearly the uncertainties are fairly conservative due to the relatively large numerical uncertainties we assigned in the posterior
+%MRS: Not clear; uncertainties in rholsat and Pvsat affect the posterior . . . ? Important point; the way that we've defined likelihood includes the experimental uncertainty, but not the numerical uncertainty. 
 	\item Figure: Z vs 1000/T for n-alkanes where the error bars represent the Bayesian uncertainties from VLE. Include 14-6, 15-6, and 16-6 results.
+%MRS: for the points below, what is the proof of the points; the figure of Z vs 1000/T? Be clear.
 	\item The 16-6 potential is not able to predict both VLE and compressed liquid/supercritical pressures
 	\item VLE is much worse for 14-6, about the same for 15-6
 	\item Condensed liquid pressures are slightly better for 14-6 and 15-6 but still over predict
@@ -238,29 +269,34 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 
 %%% RAM: We feel like this discussion could just be a paragraph saying that if Pvsat is not important you could use a 14-6 potential and match just liquid phase pressures
 %\subsection{Optimal $\lambda$ for high pressures}
-
+%MRS: might need to justify why or why not would would need Pvstat.
 \begin{enumerate}
 	\item We modify the posterior by excluding the Pvsat data and including the REFPROP correlations at high pressures
 	\item Figure: I can either include the parameter uncertainties here or back in the Parameter Uncertainties section. I could even move this to supporting information
 	\item Bayes ratios show the evidence for different values of $\lambda$
 	\item We recommend that lower values of $\lambda$ be favored
+%MRS: but the thesis is that MIE isn't sufficient; difficult if you are complicating the thesis too much.
 \end{enumerate}
 
 \section{Future Work}
-
+%MRS: I don't think there's that good motivation for ``future work'' sections in general. Either make AUA part of the thesis, or don't include them.  There can be discussion of possible alternatives. 
 \begin{enumerate}
 	\item As observed in the case study, the AUA approach typically provides more reliable estimates at high pressures.
 	\item At higher pressures you need the hydrogens, the higher the shift in the bond-length the better.
 	\item For example, notice that the AUA LJ (TraPPE-2) model is better than the AUA Mie (TAMie) and AUA Exp-6 (ErrExp-6), despite having fewer fitting parameters. This is because they use a much larger bond displacement.
-	%%% RAM: I do not have results for AUA4, do I really need all of these examples from the literature?	
+	%%% RAM: I do not have results for AUA4, do I really need all of these examples from the literature?
+        %%% MRS: depends on the thesis. . .  
 	\item An alternative method to AUA is to use an extended Lennard-Jones potential, 12-10-8-6, that has the flexibility of a Mie potential but without the steep barrier
 \end{enumerate}
  
 \section{Conclusions}
 
 \begin{enumerate}
+%MRS: make claims more specific: you said Mie not good for VLE - did you mean that its's good for low pressure VLE, but not high pressure?
 	\item Although the UA Mie potential provides great improvement over the UA LJ 12-6 potential for VLE, it drastically over predicts pressures for supercritical fluids and compressed liquids (actually for supercritical fluids it over predicts at high densities and under predicts at low densities. Not sure I want to open up that can of worms.)
+%MRS: if you've observed it, should mention it. 
 	\item By performing a rigorous statistical analysis, we verify that no set of $\epsilon$ and $\sigma$ can adequately predict VLE and high pressures (I need a better way to refer to this) for a 16-6, 15-6, or 14-6 potential.
+%MRS: Are those two different things: ``VLE'' and ``high pressures'', or is it just ``high pressure properties, including VLE and supercritical densities''.
 \end{enumerate}
 
 %%% This was taken from previous drafts of the first manuscript. These paragraphs will probably not go in this manuscript.
