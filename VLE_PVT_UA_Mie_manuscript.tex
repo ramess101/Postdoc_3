@@ -220,11 +220,12 @@ The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie
 
 \section{Introduction}
 
-An accurate understanding of the relationship between pressure, volume (or density, $\rho$), and temperature $(PVT)$ and caloric properties (such as heat capacity) for a given compound is essential for designing industrial chemical processes. Fundamental equations of state (FEOS), such as those based on the Helmholtz free energy, are a powerful approach for estimating $PVT$ behavior and caloric properties. For example, the National Institute of Standards and Technology (NIST) REFPROP (Reference Fluid Properties) currently provides FEOS for around one hundred chemical species. Unfortunately, large amounts of (reliable) experimental data covering a wide range of pressures, densities, and temperatures are required to develop a highly-accurate FEOS, but are not available for most compounds. Using an FEOS to extrapolate to temperatures and pressures that are significantly higher than those used in parameterizing the FEOS can result in large errors. Therefore, improvement in an FEOS at high temperatures and pressures necessitates additional data near those conditions.
+An accurate understanding of the relationship between pressure, volume (or density, $\rho$), and temperature $(PVT)$ and caloric properties (such as heat capacity) for a given compound is essential for designing industrial chemical processes. Fundamental equations of state (FEOS), such as those based on the Helmholtz free energy, are a powerful approach for estimating $PVT$ behavior and caloric properties. For example, the National Institute of Standards and Technology (NIST) REFPROP (Reference Fluid Properties) currently provides FEOS for around one hundred chemical species \cite{LEMMON-RP91}. Unfortunately, most compounds do not have sufficient (reliable) experimental data covering a wide range of pressures, densities, and temperatures to develop a highly-accurate FEOS. Using an FEOS to extrapolate to temperatures and pressures that are significantly higher than those used in parameterizing the FEOS can result in large errors. Therefore, improvement in an FEOS at high temperatures and pressures necessitates additional data near those conditions.
 % Most compounds do not have sufficient reliable experimental data over a wide enough region of phase space. 
 %However, Thol et al. demonstrated that molecular simulation results at high temperatures and pressures can be used to supplement experimental data when developing fundamental equations of state \cite{Thol2016_siloxane}.
+%Unfortunately, most compounds do not have sufficient (reliable) experimental data covering a wide range of pressures, densities, and temperatures are required to develop a highly-accurate FEOS, but are not available for most compounds.
 
-The lack of experimental data at high temperatures and pressures, especially, is likely attributed to the inherent safety, cost, and complexity of such experiments. By contrast, molecular simulation (i.e. Monte Carlo, MC, and molecular dynamics, MD) at high temperatures and pressures does not suffer from any of these limitations. Therefore, in principle, molecular simulation could aid in developing FEOS. For example, Thol et al. supplemented experimental data with molecular simulation results at temperatures and pressures beyond the range of available experimental temperatures and pressures \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017}. Specifically, experimental data were available for temperatures and pressures up to 580 K and 130 MPa, 590 K and 180 MPa, and 560 K and 100 MPa for hexamethyldisiloxane, octamethylcyclotetrasiloxane, and 1,2-dichloroethane, respectively. Molecular simulations were performed for these compounds at temperatures and pressures up to 1200 K and 600 MPa, 1200 K and 520 MPa, 1000 K and 1200 MPa, respectively. The inclusion of these simulation results improved the performance of the FEOS at extreme temperatures and pressures. 
+The lack of experimental data at high temperatures and pressures, especially, is likely attributed to the inherent safety, cost, and complexity of such experiments. By contrast, molecular simulation (i.e. Monte Carlo, MC, and molecular dynamics, MD) methods at high temperatures and pressures do not suffer from any of these limitations. Therefore, in principle, molecular simulation could aid in developing FEOS. For example, Thol et al. supplemented experimental data with molecular simulation results at temperatures and pressures beyond the range of available experimental temperatures and pressures \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017}. Specifically, experimental data were available for temperatures and pressures up to 580 K and 130 MPa, 590 K and 180 MPa, and 560 K and 100 MPa for hexamethyldisiloxane, octamethylcyclotetrasiloxane, and 1,2-dichloroethane, respectively. Molecular simulations were performed for these compounds at temperatures and pressures up to 1200 K and 600 MPa, 1200 K and 520 MPa, 1000 K and 1200 MPa, respectively. The inclusion of these simulation results improved the performance of the FEOS at extreme temperatures and pressures. 
 
 %Typically, force fields are parameterized with vapor-liquid equilibria data
 
@@ -232,7 +233,7 @@ Hydrocarbons are a fundamental feed-stock for many petrochemical processes and, 
 
 The primary limitation for implementing molecular simulation at extreme temperatures and pressures is whether or not the force field, which is typically parameterized using VLE data, is reliable at those conditions, i.e. if the VLE optimal parameters are transferable to higher temperatures and pressures. In this study, we investigate how well the traditional force fields for predicting VLE extrapolate to higher temperatures (supercritical fluid) and pressures (compressed liquid). This analysis is performed for four normal and four branched alkanes by comparing the simulated compressibility factor $(Z)$ with the REFPROP correlations, which are assumed to be reliable at these conditions.
 
-The most accurate hydrocarbon force fields for estimating VLE properties (i.e. $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) are TraPPE (and the recent TraPPE-2), Errington, AUA4, Potoff, and TAMie. The TraPPE and Potoff force fields use a united-atom (UA) model while the TraPPE-2, Errington, AUA4, and TAMie force fields use an anisotropic-united-atom (AUA) model. Both a UA and AUA model group the hydrogen interactions with their neighobring carbon atom. However, the UA model assumes that the UA interaction site is that of the carbon atom, while an AUA model assumes that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Although, in theory, an all-atom (AA) force field should yield more accurate results, from a parameterization standpoint, it is much easier to ensure that a global minimum is obtained when parameterizing UA and AUA force fields since fewer parameters are optimized simultaneously. The reduced computational cost is an additional benefit of the UA and AUA approach.
+The most accurate force fields for estimating hydrocarbon VLE properties (i.e. $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) are Transferable Potentials for Phase Equilibria (TraPPE) \cite{TraPPE,Martin1999} (and, especially, the recent TraPPE-2 \cite{TraPPEUA2}), Errington \cite{Exp6}, anisotropic-united-atom (AUA4) \cite{AUA4,Bourasseau2002}, Potoff \cite{Mie,Potoff_branched}, and Transferable anisotropic Mie potential (TAMie) \cite{TAMie,Weidler2016}. The TraPPE and Potoff force fields use a united-atom (UA) model while the TraPPE-2, Errington, AUA4, and TAMie force fields use an anisotropic-united-atom (AUA) model. Both a UA and AUA model group the hydrogen interactions with their neighobring carbon atom. However, the UA model assumes that the UA interaction site is that of the carbon atom, while an AUA model assumes that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Although, in theory, an all-atom (AA) force field should yield more accurate results, from a parameterization standpoint, it is much easier to ensure that a global minimum is obtained when parameterizing UA and AUA force fields since fewer parameters are optimized simultaneously. The reduced computational cost is an additional benefit of the UA and AUA approach.
 
 %
 %implicit hydrogens (IH) instead of explicit hydrogens (EH). An IH model does not directly compute the hydrogen interactions, rather the hydrogens are grouped with their neighboring carbon atom. The two classes of IH models are united-atom (UA) and anisotropic-united-atom (AUA). A UA model assumes that the UA interaction site is that of the carbon atom, while a AUA model assumes that the AUA interaction site is shifted away from the carbon atom and towards the hydrogen atom(s). Although, in theory, an all-atom (AA) force field should yield more accurate results, from a parameterization standpoint, it is much easier to ensure that a global minimum is obtained when optimizing UA and AUA force fields. The reduced computational cost is an additional benefit of the UA and AUA approach.
@@ -277,18 +278,17 @@ The outline for this manuscript is the following. Section \ref{Methods I} discus
 %
 % The reliability of 
 
-\begin{enumerate}
-	\item Developing reliable fundamental equations of state (REFPROP) is an arduous task that relies on having high accuracy data over a wide range of state points
-	\item Reliable predictions for high pressure systems are important for many industrial applications
-	\item Recently, molecular simulation results have supplemented experimental data when developing fundamental equations of state
-%MRS: I wouldn't inlcude on the fluid properties simulation challenge.  It might the reason you are interested, but it isn't the reason the readers would be interested. 
-%	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
-	\item The UA Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
-	\item However, the impact that modifying the repulsive exponent has on the higher pressure states has not been tested
-%MRS: you didn't say earlier the importance was properties at supercritical pressures as well.  You did say compressed; make languate consistent throughout.
-	\item The purpose of this study is to perform a rigorous Bayesian analysis as to the adequacy of a UA Mie potential for predicting both VLE and compressed liquid/supercritical pressures
-\end{enumerate}
-
+%\begin{enumerate}
+%	\item Developing reliable fundamental equations of state (REFPROP) is an arduous task that relies on having high accuracy data over a wide range of state points
+%	\item Reliable predictions for high pressure systems are important for many industrial applications
+%	\item Recently, molecular simulation results have supplemented experimental data when developing fundamental equations of state
+%%MRS: I wouldn't inlcude on the fluid properties simulation challenge.  It might the reason you are interested, but it isn't the reason the readers would be interested. 
+%%	\item In addition, the 10th Industrial Fluid Properties Simulation Challenge is to predict the viscosities at high pressures of a highly branched alkane. Reliable PVT predictions are essential for this challenge.
+%	\item The UA Mie potential has received significant attention for its ability to predict VLE without requiring an all-atom representation
+%	\item However, the impact that modifying the repulsive exponent has on the higher pressure states has not been tested
+%%MRS: you didn't say earlier the importance was properties at supercritical pressures as well.  You did say compressed; make languate consistent throughout.
+%	\item The purpose of this study is to perform a rigorous Bayesian analysis as to the adequacy of a UA Mie potential for predicting both VLE and compressed liquid/supercritical pressures
+%\end{enumerate}
 
 \section{Methods I} \label{Methods I}
 
@@ -298,9 +298,32 @@ As normal and branched alkanes are the focus of this study, we simulate ethane, 
 
 Simulations for this study are performed in the NVT ensemble (constant number of molecules, $N$, constant volume, $V$, and constant temperature, $T$) using GROMACS version 2018 \cite{GROMACS_2018}. Each simulation uses the Velocity Verlet integrator with a 2 fs time-step, 1.4 nm cut-off for non-bonded interactions with tail corrections for energy and pressure, Nos{\'e}-Hoover thermostat with a time constant of 1 ps, and fixed bond-lengths are constrained using LINCS with a LINCS-order of eight. The equilibration time was 0.1 ns for ethane and propane, 0.2 ns for \textit{n}-butane, and 0.5 ns for all other compounds. The production time was 1 ns for ethane, 2 ns for propane and \textit{n}-butane, and 4 ns for all other compounds. A system size of 400 molecules is used for ethane, propane, and \textit{n}-butane, while all other compounds use 800 molecules. Example input files are provided as Supporting Information.
 
-Simulations are performed along a supercritical isotherm (with a reduced temperature, $T_{\rm r}, \approx 1.2$) and five saturated liquid density isochores. Nine densities are simulated along the supercritical isotherm (with five being those of the isochore densities), and two sub-critical temperatures are simulated along each isochore. Thus, a total of 19 simulations are performed for each compound and force field. The specific state points for each compound studied are depicted in Figure BLANK, with the REFPROP saturation curve included as a reference. Tabulated values for the state points of each compound are provided in Supporting Information.
+Simulations are performed along a supercritical isotherm (with a reduced temperature, $T_{\rm r}, \approx 1.2$) and five saturated liquid density isochores. Nine densities are simulated along the supercritical isotherm (with five being those of the isochore densities), and two sub-critical temperatures are simulated along each isochore. Thus, a total of 19 simulations are performed for each compound and force field. The specific state points for each compound studied are depicted in Figure \ref{fig:simulation_conditions}, with the REFPROP saturation curve included as a reference. Tabulated values for the state points of each compound are provided in Supporting Information.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=6.4in]{simulation_conditions}
+	\caption{State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along liquid density isochores. Filled symbols and solid lines correspond to \textit{n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference.}
+	\label{fig:simulation_conditions}
+\end{figure}
 
 We use isothermal isochoric integration (ITIC) to convert the departure internal energies $(U^{\rm dep})$ and compressibility factors $(Z)$ obtained at the 19 state points to saturated VLE properties, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ \cite{Mostafa_Diss,Postdoc_1}.
+The 
+%fundamental 
+equations for ITIC are: 
+\begin{equation} \label{ITIC A}
+\frac{A^{\rm dep}}{R_{\rm g}T^{\rm sat}} = \int_{0}^{\rho_{\rm l}^{\rm sat}}\frac{Z-1}{\rho} \partial \rho |_{T = T^{\rm IT}} + \int_{T^{\rm IT}}^{T^{\rm sat}}U^{\rm dep}\partial\left(\frac{1}{R_{\rm g}T}\right)|_{\rho=\rho_{\rm l}^{\rm sat}}
+\end{equation}
+\begin{equation} \label{ITIC rhov}
+\rho_{\rm v}^{\rm sat} \approx \rho_{\rm l}^{\rm sat} \exp \left( \frac{A^{\rm dep}}{R_{\rm g}T^{\rm sat}} + Z_{\rm l}^{\rm sat} - 1 - 2 B_2 \rho_{\rm v}^{\rm sat} - 1.5 B_3 \rho_{\rm v}^{\rm sat^2} \right)
+\end{equation}
+\begin{equation} \label{ITIC Pv}
+P_{\rm v}^{\rm sat} \approx (1 + B_2 \rho_{\rm v}^{\rm sat} + B_3 \rho_{\rm v}^{\rm sat^2})\rho_{\rm v}^{\rm sat} R_{\rm g}T^{\rm sat}
+\end{equation}
+\begin{equation} \label{ITIC Zl}
+Z_{\rm l}^{\rm sat} = \frac{P_{\rm v}^{\rm sat}}{\rho_{\rm l}^{\rm sat} R_{\rm g} T^{\rm sat}}
+\end{equation}
+where $A^{\rm dep} \equiv A-A^{\rm ig}$ is the Helmholtz free energy departure from ideal gas for temperature $(T)$ equal to the saturation temperature $(T^{\rm sat})$ and density $(\rho)$ equal to the saturated liquid density $(\rho_{\rm l}^{\rm sat})$, $U^{\rm dep} \equiv U-U^{\rm ig}$ is the internal energy departure, $Z_{\rm l}^{\rm sat}$ is the saturated liquid compressibility factor $(Z)$, $B_2$ is the second virial coefficient, $B_3$ is the third virial coefficient, $T^{\rm IT}$ is the isothermal temperature, and $R_{\rm g}$ is the universal gas constant. As discussed and validated in a previous work \cite{Postdoc_1}, the $B_2$ and $B_3$ values found in Equations \ref{ITIC rhov}-\ref{ITIC Pv} are calculated using REFPROP correlations \cite{LEMMON-RP91}. 
 
 %\begin{enumerate}
 %	\item The compounds simulated in this study are ethane, propane, \textit{n}-butane, \textit{n}-octane, isobutane, isopentane, isohexane, isooctane, and neopentane
@@ -374,6 +397,8 @@ where the $ij$ subscript refers to cross-interactions and the subscripts $ii$ an
 
 The purpose of this case study is to demonstrate that the existing UA and AUA force fields for normal and branched alkanes that were parameterized with VLE properties do not predict the proper PVT behavior at higher temperatures and pressures. Figures \ref{fig:IC_normal_alkanes} and \ref{fig:IC_branched_alkanes} plot the compressibility factor with respect to inverse temperature for \textit{n}-alkanes and branched alkanes, respectively. Note that saturation corresponds to $Z \approx 0$ for each isochore. 
 
+The ``Potoff'' results in Figure \ref{fig:IC_branched_alkanes} use the ``short/long'' model, i.e. the CH and C groups depend on the length of the carbon backbone, since the ``short/long'' model is more accurate than the ``generalized'' model for these compounds. The ``generalized'' Potoff results are not included in Figure \ref{fig:IC_branched_alkanes}, as they do not aid in the discussion, but are found in the Supporting Information. 
+
 %Several force fields in the literature have been optimized to agree with VLE properties for normal and branched alkanes. Two of the most widely used united-atom based force fields are the TraPPE LJ 12-6 and Potoff Mie 16-6.
 
 %It has been demonstrated that the united-atom LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. By contrast, when properly optimized, the Mie 16-6 potential can accurately predict both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range. However, there is some concern that increasing the repulsive exponent (in this case, from 12 to 16) might have some undesirable consequences, especially at high pressures, where close range interactions will become more significant.
@@ -420,6 +445,10 @@ Although the TAMie potential uses a softer repulsive exponent than Potoff (14 in
 
 \section{Methods II} \label{Methods II}
 
+The results presented in Section \ref{Case Study} demonstrate that none of the existing force fields studied reproduce the $PVT$ behavior for supercritical fluids and compressed liquids. However, recall that each of these force fields was parameterized using only VLE properties. Therefore, it is possible that including both VLE and $PVT$ properties in the parameterization objective function will improve the results. However, if no combination of $\epsilon$, $\sigma$, and $\lambda$ is capable of predicting VLE properties and $PVT$ behavior, we can conclude that the UA Mie $\lambda$-6 potential is inadequate for this purpose and, therefore, should not be used when developing FEOS with molecular simulation results.
+
+In order to rigorously quantify if the UA Mie $\lambda$-6 potential is ``adequate'', we perform a Bayesian inference analysis. We refer the reader to the literature for a thorough discussion of Bayesian statistics. In Section \ref{Bayesian Analysis}, we review some basic concepts of Bayes theorem, we define the posterior, likelihood, and prior functions, and we discuss the Markov Chain Monte Carlo (MCMC) sampling approach. As MCMC can be computationally burdensome, especially when coupled with molecular simulations, Section \ref{Surrogate Model} explains the surrogate models used to reduce the computational cost for determining the VLE properties $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ and $Z$ of the supercritical fluids and compressed liquids. 
+
 \begin{enumerate}
 	\item We use Bayesian inference with MCMC to quantify the uncertainty in the force field parameters
 	%%%% RAM: Do we even need to perform an MCMC analysis? It is kind of overkill. We could just plot the credible regions by scanning the parameter space.
@@ -433,7 +462,7 @@ In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andr
 %MRS: not sure what you are saying here. Seems like you do need to do some optimization with C and CH if you are making blanket claims about whether Mie (or other potentials) work or not.  I guess you could justify by saying that if CH2 and CH3 don't work for normal alkanes, no point in proving it for branched alkanes.
 \end{enumerate}
 
-\subsection{Bayesian Analysis}
+\subsection{Bayesian Analysis} \label{Bayesian Analysis}
 
 \begin{enumerate}
 	\item By quantifying the uncertainty in epsilon and sigma for a given lambda, we can determine if the Mie potential is adequate for reproducing VLE and compressed liquid/supercritical pressures
@@ -446,7 +475,7 @@ In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andr
 	% RAM:  No longer finding the optimal lambda for high pressures \item To determine the optimal value of lambda for compressed liquid pressures, we redefine the posterior using only saturated liquid density and compressed liquid pressures  
 \end{enumerate}
 
-\subsection{Surrogate Model}
+\subsection{Surrogate Model} \label{Surrogate Model}
 
 \begin{enumerate}
 	\item A Bayesian analysis is computationally too expensive if direct molecular simulations are performed for every MCMC step
@@ -459,6 +488,7 @@ In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andr
 \end{enumerate}
 
 \subsection{Propagation of Uncertainty}
+%RAM: I think we should move this inside the Bayesian analysis section.
 %MRS: not sure what you mean by propagation of uncertainty here. Uncertainty in credible region? 
 \begin{enumerate}
 	\item From the MCMC parameter sets, we randomly sample a subset of 100-1000 parameter sets
@@ -531,13 +561,19 @@ I could include the results from the alternative posterior (excluding Pvsat and 
  
 \section{Conclusions} \label{Conclusions}
 
-\begin{enumerate}
-%MRS: make claims more specific: you said Mie not good for VLE - did you mean that its's good for low pressure VLE, but not high pressure?
-	\item Although the UA Mie potential provides great improvement over the UA LJ 12-6 potential for VLE, it drastically over predicts pressures for supercritical fluids and compressed liquids (actually for supercritical fluids it over predicts at high densities and under predicts at low densities. Not sure I want to open up that can of worms.)
-%MRS: if you've observed it, should mention it. 
-	\item By performing a rigorous statistical analysis, we verify that no set of $\epsilon$ and $\sigma$ can adequately predict VLE and high pressures (I need a better way to refer to this) for a 16-6, 15-6, or 14-6 potential.
-%MRS: Are those two different things: ``VLE'' and ``high pressures'', or is it just ``high pressure properties, including VLE and supercritical densities''.
-\end{enumerate}
+Recently, molecular simulation results at extreme temperatures and pressures have been used to supplement experimental data when developing a fundamental equation of state. As discussed by Thol et al., due to uncertainties and deficiencies in the force field, experimental data should be favored over molecular simulation values whenever possible. However, in principle, a FEOS could be developed for compounds without any experimental data by using only molecular simulation results, if the force field were reliable and transferable over different $PVT$ conditions. In part, one of our aims was to determine whether the united-atom Mie $\lambda$-6 potential for normal and branched alkanes was reliable enough that a FEOS could be developed strictly from molecular simulation results. Unfortunately, the Bayesian statistical analysis performed in this study suggests that this model type (UA Mie $\lambda$-6) is not adequate for predicting both VLE properties and high pressures for supercritical fluids and compressed liquids. Specifically, no set of $\epsilon$, $\sigma$, and $\lambda$ can adequately predict VLE and PVT behavior. Therefore, we recommend that alternative models be considered for developing FEOS, such as force fields using anisotropic-united-atom, all-atom, and/or alternative non-bonded potentials, e.g. Buckingham exponential-6, extended Lennard-Jones, etc.
+
+%   The aim of the present study was to determine whether the Mie potential is a candidate for supplanting experimental data by accurately predicting both VLE properties and pressures for supercritical fluids and compressed liquids. 
+%
+%The results from this study suggest that the united-atom Mie $\lambda$-6 potential is not adequate for predicting both VLE properties and pressures for supercritical fluids and compressed liquids of normal and branched alkanes.
+
+%\begin{enumerate}
+%%MRS: make claims more specific: you said Mie not good for VLE - did you mean that its's good for low pressure VLE, but not high pressure?
+%%	\item Although the UA Mie potential provides great improvement over the UA LJ 12-6 potential for VLE, it drastically over predicts pressures for supercritical fluids and compressed liquids (actually for supercritical fluids it over predicts at high densities and under predicts at low densities. Not sure I want to open up that can of worms.)
+%%%MRS: if you've observed it, should mention it. 
+%%	\item By performing a rigorous statistical analysis, we verify that no set of $\epsilon$ and $\sigma$ can adequately predict VLE and high pressures (I need a better way to refer to this) for a 16-6, 15-6, or 14-6 potential.
+%%MRS: Are those two different things: ``VLE'' and ``high pressures'', or is it just ``high pressure properties, including VLE and supercritical densities''.
+%\end{enumerate}
 
 %%% This was taken from previous drafts of the first manuscript. These paragraphs will probably not go in this manuscript.
 %%%% The next few paragraphs probably belong in Part II where we focus on parameterization. I think it suffices in this paper to just say that we need surrogate models for computational reasons.
