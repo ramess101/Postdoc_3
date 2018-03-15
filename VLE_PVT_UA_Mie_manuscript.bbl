@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{21}
+\begin{mcitethebibliography}{27}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -31,6 +31,52 @@ Lemmon,~E.~W.; Huber,~M.~L.; McLinden,~M.~O. {NIST Standard Reference Database
   23: Reference Fluid Thermodynamic and Transport Properties-REFPROP, Version
   9.1, National Institute of Standards and Technology}. 2013;
   \url{https://www.nist.gov/srd/refprop}\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Thol \latin{et~al.}(2016)Thol, Rutkai, K{\"o}ster, Lustig, Span, and
+  Vrabec]{Thol2016_LJ}
+Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Lustig,~R.; Span,~R.; Vrabec,~J.
+  \emph{Journal of Physical and Chemical Reference Data} \textbf{2016},
+  \emph{45}, 023101\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Thol \latin{et~al.}(2015)Thol, Rutkai, Span, Vrabec, and
+  Lustig]{Thol_LJTS}
+Thol,~M.; Rutkai,~G.; Span,~R.; Vrabec,~J.; Lustig,~R. \emph{International
+  Journal of Thermophysics} \textbf{2015}, \emph{36}, 25--43\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rutkai \latin{et~al.}(2017)Rutkai, Thol, Span, and Vrabec]{Rutkai2017}
+Rutkai,~G.; Thol,~M.; Span,~R.; Vrabec,~J. \emph{Molecular Physics}
+  \textbf{2017}, \emph{115}, 1104--1121\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Lustig \latin{et~al.}(2015)Lustig, Rutkai, and Vrabec]{Lustig2015}
+Lustig,~R.; Rutkai,~G.; Vrabec,~J. \emph{Molecular Physics} \textbf{2015},
+  \emph{113}, 910--931\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rutkai \latin{et~al.}(2013)Rutkai, Thol, Lustig, Span, and
+  Vrabec]{Rutkai2013}
+Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. \emph{The Journal of
+  Chemical Physics} \textbf{2013}, \emph{139}, 041102\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rutkai and Vrabec(2015)Rutkai, and Vrabec]{Rutkai2015}
+Rutkai,~G.; Vrabec,~J. \emph{Journal of Chemical \& Engineering Data}
+  \textbf{2015}, \emph{60}, 2895--2905\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

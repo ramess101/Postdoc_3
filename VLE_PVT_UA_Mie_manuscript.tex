@@ -246,7 +246,7 @@ In addition to the classification of UA and AUA force fields, the existing force
 
 Previous work demonstrated that the UA LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for \textit{n}-alkanes \cite{Pareto_LJPQ,Mess4}. For this reason, the TraPPE-UA force field was primarily developed to agree with saturated liquid densities \cite{TraPPE}. By contrast, accurate prediction of both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range is possible by varying the repulsive exponent of the LJ potential (i.e. the Mie $\lambda$-6 potential). Typically, the optimal value of $\lambda$ is greater than 12 with a corresponding increase in the well depth $(\epsilon)$. Specifically for hydrocarbons, the Potoff UA force field uses $\lambda = 16$ while the TAMie force field uses $\lambda = 14$. However, there is some concern that increasing the repulsive exponent might have some undesirable consequences, especially at high pressures, where close range interactions will become more prevalent than at vapor-liquid equilibria. The purpose of this study is to determine whether or not the UA Mie potential is adequate for predicting both VLE and PVT at higher temperatures and pressures. 
 
-Note that the simulation values used by Thol et al. were derivatives of the residual Helmholtz free energy $(\partial^n a^{\rm r})$ \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017}, while in this study we simply compare the $PVT$ behavior. Aside from the advantage of simplicity (most simulation packages do not provide $\partial^n a^{\rm r}$), this choice is based on the fact that $PVT$ is more readily understood and easier to visualize. In other words, it is easier to quantify the impact on process design caused by deviations in $PVT$ behavior than derivatives in the residual Helmholtz free energy. Furthermore, as demonstrated by Thol et al., an inaccurate prediction of some $\partial^n a^{\rm r}$ does not necessarily result in poor prediction of $PVT$ behavior \cite{Thol2016_siloxane_first}. Although we did not use $\partial^n a^{\rm r}$ for our analysis, including higher order derivatives of the residual Helmholtz free energy from molecular simulation is a significant advantage of the approach implemented by Thol et al. for FEOS development.
+Note that the simulation values used by Thol et al. were derivatives of the residual Helmholtz free energy $(\partial^n a^{\rm r})$ with respect to inverse temperature and/or density \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017}, while in this study we simply compare the $PVT$ behavior. Aside from the advantage of simplicity (most simulation packages do not provide $\partial^n a^{\rm r}$), this choice is based on the fact that $PVT$ is more readily understood and easier to visualize. In other words, it is easier to quantify the impact on process design caused by deviations in $PVT$ behavior than derivatives in the residual Helmholtz free energy. Furthermore, as demonstrated by Thol et al., an inaccurate prediction of some $\partial^n a^{\rm r}$ does not necessarily result in poor prediction of $PVT$ behavior \cite{Thol2016_siloxane_first}. Although we did not use $\partial^n a^{\rm r}$ for our analysis, including higher order derivatives of the residual Helmholtz free energy from molecular simulation is a significant advantage of the approach implemented by Thol et al. for FEOS development.
 
 The outline for this manuscript is the following. Section \ref{Methods I} discusses the simulation and force field details. Section \ref{Case Study} is a case study for normal and branched alkanes using the existing force fields developed from VLE properties. Section \ref{Methods II} explains how Bayesian inference is employed to investigate the adequacy of the UA Mie potential. Section \ref{Results} presents the results from the Bayesian analysis. Section \ref{Conclusions} reports the primary conclusions of this study.
 
@@ -464,6 +464,17 @@ In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andr
 
 \subsection{Bayesian Analysis} \label{Bayesian Analysis}
 
+Bayesian inference is used to quantify the uncertainty in $\epsilon$ and $\sigma$ for a given $\lambda$. 
+Bayes theorem is
+\begin{equation} \label{Bayes Theorem}
+Pr(\theta|D) = \frac{Pr(D|\theta)Pr(\theta)}{Pr(D)}
+\end{equation}
+where $Pr$ denotes a probability distribution function, $\theta$ is the parameter set (i.e. $\epsilon$, $\sigma$, and $\lambda$ for the Mie $\lambda$-6 potential), and $D$ are the data. $Pr(\theta|D)$ is commonly referred to as the ``posterior, $Pr(D|\theta)$ is the ``likelihood'' (alternatively expressed as $L(\theta|D)$), $Pr(\theta)$ is the ``prior'', and $Pr(D)$ is a normalization constant. 
+
+Markov Chain Monte Carlo (MCMC) is the traditional approach for sampling from $Pr(\theta|D)$. We use a ``non-informative prior'' with a lower bound that the parameters are positive, i.e. $Pr(\theta)$ is uniform for all values of $\epsilon$, $\sigma$, and $\lambda$ greater than 0. Because MCMC moves in parameter space are accepted based on the ratio of $Pr(\theta_i|D)$ and $Pr(\theta_{i+1}|D)$ and the denominator in Equation \ref{Bayes Theorem} (i.e $(Pr(D)$) does not depend on $\theta$, $Pr(D)$ is not needed. Therefore, the probability of accepting $\theta_{i+1}$ is based completely 
+
+% With MCMC it is not necessary to estimate $Pr(D)$ because MC moves are accepted based on the ratio of $Pr(\theta_i|D)$ and $Pr(\theta_{i+1}|D)$
+
 \begin{enumerate}
 	\item By quantifying the uncertainty in epsilon and sigma for a given lambda, we can determine if the Mie potential is adequate for reproducing VLE and compressed liquid/supercritical pressures
 	\item Posterior includes saturated liquid density and vapor pressure
@@ -498,9 +509,43 @@ In other words, the Markov Chain only samples a 2-dimensional space. % RAM: Andr
 
 \section{Results} \label{Results}
 
-\subsection{VLE and Compressed}
+%\subsection{VLE and Compressed}
 
-\subsubsection{Parameter uncertainties}
+\subsection{Parameter uncertainties}
+
+CH3 Results:
+
+Figure: Ethane CH3 uncertainties. Panel a) 14-6, 15-6, 16-6. Panel b) Z plots for each exponent
+Figure: Evidence for 14-6, 15-6, 16-6 based on VLE
+
+CH2 results:
+
+Combine these into one figure
+Figure: CH2 uncertainties. Panel a) 16-6 Panel b) 14-6
+
+Figure \ref{fig:MCMC_Mie16_propane_butane_octane} presents the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets with $\lambda_{\rm CH_2} = 16$. Notice that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets overlap considerably for propane, \textit{n}-butane, and \textit{n}-octane. This supports the common assumption of transferability of CH$_2$ parameters between different \textit{n}-alkanes. Note that the uncertainty in the parameters is largest for propane and smallest for \textit{n}-octane. This suggests that, as expected, the sensitivity of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to the CH$_2$ parameters increases with increasing number of CH$_2$ interaction sites. Also, notice that the Potoff parameter set is within the MCMC sample region. More importantly, for the purposes of this manuscript, the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets have $P^{\rm high}$ AAD\% $\approx 16$-$23$, while the REFPROP uncertainty in $P^{\rm high}$ is estimated to be around $1$\%. 
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=3.2in]{MCMC_Mie16_propane_butane_octane}
+	\caption{MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets with $\lambda_{\rm CH_2} = 16$ result in AAD\% $\approx 16$-$23$ for $P^{\rm high}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%. Potoff parameter set is provided as a reference.}
+	\label{fig:MCMC_Mie16_propane_butane_octane}
+\end{figure}
+
+Figure \ref{fig:MCMC_Mie16_propane_butane_octane} suggests that the UA Mie 16-6 potential is not capable of predicting VLE and $PVT$ for supercritical fluids and compressed liquids of propane, \textit{n}-butane, and \textit{n}-octane. Figure \ref{fig:MCMC_Mie14_propane_butane} demonstrates that the UA Mie 14-6 potential is also not capable of predicting both properties for propane and \textit{n}-butane. Specifically, all of the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets in Figure \ref{fig:MCMC_Mie14_propane_butane} have $P^{\rm high}$ AAD\% $\approx 10$-$15$. Although this is improvement relative to the UA Mie 16-6 AAD\%, recall that the UA Mie 14-6 is less reliable for VLE. Therefore, considering the significant deprecation in VLE, the marginal gain in accuracy for $P^{\rm high}$ likely does not merit using a UA Mie 14-6 potential. 
+
+Figure \ref{fig:MCMC_Mie14_propane_butane} also includes the ``REFPROP uncertainty'' region which corresponds to AAD\% of $\pm 1$.  Because the ``REFPROP uncertainty'' contours are parallel to the MCMC region and found at much lower $\epsilon_{\rm CH_2}$ (around 45 K for the same $\sigma_{\rm CH_2}$), in order to accurately predict $P^{\rm high}$, it is necessary to sacrifice accuracy in $\rho_{\rm l}^{sat}$ and $P_{\rm v}^{\rm sat}$. Figures \ref{fig:MCMC_Mie16_propane_butane_octane}-\ref{fig:MCMC_Mie14_propane_butane} provide convincing evidence that, regardless of the value of $\lambda$, the UA Mie $\lambda$-6 model is not capable of predicting both VLE and $PVT$ at high pressures.
+
+%The REFPROP uncertainty region that corresponds to AAD\% of $\pm 1$ is parallel to the MCMC region and found at much lower $\epsilon_{\rm CH_2}$ (around 45 K for the same $\sigma_{\rm CH_2}$). Therefore, in order to accurately predict $P^{\rm high}$, it is necessary to sacrifice accuracy in $\rho_{\rm l}^{sat}$ and $P_{\rm v}^{\rm sat}$. Figures \ref{fig:MCMC_Mie16_propane_butane_octane}-\ref{fig:MCMC_Mie14_propane_butane} provide convincing evidence that, regardless of the value of $\lambda$, the UA Mie $\lambda$-6 model is not capable of predicting both VLE and $PVT$ at high pressures.
+
+%Also, notice that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets overlap considerably for the two compounds. In other words, the $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets for propane and \textit{n}-butane are indistinguishable to within uncertainty. This supports the common assumption of transferability of CH$_2$ parameters between different \textit{n}-alkanes.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=3.2in]{MCMC_Mie14_propane_butane}
+	\caption{MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets with $\lambda_{\rm CH_2} = 14$ result in AAD\% $\approx 10$-$15$ for $P^{\rm high}$. REFPROP uncertainty in $P^{\rm high}$ is included at $\pm 1$\%.}
+	\label{fig:MCMC_Mie14_propane_butane}
+\end{figure}
 
 \begin{enumerate}
 	\item Figure: The uncertainty regions for CH3, CH2, CH, and C. I can include 14-6, 15-6, and 16-6. Perhaps I will only do this rigorous analysis for CH3 or for CH3 and CH2. Probably not for all. 
@@ -520,7 +565,7 @@ I could include the results from the alternative posterior (excluding Pvsat and 
 	\item Statement about C credible region for isooctane and neopentane
 \end{enumerate}
 
-\subsubsection{Propagation of uncertainties}
+\subsection{Propagation of uncertainties}
 
 \begin{enumerate}
 %MRS: be more precise about what you mean by propagation of uncertainties. 95% confidence intervals?  Standard deivations? What is the point that you are proving with this data?
@@ -548,16 +593,16 @@ I could include the results from the alternative posterior (excluding Pvsat and 
 %MRS: but the thesis is that MIE isn't sufficient; difficult if you are complicating the thesis too much.
 \end{enumerate}
 
-\section{Future Work}
-%MRS: I don't think there's that good motivation for ``future work'' sections in general. Either make AUA part of the thesis, or don't include them.  There can be discussion of possible alternatives. 
-\begin{enumerate}
-	\item As observed in the case study, the AUA approach typically provides more reliable estimates at high pressures.
-	\item At higher pressures you need the hydrogens, the higher the shift in the bond-length the better.
-	\item For example, notice that the AUA LJ (TraPPE-2) model is better than the AUA Mie (TAMie) and AUA Exp-6 (ErrExp-6), despite having fewer fitting parameters. This is because they use a much larger bond displacement.
-	%%% RAM: I do not have results for AUA4, do I really need all of these examples from the literature?
-        %%% MRS: depends on the thesis. . .  
-	\item An alternative method to AUA is to use an extended Lennard-Jones potential, 12-10-8-6, that has the flexibility of a Mie potential but without the steep barrier
-\end{enumerate}
+%\section{Future Work}
+%%MRS: I don't think there's that good motivation for ``future work'' sections in general. Either make AUA part of the thesis, or don't include them.  There can be discussion of possible alternatives. 
+%\begin{enumerate}
+%	\item As observed in the case study, the AUA approach typically provides more reliable estimates at high pressures.
+%	\item At higher pressures you need the hydrogens, the higher the shift in the bond-length the better.
+%	\item For example, notice that the AUA LJ (TraPPE-2) model is better than the AUA Mie (TAMie) and AUA Exp-6 (ErrExp-6), despite having fewer fitting parameters. This is because they use a much larger bond displacement.
+%	%%% RAM: I do not have results for AUA4, do I really need all of these examples from the literature?
+%        %%% MRS: depends on the thesis. . .  
+%	\item An alternative method to AUA is to use an extended Lennard-Jones potential, 12-10-8-6, that has the flexibility of a Mie potential but without the steep barrier
+%\end{enumerate}
  
 \section{Conclusions} \label{Conclusions}
 
