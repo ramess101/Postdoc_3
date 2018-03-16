@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{27}
+\begin{mcitethebibliography}{29}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -230,5 +230,22 @@ Allen,~M.~P.; Tildesley,~D.~J. \emph{Computer simulation of liquids}; Clarendon
 \mciteBstWouldAddEndPunctfalse
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Nieto-Draghi \latin{et~al.}(2008)Nieto-Draghi, Bocahut, Creton, Have,
+  Ghoufi, Wender, , Boutin, Rousseau, and Normand]{Nieto2008}
+Nieto-Draghi,~C.; Bocahut,~A.; Creton,~B.; Have,~P.; Ghoufi,~A.; Wender,~A.; ;
+  Boutin,~A.; Rousseau,~B.; Normand,~L. \emph{Molecular Simulation}
+  \textbf{2008}, \emph{34}, 211--230\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Angelikopoulos \latin{et~al.}(2012)Angelikopoulos, Papadimitriou, and
+  Koumoutsakos]{Bay_MD}
+Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
+  Chemical Physics} \textbf{2012}, \emph{137}, 144103\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \end{mcitethebibliography}
