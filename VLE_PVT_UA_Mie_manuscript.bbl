@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{29}
+\begin{mcitethebibliography}{30}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -244,6 +244,15 @@ Nieto-Draghi,~C.; Bocahut,~A.; Creton,~B.; Have,~P.; Ghoufi,~A.; Wender,~A.; ;
   Koumoutsakos]{Bay_MD}
 Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
   Chemical Physics} \textbf{2012}, \emph{137}, 144103\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Frenkel \latin{et~al.}(2005)Frenkel, Chirico, Diky, Yan, Dong, and
+  Muzny]{TDE}
+Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C.
+  \emph{Journal of Chemical Information and Modeling} \textbf{2005}, \emph{45},
+  816--838\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
