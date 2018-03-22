@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{30}
+\begin{mcitethebibliography}{44}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -66,17 +66,17 @@ Lustig,~R.; Rutkai,~G.; Vrabec,~J. \emph{Molecular Physics} \textbf{2015},
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Rutkai \latin{et~al.}(2013)Rutkai, Thol, Lustig, Span, and
-  Vrabec]{Rutkai2013}
-Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. \emph{The Journal of
-  Chemical Physics} \textbf{2013}, \emph{139}, 041102\relax
+\bibitem[Rutkai and Vrabec(2015)Rutkai, and Vrabec]{Rutkai2015}
+Rutkai,~G.; Vrabec,~J. \emph{Journal of Chemical \& Engineering Data}
+  \textbf{2015}, \emph{60}, 2895--2905\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Rutkai and Vrabec(2015)Rutkai, and Vrabec]{Rutkai2015}
-Rutkai,~G.; Vrabec,~J. \emph{Journal of Chemical \& Engineering Data}
-  \textbf{2015}, \emph{60}, 2895--2905\relax
+\bibitem[Rutkai \latin{et~al.}(2013)Rutkai, Thol, Lustig, Span, and
+  Vrabec]{Rutkai2013}
+Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. \emph{The Journal of
+  Chemical Physics} \textbf{2013}, \emph{139}, 041102\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -105,6 +105,15 @@ Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Dubberke,~F.~H.; Windmann,~T.; Span,~R.;
 Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Miroshnichenko,~S.; Wagner,~W.;
   Vrabec,~J.; Span,~R. \emph{Molecular Physics} \textbf{2017}, \emph{115},
   1166--1185\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Thol \latin{et~al.}(2015)Thol, Rutkai, Köster, Kortmann, Span, and
+  Vrabec]{Thol2015}
+Thol,~M.; Rutkai,~G.; Köster,~A.; Kortmann,~M.; Span,~R.; Vrabec,~J.
+  \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 87 -- 99, 2013
+  Danckwerts Special Issue on Molecular Modelling in Chemical Engineering\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -200,6 +209,60 @@ Messerly,~R.~A.; KnottsIV,~T.~A.; Wilding,~W.~V. \emph{The Journal of Chemical
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Gordon(2006)]{Gordon2006}
+Gordon,~P.~A. \emph{The Journal of Chemical Physics} \textbf{2006}, \emph{125},
+  014504\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kulakova \latin{et~al.}(2017)Kulakova, Arampatzis, Angelikopoulos,
+  Hadjidoukas, Papadimitriou, and Koumoutsakos]{Kulakova2017}
+Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
+  Papadimitriou,~C.; Koumoutsakos,~P. \emph{Scientific Reports} \textbf{2017},
+  \emph{7}, 16576\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Galli{\'e}ro \latin{et~al.}(2006)Galli{\'e}ro, Boned, Baylaucq, and
+  Montel]{Galliero2005}
+Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. \emph{Phys. Rev. E}
+  \textbf{2006}, \emph{73}, 061201\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Mick \latin{et~al.}(2015)Mick, Soroush~Barhaghi, Jackman, Rushaidat,
+  Schwiebert, and Potoff]{Mick_Mie}
+Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Rushaidat,~K.; Schwiebert,~L.;
+  Potoff,~J.~J. \emph{The Journal of Chemical Physics} \textbf{2015},
+  \emph{143}, 114504\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rowley and Pakkanen(1999)Rowley, and Pakkanen]{Rowley1999}
+Rowley,~R.~L.; Pakkanen,~T. \emph{The Journal of Chemical Physics}
+  \textbf{1999}, \emph{110}, 3368--3377\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rowley \latin{et~al.}(2001)Rowley, Yang, and Pakkanen]{Rowley2001}
+Rowley,~R.~L.; Yang,~Y.; Pakkanen,~T.~A. \emph{The Journal of Chemical Physics}
+  \textbf{2001}, \emph{114}, 6058--6067\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hayes \latin{et~al.}(2004)Hayes, Greer, and Morton–Blake]{Hayes2004}
+Hayes,~J.~M.; Greer,~J.~C.; Morton–Blake,~D.~A. \emph{Journal of
+  Computational Chemistry} \textbf{2004}, \emph{25}, 1953--1966\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Abraham \latin{et~al.}()Abraham, van~der Spoel, Lindahl, B.Hess, and
   the GROMACS~development team]{GROMACS_2018}
 Abraham,~M.; van~der Spoel,~D.; Lindahl,~E.; B.Hess,; the GROMACS~development
@@ -240,10 +303,34 @@ Nieto-Draghi,~C.; Bocahut,~A.; Creton,~B.; Have,~P.; Ghoufi,~A.; Wender,~A.; ;
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Rizzi \latin{et~al.}(2012)Rizzi, Najm, Debusschere, Sargsyan, Salloum,
+  Adalsteinsson, and Knio]{Bay_Deriv}
+Rizzi,~F.; Najm,~H.~N.; Debusschere,~B.~J.; Sargsyan,~K.; Salloum,~M.;
+  Adalsteinsson,~H.; Knio,~O.~M. \emph{Multiscale Modeling \& Simulation}
+  \textbf{2012}, \emph{10}, 1460--1492\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Angelikopoulos \latin{et~al.}(2012)Angelikopoulos, Papadimitriou, and
   Koumoutsakos]{Bay_MD}
 Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
   Chemical Physics} \textbf{2012}, \emph{137}, 144103\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Cailliez and Pernot(2011)Cailliez, and Pernot]{Bay_UQ}
+Cailliez,~F.; Pernot,~P. \emph{The Journal of Chemical Physics} \textbf{2011},
+  \emph{134}, 054124\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Shirts and Chodera(2008)Shirts, and
+  Chodera]{shirts-chodera:jcp:2008:mbar}
+Shirts,~M.~R.; Chodera,~J.~D. \emph{The Journal of Chemical Physics}
+  \textbf{2008}, \emph{129}, 124105\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -253,6 +340,36 @@ Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
 Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C.
   \emph{Journal of Chemical Information and Modeling} \textbf{2005}, \emph{45},
   816--838\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Schappals \latin{et~al.}(2017)Schappals, Mecklenfeld, Kr{\"o}ger,
+  Botan, K{\"o}ster, Stephan, Garc{\'i}a, Rutkai, Raabe, Klein, Leonhard,
+  Glass, Lenhard, Vrabec, and Hasse]{RoundRobin}
+Schappals,~M.; Mecklenfeld,~A.; Kr{\"o}ger,~L.; Botan,~V.; K{\"o}ster,~A.;
+  Stephan,~S.; Garc{\'i}a,~E.~J.; Rutkai,~G.; Raabe,~G.; Klein,~P.;
+  Leonhard,~K.; Glass,~C.~W.; Lenhard,~J.; Vrabec,~J.; Hasse,~H. \emph{Journal
+  of Chemical Theory and Computation} \textbf{2017}, \emph{13},
+  4270--4280\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[St{\"o}bener \latin{et~al.}(2014)St{\"o}bener, Klein, Reiser, Horsch,
+  Kufer, and Hasse]{Pareto_Deriv}
+St{\"o}bener,~K.; Klein,~P.; Reiser,~S.; Horsch,~M.; Kufer,~K.-H.; Hasse,~H.
+  \emph{Fluid Phase Equilibria} \textbf{2014}, \emph{373}, 100 -- 108\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Werth \latin{et~al.}(2015)Werth, St{\"o}bener, Klein, Kufer, Horsch,
+  and Hasse]{Pareto_ST}
+Werth,~S.; St{\"o}bener,~K.; Klein,~P.; Kufer,~K.-H.; Horsch,~M.; Hasse,~H.
+  \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 110 -- 117,
+  2013 Danckwerts Special Issue on Molecular Modelling in Chemical
+  Engineering\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
