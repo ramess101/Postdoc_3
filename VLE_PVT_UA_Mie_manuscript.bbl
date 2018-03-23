@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{44}
+\begin{mcitethebibliography}{47}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -216,19 +216,19 @@ Gordon,~P.~A. \emph{The Journal of Chemical Physics} \textbf{2006}, \emph{125},
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
+\bibitem[Galli{\'e}ro \latin{et~al.}(2006)Galli{\'e}ro, Boned, Baylaucq, and
+  Montel]{Galliero2005}
+Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. \emph{Phys. Rev. E}
+  \textbf{2006}, \emph{73}, 061201\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
 \bibitem[Kulakova \latin{et~al.}(2017)Kulakova, Arampatzis, Angelikopoulos,
   Hadjidoukas, Papadimitriou, and Koumoutsakos]{Kulakova2017}
 Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
   Papadimitriou,~C.; Koumoutsakos,~P. \emph{Scientific Reports} \textbf{2017},
   \emph{7}, 16576\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Galli{\'e}ro \latin{et~al.}(2006)Galli{\'e}ro, Boned, Baylaucq, and
-  Montel]{Galliero2005}
-Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. \emph{Phys. Rev. E}
-  \textbf{2006}, \emph{73}, 061201\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -370,6 +370,32 @@ Werth,~S.; St{\"o}bener,~K.; Klein,~P.; Kufer,~K.-H.; Horsch,~M.; Hasse,~H.
   \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 110 -- 117,
   2013 Danckwerts Special Issue on Molecular Modelling in Chemical
   Engineering\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Hajigeorgiou(2016)]{Hajigeorgiou2016}
+Hajigeorgiou,~P.~G. \emph{Journal of Molecular Spectroscopy} \textbf{2016},
+  \emph{330}, 4 -- 13, Potentiology and Spectroscopy in Honor of Robert Le
+  Roy\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kalos and Grosser(1972)Kalos, and Grosser]{Kalos1972}
+Kalos,~F.; Grosser,~A.~E. \emph{Canadian Journal of Chemistry} \textbf{1972},
+  \emph{50}, 892--896\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Rutkai \latin{et~al.}(2017)Rutkai, K{\:o}ster, Guevara-Carrion,
+  Janzen, Schappals, Glass, Bernreuther, Wafai, Stephan, Kohns, Reiser,
+  Deublein, Horsch, Hasse, and Vrabec]{ms2}
+Rutkai,~G.; K{\:o}ster,~A.; Guevara-Carrion,~G.; Janzen,~T.; Schappals,~M.;
+  Glass,~C.~W.; Bernreuther,~M.; Wafai,~A.; Stephan,~S.; Kohns,~M.; Reiser,~S.;
+  Deublein,~S.; Horsch,~M.; Hasse,~H.; Vrabec,~J. \emph{Computer Physics
+  Communications} \textbf{2017}, \emph{221}, 343 -- 351\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
