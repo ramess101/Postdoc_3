@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{48}
+\begin{mcitethebibliography}{49}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -323,6 +323,16 @@ Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
 \bibitem[Cailliez and Pernot(2011)Cailliez, and Pernot]{Bay_UQ}
 Cailliez,~F.; Pernot,~P. \emph{The Journal of Chemical Physics} \textbf{2011},
   \emph{134}, 054124\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Wu \latin{et~al.}(2016)Wu, Angelikopoulos, Papadimitriou, Moser, and
+  Koumoutsakos]{Wu2016}
+Wu,~S.; Angelikopoulos,~P.; Papadimitriou,~C.; Moser,~R.; Koumoutsakos,~P.
+  \emph{Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences} \textbf{2016},
+  \emph{374}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
