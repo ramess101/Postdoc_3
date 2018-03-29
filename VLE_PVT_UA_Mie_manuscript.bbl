@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{47}
+\begin{mcitethebibliography}{48}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -224,24 +224,6 @@ Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. \emph{Phys. Rev. E}
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Kulakova \latin{et~al.}(2017)Kulakova, Arampatzis, Angelikopoulos,
-  Hadjidoukas, Papadimitriou, and Koumoutsakos]{Kulakova2017}
-Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
-  Papadimitriou,~C.; Koumoutsakos,~P. \emph{Scientific Reports} \textbf{2017},
-  \emph{7}, 16576\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Mick \latin{et~al.}(2015)Mick, Soroush~Barhaghi, Jackman, Rushaidat,
-  Schwiebert, and Potoff]{Mick_Mie}
-Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Rushaidat,~K.; Schwiebert,~L.;
-  Potoff,~J.~J. \emph{The Journal of Chemical Physics} \textbf{2015},
-  \emph{143}, 114504\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Rowley and Pakkanen(1999)Rowley, and Pakkanen]{Rowley1999}
 Rowley,~R.~L.; Pakkanen,~T. \emph{The Journal of Chemical Physics}
   \textbf{1999}, \emph{110}, 3368--3377\relax
@@ -259,6 +241,24 @@ Rowley,~R.~L.; Yang,~Y.; Pakkanen,~T.~A. \emph{The Journal of Chemical Physics}
 \bibitem[Hayes \latin{et~al.}(2004)Hayes, Greer, and Morton–Blake]{Hayes2004}
 Hayes,~J.~M.; Greer,~J.~C.; Morton–Blake,~D.~A. \emph{Journal of
   Computational Chemistry} \textbf{2004}, \emph{25}, 1953--1966\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Kulakova \latin{et~al.}(2017)Kulakova, Arampatzis, Angelikopoulos,
+  Hadjidoukas, Papadimitriou, and Koumoutsakos]{Kulakova2017}
+Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
+  Papadimitriou,~C.; Koumoutsakos,~P. \emph{Scientific Reports} \textbf{2017},
+  \emph{7}, 16576\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Mick \latin{et~al.}(2015)Mick, Soroush~Barhaghi, Jackman, Rushaidat,
+  Schwiebert, and Potoff]{Mick_Mie}
+Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Rushaidat,~K.; Schwiebert,~L.;
+  Potoff,~J.~J. \emph{The Journal of Chemical Physics} \textbf{2015},
+  \emph{143}, 114504\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -340,6 +340,13 @@ Shirts,~M.~R.; Chodera,~J.~D. \emph{The Journal of Chemical Physics}
 Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C.
   \emph{Journal of Chemical Information and Modeling} \textbf{2005}, \emph{45},
   816--838\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Naden and Shirts(2016)Naden, and Shirts]{naden:jctc:2016}
+Naden,~L.~N.; Shirts,~M.~R. \emph{Journal of Chemical Theory and Computation}
+  \textbf{2016}, \emph{12}, 1806--1823\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
