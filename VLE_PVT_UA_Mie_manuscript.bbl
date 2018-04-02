@@ -337,19 +337,19 @@ Wu,~S.; Angelikopoulos,~P.; Papadimitriou,~C.; Moser,~R.; Koumoutsakos,~P.
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Shirts and Chodera(2008)Shirts, and
-  Chodera]{shirts-chodera:jcp:2008:mbar}
-Shirts,~M.~R.; Chodera,~J.~D. \emph{The Journal of Chemical Physics}
-  \textbf{2008}, \emph{129}, 124105\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \bibitem[Frenkel \latin{et~al.}(2005)Frenkel, Chirico, Diky, Yan, Dong, and
   Muzny]{TDE}
 Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C.
   \emph{Journal of Chemical Information and Modeling} \textbf{2005}, \emph{45},
   816--838\relax
+\mciteBstWouldAddEndPuncttrue
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Shirts and Chodera(2008)Shirts, and
+  Chodera]{shirts-chodera:jcp:2008:mbar}
+Shirts,~M.~R.; Chodera,~J.~D. \emph{The Journal of Chemical Physics}
+  \textbf{2008}, \emph{129}, 124105\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
