@@ -284,7 +284,7 @@ While previous studies have focused on small/hazardous compounds, the present st
 
 The primary limitation for implementing molecular simulation at extreme temperatures and pressures is whether or not the force field, which is typically parameterized using VLE data, is reliable at those conditions.  
 %MRS2: is the next clause repetitive?
-%RAM2: No, I reworded it to make this more clear
+%RAM2: No. I reworded it to make this more clear
 %i.e. if the VLE optimal parameters are transferable to higher temperatures and pressures. 
 %the VLE-optimal force field does adequately predict the homogeneous fluid region
 For example, it was demonstrated that VLE-optimized force fields for small compounds, such as noble gases, hydrogen sulfide, and hydrogen chloride, do adequately represent the homogeneous fluid region \cite{Rutkai2013}. In this study, we investigate how well the traditional force fields for predicting VLE of normal and branched alkanes extrapolate to higher temperatures (supercritical fluid) and pressures (compressed liquid). This analysis is performed for four normal and four branched alkanes by comparing the simulated compressibility factor $(Z)$ with the REFPROP correlations. Note that the simulation conditions do not go beyond the range of validity for the respective compounds, so that we can assume the REFPROP correlations are reliable.
@@ -318,7 +318,7 @@ particles will spend more time with very short  pairwise distances
 than at VLE conditions. For example, several older studies demonstrated that neither an all-atom LJ 12-6 or an all-atom LJ 9-6 is adequate to reproduce high-level \textit{ab initio} calculations of \textit{n}-alkanes ranging from methane to \textit{n}-butane \cite{Rowley1999,Rowley2001,Hayes2004}. 
 %MRS2: can you be more precise?  Which ab initio energies?  The entire pairwise curve? cluster energies?
 %RAM2: These are single-point energies computed at several different configurations and center-of-mass distances
-The studies of Rowley et al. suggest a Morse potential is necessary for accurate representation of \textit{ab initio} energies. Hayes et al. confirms these results while also emphasizing that the short-range repulsive forces, which are most important when computing high pressures in molecular simulation, are poorly represented with an AA LJ 12-6 or an AA LJ 9-6 model. Specifically, the LJ 12-6 potential is too steep, and only slight improvement in the repulsive region is observed for the LJ 9-6 potential. %MRS2: suggest removing parenthetical, as well as as a brief aside; If you talk about Morse, then talking about Buckingham as well. 
+The studies of Rowley et al. suggest a Morse potential is necessary for accurate representation of \textit{ab initio} dimer energies. Hayes et al. confirms these results while also emphasizing that the short-range repulsive forces, which are most important when computing high pressures in molecular simulation, are poorly represented with an AA LJ 12-6 or an AA LJ 9-6 model. Specifically, the LJ 12-6 potential is too steep, and only slight improvement in the repulsive region is observed for the LJ 9-6 potential. %MRS2: suggest removing parenthetical, as well as as a brief aside; If you talk about Morse, then talking about Buckingham as well. 
 %RAM2: Done
 It is interesting that Hayes et al. also highlights deficiencies in the repulsive region for the Buckingham exponential-6 potential. 
 %MRS2: Suggest actually writing out the general Mie equation earlier in the intro,  just for concreteness in the introduction, then can refer back to it when defining specific potentials.  Couldn't hurt to put morse and buckingham, but not vital, since you don't really explore it.  
@@ -694,6 +694,8 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1\%
 	\label{fig:IC_normal_alkanes}
 \end{figure}
 
+\newpage
+
 \begin{figure}[htb!]
 %MRS2: suggest making 2 and 3 one page-sized figure? Could make symbol lines a one notch thicker.  If 2 pages, I would repeat the legend.
 %RAM2: My intention was for these to be page-sized figures. 
@@ -704,6 +706,8 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1\%
 	\caption{Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isopentane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref{fig:IC_normal_alkanes}.}
 	\label{fig:IC_branched_alkanes}
 \end{figure}
+
+\newpage
 
 % I am going to change isopentane to isohexane so that it uses Potoff 'long', to have a better representation of compounds.
 
@@ -954,7 +958,7 @@ where $\alpha$ is the acceptance probability, $\epsilon_i$ and $\sigma_i$ are th
 Because MCMC moves are accepted based on Equation \ref{eq:Acceptance} and the denominator in Equation \ref{Bayes Specific} (i.e. $Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)$) does not depend on $\epsilon$ and $\sigma$, the acceptance probability is independent of $Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)$. 
 %MRS2: is uniform actually non-informative?  It has scale information (if there are ranges), which I think you may be implicitly including, unles the probability distributions are proven not to diverge when integrated over all sigma,epsilon.  This may confuse people since you say both non-informative and uniform.
 %RAM2: I will get some feedback from the Bayesian people
-Also, we use a ``non-informative prior'' such that the acceptance probability is independent of $Pr(\epsilon,\sigma|\lambda)$ (although we do include a lower bound that the parameters are positive, i.e. $Pr(\epsilon,\sigma|\lambda)$ is uniform for all values of $\epsilon$, $\sigma$, and $\lambda$ greater than 0). Furthermore, $\pi$ is chosen to be symmetric such that the $\pi$ terms in the numerator and denominator of Equation \ref{eq:Acceptance} cancel. Therefore, the probability of accepting $\epsilon_{i+1}$ and $\sigma_{i+1}$ is based completely on the likelihood:
+Also, we use a ``weakly informative prior'' such that the acceptance probability is independent of $Pr(\epsilon,\sigma|\lambda)$ (although we do include a lower bound that the parameters are positive, i.e. $Pr(\epsilon,\sigma|\lambda)$ is uniform for all values of $\epsilon$, $\sigma$, and $\lambda$ greater than 0). Furthermore, $\pi$ is chosen to be symmetric such that the $\pi$ terms in the numerator and denominator of Equation \ref{eq:Acceptance} cancel. Therefore, the probability of accepting $\epsilon_{i+1}$ and $\sigma_{i+1}$ is based completely on the likelihood:
 \begin{equation} \label{eq:Acceptance Assumptions}
 \alpha = \min\left(1,\frac{L(\epsilon_{i+1},\sigma_{i+1}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)}{L(\epsilon_i,\sigma_i|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)}\right)
 \end{equation} 
