@@ -132,9 +132,9 @@ This section is provided to improve the reproducibility of the results presented
 
 \subsection{State Points} \label{State Points}
 
-Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H10 state points}, \ref{tab:C8H18 state points}, \ref{tab:IC4H10 state points}, \ref{tab:IC6H14 state points}, \ref{tab:IC8H18 state points}, and \ref{tab:NEOC5H12 state points} contain the state points that were simulated for ethane, propane, \textit{n}-butane, \textit{n}-octane, isobutane, isohexane, isooctane, and neopentane, respectively. The first 10 state points of each table correspond to five isochores while the last 9 points are for the supercritical isotherm. The number of state points, the specified reduced temperatures, and the spacing between neighboring densities were recommended by the developers of the ITIC approach (J. Richard Elliott and Seyed Mostafa Razavi). It has been demonstrated that these points are sufficient for accurate calculation of $\rho_{\rm l}^{\rm sat}$, $\rho_{\rm v}^{\rm sat}$, and $P_{\rm v}^{\rm sat}$ \cite{Mostafa_Diss}. Note that the temperatures $(T_{\rm sim})$, box lengths $(L_{\rm box})$, and number of molecules $(N_{\rm M})$ are the exact values used in simulation while the density $(\rho)$ is approximate (rounded) since it is calculated from $L_{\rm box}$, $N_{\rm M}$, and the molecular weight. 
+Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H10 state points}, \ref{tab:C8H18 state points}, \ref{tab:IC4H10 state points}, \ref{tab:IC6H14 state points}, \ref{tab:IC8H18 state points}, and \ref{tab:NEOC5H12 state points} contain the state points that were simulated for ethane, propane, \textit{n}-butane, \textit{n}-octane, isobutane, isohexane, isooctane, and neopentane, respectively. The first 10 state points of each table correspond to five isochores while the last 9 points are for the supercritical isotherm. The number of state points, the specified reduced temperatures, and the spacing between neighboring densities were recommended by the developers of the ITIC approach (J. Richard Elliott and Seyed Mostafa Razavi). It has been demonstrated that these points are sufficient for accurate calculation of $\rho_{\rm l}^{\rm sat}$, $\rho_{\rm v}^{\rm sat}$, and $P_{\rm v}^{\rm sat}$ \cite{Mostafa_Diss,Postdoc_1}. Note that the temperatures $(T_{\rm sim})$, box lengths $(L_{\rm box})$, and number of molecules $(N_{\rm M})$ are the exact values used in simulation while the density $(\rho)$ is approximate (rounded) since it is calculated from $L_{\rm box}$, $N_{\rm M}$, and the molecular weight. 
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for ethane.} \label{tab:Ethane state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -164,7 +164,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for propane.} \label{tab:C3H8 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -194,7 +194,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for \textit{n}-butane.} \label{tab:C4H10 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -224,7 +224,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for \textit{n}-octane.} \label{tab:C8H18 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -254,7 +254,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for isobutane.} \label{tab:IC4H10 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -284,7 +284,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for isohexane.} \label{tab:IC6H14 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -314,7 +314,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for isooctane.} \label{tab:IC8H18 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -344,7 +344,7 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 	\end{center}
 \end{table}
 
-\begin{table}[htb!]
+\begin{table}[p!]
 	\caption{State points simulated for neopentane.} \label{tab:NEOC5H12 state points}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
@@ -377,6 +377,57 @@ Tables \ref{tab:Ethane state points}, \ref{tab:C3H8 state points}, \ref{tab:C4H1
 \subsection{GROMACS Input Files} \label{GROMACS Input Files}
 
 We have provided example input files for simulating isooctane at 653.0 K with the TraPPE-UA force field in GROMACS (see attached .gro, .top, and .mdp files).
+
+\newpage
+
+\section{Potoff Generalized} \label{Potoff Generalized}
+
+Figure \ref{fig:IC_branched_alkanes_supporting_information} provides the simulation results for the Potoff generalized force field for branched alkanes. Compare to Figure \ref{fig:IC_branched_alkanes} in the main text.
+
+\begin{figure}[H]
+	%MRS2: suggest making 2 and 3 one page-sized figure? Could make symbol lines a one notch thicker.  If 2 pages, I would repeat the legend.
+	%RAM2: My intention was for these to be page-sized figures. 
+	%RAM2: Made symbol edges thicker. 
+	%RAM2: Repeated the legend
+	\centering
+	\includegraphics[width=6.2in]{IC_branched_alkanes_supporting_information}
+	\caption{Compressibility factors $(Z)$ along isochores for branched alkanes deviate strongly at higher pressures using the Potoff generalized force field. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref{fig:IC_normal_alkanes}.}
+	\label{fig:IC_branched_alkanes_supporting_information}
+\end{figure}
+
+\newpage
+
+\section{MCMC Example} \label{MCMC Example}
+
+In this section we present typical results from an MCMC run. All of the MCMC runs performed in this study used 10000 MCMC steps for the burn-in period and an additional 10000 MCMC steps for the production period. The proposal distribution variances $(s^2_{\epsilon}$ and $s^2_{\sigma})$ were tuned every 100 MCMC steps during the burn-in period. Specifically, if the acceptance ratio was less than 20\%, the variances were decreased by a factor $0.9^2$. If the acceptance ratio was greater than 50\%, the variances were increased by a factor of $1.1^2$. 
+
+Figures \ref{fig:MCMC_supporting_information}-\ref{fig:MCMC_supporting_information_2} provide an example of the MCMC results for ethane with $\lambda_{\rm CH_3} = 16$. Figure \ref{fig:MCMC_supporting_information} Panels a)-c) demonstrate that a burn-in period of 10000 steps is sufficient for an ergodic-like sampling of $\sigma$, $\epsilon$ and $\log(Pr)$, respectively. Panels d)-e) show that the respective distributions for $\sigma$ and $\epsilon$ appear to be normal. Note that the histograms of Panels d)-f) only include production period samples. The acceptance rate for proposed moves in $\epsilon$ and $\sigma$ was 28.8\%. 
+
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=5.4in]{MCMC_supporting_information}
+	\caption{Panels a)-c) plot the respective traces of $\sigma$, $\epsilon$ and $\log(Pr)$, where $Pr$ is the posterior. Panels d)-f) plot histograms of the production period samples for $\sigma$, $\epsilon$ and $\log(Pr)$, respectively. Note that $\log(Pr)$ is normalized by the maximum $\log(Pr)$.}
+	\label{fig:MCMC_supporting_information}
+\end{figure} 
+
+\newpage
+
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=6.4in]{MCMC_supporting_information_2}
+	\caption{Panels a)-b) plot the dependence of $\log(Pr)$ (normalized by the maximum $\log(Pr)$, where $Pr$ is the posterior) with respect to $\sigma$ and $\epsilon$.}
+	\label{fig:MCMC_supporting_information_2}
+\end{figure} 
+
+\newpage
+
+\section{Additional Properties} \label{Udep and Z_IT}
+
+\newpage
+
+\section{Error Model} \label{Error Model}
+
+\newpage
 
 \bibliography{postdoc_references}
 

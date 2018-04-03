@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{2}
+\begin{mcitethebibliography}{3}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -33,5 +33,12 @@ Razavi,~S.~M. Optimization of a Transferable Shifted Force Field for Interfaces
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Messerly and Shirts(2018)Messerly, and Shirts]{Postdoc_1}
+Messerly,~R.~A.; Shirts,~M.~R. \emph{Journal of Chemical Theory and
+  Computation} \textbf{2018}, \emph{Pending publication.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \end{mcitethebibliography}

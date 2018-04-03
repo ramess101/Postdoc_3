@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  3 APR 2018 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  3 APR 2018 16:08
 entering extended mode
 **./VLE_PVT_UA_Mie_manuscript.tex
 (VLE_PVT_UA_Mie_manuscript.tex
@@ -1564,7 +1564,7 @@ nd-ing pa-ram-e-ters. The TraPPE,
 [5] [6]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 417.
- [7] [8] <figures/simulation_conditions.pdf, id=213, 722.7pt x 722.7pt>
+ [7] [8] <figures/simulation_conditions.pdf, id=215, 722.7pt x 722.7pt>
 File: figures/simulation_conditions.pdf Graphic file (type pdf)
 
 <use figures/simulation_conditions.pdf>
@@ -1577,7 +1577,7 @@ Overfull \hbox (16.85147pt too wide) in paragraph at lines 564--580
  []
 
 [13] [14]
-<figures/IC_normal_alkanes_all_models.pdf, id=366, 1445.4pt x 1445.4pt>
+<figures/IC_normal_alkanes_all_models.pdf, id=369, 1445.4pt x 1445.4pt>
 File: figures/IC_normal_alkanes_all_models.pdf Graphic file (type pdf)
 
 <use figures/IC_normal_alkanes_all_models.pdf>
@@ -1585,7 +1585,7 @@ Package pdftex.def Info: figures/IC_normal_alkanes_all_models.pdf used on input
  line 693.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 
-<figures/IC_branched_alkanes_all_models.pdf, id=367, 1445.4pt x 1445.4pt>
+<figures/IC_branched_alkanes_all_models.pdf, id=370, 1445.4pt x 1445.4pt>
 File: figures/IC_branched_alkanes_all_models.pdf Graphic file (type pdf)
 
 <use figures/IC_branched_alkanes_all_models.pdf>
@@ -1595,85 +1595,84 @@ ut line 712.
  [15] [16 <./figures/IC_normal_alkanes_all_models.pdf>] [17 <./figures/IC_branc
 hed_alkanes_all_models.pdf>]
 [18] [19] [20] [21]
-Overfull \hbox (6.99315pt too wide) in paragraph at lines 957--958
+Overfull \hbox (6.99315pt too wide) in paragraph at lines 960--961
 \T1/ppl/m/n/12 pling from the prob-a-bil-ity dis-tri-bu-tion $\OML/cmm/m/it/12 
 Pr\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 [];
  P[]; \OT1/cmr/m/n/12 )$\T1/ppl/m/n/12 . We use the Metropolis-Hastings
  []
 
-[22] [23] <figures/Error_model_alkanes.pdf, id=692, 1445.4pt x 722.7pt>
+[22] [23] <figures/Error_model_alkanes.pdf, id=696, 1445.4pt x 722.7pt>
 File: figures/Error_model_alkanes.pdf Graphic file (type pdf)
 
 <use figures/Error_model_alkanes.pdf>
-Package pdftex.def Info: figures/Error_model_alkanes.pdf used on input line 104
-5.
+Package pdftex.def Info: figures/Error_model_alkanes.pdf used on input line 105
+4.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
  [24 <./figures/Error_model_alkanes.pdf>]
 [25] [26] [27]
-<figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf, id=813, 1445.4pt x 1445.4pt>
+<figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf, id=818, 1445.4pt x 1445.4pt>
 File: figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf Graphic file (type pdf)
 
 <use figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf>
 Package pdftex.def Info: figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf used on 
-input line 1191.
+input line 1202.
 (pdftex.def)             Requested size: 440.84743pt x 440.83533pt.
 
 
-LaTeX Warning: Float too large for page by 4.4053pt on input line 1196.
+LaTeX Warning: Float too large for page by 4.4053pt on input line 1207.
 
-[28] [29 <./figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf>]
-<figures/Evidence_Mie_CH3_CH2.pdf, id=945, 1445.4pt x 722.7pt>
+[28] [29 <./figures/MCMC_Mie_13_14_15_16_17_18_ethane.pdf>] [30]
+<figures/Evidence_Mie_CH3_CH2.pdf, id=954, 1445.4pt x 722.7pt>
 File: figures/Evidence_Mie_CH3_CH2.pdf Graphic file (type pdf)
 
 <use figures/Evidence_Mie_CH3_CH2.pdf>
 Package pdftex.def Info: figures/Evidence_Mie_CH3_CH2.pdf used on input line 12
-39.
+50.
 (pdftex.def)             Requested size: 346.89621pt x 173.4405pt.
- [30]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 1282.
  [31 <./figures/Evidence_Mie_CH3_CH2.pdf>]
-<figures/MCMC_Mie_14_16_propane_butane_octane.pdf, id=991, 1445.4pt x 722.7pt>
-File: figures/MCMC_Mie_14_16_propane_butane_octane.pdf Graphic file (type pdf)
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 1297.
 
+<figures/MCMC_Mie_14_16_propane_butane_octane.pdf, id=1000, 1445.4pt x 722.7pt>
+File: figures/MCMC_Mie_14_16_propane_butane_octane.pdf Graphic file (type pdf)
 <use figures/MCMC_Mie_14_16_propane_butane_octane.pdf>
 Package pdftex.def Info: figures/MCMC_Mie_14_16_propane_butane_octane.pdf used 
-on input line 1292.
+on input line 1307.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
- [32 <./figures/MCMC_Mie_14_16_propane_butane_octane.pdf>] [33] [34] [35] [36] 
+ [32] [33 <./figures/MCMC_Mie_14_16_propane_butane_octane.pdf>] [34] [35] [36] 
 [37]
-(VLE_PVT_UA_Mie_manuscript.bbl
+(VLE_PVT_UA_Mie_manuscript.bbl [38]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [38] [39] [40]
-[41] [42]
-Underfull \hbox (badness 1137) in paragraph at lines 419--427
+) [39] [40] [41]
+[42]
+Underfull \hbox (badness 1137) in paragraph at lines 426--434
 \T1/ppl/m/n/12 Bern-reuther, M.; Wafai, A.; Stephan, S.; Kohns, M.; Reiser, S.;
  Deublein, S.;
  []
 
 ) [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1594.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1594.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1611.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1611.
  (VLE_PVT_UA_Mie_manuscript.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1594.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1594.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1611.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1611.
 
 Package rerunfilecheck Info: File `VLE_PVT_UA_Mie_manuscript.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: 0AD94CBA248D1825EFDD6DB68E2E14FA;1209.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1594.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1611.
  ) 
 Here is how much of TeX's memory you used:
- 31887 strings out of 493333
- 633550 string characters out of 3139198
- 674222 words of memory out of 3000000
- 34775 multiletter control sequences out of 15000+200000
+ 31899 strings out of 493333
+ 633840 string characters out of 3139198
+ 675747 words of memory out of 3000000
+ 34786 multiletter control sequences out of 15000+200000
  51428 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,94p,10424b,1074s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,94p,10424b,1064s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1691,9 +1690,9 @@ e1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 s/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on VLE_PVT_UA_Mie_manuscript.pdf (43 pages, 1322614 bytes).
+Output written on VLE_PVT_UA_Mie_manuscript.pdf (43 pages, 1326443 bytes).
 PDF statistics:
- 1247 PDF objects out of 1440 (max. 8388607)
- 154 named destinations out of 1000 (max. 500000)
+ 1257 PDF objects out of 1440 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
