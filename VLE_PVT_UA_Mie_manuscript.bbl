@@ -263,10 +263,10 @@ Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Rushaidat,~K.; Schwiebert,~L.;
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Abraham \latin{et~al.}()Abraham, van~der Spoel, Lindahl, B.Hess, and
-  the GROMACS~development team]{GROMACS_2018}
+\bibitem[Abraham \latin{et~al.}(2018)Abraham, van~der Spoel, Lindahl, B.Hess,
+  and the GROMACS~development team]{GROMACS_2018}
 Abraham,~M.; van~der Spoel,~D.; Lindahl,~E.; B.Hess,; the GROMACS~development
-  team, GROMACS User Manual version 2018, www.gromacs.org (2018)\relax
+  team, GROMACS User Manual version 2018, www.gromacs.org (2018). 2018\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

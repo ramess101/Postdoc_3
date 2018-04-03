@@ -52,6 +52,7 @@
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
 \usepackage{siunitx}
 \usepackage{xr}
+\usepackage{afterpage}
 
 \makeatletter
 \newcommand*{\addFileDependency}[1]{% argument=file name and extension
@@ -686,7 +687,8 @@ The purpose of this case study is to demonstrate that the existing UA and AUA fo
 
 %It has been demonstrated that the united-atom LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. By contrast, when properly optimized, the Mie 16-6 potential can accurately predict both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range. However, there is some concern that increasing the repulsive exponent (in this case, from 12 to 16) might have some undesirable consequences, especially at high pressures, where close range interactions will become more significant.
 
-\begin{figure}[htb!]
+%\afterpage{%
+\begin{figure}[p!]
 	\centering
 	\includegraphics[width=6.4in]{IC_normal_alkanes_all_models}
 	\caption{Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho_0 < \rho_1 < \rho_2 < \rho_3 < \rho_4$.  Panels a)-d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively.
@@ -697,10 +699,11 @@ The purpose of this case study is to demonstrate that the existing UA and AUA fo
 Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values. Simulation error bars are approximately one symbol size.}
 	\label{fig:IC_normal_alkanes}
 \end{figure}
+%}
 
-\newpage
+%\newpage
 
-\begin{figure}[htb!]
+\begin{figure}[p!]
 %MRS2: suggest making 2 and 3 one page-sized figure? Could make symbol lines a one notch thicker.  If 2 pages, I would repeat the legend.
 %RAM2: My intention was for these to be page-sized figures. 
 %RAM2: Made symbol edges thicker. 
@@ -711,7 +714,7 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1\%
 	\label{fig:IC_branched_alkanes}
 \end{figure}
 
-\newpage
+%\newpage
 
 % I am going to change isopentane to isohexane so that it uses Potoff 'long', to have a better representation of compounds.
 
@@ -991,7 +994,7 @@ Pr(QoI|D,M) = \int Pr(QoI|\theta,M) Pr(\theta|D,M) d\theta \approx H\left(QoI(\t
 %RAM2: I included a citation for Kulakova
 where $H$ is a normalized histogram, $QoI(\theta_{\rm MCMC}|D,M)$ are the evaluated values of $QoI$ using the MCMC sampled parameter sets $(\theta_{\rm MCMC})$, and we adopt the more succinct notation $QoI_{\rm MCMC}$ to denote $QoI(\theta_{\rm MCMC}|D,M)$. From the histogram of $QoI_{\rm MCMC}$ values, standard statistical methods can be implemented to approximate the $QoI$ uncertainty at a desired credible level.
 
-The $QoI$ considered in this study are VLE data, which are included in $D$, and $Z$ at high temperatures and pressures. For the specific case of propagating the parameter uncertainties ($\epsilon$ and $\sigma$ for a given $\lambda$) from $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ to $Z$, Equation \ref{Posterior Prediction} becomes:
+The $QoI$ considered in this study are VLE data, which are included in $D$, as well as $Z$ at high temperatures and pressures. For the specific case of propagating the $\epsilon$--$\sigma$ parameter uncertainties (for a given $\lambda$) from $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ to $Z$, Equation \ref{Posterior Prediction} becomes:
 \begin{equation} \label{Posterior Prediction Z}
 Pr(Z|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) \approx H\left(Z(\epsilon_{\rm MCMC},\sigma_{\rm MCMC}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)\right) \equiv H(Z_{\rm MCMC})
 \end{equation}
@@ -1085,7 +1088,7 @@ We fit $\rho_{\rm l, ITIC}^{\rm sat}$ and $T^{\rm sat}_{\rm ITIC}$ to a combined
 \begin{equation} \label{Rectilinear Scale}
 \rho_{\rm l}^{\rm sat} = b_0 + b_1 (b_2 - T^{\rm sat}) + b_3 (b_2 - T^{\rm sat}) ^ {\beta}
 \end{equation}
-where $b_i$ are fitting parameters, and $\beta = 0.326$. $b_0$ and $b_2$ only provide rough estimates of the critical density $(\rho_c)$ and critical temperature $(T_c)$. More reliable estimates of the critical point require simultaneous fitting of $\rho_{\rm v, ITIC}^{\rm sat}$ to a similar expression, but this is unnecessary for our purposes since we are only including $\rho_{\rm l}^{\rm sat}$ in $D$. Note that Equations \ref{Antoine}-\ref{Rectilinear Scale} are only used to interpolate ITIC values, and not to extrapolate to higher or lower $T^{\rm sat}$. These equations appear to be reliable over the limited temperature range studied $(0.45 < T_{\rm r} < 0.85)$, whereas a wider temperature range would require more flexible models \cite{Riedel}. 
+where $b_i$ are fitting parameters, and $\beta = 0.326$. $b_0$ and $b_2$ only provide rough estimates of the critical density $(\rho_c)$ and critical temperature $(T_c)$. More reliable estimates of the critical point require simultaneous fitting of $\rho_{\rm v, ITIC}^{\rm sat}$ to a similar expression, but this is unnecessary for our purposes since we are only including $\rho_{\rm l}^{\rm sat}$ in $D$. Note that Equations \ref{Antoine}-\ref{Rectilinear Scale} are only used to interpolate ITIC values, and not to extrapolate to higher or lower $T^{\rm sat}$. These equations are reliable over the limited temperature range studied $(0.45 < T_{\rm r} < 0.85)$, whereas a wider temperature range would require more flexible models \cite{Riedel}. 
 
 In summary, MBAR, ITIC, and Equations \ref{Antoine}-\ref{Rectilinear Scale} enable prediction of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ at any $T^{\rm sat}$ for any $\epsilon$, $\sigma$, and $\lambda$ by performing direct NVT simulations with only a few reference parameter sets. In addition, since the Mie $\lambda$-6 potential is linear with respect to $r^{-6}$ and $r^{-\lambda}$ (see Equation \ref{eq:Mie}), we implement basis functions to efficiently recompute the energies and forces that are required for MBAR and ITIC (for details see Supporting Information of Reference \citenum{Postdoc_1} and Reference \citenum{naden:jctc:2016}). 
 %MRS2: also cite one of Levi's papers here.
@@ -1183,7 +1186,7 @@ Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} presents the MCMC results for
 
     
 
-\begin{figure}[H]
+\begin{figure}[p!]
 	\centering
 	\includegraphics[width=6.1in]{MCMC_Mie_13_14_15_16_17_18_ethane}
 	\caption{MCMC results confirm that the UA Mie $\lambda$-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. Panel a) plots the MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$) and the Potoff parameter set as a reference. Inset of Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$. Panels b) and d) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively, where the upper and lower lines correspond to the 95\% credible level for each $\lambda$. Insets of Panels b) and d) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included in Panels b) and d) as black dots. Panel c) plots $Z$ with respect to inverse temperature for the two highest isochore densities $(\rho_3$ and $\rho_4)$. Inset of Panel c) plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. pressure for $\rho_3$--$\rho_4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%.}
@@ -1207,7 +1210,9 @@ while $\lambda_{\rm CH_3} = 15$--$16$ are the most reliable. $\lambda_{\rm CH_3}
 
 The inset of Panel a), helps to visualize the overall performance of different values of $\lambda_{\rm CH_3}$. 
 %MRS2: be more precise about noticing the pareto front.  You mean in Panel a?) Can you draw a line indicating it? Some people might not have a sense of what they would be looking for.
-Notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. This compromise between two competing properties included in the objective function, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, is known as a Pareto front \cite{Pareto_Deriv,Pareto_LJPQ,Pareto_ST}. The optimal location for a Pareto front is the bottom left region of the plot (low MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) while the worst location is the top right region (high MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$). By comparing the Pareto fronts for different values of $\lambda_{\rm CH_3}$, $\lambda_{\rm CH_3} = 15$ or $16$ are the optimal choice, depending on whether $\rho_{\rm l}^{\rm sat}$ or $P_{\rm v}^{\rm sat}$ has a greater weight.
+Notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. This compromise between two competing properties included in the objective function, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, is known as a Pareto front \cite{Pareto_Deriv,Pareto_LJPQ,Pareto_ST}. The optimal location for a Pareto front is the bottom left region of the plot (low MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) while the worst location is the top right region (high MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$). Note that the inset of Panel a) includes an approximate ``overall'' Pareto front that combines the results for all values of $\lambda_{\rm CH_3}$. Although not depicted for visual clarity, the ``L'' shaped frontier for different colors/symbols demonstrates that each $\lambda_{\rm CH_3}$ value also has its own Pareto front. Because the overall Pareto front consists of points from the $\lambda_{\rm CH_3} = 15$--$17$ Pareto fronts, the Pareto optimal $\lambda_{\rm CH_3}$ value is either $15$, $16$, or $17$, depending on the relative weight assigned to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. By contrast, since the $\lambda_{\rm CH_3} = 13$, $14$, and $18$ Pareto fronts are completely inside the overall Pareto front, these $\lambda_{\rm CH_3}$ values are not optimal, regardless of the weighting.   
+
+% By comparing the Pareto fronts for different values of $\lambda_{\rm CH_3}$ with the overall Pareto front, $\lambda_{\rm CH_3} = 15$, $16$, or $17$ are the optimal choices, depending on the relative weight assigned to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The $\lambda_{\rm CH_3} = 13$, $14$, and $18$ Pareto fronts are completely inside the overall Pareto front, suggesting that these values are not optimal, regardless of the weighting assignment.
 
 % A Pareto front represents a compromise between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ two competing contributions to the objective function. 
 
@@ -1215,7 +1220,7 @@ Notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm 
 
 %Consistent with the insets of Panels b) and d), the 15-6 potential has the lowest MAPD\% in $P_{\rm v}^{\rm sat}$, while the 16-6, 17-6, and 18-6 have slightly lower MAPD\% in $\rho_{\rm l}^{\rm sat}$ and the 13-6 and 14-6 have significantly higher MAPD for $\rho_{\rm l}^{\rm sat}$.
 
-Finally, and most importantly, Panel c) demonstrates that all of the sampled $\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$ parameter sets for $\lambda_{\rm CH_3} \ge 14$ over-predict $Z$ at high temperatures and densities $(P^{\rm high})$. As expected, the larger the value of $\lambda_{\rm CH_3}$, the 
+Finally, and most importantly for our purposes, Panel c) demonstrates that all of the sampled $\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$ parameter sets for $\lambda_{\rm CH_3} \ge 14$ over-predict $Z$ at high temperatures and densities $(P^{\rm high})$. As expected, the larger the value of $\lambda_{\rm CH_3}$, the 
 more 
 %greater 
 the force field over-predicts $P^{\rm high}$. For example, although $\lambda_{\rm CH_3} = 15$ and $16$ are the best values based on VLE data, they over-predict $P^{\rm high}$ by around 10 and 15\%, respectively. This supports the fundamental claim of this manuscript, namely, that the UA Mie $\lambda$-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids.  
