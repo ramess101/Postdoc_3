@@ -1,0 +1,39 @@
+integrator               = md-vv     ; Velocity Verlet
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 1000000   ; 2 ns
+nstcomm                  = 100
+nstxout                  = 2000      ; Sample every 4 ps
+nstvout                  = 2000      ; Must sample for accurate KE 
+nstfout                  = 0         ; Forces are not needed
+nstlog                   = 500000
+nstenergy                = 2000
+nstxout-compressed       = 0
+; verlet cutoff-scheme is currently not compatible with vdwtype user
+cutoff-scheme            = group
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.4
+; Electrostatics are not needed for these molecules
+coulombtype              = cutoff
+rcoulomb                 = 1.4
+; A tabulated (user) potential is used for Lennard-Jones and Mie
+vdwtype                  = user
+vdw-modifier             = none
+rvdw                     = 1.4
+; Apply long range dispersion corrections for Energy and Pressure
+DispCorr                  = EnerPres
+; ref_t depends on the state point
+Tcoupl                   = nose-hoover
+tc_grps                  = system
+tau_t                    = 1.0
+ref_t                    = 600.0
+; Pressure coupling is off for NVT
+Pcoupl                   = No
+; TraPPE and Potoff use fixed bond-lengths
+constraints              = all-bonds
+constraint_algorithm     = lincs
+lincs-order              = 8 
+; Velocities are generated in equilibration stage
+gen_vel                  = no 

@@ -108,7 +108,7 @@
 	\endgroup
 }
 
-\title{Inaccurate extrapolation toward high pressures using united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties. To be submitted to the Journal of Chemical Physics.}
+\title{Bayesian inference verifies inaccurate extrapolation toward high pressures for united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties. To be submitted to the Journal of Chemical Physics.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
 %MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
 % Bayesian inference demonstrates limitations at high pressures of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes
@@ -326,6 +326,7 @@ The studies of Rowley et al. suggest a Morse potential is necessary for accurate
 It is interesting that Hayes et al. also highlights deficiencies in the repulsive region for the Buckingham exponential-6 potential. 
 %MRS2: Suggest actually writing out the general Mie equation earlier in the intro,  just for concreteness in the introduction, then can refer back to it when defining specific potentials.  Couldn't hurt to put morse and buckingham, but not vital, since you don't really explore it.  
 %RAM2: I thought about this too, but it seemed strange to have an equation in the introduction.
+
 Recently, Kulakova et al. used Bayesian inference to conclude that experimental data for argon, specifically the radial distribution functions of liquid and vapor at varying temperatures and densities, support $\lambda$ values between 6 and 10, while quantum argon dimer energies support $\lambda$ values between 12 and 14 \cite{Kulakova2017}. They suggest that these larger values of $\lambda$ should not be used for liquid phase simulations. By contrast, two other studies of noble gases, including argon, support $\lambda \ge 12$ \cite{Galliero2005,Mick_Mie}. Specifically, Mick et al. reports a 13-6 potential for argon, while Galli{\'e}ro et al. states that the 12-6 potential is superior for argon than the 10-6, 14-6, 16-6, 18-6, and 20-6 potentials. The primary explanation for this discrepancy is the choice of experimental data. The conclusions from Kulakova et al. are based on the radial distribution function, while Galli{\'e}ro et al. used viscosity and pressure, and Mick et al. utilized VLE data.
 
 Structural properties, such as the radial distribution function, and \textit{ab initio} calculations provide considerable insight into the true repulsive barrier \cite{Kulakova2017,Galliero2005}. However, the ``correct'' value of $\lambda$ does not guarantee adequate prediction of VLE and/or $PVT$ behavior. This is primarily because the Mie $\lambda$-6 potential is only an approximation to the real potential and, thus, it is not flexible enough to agree with both the repulsive and attractive regions. Instead, only the region that is most sensitive to the target experimental data will be adequately represented, which for VLE data is typically the effective-size, depth of the energy minimum, and the dispersive tail. Furthermore, the ``optimal'' $\lambda$ is not necessarily the ``true'' $\lambda$ because force fields use effective parameter sets that account for assumptions, such as pair-wise additivity (i.e. excluding three-, four-, etc. body interactions) or the lack of explicit hydrogens. For example, a UA Mie $\lambda$-6 potential is simply not capable of predicting VLE properties of ethane for $\lambda < 12$ (see Figures 1-2 of Reference \citenum{Mie}), despite theoretical evidence that the repulsive barrier should be softer than $\lambda = 12$.
@@ -342,7 +343,7 @@ Structural properties, such as the radial distribution function, and \textit{ab 
 
 %several studies suggest the need for $\lambda$ values greater than 12 to match VLE data \cite{Gordon2006,Mie,Potoff_branched,TAMie}. 
 
-The purpose of this study is to determine whether or not the UA Mie $\lambda$-6 model is adequate for predicting \textit{both} VLE and $PVT$ at high temperatures and pressures for alkanes. Although it is difficult to know if the theoretical studies for noble gases and all-atom \textit{n}-alkane models are applicable to UA models for normal and branched alkanes, the working hypothesis based on previous studies is that a UA Mie $\lambda$-6 potential performs poorly at high pressures if parameterized with VLE data. 
+The purpose of this study is to determine whether or not the UA Mie $\lambda$-6 model is adequate for predicting \textit{both} VLE and $PVT$ at high temperatures and pressures for alkanes. Although it is difficult to know if the theoretical studies for noble gases and all-atom \textit{n}-alkane models are applicable to UA models for normal and branched alkanes, the working hypothesis based on these previous studies is that a UA Mie $\lambda$-6 potential performs poorly at high pressures if parameterized with VLE data. 
 %MRS2: above: be specific as to what evidence from above you are using to reach this conclusion so the reader knows.
 %RAM2: OK, hopefully this is better
 This assessment is of practical engineering importance for deciding whether or not UA Mie $\lambda$-6 force fields should be used when developing fundamental equations of state for alkanes based on hybrid data sets.
@@ -1372,15 +1373,16 @@ This section demonstrates that the conclusions regarding the UA Mie $\lambda$-6 
 %	\label{fig:MCMC_Mie16_propane_butane_octane}
 %\end{figure}
 
-Notice in Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane} that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets, for a given value of $\lambda_{\rm CH_2}$, overlap considerably for propane, \textit{n}-butane, and \textit{n}-octane. This provides statistical evidence to support the common assumption of transferability of CH$_2$ parameters between different \textit{n}-alkanes. 
+Notice in Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane} that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets, for a given value of $\lambda_{\rm CH_2}$, overlap considerably for propane, \textit{n}-butane, and \textit{n}-octane. This provides statistical evidence to support the common assumption of transferability of CH$_2$ parameters between different \textit{n}-alkanes. To further demonstrate this point, Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane} includes the MCMC results when we use the combined likelihoods from all three compounds, referred to as ``MCMC transferable.''
 
-Panel a) shows that the Potoff CH$_2$ parameter set is within the MCMC sample region for $\lambda_{\rm CH_2} = 16$. The same result was also observed for ethane (see Panel a) of Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane}). This suggests that the Potoff CH$_3$ and CH$_2$ parameters are supported by the VLE data used in this study, although the Potoff force field was parameterized using VLE data in a higher temperature range $(0.6 < T_{\rm r}^{\rm sat} < 0.95)$. 
+Panel a) shows that the Potoff CH$_2$ parameter set is within the MCMC sample regions for $\lambda_{\rm CH_2} = 16$. The same result was also observed for ethane (see Panel a) of Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane}). This suggests that the Potoff CH$_3$ and CH$_2$ parameters are supported by the VLE data used in this study, even though the Potoff force field was parameterized using VLE data in a higher temperature range $(0.6 < T_{\rm r}^{\rm sat} < 0.95)$. 
 %MRS2: ``likely parameter sets'' or ``parameter sets supported by data''?
 %RAM2: Done
 %feasible parameter sets.
 
-Also, note that the uncertainty in the parameters is largest for propane and smallest for \textit{n}-octane. This suggests that the sensitivity of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, with respect to the CH$_2$ parameters, increases with increasing number of CH$_2$ interaction sites. Although this result is fairly intuitive, it is a valuable insight when selecting a training set of molecules for force field development.
+Also, note that the uncertainty in the parameters is largest for propane and smallest for \textit{n}-octane. This suggests that the sensitivity of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, with respect to the CH$_2$ parameters, increases with increasing number of CH$_2$ interaction sites. Although this result is fairly intuitive, it is a valuable insight when selecting a training set of molecules for force field development. For example, notice that the MCMC transferable region is almost identical to that of \textit{n}-octane, this suggests that propane and \textit{n}-butane provide relatively little additional information. 
 
+%%% Considering moving these two paragraphs higher since they are the main conclusions
 For the purposes of this study, it is important to focus on the contours in Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane}, which correspond to AD\% in $P^{\rm high}$. Notice that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets have a strong positive bias (i.e. large AD\%) in $P^{\rm high}$. Specifically, $\lambda_{\rm CH_2} = 16$ and $\lambda_{\rm CH_2} = 14$ have, respectively, AD\% of $\approx 16$-$21$ and $\approx 10$-$15$, much greater than the REFPROP uncertainty of around $1$\%. It is interesting that, for corresponding values of $\lambda$, the AD\% for these larger \textit{n}-alkanes is higher than that of ethane. This suggests that longer chain-lengths, with a UA Mie $\lambda$-6 force field, exacerbate the erroneous $PVT$ trend at high pressures.
 
 % for the UA Mie $\lambda$-6 potential   
@@ -1655,7 +1657,7 @@ Recently, molecular simulation results at extreme temperatures and pressures hav
 
 \section*{Acknowledgments}
 
-We are appreciative for the assistance provided by Eric Lemmon regarding the REFPROP correlation uncertainties.
+We are appreciative for the assistance provided by Eric Lemmon regarding the reliability and uncertainties of the REFPROP correlations at high pressures. We would also like to acknowledge the Bayesian expertise provided by Josh Fass of the Chodera lab at the Memorial Sloan Kettering Cancer Center.
 
 
 \bibliography{postdoc_references}
