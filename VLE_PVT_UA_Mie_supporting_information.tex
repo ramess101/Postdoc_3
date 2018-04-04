@@ -427,6 +427,19 @@ Figures \ref{fig:MCMC_supporting_information}-\ref{fig:MCMC_supporting_informati
 
 \section{Error Model} \label{Error Model}
 
+Figure \ref{fig:ITIC_validation_error_model} presents the percent deviation between the surrogate model $(\rm SM)$ and literature $(\rm lit)$ VLE values using the TraPPE-UA and Potoff force fields for ethane, propane, \textit{n}-butane, and \textit{n}-octane. From this figure, an approximate surrogate model uncertainty was deduced such that most of the points, with their corresponding error bars, would lie within this uncertainty region. Note that the majority of literature values are for $T_r > 0.6$, therefore, we used our best judgment when extrapolating the surrogate model uncertainties to $T_r = 0.45$. 
+
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=6.4in]{ITIC_validation_error_model}
+	\caption{Panels a)-b) demonstrate how well the surrogate model uncertainty agrees with the percent deviations between the surrogate model and literature values for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, respectively. Reduced temperature is relative to the REFPROP $T_c$. The TraPPE-UA and Potoff literature values were obtained using GEMC \cite{TraPPE,Validation} and GCMC \cite{Mie}, respectively. Error bars represent statistical uncertainties that were obtained using replicate simulations. The error bars for TraPPE-UA were obtained from References \citenum{TraPPE,Validation}, or alternatively on the TraPPE website. No attempt was made to determine if these are standard deviations or 95\% confidence intervals. The error bars for the Potoff model are a constant 0.1\% for $\rho_{\rm l}^{\rm sat}$ and 0.5-3\% for $P_{\rm v}^{\rm sat}$, increasing linearly with decreasing reduced temperature. The values 0.5-3\% were reported in Reference \citenum{Mie}. As Reference \citenum{Mie} did not report uncertainties for $\rho_{\rm l}^{\rm sat}$, the value of 0.1\% is based on some of Potoff's more recent work. \cite{Potoff_branched}}
+	\label{fig:ITIC_validation_error_model}
+\end{figure} 
+
+There are two likely reasons to explain why the percent deviations in $\rho_{\rm l}^{\rm sat}$ increase with respect to temperature. First, ITIC neglects the higher order virial terms that become more important at higher temperatures. Second, we use the REFPROP $B_2$ and $B_3$ values, rather than those of the force field. By contrast, the larger percent deviations in $P_{\rm v}^{\rm sat}$ with decreasing temperature are attributed primarily to the difference in orders of magnitude for $P_{\rm v}^{\rm sat}$, since the virial coefficients should not impact $P_{\rm v}^{\rm sat}$ at lower temperatures.  
+
+Aside from these expected trends, some other unexplained deviation trends are observed for a specific property, compound, and/or force field. However, it is not readily obvious if these deviations are caused by limitations in the surrogate model or the literature values themselves. For example, the TraPPE-UA and Potoff literature values were obtained using GEMC \cite{TraPPE,Validation} and GCMC \cite{Mie}, respectively. These Monte Carlo methods can suffer from low insertion acceptance at $T_r<0.7$, which can result in erroneous VLE values, for $P_{\rm v}^{\rm sat}$ in particular. It is not our intention to imply that our values are better than either the TraPPE-UA or Potoff literature values, but rather we wish to emphasize that it should be expected that our approach would not yield exactly the same values as other methods. It is for this precise reason that our surrogate model uncertainty is larger than the statistical uncertainties which are typically reported in the literature.  
+
 \newpage
 
 \bibliography{postdoc_references}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  4 APR 2018 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  4 APR 2018 14:51
 entering extended mode
 **./VLE_PVT_UA_Mie_manuscript.tex
 (VLE_PVT_UA_Mie_manuscript.tex
@@ -1679,13 +1679,13 @@ ed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1663.
  ) 
 Here is how much of TeX's memory you used:
- 31907 strings out of 493333
- 634182 string characters out of 3139198
- 674945 words of memory out of 3000000
- 34791 multiletter control sequences out of 15000+200000
+ 31908 strings out of 493333
+ 634215 string characters out of 3139198
+ 676045 words of memory out of 3000000
+ 34792 multiletter control sequences out of 15000+200000
  51428 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,94p,10424b,1056s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,94p,10424b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -1703,7 +1703,7 @@ e1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 s/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on VLE_PVT_UA_Mie_manuscript.pdf (44 pages, 1725287 bytes).
+Output written on VLE_PVT_UA_Mie_manuscript.pdf (44 pages, 1724649 bytes).
 PDF statistics:
  1326 PDF objects out of 1440 (max. 8388607)
  157 named destinations out of 1000 (max. 500000)
