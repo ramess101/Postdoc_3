@@ -28,7 +28,7 @@ DispCorr                  = EnerPres
 Tcoupl                   = nose-hoover
 tc_grps                  = system
 tau_t                    = 1.0
-ref_t                    = 600.0
+ref_t                    = 653.0
 ; Pressure coupling is off for NVT
 Pcoupl                   = No
 ; TraPPE and Potoff use fixed bond-lengths

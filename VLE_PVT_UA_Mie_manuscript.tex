@@ -108,7 +108,7 @@
 	\endgroup
 }
 
-\title{Bayesian inference verifies inaccurate extrapolation toward high pressures for united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties. To be submitted to the Journal of Chemical Physics.}
+\title{United-atom, Lennard-Jones n-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties. To be submitted to the Journal of Chemical Physics.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
 %MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
 % Bayesian inference demonstrates limitations at high pressures of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes
@@ -123,6 +123,11 @@
 %RAM2: This was Andrei's recommendation: Extrapolation to high pressures with united-atom, Mie $\lambda$-6 force fields parameterized using vapor-liquid equilibria properties
 %RAM2: Another attempt: Dubious extrapolation to high pressures when using united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties
 %RAM2: Bayesian uncertainty extrapolation to high pressures when using united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties.
+%RAM2: Bayesian inference verifies inaccurate extrapolation toward high pressures for united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties.
+%RAM2: United-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties cannot be consistent with high pressure properties
+%RAM2: United-atom, Mie $\lambda$-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties.
+%RAM2: United-atom, Mie n-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties.
+%RAM2: United-atom, Lennard-Jones n-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties.
 
 \author{Richard A. Messerly}
 \email{richard.messerly@nist.gov}
@@ -983,13 +988,30 @@ where $\alpha$ is the acceptance probability, $\epsilon_i$ and $\sigma_i$ are th
 
 The 
 %MRS2: suggest
-distribution of the
-parameter sets sampled from MCMC $(\epsilon_{\rm MCMC}$ and $\sigma_{\rm MCMC})$ provide an estimate of the uncertainty in $\epsilon$ and $\sigma$ (see Panel a) of Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} and Panels a)-b) of \ref{fig:MCMC_Mie_14_16_propane_butane_octane} in Section \ref{Results}). 
+joint distribution of the
+parameter sets sampled from MCMC $(\theta_{\rm MCMC}$, or specifically, $\epsilon_{\rm MCMC}$ and $\sigma_{\rm MCMC})$ provide an estimate of the uncertainty in the $\epsilon$ and $\sigma$ (see Panel a) of Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} and Panels a)-b) of \ref{fig:MCMC_Mie_14_16_propane_butane_octane} in Section \ref{Results}). 
 %MRS2: do you have a citation for this process? It's nonobvious to me. Is there a more Bayesian way of doing this? Do you need the histogram? Can't you just sample from the distribution as needed? Why does it have to be a represented as a histogram.
 %RAM2: I did not mean to imply histograms. The 2-dimensional distribution of epsilon and sigma is not a histogram. I am now more specific when referencing the panels in the figures. I included the citation to Kulakova
+%%%RAM2: Original version. Removed histograms
+%This parameter uncertainty propagates when estimating another quantity of interest $(QoI)$, which may or may not be included in $D$, according to \cite{Kulakova2017}:
+%\begin{equation} \label{Posterior Prediction}
+%Pr(QoI|D,M) = \int Pr(QoI|\theta,M) Pr(\theta|D,M) d\theta \approx H\left(QoI(\theta_{\rm MCMC}|D,M)\right) \equiv H(QoI_{\rm MCMC})
+%\end{equation}
+%%MRS2: is there simulation error in this process? For example, is there any error computing property QoI given(\theta)? If so, aren't you including the uncertainty twice? (in the likelihood, then here). 
+%%RAM2: I don't believe I am double-counting. This is a well established approach taken from the literature. 
+%%MRS2: this is key part here that I'm a little uncertain on. Will need to be a bit more explaining, but may in part be my issues.
+%%RAM2: We can talk more about this  
+%%MRS2: I'm not 100% certain about the process here.  Likely correct, but citations to the process of generating distributions of QoI would probably be useful. The QoI(\theta) are generated in the course of the likelihood generation . . . seems like this is a completely indepenent part of the problem. 
+%%RAM2: I included a citation for Kulakova
+%where $H$ is a normalized histogram, $QoI(\theta_{\rm MCMC}|D,M)$ are the evaluated values of $QoI$ using the MCMC sampled parameter sets $(\theta_{\rm MCMC})$, and we adopt the more succinct notation $QoI_{\rm MCMC}$ to denote $QoI(\theta_{\rm MCMC}|D,M)$. From the histogram of $QoI_{\rm MCMC}$ values, standard statistical methods can be implemented to approximate the $QoI$ uncertainty at a desired credible level.
+%
+%The $QoI$ considered in this study are VLE data, which are included in $D$, as well as $Z$ at high temperatures and pressures. For the specific case of propagating the $\epsilon$--$\sigma$ parameter uncertainties (for a given $\lambda$) from $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ to $Z$, Equation \ref{Posterior Prediction} becomes:
+%\begin{equation} \label{Posterior Prediction Z}
+%Pr(Z|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) \approx H\left(Z(\epsilon_{\rm MCMC},\sigma_{\rm MCMC}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)\right) \equiv H(Z_{\rm MCMC})
+%\end{equation}
 This parameter uncertainty propagates when estimating another quantity of interest $(QoI)$, which may or may not be included in $D$, according to \cite{Kulakova2017}:
 \begin{equation} \label{Posterior Prediction}
-Pr(QoI|D,M) = \int Pr(QoI|\theta,M) Pr(\theta|D,M) d\theta \approx H\left(QoI(\theta_{\rm MCMC}|D,M)\right) \equiv H(QoI_{\rm MCMC})
+Pr(QoI|D,M) = \int Pr(QoI|\theta,M) Pr(\theta|D,M) d\theta
 \end{equation}
 %MRS2: is there simulation error in this process? For example, is there any error computing property QoI given(\theta)? If so, aren't you including the uncertainty twice? (in the likelihood, then here). 
 %RAM2: I don't believe I am double-counting. This is a well established approach taken from the literature. 
@@ -997,13 +1019,20 @@ Pr(QoI|D,M) = \int Pr(QoI|\theta,M) Pr(\theta|D,M) d\theta \approx H\left(QoI(\t
 %RAM2: We can talk more about this  
 %MRS2: I'm not 100% certain about the process here.  Likely correct, but citations to the process of generating distributions of QoI would probably be useful. The QoI(\theta) are generated in the course of the likelihood generation . . . seems like this is a completely indepenent part of the problem. 
 %RAM2: I included a citation for Kulakova
-where $H$ is a normalized histogram, $QoI(\theta_{\rm MCMC}|D,M)$ are the evaluated values of $QoI$ using the MCMC sampled parameter sets $(\theta_{\rm MCMC})$, and we adopt the more succinct notation $QoI_{\rm MCMC}$ to denote $QoI(\theta_{\rm MCMC}|D,M)$. From the histogram of $QoI_{\rm MCMC}$ values, standard statistical methods can be implemented to approximate the $QoI$ uncertainty at a desired credible level.
+The integration in Equation \ref{Posterior Prediction} is approximated from the distribution of $QoI$ values evaluated for each MCMC parameter set, i.e. $QoI(\theta_{\rm MCMC}|D,M)$ or $QoI_{\rm MCMC}$ for succinctness. From $QoI_{\rm MCMC}$, standard statistical methods are used to approximate the $QoI$ uncertainty at a desired credible level.
 
-The $QoI$ considered in this study are VLE data, which are included in $D$, as well as $Z$ at high temperatures and pressures. For the specific case of propagating the $\epsilon$--$\sigma$ parameter uncertainties (for a given $\lambda$) from $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ to $Z$, Equation \ref{Posterior Prediction} becomes:
+%, where $\theta_{\rm MCMC}$   by evaluating $QoI$ for each MCMC parameter set $(\theta_{\rm MCMC})$. We adopt a more succinct notation for the distribution $QoI(\theta_{\rm MCMC}|D,M)$ $Pr(QoI|D,M)$ is estimated from the distribution of $QoI$ values, denoted as $QoI(\theta_{\rm MCMC}|D,M)$ or $QoI_{\rm MCMC}$  using the distribution of $QoI$ values evaluated with the MCMC parameter sets $(\theta_{\rm MCMC})$, denoted as  $QoI(\theta_{\rm MCMC}|D,M)$ or  
+%where $H$ is a normalized histogram, $QoI(\theta_{\rm MCMC}|D,M)$ are the evaluated values of $QoI$ using the MCMC sampled parameter sets $(\theta_{\rm MCMC})$, and we adopt the more succinct notation $QoI_{\rm MCMC}$ to denote $QoI(\theta_{\rm MCMC}|D,M)$. 
+
+The $QoI$ considered in this study are $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, which are included in $D$, as well as $Z$ at high temperatures and pressures. For the specific case of propagating the $\epsilon$--$\sigma$ parameter uncertainties (for a given $\lambda$) from VLE data to $Z$, Equation \ref{Posterior Prediction} becomes:
 \begin{equation} \label{Posterior Prediction Z}
-Pr(Z|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) \approx H\left(Z(\epsilon_{\rm MCMC},\sigma_{\rm MCMC}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)\right) \equiv H(Z_{\rm MCMC})
+Pr(Z|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) = \int Pr(Z|\epsilon,\sigma,\lambda) Pr(\epsilon, \sigma|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) \partial\epsilon \partial\sigma
 \end{equation}
- 
+Similar expressions exist for $Pr(\rho_{\rm l}^{\rm sat}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$ and $Pr(P_{\rm v}^{\rm sat}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$. 
+The histograms and uncertainties reported in Section \ref{Results} are obtained from distributions of $\rho_{\rm l, MCMC}^{\rm sat}$, $P_{\rm v, MCMC}^{\rm sat}$, and $Z_{\rm MCMC}$, 
+
+%The histograms plotted in Section \ref{Results} are 
+%Section \ref{Results} provides histograms of $QoI_{\rm MCMC}$, where $QoI$ is $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$. 
 
 %To be more succinct, we adopt the notation $QoI_{\rm MCMC}$ to denote $QoI(\theta_{\rm MCMC}|D,M)
 
@@ -1190,7 +1219,7 @@ In this section, we use MCMC and the aforementioned surrogate models to determin
 %MRS2: here's a thought.  I think most of this paragraph actually should go in the caption (it should still start with a thesis sentence!). Right now, the figure isn't self contained.  I think it would read smoother if the TEXT focused on interpretationand analysis of the figures (what does it mean?) and the caption focused on what the data was. 
 %RAM2: I agree. Most of this was originally in the caption, but I have been trying to shorten my figure captions.
 
-Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} presents the MCMC results for ethane with $\lambda_{\rm CH_3} =13$-$18$. Panel a) in Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} demonstrates that the feasible region of $\epsilon_{\rm CH_3}$ depends strongly on $\lambda_{\rm CH_3}$, namely, larger values of $\lambda_{\rm CH_3}$ require larger values of $\epsilon_{\rm CH_3}$. By contrast, we observe a much smaller shift towards larger values of $\sigma_{\rm CH_3}$ with increasing $\lambda_{\rm CH_3}$. This observation is consistent with the literature \cite{Mie}.
+%Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} presents the MCMC results for ethane with $\lambda_{\rm CH_3} =13$-$18$. Panel a) in Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} demonstrates that the feasible region of $\epsilon_{\rm CH_3}$ depends strongly on $\lambda_{\rm CH_3}$, namely, larger values of $\lambda_{\rm CH_3}$ require larger values of $\epsilon_{\rm CH_3}$. By contrast, we observe a much smaller shift towards larger values of $\sigma_{\rm CH_3}$ with increasing $\lambda_{\rm CH_3}$. This observation is consistent with the literature \cite{Mie}.
 
 %Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} presents the MCMC results for ethane with $\lambda_{\rm CH_3} =13$-$18$. Panel a) plots the MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$). The inset of Panel a) plots the mean absolute percent deviation (MAPD\%) of the MCMC predicted VLE properties ($\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$). Panels b) and d) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Specifically, the upper and lower lines correspond to the uncertainty for each $\lambda$, which are determined at the 95\% credible level. The insets of Panels b) and d) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Panel c) plots $Z$ with respect to inverse temperature for the two highest isochores $(\rho_0$ and $\rho_1$ in Panel a) of Figure \ref{fig:IC_normal_alkanes}). The inset of Panel c) plots the distribution of average deviation (AD\%) in pressure for the two highest densities along the supercritical isotherm $(P^{\rm high})$. The AD\% is chosen to demonstrate the positive bias in $P^{\rm high}$, while the MAPD\% is used when quantifying the goodness of fit in VLE data.
 %MRS2: I'm having a hard time processing the entire figure, since it really is 8 figures in one.   Is there a good way to split it into 2? Obvously b and d go together well.  Perhaps a and c should be a separate figure? Too much information in too small a space.
@@ -1243,29 +1272,70 @@ Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} presents the MCMC results for
 
 
 %%%% New discussion with Pareto front as its own figure
+%%%% Separated into three figures
+%\begin{figure}[p!]
+%	\centering
+%	\includegraphics[width=6.4in]{MCMC_Mie_13_14_15_16_17_18_ethane}
+%	\caption{MCMC results quantify the uncertainty in $\epsilon_{\rm CH_3}$--$\sigma_{\rm CH_3}$ and how these uncertainties propagate for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$. Panel a) plots the MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$) and the Potoff parameter set as a reference.  Panels b) and d) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively, where the upper and lower lines correspond to the 95\% credible level for each $\lambda$. Insets of Panels b) and d) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included in Panels b) and d) as black dots. Panel c) plots $Z$ with respect to inverse temperature for the two highest isochore densities $(\rho_3$ and $\rho_4)$. Inset of Panel c) plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. pressure for $\rho_3$--$\rho_4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%.}
+%	%MRS2: is the spread in exprimental data at each T the experimental uncertainty? I'm not entirely sure only one property is being predicted, meaning the spread is noise in a single obserbable.
+%	%RAM2: The experimental data are just included to give a sense for the goodness of fit. Is your point that I should not include them? 
+%	\label{fig:MCMC_Mie_13_14_15_16_17_18_ethane}
+%\end{figure} 
+%
+%The results depicted in Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} Panels b)-d) are useful for comparing the performance of different values of $\lambda$ for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$, respectively. Notice that the insets in Panels b) and d) plot the mean absolute percent deviation (MAPD\%) to quantify the goodness of fit to VLE data, while the inset in Panel c) plots the average deviation (AD\%) to demonstrate the positive bias in $P^{\rm high}$. Note that because MAPD\% and AD\% are percent deviations they are not directly related to the posterior distribution since our likelihood is a normal distribution, which is based on squared deviations. However, we plot MAPD\% and AD\% as these are easier to conceptualize and quantify. 
+%
+%Panel b) with the corresponding inset demonstrates that the best prediction of $\rho_{\rm l}^{\rm sat}$ is obtained for higher values of $\lambda_{\rm CH_3}$. However, while the $\rho_{\rm l}^{\rm sat}$ MAPD\% for $\lambda_{\rm CH_3} = 15$--$18$ are similar, $\lambda_{\rm CH_3} = 13$--$14$ have significantly higher $\rho_{\rm l}^{\rm sat}$ MAPD\%. 
+%
+%Panel d) demonstrates that $\lambda_{\rm CH_3} = 13$--$14$ and $\lambda_{\rm CH_3} = 17$--$18$ over- and under-predict $P_{\rm v}^{\rm sat}$ at low temperatures, respectively, 
+%%MRS2: eyeballing, 14 looks consistent to me.  What quantitive measure can you use for what it means to over or underpredict?
+%%RAM2: The MAPD histogram is intended to quantify this statement. Also, I just realized that I had an error in panels b,c, and d. Specifically, the errorbars and uncertainty regions represented the estimated 100% confidence region, i.e. all of the MCMC sampled values. I have now converted these to the 95% credible regions by integrating the histograms with equal areas. The results are much more conclusive now.
+%while $\lambda_{\rm CH_3} = 15$--$16$ are the most reliable. $\lambda_{\rm CH_3} = 15$ has the least amount of bias and the lowest MAPD\% in $P_{\rm v}^{\rm sat}$ (see inset). 
+%
+%Finally, Panel c) demonstrates that all of the sampled $\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$ parameter sets for $\lambda_{\rm CH_3} \ge 14$ over-predict $Z$ at high temperatures and densities $(P^{\rm high})$. As expected, the larger the value of $\lambda_{\rm CH_3}$, the 
+%more 
+%%greater 
+%the force field over-predicts $P^{\rm high}$.
 
-\begin{figure}[p!]
+Figures \ref{fig:MCMC_ethane_parameter_space}-\ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto} present the MCMC results for ethane with $\lambda_{\rm CH_3} =13$-$18$. Figure \ref{fig:MCMC_ethane_parameter_space} demonstrates that the feasible region of $\epsilon_{\rm CH_3}$ depends strongly on $\lambda_{\rm CH_3}$, namely, larger values of $\lambda_{\rm CH_3}$ require larger values of $\epsilon_{\rm CH_3}$. By contrast, we observe a much smaller shift towards larger values of $\sigma_{\rm CH_3}$ with increasing $\lambda_{\rm CH_3}$. This observation is consistent with the literature \cite{Mie}.
+
+\begin{figure}[htb!]
 	\centering
-	\includegraphics[width=6.4in]{MCMC_Mie_13_14_15_16_17_18_ethane}
-	\caption{MCMC results quantify the uncertainty in $\epsilon_{\rm CH_3}$--$\sigma_{\rm CH_3}$ and how these uncertainties propagate for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$. Panel a) plots the MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$) and the Potoff parameter set as a reference.  Panels b) and d) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively, where the upper and lower lines correspond to the 95\% credible level for each $\lambda$. Insets of Panels b) and d) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included in Panels b) and d) as black dots. Panel c) plots $Z$ with respect to inverse temperature for the two highest isochore densities $(\rho_3$ and $\rho_4)$. Inset of Panel c) plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. pressure for $\rho_3$--$\rho_4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%.}
+	\includegraphics[width=3.2in]{MCMC_ethane_parameter_space}
+	\caption{MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$) quantify the uncertainty in $\epsilon_{\rm CH_3}$--$\sigma_{\rm CH_3}$. The Potoff parameter set is included as a reference for $\lambda_{\rm CH_3} = 16$.} 
+	\label{fig:MCMC_ethane_parameter_space}
+\end{figure}
+
+The results depicted in Figure \ref{fig:MCMC_ethane_VLE} Panels a)-b) and Figure \ref{fig:MCMC_ethane_Phigh} are useful for comparing the performance of different values of $\lambda$ for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$, respectively. Notice that the insets in Figure \ref{fig:MCMC_ethane_VLE} plot the mean absolute percent deviation (MAPD\%) to quantify the goodness of fit to VLE data, while the inset in Figure \ref{fig:MCMC_ethane_Phigh} plots the average deviation (AD\%) to demonstrate the positive bias in $P^{\rm high}$. Note that because MAPD\% and AD\% are percent deviations they are not directly related to the squared deviations of the normal distribution used to compute the likelihood. However, we plot MAPD\% and AD\% as these are easier to conceptualize and quantify. 
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=6.4in]{MCMC_ethane_VLE}
+	\caption{Uncertainties in $\epsilon_{\rm CH_3}$--$\sigma_{\rm CH_3}$ propagate to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. Panels a)--b) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. The upper and lower lines for each $\lambda$ correspond to the 95\% credible interval obtained from $QoI_{\rm MCMC}$. Insets of Panels a)--b) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included in Panels a)--b) as black dots.}
 	%MRS2: is the spread in exprimental data at each T the experimental uncertainty? I'm not entirely sure only one property is being predicted, meaning the spread is noise in a single obserbable.
 	%RAM2: The experimental data are just included to give a sense for the goodness of fit. Is your point that I should not include them? 
-	\label{fig:MCMC_Mie_13_14_15_16_17_18_ethane}
-\end{figure} 
+	\label{fig:MCMC_ethane_VLE}
+\end{figure}
 
-The results depicted in Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane} Panels b)-d) are useful for comparing the performance of different values of $\lambda$ for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$, respectively. Notice that the insets in Panels b) and d) plot the mean absolute percent deviation (MAPD\%) to quantify the goodness of fit to VLE data, while the inset in Panel c) plots the average deviation (AD\%) to demonstrate the positive bias in $P^{\rm high}$. Note that because MAPD\% and AD\% are percent deviations they are not directly related to the posterior distribution since our likelihood is a normal distribution, which is based on squared deviations. However, we plot MAPD\% and AD\% as these are easier to conceptualize and quantify. 
-
-Panel b) with the corresponding inset demonstrates that the best prediction of $\rho_{\rm l}^{\rm sat}$ is obtained for higher values of $\lambda_{\rm CH_3}$. However, while the $\rho_{\rm l}^{\rm sat}$ MAPD\% for $\lambda_{\rm CH_3} = 15$--$18$ are similar, $\lambda_{\rm CH_3} = 13$--$14$ have significantly higher $\rho_{\rm l}^{\rm sat}$ MAPD\%. 
-
-Panel d) demonstrates that $\lambda_{\rm CH_3} = 13$--$14$ and $\lambda_{\rm CH_3} = 17$--$18$ over- and under-predict $P_{\rm v}^{\rm sat}$ at low temperatures, respectively, 
+Figure \ref{fig:MCMC_ethane_VLE} Panel a) with the corresponding inset demonstrates that the best prediction of $\rho_{\rm l}^{\rm sat}$ is obtained for higher values of $\lambda_{\rm CH_3}$. However, while the $\rho_{\rm l}^{\rm sat}$ MAPD\% for $\lambda_{\rm CH_3} = 15$--$18$ are similar, $\lambda_{\rm CH_3} = 13$--$14$ have significantly higher $\rho_{\rm l}^{\rm sat}$ MAPD\%. Figure \ref{fig:MCMC_ethane_VLE} Panel b) demonstrates that $\lambda_{\rm CH_3} = 13$--$14$ and $\lambda_{\rm CH_3} = 17$--$18$ over- and under-predict $P_{\rm v}^{\rm sat}$ at low temperatures, respectively, 
 %MRS2: eyeballing, 14 looks consistent to me.  What quantitive measure can you use for what it means to over or underpredict?
 %RAM2: The MAPD histogram is intended to quantify this statement. Also, I just realized that I had an error in panels b,c, and d. Specifically, the errorbars and uncertainty regions represented the estimated 100% confidence region, i.e. all of the MCMC sampled values. I have now converted these to the 95% credible regions by integrating the histograms with equal areas. The results are much more conclusive now.
 while $\lambda_{\rm CH_3} = 15$--$16$ are the most reliable. $\lambda_{\rm CH_3} = 15$ has the least amount of bias and the lowest MAPD\% in $P_{\rm v}^{\rm sat}$ (see inset). 
 
-Finally, Panel c) demonstrates that all of the sampled $\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$ parameter sets for $\lambda_{\rm CH_3} \ge 14$ over-predict $Z$ at high temperatures and densities $(P^{\rm high})$. As expected, the larger the value of $\lambda_{\rm CH_3}$, the 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=3.2in]{MCMC_ethane_Phigh}
+	\caption{Inadequacies of the UA Mie $\lambda$-6 potential are observed in $Z$ for the two highest isochore densities $(\rho_3$ and $\rho_4)$ by propagating the uncertainties in $\epsilon_{\rm CH_3}$--$\sigma_{\rm CH_3}$ for different values of $\lambda_{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho_3$--$\rho_4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%.}
+	\label{fig:MCMC_ethane_Phigh}
+\end{figure} 
+
+Finally, Figure \ref{fig:MCMC_ethane_Phigh} demonstrates that all of the sampled $\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$ parameter sets for $\lambda_{\rm CH_3} \ge 14$ over-predict $Z$ at high temperatures and densities $(P^{\rm high})$. As expected, the larger the value of $\lambda_{\rm CH_3}$, the 
 more 
 %greater 
 the force field over-predicts $P^{\rm high}$.
+
+While Figures \ref{fig:MCMC_ethane_VLE}-\ref{fig:MCMC_ethane_Phigh} plot the results for each property individually, Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto} helps to visualize the overall performance of different values of $\lambda_{\rm CH_3}$ for simultaneously predicting all three properties of interest. 
+%MRS2: be more precise about noticing the pareto front.  You mean in Panel a?) Can you draw a line indicating it? Some people might not have a sense of what they would be looking for.
+In Panel a), notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. This compromise between two competing properties included in the objective function, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, is known as a Pareto front \cite{Pareto_Deriv,Pareto_LJPQ,Pareto_ST}. The optimal location for a Pareto front is the bottom left region of the plot (low MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) while the worst location is the top right region (high MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$). Note that the inset of Panel a) includes an approximate ``overall'' Pareto front that combines the results for all values of $\lambda_{\rm CH_3}$. Although not depicted for visual clarity, the ``L'' shaped frontier for different colors/symbols demonstrates that each $\lambda_{\rm CH_3}$ value also has its own Pareto front. Because the overall Pareto front consists of points from the $\lambda_{\rm CH_3} = 15$--$17$ Pareto fronts, the Pareto optimal $\lambda_{\rm CH_3}$ value is either $15$, $16$, or $17$, depending on the relative weight assigned to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. By contrast, since the $\lambda_{\rm CH_3} = 13$, $14$, and $18$ Pareto fronts are completely inside the overall Pareto front, these $\lambda_{\rm CH_3}$ values are not optimal, regardless of the weighting.
 
 \begin{figure}[p!]
 	\centering
@@ -1274,9 +1344,6 @@ the force field over-predicts $P^{\rm high}$.
 	\label{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto}
 \end{figure} 
 
-Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto} helps to visualize the overall performance of different values of $\lambda_{\rm CH_3}$ for predicting all three properties of interest. 
-%MRS2: be more precise about noticing the pareto front.  You mean in Panel a?) Can you draw a line indicating it? Some people might not have a sense of what they would be looking for.
-In Panel a), notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. This compromise between two competing properties included in the objective function, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, is known as a Pareto front \cite{Pareto_Deriv,Pareto_LJPQ,Pareto_ST}. The optimal location for a Pareto front is the bottom left region of the plot (low MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) while the worst location is the top right region (high MAPD\% for both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$). Note that the inset of Panel a) includes an approximate ``overall'' Pareto front that combines the results for all values of $\lambda_{\rm CH_3}$. Although not depicted for visual clarity, the ``L'' shaped frontier for different colors/symbols demonstrates that each $\lambda_{\rm CH_3}$ value also has its own Pareto front. Because the overall Pareto front consists of points from the $\lambda_{\rm CH_3} = 15$--$17$ Pareto fronts, the Pareto optimal $\lambda_{\rm CH_3}$ value is either $15$, $16$, or $17$, depending on the relative weight assigned to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. By contrast, since the $\lambda_{\rm CH_3} = 13$, $14$, and $18$ Pareto fronts are completely inside the overall Pareto front, these $\lambda_{\rm CH_3}$ values are not optimal, regardless of the weighting.
 
 Finally, and most importantly for our purposes, Panels b)-c) of Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto} demonstrate the depreciation in $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ that is required to achieve more accurate prediction of $P^{\rm high}$. For example, although $\lambda_{\rm CH_3} = 15$ and $16$ are the best values based on VLE data, they over-predict $P^{\rm high}$ by around 10 and 15\%, respectively. By contrast, while $\lambda_{\rm CH_3} = 13$ is the most accurate for $P^{\rm high}$, the MAPD\% for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are, respectively, $4$ and $40$ factors larger than the optimal MAPD\%. This supports the fundamental claim of this work, namely, that the UA Mie $\lambda$-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. 
 
