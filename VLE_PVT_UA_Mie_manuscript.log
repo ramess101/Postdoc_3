@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  4 APR 2018 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  5 APR 2018 09:30
 entering extended mode
 **./VLE_PVT_UA_Mie_manuscript.tex
 (VLE_PVT_UA_Mie_manuscript.tex
@@ -1572,7 +1572,7 @@ Package pdftex.def Info: figures/simulation_conditions.pdf used on input line 4
 36.
 (pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
  [9 <./figures/simulation_conditions.pdf>] [10] [11] [12]
-Overfull \hbox (16.85147pt too wide) in paragraph at lines 565--581
+Overfull \hbox (2.27174pt too wide) in paragraph at lines 565--581
  [] 
  []
 
@@ -1703,7 +1703,7 @@ e1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic
 s/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on VLE_PVT_UA_Mie_manuscript.pdf (44 pages, 1817218 bytes).
+Output written on VLE_PVT_UA_Mie_manuscript.pdf (44 pages, 1817225 bytes).
 PDF statistics:
  1332 PDF objects out of 1440 (max. 8388607)
  157 named destinations out of 1000 (max. 500000)

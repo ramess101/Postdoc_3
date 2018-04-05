@@ -484,9 +484,9 @@ A fixed bond-length is used for each bond between UA or AUA sites. Although TAMi
 			\hline
 			Bond & TraPPE, Potoff & TAMie & Exp-6 & AUA4 & TraPPE-2 \\ \hline
 			CH$_3$-CH$_3$ & 0.154 & 0.194 & 0.1839 & 0.1967 & 0.230 \\ 
-			CH$_3$-CH$_2$ & 0.154 & 0.174 & 0.1687 & N/A & N/A \\ 
-			CH$_3$-CH & 0.154 & 0.174 & N/A & N/A & N/A \\
-			CH$_3$-C & 0.154 & 0.174 & N/A & 0.1751 & N/A \\
+			CH$_3$-CH$_2$ & 0.154 & 0.174 & 0.1687 & -- & -- \\ 
+			CH$_3$-CH & 0.154 & 0.174 & -- & -- & -- \\
+			CH$_3$-C & 0.154 & 0.174 & -- & 0.1751 & -- \\
 			\hline
 		\end{tabular}
 	\end{center} 
@@ -575,7 +575,7 @@ Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\l
 			CH$_3$ & 120.15  & 0.3607 & 12 & 136.318 (130.780) & 0.36034 (0.36463) & 14 \\ 
 			CH$_2$ & 86.29 & 0.3461 & 12 & 52.9133 & 0.40400 & 14 \\ 
 			CH & 50.98 & 0.3363 & 12 & 14.5392 & 0.43656 & 14\\
-			C & 15.04 & 0.244 & 12 & N/A & N/A & N/A\\
+			C & 15.04 & 0.244 & 12 & -- & -- & --\\
 			\hline
 		\end{tabular}
 	\end{center} 
@@ -629,7 +629,7 @@ Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\l
 %	\end{center} 
 %\end{table}
 
-The Errington force field utilizes an exponential-6 model:
+The Errington force field utilizes a Buckingham exponential-6 (Exp-6) model:
 \begin{equation} \label{eq:Buckingham}
 u^{\rm vdw}(\epsilon,r_{\rm min},\alpha;r) = 
 \begin{cases}
@@ -651,7 +651,7 @@ where $u^{\rm vdw}$, $\epsilon$, and $r$ are the same as in Equation \ref{eq:Mie
 	\end{center} 
 \end{table}
 
-Non-bonded interactions between two different site types (i.e. cross-interactions) are determined using Lorentz-Berthelot combining rules \cite{Allen1987} for $\epsilon$ and $\sigma$, an arithmetic mean for the repulsive exponent $(\lambda)$ (as recommended by Potoff and Bernard-Brunel \cite{Mie}), and a geometric mean for $\alpha$ (as recommended by Errington and Panagiotopoulos \cite{Exp6}):
+Non-bonded interactions between two different site types (i.e. cross-interactions) are determined using Lorentz-Berthelot combining rules \cite{Allen1987} for $\epsilon$ and $\sigma$, an arithmetic mean for the repulsive exponent $(\lambda)$ (as recommended in Reference \citenum{Mie}), and a geometric mean for $\alpha$ (as recommended in Reference \citenum{Exp6}):
 \begin{equation} \label{eq:Lorentz-Berthelot_eps}
 \epsilon_{ij} = \sqrt{\epsilon_{ii} \epsilon_{jj}}
 \end{equation}
@@ -1299,7 +1299,7 @@ To statistically verify this statement, Figure \ref{fig:Bayes_Factors} provides 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=4.8in]{Evidence_Mie_CH3_CH2}
-	\caption{Evidence (Bayes factor) in Panel a) supports $\lambda_{\rm CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda_{\rm CH_2} = 16$ over $\lambda_{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane and \textit{n}-butane. Note that all values are normalized with respect to $\lambda = 14$.}
+	\caption{Evidence (Bayes factor) in Panel a) supports $\lambda_{\rm CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda_{\rm CH_2} = 16$ over $\lambda_{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit{n}-butane, and \textit{n}-octane. Note that all values are normalized with respect to $\lambda = 14$.}
 	\label{fig:Bayes_Factors}
 \end{figure}
 
@@ -1314,7 +1314,7 @@ To statistically verify this statement, Figure \ref{fig:Bayes_Factors} provides 
 %			13 & 0.024 & - \\
 %			14 & 1. & 1. \\ 
 %			15 & 3.6 & - \\  
-%			16 & 3.5 & 16.3 \\ 
+%			16 & 3.5 & 15.8 \\ 
 %			17 & 0.84 & - \\ 
 %			18 & 0.11 & - \\  
 %			\hline
