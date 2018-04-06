@@ -37,51 +37,46 @@ Lemmon,~E.~W.; Huber,~M.~L.; McLinden,~M.~O. {NIST Standard Reference Database
 \EndOfBibitem
 \bibitem[Thol \latin{et~al.}(2016)Thol, Rutkai, K{\"o}ster, Lustig, Span, and
   Vrabec]{Thol2016_LJ}
-Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Lustig,~R.; Span,~R.; Vrabec,~J. Equation
-  of State for the Lennard-Jones Fluid. \emph{Journal of Physical and Chemical
-  Reference Data} \textbf{2016}, \emph{45}, 023101\relax
+Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Lustig,~R.; Span,~R.; Vrabec,~J.
+  \emph{Journal of Physical and Chemical Reference Data} \textbf{2016},
+  \emph{45}, 023101\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Thol \latin{et~al.}(2015)Thol, Rutkai, Span, Vrabec, and
   Lustig]{Thol_LJTS}
-Thol,~M.; Rutkai,~G.; Span,~R.; Vrabec,~J.; Lustig,~R. Equation of State for
-  the Lennard-Jones Truncated and Shifted Model Fluid. \emph{International
+Thol,~M.; Rutkai,~G.; Span,~R.; Vrabec,~J.; Lustig,~R. \emph{International
   Journal of Thermophysics} \textbf{2015}, \emph{36}, 25--43\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Rutkai \latin{et~al.}(2017)Rutkai, Thol, Span, and Vrabec]{Rutkai2017}
-Rutkai,~G.; Thol,~M.; Span,~R.; Vrabec,~J. How well does the Lennard-Jones
-  potential represent the thermodynamic properties of noble gases?
-  \emph{Molecular Physics} \textbf{2017}, \emph{115}, 1104--1121\relax
+Rutkai,~G.; Thol,~M.; Span,~R.; Vrabec,~J. \emph{Molecular Physics}
+  \textbf{2017}, \emph{115}, 1104--1121\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Lustig \latin{et~al.}(2015)Lustig, Rutkai, and Vrabec]{Lustig2015}
-Lustig,~R.; Rutkai,~G.; Vrabec,~J. Thermodynamic correlation of molecular
-  simulation data. \emph{Molecular Physics} \textbf{2015}, \emph{113},
-  910--931\relax
+Lustig,~R.; Rutkai,~G.; Vrabec,~J. \emph{Molecular Physics} \textbf{2015},
+  \emph{113}, 910--931\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Rutkai and Vrabec(2015)Rutkai, and Vrabec]{Rutkai2015}
-Rutkai,~G.; Vrabec,~J. Empirical Fundamental Equation of State for Phosgene
-  Based on Molecular Simulation Data. \emph{Journal of Chemical \& Engineering
-  Data} \textbf{2015}, \emph{60}, 2895--2905\relax
+Rutkai,~G.; Vrabec,~J. \emph{Journal of Chemical \& Engineering Data}
+  \textbf{2015}, \emph{60}, 2895--2905\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Rutkai \latin{et~al.}(2013)Rutkai, Thol, Lustig, Span, and
   Vrabec]{Rutkai2013}
-Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. Communication:
-  Fundamental equation of state correlation with hybrid data sets. \emph{The
-  Journal of Chemical Physics} \textbf{2013}, \emph{139}, 041102\relax
+Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. \emph{The Journal of
+  Chemical Physics} \textbf{2013}, \emph{139}, 041102\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -89,10 +84,9 @@ Rutkai,~G.; Thol,~M.; Lustig,~R.; Span,~R.; Vrabec,~J. Communication:
 \bibitem[Thol \latin{et~al.}(2016)Thol, Dubberke, Rutkai, Windmann, K{\"o}ster,
   Span, and Vrabec]{Thol2016_siloxane_first}
 Thol,~M.; Dubberke,~F.; Rutkai,~G.; Windmann,~T.; K{\"o}ster,~A.; Span,~R.;
-  Vrabec,~J. Fundamental equation of state correlation for hexamethyldisiloxane
-  based on experimental and molecular simulation data. \emph{Fluid Phase
-  Equilibria} \textbf{2016}, \emph{418}, 133 -- 151, Special Issue covering the
-  Nineteenth Symposium on Thermophysical Properties\relax
+  Vrabec,~J. \emph{Fluid Phase Equilibria} \textbf{2016}, \emph{418}, 133 --
+  151, Special Issue covering the Nineteenth Symposium on Thermophysical
+  Properties\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -100,9 +94,8 @@ Thol,~M.; Dubberke,~F.; Rutkai,~G.; Windmann,~T.; K{\"o}ster,~A.; Span,~R.;
 \bibitem[Thol \latin{et~al.}(2016)Thol, Rutkai, K{\"o}ster, Dubberke, Windmann,
   Span, and Vrabec]{Thol2016_siloxane}
 Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Dubberke,~F.~H.; Windmann,~T.; Span,~R.;
-  Vrabec,~J. Thermodynamic Properties of Octamethylcyclotetrasiloxane.
-  \emph{Journal of Chemical \& Engineering Data} \textbf{2016}, \emph{61},
-  2580--2595\relax
+  Vrabec,~J. \emph{Journal of Chemical \& Engineering Data} \textbf{2016},
+  \emph{61}, 2580--2595\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -110,8 +103,7 @@ Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Dubberke,~F.~H.; Windmann,~T.; Span,~R.;
 \bibitem[Thol \latin{et~al.}(2017)Thol, Rutkai, K{\"o}ster, Miroshnichenko,
   Wagner, Vrabec, and Span]{Thol2017}
 Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Miroshnichenko,~S.; Wagner,~W.;
-  Vrabec,~J.; Span,~R. Equation of state for 1,2-dichloroethane based on a
-  hybrid data set. \emph{Molecular Physics} \textbf{2017}, \emph{115},
+  Vrabec,~J.; Span,~R. \emph{Molecular Physics} \textbf{2017}, \emph{115},
   1166--1185\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -120,7 +112,6 @@ Thol,~M.; Rutkai,~G.; K{\"o}ster,~A.; Miroshnichenko,~S.; Wagner,~W.;
 \bibitem[Thol \latin{et~al.}(2015)Thol, Rutkai, Köster, Kortmann, Span, and
   Vrabec]{Thol2015}
 Thol,~M.; Rutkai,~G.; Köster,~A.; Kortmann,~M.; Span,~R.; Vrabec,~J.
-  Fundamental equation of state for ethylene oxide based on a hybrid dataset.
   \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 87 -- 99, 2013
   Danckwerts Special Issue on Molecular Modelling in Chemical Engineering\relax
 \mciteBstWouldAddEndPuncttrue
@@ -128,35 +119,30 @@ Thol,~M.; Rutkai,~G.; Köster,~A.; Kortmann,~M.; Span,~R.; Vrabec,~J.
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Martin and Siepmann(1998)Martin, and Siepmann]{TraPPE}
-Martin,~M.~G.; Siepmann,~J.~I. Transferable potentials for phase equilibria. 1.
-  {United-atom} description of n-alkanes. \emph{The Journal of Physical
-  Chemistry B} \textbf{1998}, \emph{102}, 2569--2577\relax
+Martin,~M.~G.; Siepmann,~J.~I. \emph{The Journal of Physical Chemistry B}
+  \textbf{1998}, \emph{102}, 2569--2577\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Martin and Siepmann(1999)Martin, and Siepmann]{Martin1999}
-Martin,~M.~G.; Siepmann,~J.~I. Novel Configurational-Bias Monte Carlo Method
-  for Branched Molecules. Transferable Potentials for Phase Equilibria. 2.
-  United-Atom Description of Branched Alkanes. \emph{The Journal of Physical
-  Chemistry B} \textbf{1999}, \emph{103}, 4508--4517\relax
+Martin,~M.~G.; Siepmann,~J.~I. \emph{The Journal of Physical Chemistry B}
+  \textbf{1999}, \emph{103}, 4508--4517\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Shah \latin{et~al.}(2017)Shah, Siepmann, and Tsapatsis]{TraPPEUA2}
-Shah,~M.~S.; Siepmann,~J.~I.; Tsapatsis,~M. Transferable potentials for phase
-  equilibria. Improved united-atom description of ethane and ethylene.
-  \emph{AIChE Journal} \textbf{2017}, \emph{63}, 5098--5110\relax
+Shah,~M.~S.; Siepmann,~J.~I.; Tsapatsis,~M. \emph{AIChE Journal} \textbf{2017},
+  \emph{63}, 5098--5110\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Errington and Panagiotopoulos(1999)Errington, and
   Panagiotopoulos]{Exp6}
-Errington,~J.~R.; Panagiotopoulos,~A.~Z. A new intermolecular potential model
-  for the n-alkane homologous series. \emph{The Journal of Physical Chemistry
-  B} \textbf{1999}, \emph{103}, 6314--6322\relax
+Errington,~J.~R.; Panagiotopoulos,~A.~Z. \emph{The Journal of Physical
+  Chemistry B} \textbf{1999}, \emph{103}, 6314--6322\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -164,28 +150,23 @@ Errington,~J.~R.; Panagiotopoulos,~A.~Z. A new intermolecular potential model
 \bibitem[Ungerer \latin{et~al.}(2000)Ungerer, Beauvais, Delhommelle, Boutin,
   Rousseau, and Fuchs]{AUA4}
 Ungerer,~P.; Beauvais,~C.; Delhommelle,~J.; Boutin,~A.; Rousseau,~B.;
-  Fuchs,~A.~H. Optimization of the anisotropic united atoms intermolecular
-  potential for n-alkanes. \emph{The Journal of Chemical Physics}
-  \textbf{2000}, \emph{112}, 5499--5510\relax
+  Fuchs,~A.~H. \emph{The Journal of Chemical Physics} \textbf{2000},
+  \emph{112}, 5499--5510\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Bourasseau \latin{et~al.}(2002)Bourasseau, Ungerer, Boutin, and
   Fuchs]{Bourasseau2002}
-Bourasseau,~E.; Ungerer,~P.; Boutin,~A.; Fuchs,~A.~H. Monte Carlo simulation of
-  branched alkanes and long chain n-alkanes with anisotropic united atoms
-  intermolecular potential. \emph{Molecular Simulation} \textbf{2002},
-  \emph{28}, 317--336\relax
+Bourasseau,~E.; Ungerer,~P.; Boutin,~A.; Fuchs,~A.~H. \emph{Molecular
+  Simulation} \textbf{2002}, \emph{28}, 317--336\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Potoff and Bernard-Brunel(2009)Potoff, and Bernard-Brunel]{Mie}
-Potoff,~J.~J.; Bernard-Brunel,~D.~A. Mie Potentials for Phase Equilibria
-  Calculations: {Applications} to Alkanes and Perfluoroalkanes. \emph{The
-  Journal of Physical Chemistry B} \textbf{2009}, \emph{113},
-  14725--14731\relax
+Potoff,~J.~J.; Bernard-Brunel,~D.~A. \emph{The Journal of Physical Chemistry B}
+  \textbf{2009}, \emph{113}, 14725--14731\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -193,54 +174,44 @@ Potoff,~J.~J.; Bernard-Brunel,~D.~A. Mie Potentials for Phase Equilibria
 \bibitem[Mick \latin{et~al.}(2017)Mick, Soroush~Barhaghi, Jackman, Schwiebert,
   and Potoff]{Potoff_branched}
 Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Schwiebert,~L.; Potoff,~J.~J.
-  Optimized Mie Potentials for Phase Equilibria: Application to Branched
-  Alkanes. \emph{Journal of Chemical \& Engineering Data} \textbf{2017},
-  \emph{62}, 1806--1818\relax
+  \emph{Journal of Chemical \& Engineering Data} \textbf{2017}, \emph{62},
+  1806--1818\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Hemmen and Gross(2015)Hemmen, and Gross]{TAMie}
-Hemmen,~A.; Gross,~J. Transferable Anisotropic United-Atom Force Field Based on
-  the Mie Potential for Phase Equilibrium Calculations: n-Alkanes and
-  n-Olefins. \emph{The Journal of Physical Chemistry B} \textbf{2015},
+Hemmen,~A.; Gross,~J. \emph{The Journal of Physical Chemistry B} \textbf{2015},
   \emph{119}, 11695--11707\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Weidler and Gross(2016)Weidler, and Gross]{Weidler2016}
-Weidler,~D.; Gross,~J. Transferable Anisotropic United-Atom Force Field Based
-  on the Mie Potential for Phase Equilibria: Aldehydes, Ketones, and Small
-  Cyclic Alkanes. \emph{Industrial \& Engineering Chemistry Research}
+Weidler,~D.; Gross,~J. \emph{Industrial \& Engineering Chemistry Research}
   \textbf{2016}, \emph{55}, 12123--12132\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Herdes \latin{et~al.}(2015)Herdes, Totton, and M{\"u}ller]{Herdes2015}
-Herdes,~C.; Totton,~T.~S.; M{\"u}ller,~E.~A. Coarse grained force field for the
-  molecular simulation of natural gases and condensates. \emph{Fluid Phase
-  Equilibria} \textbf{2015}, \emph{406}, 91 -- 100\relax
+Herdes,~C.; Totton,~T.~S.; M{\"u}ller,~E.~A. \emph{Fluid Phase Equilibria}
+  \textbf{2015}, \emph{406}, 91 -- 100\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[St{\"o}bener \latin{et~al.}(2016)St{\"o}bener, Klein, Horsch, Kufer,
   and Hasse]{Pareto_LJPQ}
-St{\"o}bener,~K.; Klein,~P.; Horsch,~M.; Kufer,~K.; Hasse,~H. Parametrization
-  of two-center {Lennard-Jones} plus point-quadrupole force field models by
-  multicriteria optimization. \emph{Fluid Phase Equilibria} \textbf{2016},
-  \emph{411}, 33 -- 42\relax
+St{\"o}bener,~K.; Klein,~P.; Horsch,~M.; Kufer,~K.; Hasse,~H. \emph{Fluid Phase
+  Equilibria} \textbf{2016}, \emph{411}, 33 -- 42\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Messerly \latin{et~al.}(2017)Messerly, KnottsIV, and Wilding]{Mess4}
-Messerly,~R.~A.; KnottsIV,~T.~A.; Wilding,~W.~V. Uncertainty quantification and
-  propagation of errors of the Lennard-Jones 12-6 parameters for n-alkanes.
-  \emph{The Journal of Chemical Physics} \textbf{2017}, \emph{146},
-  194110\relax
+Messerly,~R.~A.; KnottsIV,~T.~A.; Wilding,~W.~V. \emph{The Journal of Chemical
+  Physics} \textbf{2017}, \emph{146}, 194110\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -254,46 +225,37 @@ Allen,~M.~P.; Tildesley,~D.~J. \emph{Computer simulation of liquids}; Clarendon
 {}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Gordon(2006)]{Gordon2006}
-Gordon,~P.~A. Development of intermolecular potentials for predicting transport
-  properties of hydrocarbons. \emph{The Journal of Chemical Physics}
-  \textbf{2006}, \emph{125}, 014504\relax
+Gordon,~P.~A. \emph{The Journal of Chemical Physics} \textbf{2006}, \emph{125},
+  014504\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Galli{\'e}ro \latin{et~al.}(2006)Galli{\'e}ro, Boned, Baylaucq, and
   Montel]{Galliero2005}
-Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. Molecular dynamics
-  comparative study of Lennard-Jones $\ensuremath{\alpha}$-6 and exponential
-  $\ensuremath{\alpha}$-6 potentials: Application to real simple fluids
-  (viscosity and pressure). \emph{Phys. Rev. E} \textbf{2006}, \emph{73},
-  061201\relax
+Galli{\'e}ro,~G.; Boned,~C.; Baylaucq,~A.; Montel,~F. m.~c. \emph{Phys. Rev. E}
+  \textbf{2006}, \emph{73}, 061201\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Rowley and Pakkanen(1999)Rowley, and Pakkanen]{Rowley1999}
-Rowley,~R.~L.; Pakkanen,~T. Determination of a methane intermolecular potential
-  model for use in molecular simulations from ab initio calculations. \emph{The
-  Journal of Chemical Physics} \textbf{1999}, \emph{110}, 3368--3377\relax
+Rowley,~R.~L.; Pakkanen,~T. \emph{The Journal of Chemical Physics}
+  \textbf{1999}, \emph{110}, 3368--3377\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Rowley \latin{et~al.}(2001)Rowley, Yang, and Pakkanen]{Rowley2001}
-Rowley,~R.~L.; Yang,~Y.; Pakkanen,~T.~A. Determination of an ethane
-  intermolecular potential model for use in molecular simulations from ab
-  initio calculations. \emph{The Journal of Chemical Physics} \textbf{2001},
-  \emph{114}, 6058--6067\relax
+Rowley,~R.~L.; Yang,~Y.; Pakkanen,~T.~A. \emph{The Journal of Chemical Physics}
+  \textbf{2001}, \emph{114}, 6058--6067\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Hayes \latin{et~al.}(2004)Hayes, Greer, and Morton–Blake]{Hayes2004}
-Hayes,~J.~M.; Greer,~J.~C.; Morton–Blake,~D.~A. A force‐field description
-  of short‐range repulsions for high density alkane molecular dynamics
-  simulations. \emph{Journal of Computational Chemistry} \textbf{2004},
-  \emph{25}, 1953--1966\relax
+Hayes,~J.~M.; Greer,~J.~C.; Morton–Blake,~D.~A. \emph{Journal of
+  Computational Chemistry} \textbf{2004}, \emph{25}, 1953--1966\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -301,9 +263,8 @@ Hayes,~J.~M.; Greer,~J.~C.; Morton–Blake,~D.~A. A force‐field description
 \bibitem[Kulakova \latin{et~al.}(2017)Kulakova, Arampatzis, Angelikopoulos,
   Hadjidoukas, Papadimitriou, and Koumoutsakos]{Kulakova2017}
 Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
-  Papadimitriou,~C.; Koumoutsakos,~P. Data driven inference for the repulsive
-  exponent of the Lennard-Jones potential in molecular dynamics simulations.
-  \emph{Scientific Reports} \textbf{2017}, \emph{7}, 16576\relax
+  Papadimitriou,~C.; Koumoutsakos,~P. \emph{Scientific Reports} \textbf{2017},
+  \emph{7}, 16576\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -311,9 +272,8 @@ Kulakova,~L.; Arampatzis,~G.; Angelikopoulos,~P.; Hadjidoukas,~P.;
 \bibitem[Mick \latin{et~al.}(2015)Mick, Soroush~Barhaghi, Jackman, Rushaidat,
   Schwiebert, and Potoff]{Mick_Mie}
 Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Rushaidat,~K.; Schwiebert,~L.;
-  Potoff,~J.~J. Optimized {Mie} potentials for phase equilibria: {Application}
-  to noble gases and their mixtures with n-alkanes. \emph{The Journal of
-  Chemical Physics} \textbf{2015}, \emph{143}, 114504\relax
+  Potoff,~J.~J. \emph{The Journal of Chemical Physics} \textbf{2015},
+  \emph{143}, 114504\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -335,10 +295,8 @@ Razavi,~S.~M. Optimization of a Transferable Shifted Force Field for Interfaces
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Messerly and Shirts(2018)Messerly, and Shirts]{Postdoc_1}
-Messerly,~R.~A.; Shirts,~M.~R. Configuration-Sampling-Based Surrogate Models
-  for Rapid Parameterization of Non-bonded Interactions. \emph{Journal of
-  Chemical Theory and Computation} \textbf{2018}, \emph{Pending
-  publication.}\relax
+Messerly,~R.~A.; Shirts,~M.~R. \emph{Journal of Chemical Theory and
+  Computation} \textbf{2018}, \emph{Pending publication.}\relax
 \mciteBstWouldAddEndPunctfalse
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {}{\mcitedefaultseppunct}\relax
@@ -346,9 +304,7 @@ Messerly,~R.~A.; Shirts,~M.~R. Configuration-Sampling-Based Surrogate Models
 \bibitem[Nieto-Draghi \latin{et~al.}(2008)Nieto-Draghi, Bocahut, Creton, Have,
   Ghoufi, Wender, , Boutin, Rousseau, and Normand]{Nieto2008}
 Nieto-Draghi,~C.; Bocahut,~A.; Creton,~B.; Have,~P.; Ghoufi,~A.; Wender,~A.; ;
-  Boutin,~A.; Rousseau,~B.; Normand,~L. Optimisation of the dynamical behaviour
-  of the anisotropic united atom model of branched alkanes: application to the
-  molecular simulation of fuel gasoline. \emph{Molecular Simulation}
+  Boutin,~A.; Rousseau,~B.; Normand,~L. \emph{Molecular Simulation}
   \textbf{2008}, \emph{34}, 211--230\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -357,38 +313,32 @@ Nieto-Draghi,~C.; Bocahut,~A.; Creton,~B.; Have,~P.; Ghoufi,~A.; Wender,~A.; ;
 \bibitem[Rizzi \latin{et~al.}(2012)Rizzi, Najm, Debusschere, Sargsyan, Salloum,
   Adalsteinsson, and Knio]{Bay_Deriv}
 Rizzi,~F.; Najm,~H.~N.; Debusschere,~B.~J.; Sargsyan,~K.; Salloum,~M.;
-  Adalsteinsson,~H.; Knio,~O.~M. Uncertainty Quantification in {MD}
-  Simulations. {Part II: Bayesian} Inference of Force-Field Parameters.
-  \emph{Multiscale Modeling \& Simulation} \textbf{2012}, \emph{10},
-  1460--1492\relax
+  Adalsteinsson,~H.; Knio,~O.~M. \emph{Multiscale Modeling \& Simulation}
+  \textbf{2012}, \emph{10}, 1460--1492\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Angelikopoulos \latin{et~al.}(2012)Angelikopoulos, Papadimitriou, and
   Koumoutsakos]{Bay_MD}
-Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. Bayesian uncertainty
-  quantification and propagation in molecular dynamics simulations: A high
-  performance computing framework. \emph{The Journal of Chemical Physics}
-  \textbf{2012}, \emph{137}, 144103\relax
+Angelikopoulos,~P.; Papadimitriou,~C.; Koumoutsakos,~P. \emph{The Journal of
+  Chemical Physics} \textbf{2012}, \emph{137}, 144103\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Cailliez and Pernot(2011)Cailliez, and Pernot]{Bay_UQ}
-Cailliez,~F.; Pernot,~P. Statistical approaches to forcefield calibration and
-  prediction uncertainty in molecular simulation. \emph{The Journal of Chemical
-  Physics} \textbf{2011}, \emph{134}, 054124\relax
+Cailliez,~F.; Pernot,~P. \emph{The Journal of Chemical Physics} \textbf{2011},
+  \emph{134}, 054124\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Wu \latin{et~al.}(2016)Wu, Angelikopoulos, Papadimitriou, Moser, and
   Koumoutsakos]{Wu2016}
-Wu,~S.; Angelikopoulos,~P.; Papadimitriou,~C.; Moser,~R.; Koumoutsakos,~P. A
-  hierarchical Bayesian framework for force field selection in molecular
-  dynamics simulations. \emph{Philosophical Transactions of the Royal Society
-  of London A: Mathematical, Physical and Engineering Sciences} \textbf{2016},
+Wu,~S.; Angelikopoulos,~P.; Papadimitriou,~C.; Moser,~R.; Koumoutsakos,~P.
+  \emph{Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences} \textbf{2016},
   \emph{374}\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -396,45 +346,38 @@ Wu,~S.; Angelikopoulos,~P.; Papadimitriou,~C.; Moser,~R.; Koumoutsakos,~P. A
 \EndOfBibitem
 \bibitem[Frenkel \latin{et~al.}(2005)Frenkel, Chirico, Diky, Yan, Dong, and
   Muzny]{TDE}
-Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C. ThermoData
-  Engine (TDE):  Software Implementation of the Dynamic Data Evaluation
-  Concept. \emph{Journal of Chemical Information and Modeling} \textbf{2005},
-  \emph{45}, 816--838\relax
+Frenkel,~M.; Chirico,~R.~D.; Diky,~V.; Yan,~X.; Dong,~Q.; Muzny,~C.
+  \emph{Journal of Chemical Information and Modeling} \textbf{2005}, \emph{45},
+  816--838\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Shirts and Chodera(2008)Shirts, and
   Chodera]{shirts-chodera:jcp:2008:mbar}
-Shirts,~M.~R.; Chodera,~J.~D. Statistically optimal analysis of samples from
-  multiple equilibrium states. \emph{The Journal of Chemical Physics}
+Shirts,~M.~R.; Chodera,~J.~D. \emph{The Journal of Chemical Physics}
   \textbf{2008}, \emph{129}, 124105\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Vetere(1991)]{Riedel}
-Vetere,~A. The {Riedel} Equation. \emph{Industrial \& Engineering Chemistry
-  Research} \textbf{1991}, \emph{30}, 2487--2492\relax
+Vetere,~A. \emph{Industrial \& Engineering Chemistry Research} \textbf{1991},
+  \emph{30}, 2487--2492\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Funke \latin{et~al.}(2002)Funke, Kleinrahm, and Wagner]{Funke}
-Funke,~M.; Kleinrahm,~R.; Wagner,~W. Measurement and correlation of the ({P},
-  $\rho$, {T}) relation of ethane {II}. {Saturated-liquid} and saturated-vapour
-  densities and vapour pressures along the entire coexistence curve. \emph{The
-  Journal of Chemical Thermodynamics} \textbf{2002}, \emph{34}, 2017 --
-  2039\relax
+Funke,~M.; Kleinrahm,~R.; Wagner,~W. \emph{The Journal of Chemical
+  Thermodynamics} \textbf{2002}, \emph{34}, 2017 -- 2039\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Naden and Shirts(2016)Naden, and Shirts]{naden:jctc:2016}
-Naden,~L.~N.; Shirts,~M.~R. Rapid Computation of Thermodynamic Properties Over
-  Multidimensional Nonbonded Parameter Spaces using Adaptive Multistate
-  Reweighting. \emph{Journal of Chemical Theory and Computation} \textbf{2016},
-  \emph{12}, 1806--1823\relax
+Naden,~L.~N.; Shirts,~M.~R. \emph{Journal of Chemical Theory and Computation}
+  \textbf{2016}, \emph{12}, 1806--1823\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -444,10 +387,9 @@ Naden,~L.~N.; Shirts,~M.~R. Rapid Computation of Thermodynamic Properties Over
   Glass, Lenhard, Vrabec, and Hasse]{RoundRobin}
 Schappals,~M.; Mecklenfeld,~A.; Kr{\"o}ger,~L.; Botan,~V.; K{\"o}ster,~A.;
   Stephan,~S.; Garc{\'i}a,~E.~J.; Rutkai,~G.; Raabe,~G.; Klein,~P.;
-  Leonhard,~K.; Glass,~C.~W.; Lenhard,~J.; Vrabec,~J.; Hasse,~H. Round Robin
-  Study: Molecular Simulation of Thermodynamic Properties from Models with
-  Internal Degrees of Freedom. \emph{Journal of Chemical Theory and
-  Computation} \textbf{2017}, \emph{13}, 4270--4280\relax
+  Leonhard,~K.; Glass,~C.~W.; Lenhard,~J.; Vrabec,~J.; Hasse,~H. \emph{Journal
+  of Chemical Theory and Computation} \textbf{2017}, \emph{13},
+  4270--4280\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -455,7 +397,6 @@ Schappals,~M.; Mecklenfeld,~A.; Kr{\"o}ger,~L.; Botan,~V.; K{\"o}ster,~A.;
 \bibitem[St{\"o}bener \latin{et~al.}(2014)St{\"o}bener, Klein, Reiser, Horsch,
   Kufer, and Hasse]{Pareto_Deriv}
 St{\"o}bener,~K.; Klein,~P.; Reiser,~S.; Horsch,~M.; Kufer,~K.-H.; Hasse,~H.
-  Multicriteria optimization of molecular force fields by {Pareto} approach.
   \emph{Fluid Phase Equilibria} \textbf{2014}, \emph{373}, 100 -- 108\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -464,9 +405,8 @@ St{\"o}bener,~K.; Klein,~P.; Reiser,~S.; Horsch,~M.; Kufer,~K.-H.; Hasse,~H.
 \bibitem[Werth \latin{et~al.}(2015)Werth, St{\"o}bener, Klein, Kufer, Horsch,
   and Hasse]{Pareto_ST}
 Werth,~S.; St{\"o}bener,~K.; Klein,~P.; Kufer,~K.-H.; Horsch,~M.; Hasse,~H.
-  Molecular modelling and simulation of the surface tension of real quadrupolar
-  fluids. \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 110 --
-  117, 2013 Danckwerts Special Issue on Molecular Modelling in Chemical
+  \emph{Chemical Engineering Science} \textbf{2015}, \emph{121}, 110 -- 117,
+  2013 Danckwerts Special Issue on Molecular Modelling in Chemical
   Engineering\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -480,17 +420,15 @@ Jeffreys,~H. \emph{The theory of probability. Third edition}; Clarendon Press:
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Hajigeorgiou(2016)]{Hajigeorgiou2016}
-Hajigeorgiou,~P.~G. The extended Lennard-Jones potential energy function: A
-  simpler model for direct-potential-fit analysis. \emph{Journal of Molecular
-  Spectroscopy} \textbf{2016}, \emph{330}, 4 -- 13, Potentiology and
-  Spectroscopy in Honor of Robert Le Roy\relax
+Hajigeorgiou,~P.~G. \emph{Journal of Molecular Spectroscopy} \textbf{2016},
+  \emph{330}, 4 -- 13, Potentiology and Spectroscopy in Honor of Robert Le
+  Roy\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Kalos and Grosser(1972)Kalos, and Grosser]{Kalos1972}
-Kalos,~F.; Grosser,~A.~E. Intermolecular Potentials from Differential Cross
-  Sections: Ar + Ar. \emph{Canadian Journal of Chemistry} \textbf{1972},
+Kalos,~F.; Grosser,~A.~E. \emph{Canadian Journal of Chemistry} \textbf{1972},
   \emph{50}, 892--896\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
@@ -501,8 +439,7 @@ Kalos,~F.; Grosser,~A.~E. Intermolecular Potentials from Differential Cross
   Deublein, Horsch, Hasse, and Vrabec]{ms2}
 Rutkai,~G.; K{\:o}ster,~A.; Guevara-Carrion,~G.; Janzen,~T.; Schappals,~M.;
   Glass,~C.~W.; Bernreuther,~M.; Wafai,~A.; Stephan,~S.; Kohns,~M.; Reiser,~S.;
-  Deublein,~S.; Horsch,~M.; Hasse,~H.; Vrabec,~J. ms2: A molecular simulation
-  tool for thermodynamic properties, release 3.0. \emph{Computer Physics
+  Deublein,~S.; Horsch,~M.; Hasse,~H.; Vrabec,~J. \emph{Computer Physics
   Communications} \textbf{2017}, \emph{221}, 343 -- 351\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}

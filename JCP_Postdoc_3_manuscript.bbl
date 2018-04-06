@@ -1,0 +1,354 @@
+\begin{thebibliography}{10}
+
+\bibitem{LEMMON-RP91}
+E.~W. Lemmon, M.~L. Huber, and M.~O. McLinden.
+\newblock {NIST Standard Reference Database 23: Reference Fluid Thermodynamic
+  and Transport Properties-REFPROP, Version 9.1, National Institute of
+  Standards and Technology}, 2013.
+
+\bibitem{Thol2016_LJ}
+Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Rolf Lustig, Roland Span,
+  and Jadran Vrabec.
+\newblock Equation of state for the lennard-jones fluid.
+\newblock {\em Journal of Physical and Chemical Reference Data}, 45(2):023101,
+  2016.
+
+\bibitem{Thol_LJTS}
+Monika Thol, Gabor Rutkai, Roland Span, Jadran Vrabec, and Rolf Lustig.
+\newblock Equation of state for the lennard-jones truncated and shifted model
+  fluid.
+\newblock {\em International Journal of Thermophysics}, 36(1):25--43, Jan 2015.
+
+\bibitem{Rutkai2017}
+G{\'a}bor Rutkai, Monika Thol, Roland Span, and Jadran Vrabec.
+\newblock How well does the lennard-jones potential represent the thermodynamic
+  properties of noble gases?
+\newblock {\em Molecular Physics}, 115(9-12):1104--1121, 2017.
+
+\bibitem{Lustig2015}
+Rolf Lustig, G{\'a}bor Rutkai, and Jadran Vrabec.
+\newblock Thermodynamic correlation of molecular simulation data.
+\newblock {\em Molecular Physics}, 113(9-10):910--931, 2015.
+
+\bibitem{Rutkai2015}
+G{\'a}bor Rutkai and Jadran Vrabec.
+\newblock Empirical fundamental equation of state for phosgene based on
+  molecular simulation data.
+\newblock {\em Journal of Chemical \& Engineering Data}, 60(10):2895--2905,
+  2015.
+
+\bibitem{Rutkai2013}
+G.~Rutkai, M.~Thol, R.~Lustig, R.~Span, and J.~Vrabec.
+\newblock Communication: Fundamental equation of state correlation with hybrid
+  data sets.
+\newblock {\em The Journal of Chemical Physics}, 139(4):041102, 2013.
+
+\bibitem{Thol2016_siloxane_first}
+M.~Thol, F.H. Dubberke, G.~Rutkai, T.~Windmann, A.~K{\"o}ster, R.~Span, and
+  J.~Vrabec.
+\newblock Fundamental equation of state correlation for hexamethyldisiloxane
+  based on experimental and molecular simulation data.
+\newblock {\em Fluid Phase Equilibria}, 418:133 -- 151, 2016.
+\newblock Special Issue covering the Nineteenth Symposium on Thermophysical
+  Properties.
+
+\bibitem{Thol2016_siloxane}
+Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Frithjof~H. Dubberke,
+  Thorsten Windmann, Roland Span, and Jadran Vrabec.
+\newblock Thermodynamic properties of octamethylcyclotetrasiloxane.
+\newblock {\em Journal of Chemical \& Engineering Data}, 61(7):2580--2595,
+  2016.
+
+\bibitem{Thol2017}
+Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Svetlana Miroshnichenko,
+  Wolfgang Wagner, Jadran Vrabec, and Roland Span.
+\newblock Equation of state for 1,2-dichloroethane based on a hybrid data set.
+\newblock {\em Molecular Physics}, 115(9-12):1166--1185, 2017.
+
+\bibitem{Thol2015}
+Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Mirco Kortmann, Roland Span,
+  and Jadran Vrabec.
+\newblock Fundamental equation of state for ethylene oxide based on a hybrid
+  dataset.
+\newblock {\em Chemical Engineering Science}, 121:87 -- 99, 2015.
+\newblock 2013 Danckwerts Special Issue on Molecular Modelling in Chemical
+  Engineering.
+
+\bibitem{TraPPE}
+M.~G. Martin and J.~I. Siepmann.
+\newblock Transferable potentials for phase equilibria. 1. {United-atom}
+  description of n-alkanes.
+\newblock {\em The Journal of Physical Chemistry B}, 102(14):2569--2577, 1998.
+
+\bibitem{Martin1999}
+Marcus~G. Martin and J.~Ilja Siepmann.
+\newblock Novel configurational-bias monte carlo method for branched molecules.
+  transferable potentials for phase equilibria. 2. united-atom description of
+  branched alkanes.
+\newblock {\em The Journal of Physical Chemistry B}, 103(21):4508--4517, 1999.
+
+\bibitem{TraPPEUA2}
+Mansi~S. Shah, J.~Ilja Siepmann, and Michael Tsapatsis.
+\newblock Transferable potentials for phase equilibria. improved united-atom
+  description of ethane and ethylene.
+\newblock {\em AIChE Journal}, 63(11):5098--5110, 2017.
+
+\bibitem{Exp6}
+J.~R. Errington and A.~Z. Panagiotopoulos.
+\newblock A new intermolecular potential model for the n-alkane homologous
+  series.
+\newblock {\em The Journal of Physical Chemistry B}, 103(30):6314--6322, 1999.
+
+\bibitem{AUA4}
+Philippe Ungerer, Christele Beauvais, Jerome Delhommelle, Anne Boutin, Bernard
+  Rousseau, and Alain~H. Fuchs.
+\newblock Optimization of the anisotropic united atoms intermolecular potential
+  for n-alkanes.
+\newblock {\em The Journal of Chemical Physics}, 112(12):5499--5510, 2000.
+
+\bibitem{Bourasseau2002}
+Emeric Bourasseau, Philippe Ungerer, Anne Boutin, and Alain~H. Fuchs.
+\newblock Monte carlo simulation of branched alkanes and long chain n-alkanes
+  with anisotropic united atoms intermolecular potential.
+\newblock {\em Molecular Simulation}, 28(4):317--336, 2002.
+
+\bibitem{Mie}
+J.~J. Potoff and D.~A. Bernard-Brunel.
+\newblock Mie potentials for phase equilibria calculations: {Applications} to
+  alkanes and perfluoroalkanes.
+\newblock {\em The Journal of Physical Chemistry B}, 113(44):14725--14731,
+  2009.
+
+\bibitem{Potoff_branched}
+Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Loren Schwiebert, and
+  Jeffrey~J. Potoff.
+\newblock Optimized mie potentials for phase equilibria: Application to
+  branched alkanes.
+\newblock {\em Journal of Chemical \& Engineering Data}, 62(6):1806--1818,
+  2017.
+
+\bibitem{TAMie}
+Andrea Hemmen and Joachim Gross.
+\newblock Transferable anisotropic united-atom force field based on the mie
+  potential for phase equilibrium calculations: n-alkanes and n-olefins.
+\newblock {\em The Journal of Physical Chemistry B}, 119(35):11695--11707,
+  2015.
+
+\bibitem{Weidler2016}
+Dominik Weidler and Joachim Gross.
+\newblock Transferable anisotropic united-atom force field based on the mie
+  potential for phase equilibria: Aldehydes, ketones, and small cyclic alkanes.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  55(46):12123--12132, 2016.
+
+\bibitem{Herdes2015}
+Carmelo Herdes, Tim~S. Totton, and Erich~A. M{\"u}ller.
+\newblock Coarse grained force field for the molecular simulation of natural
+  gases and condensates.
+\newblock {\em Fluid Phase Equilibria}, 406:91 -- 100, 2015.
+
+\bibitem{Pareto_LJPQ}
+K.~St{\"o}bener, P.~Klein, M.~Horsch, K.~Kufer, and H.~Hasse.
+\newblock Parametrization of two-center {Lennard-Jones} plus point-quadrupole
+  force field models by multicriteria optimization.
+\newblock {\em Fluid Phase Equilibria}, 411:33 -- 42, 2016.
+
+\bibitem{Mess4}
+Richard~A. Messerly, Thomas~A. KnottsIV, and W.~Vincent Wilding.
+\newblock Uncertainty quantification and propagation of errors of the
+  lennard-jones 12-6 parameters for n-alkanes.
+\newblock {\em The Journal of Chemical Physics}, 146(19):194110, 2017.
+
+\bibitem{Allen1987}
+M.~P. Allen and D.~J. Tildesley.
+\newblock {\em Computer simulation of liquids}.
+\newblock Clarendon Press ; Oxford University Press, Oxford England New York,
+  1987.
+
+\bibitem{Gordon2006}
+Peter~A. Gordon.
+\newblock Development of intermolecular potentials for predicting transport
+  properties of hydrocarbons.
+\newblock {\em The Journal of Chemical Physics}, 125(1):014504, 2006.
+
+\bibitem{Galliero2005}
+Guillaume Galli{\'e}ro, Christian Boned, Antoine Baylaucq, and Fran\ifmmode
+  \mbox{\c{c}}\else~\c{c}\fi{}ois Montel.
+\newblock Molecular dynamics comparative study of lennard-jones
+  $\ensuremath{\alpha}$-6 and exponential $\ensuremath{\alpha}$-6 potentials:
+  Application to real simple fluids (viscosity and pressure).
+\newblock {\em Phys. Rev. E}, 73:061201, Jun 2006.
+
+\bibitem{Rowley1999}
+Richard~L. Rowley and Tapani Pakkanen.
+\newblock Determination of a methane intermolecular potential model for use in
+  molecular simulations from ab initio calculations.
+\newblock {\em The Journal of Chemical Physics}, 110(7):3368--3377, 1999.
+
+\bibitem{Rowley2001}
+Richard~L. Rowley, Yan Yang, and Tapani~A. Pakkanen.
+\newblock Determination of an ethane intermolecular potential model for use in
+  molecular simulations from ab initio calculations.
+\newblock {\em The Journal of Chemical Physics}, 114(14):6058--6067, 2001.
+
+\bibitem{Hayes2004}
+Joseph~M. Hayes, James~C. Greer, and David~A. Morton{--}Blake.
+\newblock A force{--}field description of short{--}range repulsions for high
+  density alkane molecular dynamics simulations.
+\newblock {\em Journal of Computational Chemistry}, 25(16):1953--1966, 2004.
+
+\bibitem{Kulakova2017}
+Lina Kulakova, Georgios Arampatzis, Panagiotis Angelikopoulos, Panagiotis
+  Hadjidoukas, Costas Papadimitriou, and Petros Koumoutsakos.
+\newblock Data driven inference for the repulsive exponent of the lennard-jones
+  potential in molecular dynamics simulations.
+\newblock {\em Scientific Reports}, 7(1):16576, 2017.
+
+\bibitem{Mick_Mie}
+Jason~R. Mick, Mohammad Soroush~Barhaghi, Brock Jackman, Kamel Rushaidat, Loren
+  Schwiebert, and Jeffrey~J. Potoff.
+\newblock Optimized {Mie} potentials for phase equilibria: {Application} to
+  noble gases and their mixtures with n-alkanes.
+\newblock {\em The Journal of Chemical Physics}, 143(11):114504, 2015.
+
+\bibitem{GROMACS_2018}
+M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
+  team.
+\newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}, 2018.
+
+\bibitem{Mostafa_Diss}
+Seyed~Mostafa Razavi.
+\newblock Optimization of a transferable shifted force field for interfaces and
+  inhomogenous fluids using thermodynamic integration.
+\newblock Master's thesis, The University of Akron, 2016.
+
+\bibitem{Postdoc_1}
+Richard~A. Messerly and Michael~R. Shirts.
+\newblock Configuration-sampling-based surrogate models for rapid
+  parameterization of non-bonded interactions.
+\newblock {\em Journal of Chemical Theory and Computation}, Pending
+  publication., 2018.
+
+\bibitem{Nieto2008}
+Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
+  Ghoufi, Aur{\'e}lie Wender, , Anne Boutin, Bernard Rousseau, and Laurent
+  Normand.
+\newblock Optimisation of the dynamical behaviour of the anisotropic united
+  atom model of branched alkanes: application to the molecular simulation of
+  fuel gasoline.
+\newblock {\em Molecular Simulation}, 34(2):211--230, 2008.
+
+\bibitem{Bay_Deriv}
+F.~Rizzi, H.~N. Najm, B.~J. Debusschere, K.~Sargsyan, M.~Salloum,
+  H.~Adalsteinsson, and O.~M. Knio.
+\newblock Uncertainty quantification in {MD} simulations. {Part II: Bayesian}
+  inference of force-field parameters.
+\newblock {\em Multiscale Modeling \& Simulation}, 10(4):1460--1492, 2012.
+
+\bibitem{Bay_MD}
+Panagiotis Angelikopoulos, Costas Papadimitriou, and Petros Koumoutsakos.
+\newblock Bayesian uncertainty quantification and propagation in molecular
+  dynamics simulations: A high performance computing framework.
+\newblock {\em The Journal of Chemical Physics}, 137(14):144103, 2012.
+
+\bibitem{Bay_UQ}
+Fabien Cailliez and Pascal Pernot.
+\newblock Statistical approaches to forcefield calibration and prediction
+  uncertainty in molecular simulation.
+\newblock {\em The Journal of Chemical Physics}, 134(5):054124, 2011.
+
+\bibitem{Wu2016}
+S.~Wu, P.~Angelikopoulos, C.~Papadimitriou, R.~Moser, and P.~Koumoutsakos.
+\newblock A hierarchical bayesian framework for force field selection in
+  molecular dynamics simulations.
+\newblock {\em Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences}, 374(2060), 2016.
+
+\bibitem{TDE}
+Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
+  Chris Muzny.
+\newblock Thermodata engine {(TDE):} software implementation of the dynamic
+  data evaluation concept.
+\newblock {\em Journal of Chemical Information and Modeling}, 45(4):816--838,
+  2005.
+
+\bibitem{shirts-chodera:jcp:2008:mbar}
+Michael~R. Shirts and John~D. Chodera.
+\newblock Statistically optimal analysis of samples from multiple equilibrium
+  states.
+\newblock {\em The Journal of Chemical Physics}, 129:124105, 2008.
+
+\bibitem{Riedel}
+A.~Vetere.
+\newblock The {Riedel} equation.
+\newblock {\em Industrial \& Engineering Chemistry Research},
+  30(11):2487--2492, 1991.
+
+\bibitem{Funke}
+M.~Funke, R.~Kleinrahm, and W.~Wagner.
+\newblock Measurement and correlation of the ({P}, $\rho$, {T}) relation of
+  ethane {II}. {Saturated-liquid} and saturated-vapour densities and vapour
+  pressures along the entire coexistence curve.
+\newblock {\em The Journal of Chemical Thermodynamics}, 34(12):2017 -- 2039,
+  2002.
+
+\bibitem{naden:jctc:2016}
+Levi~N. Naden and Michael~R Shirts.
+\newblock Rapid computation of thermodynamic properties over multidimensional
+  nonbonded parameter spaces using adaptive multistate reweighting.
+\newblock {\em Journal of Chemical Theory and Computation}, 12(4):1806--1823,
+  2016.
+
+\bibitem{RoundRobin}
+Michael Schappals, Andreas Mecklenfeld, Leif Kr{\"o}ger, Vitalie Botan, Andreas
+  K{\"o}ster, Simon Stephan, Edder~J. Garc{\'i}a, Gabor Rutkai, Gabriele Raabe,
+  Peter Klein, Kai Leonhard, Colin~W. Glass, Johannes Lenhard, Jadran Vrabec,
+  and Hans Hasse.
+\newblock Round robin study: Molecular simulation of thermodynamic properties
+  from models with internal degrees of freedom.
+\newblock {\em Journal of Chemical Theory and Computation}, 13(9):4270--4280,
+  2017.
+
+\bibitem{Pareto_Deriv}
+K.~St{\"o}bener, P.~Klein, S.~Reiser, M.~Horsch, K.-H. Kufer, and H.~Hasse.
+\newblock Multicriteria optimization of molecular force fields by {Pareto}
+  approach.
+\newblock {\em Fluid Phase Equilibria}, 373:100 -- 108, 2014.
+
+\bibitem{Pareto_ST}
+Stephan Werth, Katrin St{\"o}bener, Peter Klein, Karl-Heinz Kufer, Martin
+  Horsch, and Hans Hasse.
+\newblock Molecular modelling and simulation of the surface tension of real
+  quadrupolar fluids.
+\newblock {\em Chemical Engineering Science}, 121:110 -- 117, 2015.
+\newblock 2013 Danckwerts Special Issue on Molecular Modelling in Chemical
+  Engineering.
+
+\bibitem{Jeffreys2004}
+Harold Jeffreys.
+\newblock {\em The theory of probability. Third edition}.
+\newblock Clarendon Press: Oxford, 2004.
+
+\bibitem{Hajigeorgiou2016}
+Photos~G. Hajigeorgiou.
+\newblock The extended lennard-jones potential energy function: A simpler model
+  for direct-potential-fit analysis.
+\newblock {\em Journal of Molecular Spectroscopy}, 330:4 -- 13, 2016.
+\newblock Potentiology and Spectroscopy in Honor of Robert Le Roy.
+
+\bibitem{Kalos1972}
+Ferenc Kalos and Arthur~E. Grosser.
+\newblock Intermolecular potentials from differential cross sections{: Ar +
+  Ar}.
+\newblock {\em Canadian Journal of Chemistry}, 50(6):892--896, 1972.
+
+\bibitem{ms2}
+G{\'a}bor Rutkai, Andreas K{\:o}ster, Gabriela Guevara-Carrion, Tatjana Janzen,
+  Michael Schappals, Colin~W. Glass, Martin Bernreuther, Amer Wafai, Simon
+  Stephan, Maximilian Kohns, Steffen Reiser, Stephan Deublein, Martin Horsch,
+  Hans Hasse, and Jadran Vrabec.
+\newblock ms2: A molecular simulation tool for thermodynamic properties,
+  release 3.0.
+\newblock {\em Computer Physics Communications}, 221:343 -- 351, 2017.
+
+\end{thebibliography}

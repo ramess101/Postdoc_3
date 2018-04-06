@@ -75,7 +75,7 @@
 	\addFileDependency{#1.aux}%
 }
 
-\myexternaldocument{H:/Publications/Postdoc_3/VLE_PVT_UA_Mie_manuscript}
+\myexternaldocument{H:/Publications/Postdoc_3/JCP_Postdoc_3_manuscript}
 
 \SectionNumbersOn
 
@@ -108,7 +108,7 @@
 \newcommand{\Cov}[1] {\mathrm{cov}\left( #1 \right)}
 \newcommand{\T}{\mathrm{T}}                                % T used in matrix transpose
 
-\title{Supporting Information: Inaccurate extrapolation toward high pressures using united-atom, Mie $\lambda$-6 force fields parameterized with vapor-liquid equilibria properties.}
+\title{Supporting Information: United-atom, Mie $\lambda$-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties.}
 
 \author{Richard A. Messerly}
 \email{richard.messerly@nist.gov}
@@ -410,35 +410,13 @@ Figures \ref{fig:MCMC_supporting_information}-\ref{fig:MCMC_supporting_informati
 	\label{fig:MCMC_supporting_information}
 \end{figure} 
 
-\newpage
+%\newpage
 
-\begin{figure}[p!]
+\begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=6.4in]{MCMC_supporting_information_2}
 	\caption{Panels a)-b) plot the dependence of $\log(Pr)$ (normalized by the maximum $\log(Pr)$, where $Pr$ is the posterior) with respect to $\sigma$ and $\epsilon$.}
 	\label{fig:MCMC_supporting_information_2}
-\end{figure} 
-
-\newpage
-
-\section{Additional Properties} \label{Udep and Z_IT}
-
-Figure \ref{fig:MCMC_Mie_ZIT_alkanes} compares the MCMC results of different $\lambda$ values for $Z$ along the supercritical isotherms of the \textit{n}-alkanes studied. The purpose of this plot is to demonstrate deviations in the slope of $Z$ with respect to density for a constant temperature, i.e. $\left(\frac{\partial Z}{\partial \rho}\right)_T$, which is related to $A_{01}^{\rm dep}$ and $A_{02}^{\rm dep}$ (see Equation \ref{eq:Z_IT}). The deviations at high densities along the supercritical isotherm are already explained in the main text. For this reason, the insets focus on the low density region. Inset in Panel a) shows that the 13-6 potential under-predicts $Z$ at low density while it agrees well at high density. Recall that for ethane the 13-6 potential is very accurate at predicting $Z$ and even the slope of $Z$ along the isochores, i.e. $\left(\frac{-\partial Z}{\partial(1/T)}\right)_\rho$. However, the 13-6 potential does not appear to have the correct slope for $Z$ along the isotherm, i.e. $Z$ $\left(\frac{\partial Z}{\partial \rho}\right)_T$. The same trend is observed for the 14-6 potential in all four \textit{n}-alkanes, namely, the improvement for predicting $Z$ at high densities typicaly results in under-prediction of $Z$ at low densities.
-
-\begin{figure}[p!]
-	\centering
-	\includegraphics[width=6.4in]{MCMC_Mie_ZIT_alkanes}
-	\caption{$Z_{\rm MCMC}$ along the supercritical isotherms for different $\lambda$ values. Panels a)-d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively. Solid lines are the REFPROP correlation with dashed lines (included only in the insets) representing a 1\% uncertainty.}
-	\label{fig:MCMC_Mie_ZIT_alkanes}
-\end{figure} 
-
-Figure \ref{fig:MCMC_Mie_UIC_alkanes} compare the MCMC results of different $\lambda$ values for $U^{\rm dep}$ along the isochores of the \textit{n}-alkanes studied. The purpose of this plot is to demonstrate deviations in $U^{\rm dep}$ and the slope of $U^{\rm dep}$ with respect to temperature for a constant density, i.e. $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$, which are related to $A_{10}^{\rm dep}$ and $A_{20}^{\rm dep}$, respectively (see Equations \ref{eq:U}-\ref{eq:U_IC}). Definitive conclusions are difficult due to the relatively large uncertainty in the REFPROP correlations, approximated to be 5\%. However, Panel a) demonstrates that at $T^{\rm sat}$, i.e. the lowest temperature for a given isochore, $\lambda = 15$ accurately predicts $U^{\rm dep}$ while $\lambda > 15$ and $\lambda < 15$ consistently under- and over-predict $U^{\rm dep}$ at $T^{\rm sat}$. By contrast, $\lambda = 13$ agrees more closely with $U^{\rm dep}$ at $T^{\rm IT}$, i.e. the highest temperature, while $\lambda > 13$ under-predict $U^{\rm dep}$ at $T^{\rm IT}$. A similar trend is observed for propane, \textit{n}-butane, and \textit{n}-octane, namely, $\lambda = 16$ and $\lambda = 14$ are more accurate at $T^{\rm sat}$ and $T^{\rm IT}$, respectively. These results suggest that all values of $\lambda$ are inaccurate for $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$ and are only reliable for $U^{\rm dep}$ at certain conditions. Note that the isochoric heat capacity is directly related to $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$.
-
-\begin{figure}[p!]
-	\centering
-	\includegraphics[width=6.4in]{MCMC_Mie_UIC_alkanes}
-	\caption{$U^{\rm dep}_{\rm MCMC}$ along the isochores for different $\lambda$ values. Panels a)-d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively. Solid lines are the REFPROP correlation with dashed lines representing a 5\% uncertainty. Line colors of different isochores correspond with Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} in main text.}
-	\label{fig:MCMC_Mie_UIC_alkanes}
 \end{figure} 
 
 \newpage
@@ -457,6 +435,30 @@ Figure \ref{fig:ITIC_validation_error_model} presents the percent deviation betw
 There are two likely reasons to explain why the percent deviations in $\rho_{\rm l}^{\rm sat}$ increase with respect to temperature. First, ITIC neglects the higher order virial terms that become more important at higher temperatures. Second, we use the REFPROP $B_2$ and $B_3$ values, rather than those of the force field. By contrast, the larger percent deviations in $P_{\rm v}^{\rm sat}$ with decreasing temperature are attributed primarily to the difference in orders of magnitude for $P_{\rm v}^{\rm sat}$, since the virial coefficients should not impact $P_{\rm v}^{\rm sat}$ at lower temperatures.  
 
 Aside from these expected trends, some other unexplained deviation trends are observed for a specific property, compound, and/or force field. However, it is not readily obvious if these deviations are caused by limitations in the surrogate model or the literature values themselves. For example, the TraPPE-UA and Potoff literature values were obtained using GEMC \cite{TraPPE,Validation} and GCMC \cite{Mie}, respectively. These Monte Carlo methods can suffer from low insertion acceptance at $T_r<0.7$, which can result in erroneous VLE values, for $P_{\rm v}^{\rm sat}$ in particular. It is not our intention to imply that our values are better than either the TraPPE-UA or Potoff literature values, but rather we wish to emphasize that it should be expected that our approach would not yield exactly the same values as other methods. It is for this precise reason that our surrogate model uncertainty is larger than the statistical uncertainties which are typically reported in the literature.  
+
+\newpage
+
+\section{Additional Properties} \label{Udep and Z_IT}
+
+Figure \ref{fig:MCMC_Mie_ZIT_alkanes} compares the MCMC results of different $\lambda$ values for $Z$ along the supercritical isotherms of the \textit{n}-alkanes studied. The purpose of this plot is to demonstrate deviations in the slope of $Z$ with respect to density for a constant temperature, i.e. $\left(\frac{\partial Z}{\partial \rho}\right)_T$, which is related to $A_{01}^{\rm dep}$ and $A_{02}^{\rm dep}$ (see Equation \ref{eq:Z_IT}). The deviations at high densities along the supercritical isotherm are already explained in the main text. For this reason, the insets focus on the low density region. Inset in Panel a) shows that the 13-6 potential under-predicts $Z$ at low density while it agrees well at high density. Recall that for ethane the 13-6 potential is very accurate at predicting $Z$ and even the slope of $Z$ along the isochores, i.e. $\left(\frac{-\partial Z}{\partial(1/T)}\right)_\rho$. However, the 13-6 potential does not appear to have the correct slope for $Z$ along the isotherm, i.e. $Z$ $\left(\frac{\partial Z}{\partial \rho}\right)_T$. The same trend is observed for the 14-6 potential in all four \textit{n}-alkanes, namely, the improvement for predicting $Z$ at high densities typicaly results in under-prediction of $Z$ at low densities.
+
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=6.4in]{MCMC_Mie_ZIT_alkanes}
+	\caption{$Z_{\rm MCMC}$ along the supercritical isotherms for different $\lambda$ values. Panels a)-d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively. Solid lines are the REFPROP correlation with dashed lines (included only in the insets) representing a 1\% uncertainty.}
+	\label{fig:MCMC_Mie_ZIT_alkanes}
+\end{figure} 
+
+Figure \ref{fig:MCMC_Mie_UIC_alkanes} compare the MCMC results of different $\lambda$ values for $U^{\rm dep}$ along the isochores of the \textit{n}-alkanes studied. The purpose of this plot is to demonstrate deviations in $U^{\rm dep}$ and the slope of $U^{\rm dep}$ with respect to temperature for a constant density, i.e. $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$, which are related to $A_{10}^{\rm dep}$ and $A_{20}^{\rm dep}$, respectively (see Equations \ref{eq:U}-\ref{eq:U_IC}). Definitive conclusions are difficult due to the relatively large uncertainty in the REFPROP correlations, approximated to be 5\%. However, Panel a) demonstrates that at $T^{\rm sat}$, i.e. the lowest temperature for a given isochore, $\lambda = 15$ accurately predicts $U^{\rm dep}$ while $\lambda > 15$ and $\lambda < 15$ consistently under- and over-predict $U^{\rm dep}$ at $T^{\rm sat}$. By contrast, $\lambda = 13$ agrees more closely with $U^{\rm dep}$ at $T^{\rm IT}$, i.e. the highest temperature, while $\lambda > 13$ under-predict $U^{\rm dep}$ at $T^{\rm IT}$. A similar trend is observed for propane, \textit{n}-butane, and \textit{n}-octane, namely, $\lambda = 16$ and $\lambda = 14$ are more accurate at $T^{\rm sat}$ and $T^{\rm IT}$, respectively. These results suggest that all values of $\lambda$ are inaccurate for $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$ and are only reliable for $U^{\rm dep}$ at certain conditions. 
+
+%Note that the isochoric heat capacity is directly related to $\left(\frac{\partial U^{\rm dep}}{\partial T}\right)_\rho$.
+
+\begin{figure}[p!]
+	\centering
+	\includegraphics[width=6.4in]{MCMC_Mie_UIC_alkanes}
+	\caption{$U^{\rm dep}_{\rm MCMC}$ along the isochores for different $\lambda$ values. Panels a)-d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively. Solid lines are the REFPROP correlation with dashed lines representing a 5\% uncertainty. Line colors of different isochores correspond with Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} in main text.}
+	\label{fig:MCMC_Mie_UIC_alkanes}
+\end{figure} 
 
 \newpage
 

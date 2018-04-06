@@ -1,19 +1,12 @@
-%\documentclass[preprint,letterpaper,floatfix,citeautoscript,aip,jcp]{revtex4-1}
-%
-%\usepackage{fullpage}
-%\usepackage{amsfonts}
-%\usepackage{graphicx}
-%\usepackage{amsmath}
-%\usepackage{chemfig}
-%\usepackage{indentfirst}
+\documentclass[preprint,letterpaper,floatfix,citeautoscript,aip,jcp]{revtex4-1}
 
 %\documentclass[12pt]{article}
 %\documentclass[letterpaper,floatfix,citeautoscript,aip,jcp]{revtex4-1}
 %\documentclass[letterpaper,floatfix,citeautoscript,showkeys]{revtex4-1}
 %\documentclass[twocolumn,letterpaper,floatfix,citeautoscript,jcp]{revtex4-1}
 %\documentclass[twocolumn,letterpaper,floatfix,citeautoscript,aip,jcp]{revtex4-1}
-\documentclass[journal=jctc,manuscript=article]{achemso}
-\setkeys{acs}{maxauthors=30,etalmode=truncate}
+%\documentclass[journal=jctc,manuscript=article]{achemso}
+%\setkeys{acs}{maxauthors=30,etalmode=truncate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional packages needed here.  Only include packages
 %% which are essential, to avoid problems later.
@@ -70,7 +63,7 @@
 
 \myexternaldocument{H:/Publications/Postdoc_3/VLE_PVT_UA_Mie_supporting_information}
 
-\SectionNumbersOn
+%\SectionNumbersOn
 
 % The figures are in a figures/ subdirectory.
 \graphicspath{{figures/}}
@@ -101,14 +94,20 @@
 \newcommand{\Cov}[1] {\mathrm{cov}\left( #1 \right)}
 \newcommand{\T}{\mathrm{T}}                                % T used in matrix transpose
 
-\newcommand\blfootnote[1]{%
-	\begingroup
-	\renewcommand\thefootnote{}\footnote{#1}%
-	\addtocounter{footnote}{-1}%
-	\endgroup
-}
+%\newcommand\blfootnote[1]{%
+%	\begingroup
+%	\renewcommand\thefootnote{}\footnote{#1}%
+%	\addtocounter{footnote}{-1}%
+%	\endgroup
+%}
 
-\title{United-atom, Mie $\lambda$-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties. To be submitted to the Journal of Chemical Physics.}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+\begin{document}
+	
+\title{United-atom, Mie $\lambda$-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
 %MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
 % Bayesian inference demonstrates limitations at high pressures of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes
@@ -143,10 +142,6 @@
 
 \keywords{Transferability, Molecular Dynamics, Molecular Simulation, Monte Carlo, Markov Chain, Bayesian Inference}%Use showkeys class option if keyword
 
-\begin{document}
-	
-\blfootnote{Contribution of NIST, an agency of the United States government; not subject to copyright in the United States.}
-
 \begin{abstract}
 
 %MRS2: this is too much introductiony.  Can you state closer to the top what you show? Abstract should mostly focus on the conclusions (obviously, the question has to be asked). Shorten the first five sentences.
@@ -174,10 +169,14 @@ Molecular simulation results at extreme temperatures and pressures can be used t
 
 \end{abstract}
 
+
 \maketitle
 
-\section*{Purpose}
+\blfootnote{Contribution of NIST, an agency of the United States government; not subject to copyright in the United States.}
 
+
+%\section*{Purpose}
+%
 %The aim of this study is to demonstrate, using Bayesian inference, that a UA Mie force field cannot adequately predict VLE and PVT of compressed liquids and supercritical fluids for normal and branched alkanes. For adequate prediction of VLE and compressed liquid pressures, we recommend using AUA or AA models. % or perhaps Exp-6 or extended Lennard-Jones, i.e. 12-10-8-6. %We then use simple Bayes factors (if not RJMC) to determine the optimal value of lambda for predicting compressed liquid pressures. 
 %%%% RAM: Andrei and I think that we don't really need to find the best lambda value since most people would not be willing to sacrifice Pvsat just to match high pressures. Also Andrei wants to minimize the amount of effort/time required to get this paper ready.
 %%%% MRS: ``since most people would not be willing to sacrifice Pvsat'': right, then just state the reasonings for not including it, that you don't think people would care.
@@ -738,7 +737,7 @@ where the $ij$ subscript refers to cross-interactions and the subscripts $ii$ an
 %%MRS: My instinct, if ``anisotropic'' UA works for this system, it might not be worth it that much to develop a new functional form.  Unless there's strong reason it might be useful more generally.  we can discuss goals a bit; it really depends on goals. 
 %\end{enumerate}
 
-\section{Case study for alkanes} \label{Case Study}
+\section{Case study} \label{Case Study}
 
 The purpose of this case study is to demonstrate that the existing UA and AUA force fields for normal and branched alkanes that were parameterized with VLE properties do not predict the proper $PVT$ behavior at higher temperatures and pressures (with the exception of ethane for the TraPPE-2 potential). Figures \ref{fig:IC_normal_alkanes} and \ref{fig:IC_branched_alkanes} plot the compressibility factor with respect to inverse temperature for \textit{n}-alkanes and branched alkanes, respectively. Note that saturation corresponds to $Z \approx 0$ for each isochore. The ``Potoff'' results in Figure \ref{fig:IC_branched_alkanes} are only for the the ``short/long'' model, since the ``short/long'' model is more accurate than the ``generalized'' model. The results for the ``generalized'' model do not provide any additional insight but are found in Section \ref{Potoff Generalized} of Supporting Information.
 
@@ -786,12 +785,14 @@ Figure \ref{fig:IC_normal_alkanes} demonstrates that the existing literature for
 
 %Figure \ref{fig:IC_branched_alkanes} shows that these force fields are typically less reliable at VLE for branched alkanes than for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. More importantly, the same erroneous trend in $Z$ is observed as in Figure \ref{fig:IC_normal_alkanes}. 
 
-%Figure \ref{fig:IC_branched_alkanes} shows that these force fields are typically less reliable at VLE for branched alkanes than for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. More importantly, the same erroneous trend in $Z$ is observed as in Figure \ref{fig:IC_normal_alkanes}.  
+%Figure \ref{fig:IC_branched_alkanes} shows that these force fields are typically less reliable at VLE for branched alkanes than for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. More importantly, the same erroneous trend in $Z$ is observed as in Figure \ref{fig:IC_normal_alkanes}. 
+
+A surprising trend is that the Errington (AUA Exp-6) model has a positive bias at high pressures. This appears to suggest that the repulsive barrier is too steep, however, the Exp-6 model is actually softer than the LJ 12-6 at very short distances. Therefore, it is more likely that the Exp-6 repulsive forces are over-predicted only for the close-range distances that are sampled in molecular dynamics, i.e. $0.8 \sigma < r < r_{\rm min}$. Alternatively, since the exponential contribution is non-negligible for $r_{\rm min} < r < 1.5 \sigma$, it is possible that the tail does not decay to zero quickly enough and, therefore, the Exp-6 under-predicts the attractive forces in this region. More definitive conclusions regarding the repulsive barrier are possible for the Mie $\lambda$-6 potential by directly comparing different values of $\lambda$. 
  
 In general, 
 %MRS: clarified, bias singular suggests it's the same, but each is different.
 %a clear bias is
-clear systematic biases are observed for the LJ 12-6 potentials (TraPPE-UA and AUA4) and the Mie $\lambda$-6 potentials (Potoff and TAMie). Specifically, the LJ 12-6 and Mie $\lambda$-6 potentials under- and over-predict $Z$ at high pressures, respectively. These results are intuitive as the repulsive barriers are steeper for the respective Mie 16-6 and 14-6 potentials of the Potoff and TAMie force fields. A more surprising trend is that the Errington (AUA Exp-6) model also has a positive bias at high pressures. This appears to suggest that the repulsive barrier is too steep, however, the Exp-6 model is softer than the LJ 12-6 at very short distances. Therefore, it is more likely that the Exp-6 repulsive forces are over-predicted for the close-range distances that are sampled in molecular dynamics, i.e. $0.8 \sigma < r < r_{\rm min}$. Alternatively, since the exponential contribution is non-negligible for $r_{\rm min} < r < 1.5 \sigma$, it is possible that the Exp-6 under-predicts the attractive forces in this region. More definitive conclusions regarding the repulsive barrier are possible for the Mie $\lambda$-6 potential by directly comparing different values of $\lambda$.
+clear systematic biases are observed for the LJ 12-6 potentials (TraPPE-UA and AUA4) and the Mie $\lambda$-6 potentials (Potoff and TAMie). Specifically, the LJ 12-6 and Mie $\lambda$-6 potentials under- and over-predict $Z$ at high pressures, respectively. These results are intuitive as the repulsive barriers are steeper for the respective Mie 16-6 and 14-6 potentials of the Potoff and TAMie force fields. 
 % as the impact of $\lambda$ is more directly comparable.
 
 % or that the attractive forces are under-predicted for $r > r_{\rm min}$.  
@@ -820,7 +821,7 @@ comparing TraPPE-UA and Potoff is straightforward because they use the same bond
 could
 demonstrate the proper trend, if parameterized appropriately. To investigate this hypothesis, the remainder of this document focuses on the UA Mie $\lambda$-6 potential, where all bond-lengths are 0.154 nm. 
 
-Specifically, we perform a Bayesian uncertainty quantification analysis to determine if there exists a set of $\epsilon$, $\sigma$, and $\lambda$ that reasonably predicts $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $PVT$ of supercritical fluids and compressed liquids. The results in Section \ref{Results} suggest that the optimal value of $\lambda$ (13 or 14) for predicting $PVT$ of supercritical fluids and compressed liquids is not capable of predicting VLE properties accurately. To understand this point, it is important to remember that the TraPPE-UA LJ 12-6 force field was optimized using only $\rho_{\rm l}^{\rm sat}$ because the UA LJ 12-6 model cannot adequately predict both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$.
+Specifically, we perform a Bayesian uncertainty quantification analysis to determine if there exists a set of $\epsilon$, $\sigma$, and $\lambda$ that reasonably predicts $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $P^{\rm high}$. The results in Section \ref{Results} suggest that the optimal value of $\lambda$ (13 or 14) for predicting $PVT$ of supercritical fluids and compressed liquids is not capable of predicting VLE properties accurately. To understand this point, it is important to remember that the TraPPE-UA LJ 12-6 force field was optimized using only $\rho_{\rm l}^{\rm sat}$ because the UA LJ 12-6 model cannot adequately predict both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$.
 
 %However, as demonstrated in Section \ref{Results}, there does not exist a set of $\epsilon$, $\sigma$, and $\lambda$ that reasonably predicts $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $PVT$ of supercritical fluids and compressed liquids for the UA model. To understand this point, it is important to remember that the UA LJ 12-6 (TraPPE-UA) force field cannot adequately predict both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. In other words, determining the optimal value of $\lambda$ for predicting $PVT$ of supercritical fluids and compressed liquids does not guarantee accurate prediction of $P_{\rm v}^{\rm sat}$. See Section \ref{Results} for a further discussion.
 
@@ -1385,7 +1386,7 @@ Figures \ref{fig:MCMC_ethane_parameter_space}-\ref{fig:MCMC_Mie_13_14_15_16_17_1
 	\label{fig:MCMC_ethane_parameter_space}
 \end{figure}
 
-The results depicted in Figure \ref{fig:MCMC_ethane_VLE} Panels a)-b) and Figure \ref{fig:MCMC_ethane_Phigh} are useful for comparing the performance of different values of $\lambda$ for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$, respectively. Notice that the insets in Figure \ref{fig:MCMC_ethane_VLE} plot the mean absolute percent deviation (MAPD\%) to quantify the goodness of fit to VLE data, while the inset in Figure \ref{fig:MCMC_ethane_Phigh} plots the average deviation (AD\%) to demonstrate the positive bias in $P^{\rm high}$. Note that because MAPD\% and AD\% are percent deviations they are not directly related to the squared deviations of the normal distribution used to compute the likelihood. However, we plot MAPD\% and AD\% as these are easier to conceptualize and quantify. 
+The results depicted in Figures \ref{fig:MCMC_ethane_VLE}-\ref{fig:MCMC_ethane_Phigh} are useful for comparing the performance of different values of $\lambda$ for $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$. Notice that the insets in Figure \ref{fig:MCMC_ethane_VLE} plot the mean absolute percent deviation (MAPD\%) to quantify the goodness of fit to VLE data, while the inset in Figure \ref{fig:MCMC_ethane_Phigh} plots the average deviation (AD\%) to demonstrate the positive bias in $P^{\rm high}$. Note that because MAPD\% and AD\% are percent deviations they are not directly related to the squared deviations of the normal distribution used to compute the likelihood. We plot MAPD\% and AD\% as these are easier to conceptualize and quantify. 
 
 \begin{figure}[htb!]
 	\centering
@@ -1805,7 +1806,7 @@ Recently, molecular simulation results at extreme temperatures and pressures hav
 
 \section*{Acknowledgments}
 
-We are appreciative for the assistance provided by Eric Lemmon regarding the reliability and uncertainties of the REFPROP correlations at high pressures. We would also like to acknowledge the Bayesian expertise provided by Josh Fass of the Chodera lab at the Memorial Sloan Kettering Cancer Center.
+We are appreciative for the assistance provided by Eric Lemmon regarding the reliability and uncertainties of the REFPROP correlations at high pressures. We would also like to acknowledge the Bayesian expertise provided by Josh Fass of the Chodera lab at the Memorial Sloan Kettering Cancer Center. This research was performed while R.M. held a National Research Council (NRC) Postdoctoral Research Associateship at the National Institute of Standards and Technology (NIST).
 
 
 \bibliography{postdoc_references}
