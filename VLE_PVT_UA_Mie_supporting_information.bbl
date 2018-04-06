@@ -8,7 +8,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{7}
+\begin{mcitethebibliography}{8}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -34,9 +34,16 @@ Razavi,~S.~M. Optimization of a Transferable Shifted Force Field for Interfaces
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
-\bibitem[Messerly and Shirts(2018)Messerly, and Shirts]{Postdoc_1}
-Messerly,~R.~A.; Shirts,~M.~R. \emph{Journal of Chemical Theory and
-  Computation} \textbf{2018}, \emph{Pending publication.}\relax
+\bibitem[Messerly \latin{et~al.}(2018)Messerly, Razavi, and Shirts]{Postdoc_1}
+Messerly,~R.~A.; Razavi,~S.~M.; Shirts,~M.~R. \emph{Journal of Chemical Theory
+  and Computation} \textbf{2018}, \emph{Pending publication.}\relax
+\mciteBstWouldAddEndPunctfalse
+\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
+{}{\mcitedefaultseppunct}\relax
+\EndOfBibitem
+\bibitem[Razavi \latin{et~al.}(2018)Razavi, Messerly, and Elliott]{Mostafa2018}
+Razavi,~S.~M.; Messerly,~R.~A.; Elliott,~J.~R. \emph{Pending publication.}
+  \textbf{2018}, \relax
 \mciteBstWouldAddEndPunctfalse
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {}{\mcitedefaultseppunct}\relax
