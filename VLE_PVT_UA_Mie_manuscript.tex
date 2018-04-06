@@ -108,7 +108,7 @@
 	\endgroup
 }
 
-\title{United-atom, Lennard-Jones n-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties. To be submitted to the Journal of Chemical Physics.}
+\title{United-atom, Mie $\lambda$-6 force fields cannot simultaneously predict vapor-liquid equilibria and high pressure properties. To be submitted to the Journal of Chemical Physics.}
 %Alternative titles: Impact of repulsive exponent on high pressure systems
 %MRS1: suggestion: make the title the conclusion?  Such as ``Baysian inference shows that Mie-6 united atom force fields cannot predict vapor-liquid equilibria for alkanes?'' or ``Mie-6 united atom force fields cannot predict thermophysical properties of alkanes at high pressure''? I've had success with such straightforward titles; people know what they are getting, and get those answers when they google the question.
 % Bayesian inference demonstrates limitations at high pressures of transferable, united-atom, Mie $\lambda$-6 force fields for normal and branched alkanes
@@ -154,7 +154,7 @@
 
 %Supplementing experimental data with molecular simulation results at extreme temperatures and pressures can extend the range  fundamental equations of state for estimating thermodynamic properties over a wide range of temperatures, pressures, and densities
 
-Molecular simulation results at extreme temperatures and pressures can be used to supplement experimental data when developing fundamental equations of state for estimating thermodynamic properties over a wide range of state points. Since most force fields are optimized to agree with vapor-liquid equilibria properties, however, the reliability of the molecular simulation results depends on the validity/transferability of the force field at higher temperatures and pressures. As demonstrated in this study, although state-of-the-art united-atom Mie $\lambda$-6 potentials for normal and branched alkanes provide accurate estimates for vapor-liquid equilibria properties, they tend to over-predict pressures for dense supercritical fluids and compressed liquids. The theoretical explanation for this observation is that the repulsive barrier is too steep for the ``optimal'' united-atom Mie $\lambda$-6 potential parameterized with vapor-liquid properties. Bayesian inference confirms that no feasible combination of $\epsilon$, $\sigma$, and $\lambda$ is capable of simultaneously predicting saturated vapor pressures, saturated liquid densities, and pressures at high temperatures and densities.
+Molecular simulation results at extreme temperatures and pressures can be used to supplement experimental data when developing fundamental equations of state for estimating thermodynamic properties over a wide range of state points. Since most force fields are optimized to agree with vapor-liquid equilibria properties, however, the reliability of the molecular simulation results depends on the validity/transferability of the force field at higher temperatures and pressures. As demonstrated in this study, although state-of-the-art united-atom Mie $\lambda$-6 potentials for normal and branched alkanes provide accurate estimates for vapor-liquid equilibria properties, they tend to over-predict pressures for dense supercritical fluids and compressed liquids. The physical explanation for this observation is that the repulsive barrier is too steep for the ``optimal'' united-atom Mie $\lambda$-6 potential parameterized with vapor-liquid properties. Bayesian inference confirms that no feasible combination of $\epsilon$, $\sigma$, and $\lambda$ is capable of simultaneously predicting saturated vapor pressures, saturated liquid densities, and pressures at high temperatures and densities. This conclusion has both practical and theoretical ramifications, as more realistic non-bonded potentials may be required for accurate extrapolation to high pressures. 
 
 %RAM2: A lot of failed attempts. Can clean these up once we like our abstract.
 
@@ -304,14 +304,40 @@ The most accurate force fields for estimating hydrocarbon VLE properties (i.e. $
 %
 %Several literature UA and AUA force fields have been optimized to agree with VLE properties for normal and branched alkanes. Two of the most widely used UA based force fields are the TraPPE LJ 12-6 and Potoff Mie 16-6, while two of the most successful AUA force fields are the AUA4 LJ 12-6 and TAMie Mie 14-6. 
 
+%In addition to the 
+%%classification 
+%division between
+%UA and AUA force fields, the existing force fields differ in the non-bonded functional form and corresponding parameters. The TraPPE, TraPPE-2, and AUA4 force fields use a Lennard-Jones (LJ) 12-6 potential, while the Potoff and TAMie force fields use the Mie $\lambda$-6 (or generalized Lennard-Jones) potential, and the Errington force field uses the Buckingham exponential-6 (Exp-6) potential. The three-parameter Mie $\lambda$-6 and Exp-6 potentials are more flexible than the two-parameter LJ 12-6 potential as the additional adjustable parameter controls the steepness of the repulsive barrier.
+%
+%% have three adjustable parameters while the LJ 12-6 potential only has two parameters.
+%%%RAM2: Testing out having the equation in the introduction
+
 In addition to the 
 %classification 
 division between
-of UA and AUA force fields, the existing force fields differ in the non-bonded functional form and corresponding parameters. The TraPPE, TraPPE-2, and AUA4 force fields use a Lennard-Jones (LJ) 12-6 potential, while the Potoff and TAMie force fields use the Mie $\lambda$-6 (or generalized Lennard-Jones) potential, and the Errington force field uses the Buckingham exponential-6 (Exp-6) potential. The three-parameter Mie $\lambda$-6 and Exp-6 potentials are more flexible than the two-parameter LJ 12-6 potential as the additional adjustable parameter controls the steepness of the repulsive barrier.
+UA and AUA force fields, the existing force fields differ in the non-bonded functional form and corresponding parameters. The TraPPE, TraPPE-2, and AUA4 force fields use a Lennard-Jones (LJ) 12-6 potential, while the Potoff and TAMie force fields use the Mie $\lambda$-6 (or generalized Lennard-Jones) potential, and the Errington force field uses the Buckingham exponential-6 (Exp-6) potential. 
+
+The three-parameter Mie $\lambda$-6 and Exp-6 potentials are more flexible than the two-parameter LJ 12-6 potential as an additional adjustable parameter controls the steepness of the repulsive barrier. Specifically, the Mie $\lambda$-6 potential is \cite{Herdes2015}:
+\begin{equation} \label{eq:Mie}
+u^{\rm vdw}(\epsilon,\sigma,\lambda;r) = \left(\frac{\lambda}{\lambda - 6}\right)\left(\frac{\lambda}{6}\right)^{\frac{6}{\lambda - 6}} \epsilon \left[\left(\frac{\sigma}{r}\right)^\lambda - \left(\frac{\sigma}{r}\right)^6\right]
+\end{equation} 
+where $u^{\rm vdw}$ is the van der Waals interaction, $\sigma$ is the distance $(r)$ where $u^{\rm vdw} = 0$, $-\epsilon$ is the energy of the potential at the minimum $\left(\text{i.e. }u^{\rm vdw} = -\epsilon \text{ and } \frac{\partial u^{\rm vdw}}{\partial r} = 0 \text{ for } r=r_{\rm min} \right)$, and $\lambda$ is the repulsive exponent. Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\lambda = 12$. Therefore, the LJ 12-6 potential can be considered a special subclass of the Mie $\lambda$-6 potential. 
+
+The Buckingham exponential-6 model is \cite{Exp6}:
+\begin{equation} \label{eq:Buckingham}
+u^{\rm vdw}(\epsilon,r_{\rm min},\alpha;r) = 
+\begin{cases}
+\frac{\epsilon}{1-\frac{6}{\alpha}} \left[\frac{6}{\alpha} \exp\left(\alpha\left[1-\frac{r}{r_{\rm min}}\right]\right) - \left(\frac{r_{\rm min}}{r}\right)^6\right] & \text{for}\ r>r_{\rm max} \\
+\infty           & \text{for}\ r<r_{\rm max}
+\end{cases}
+\end{equation}
+where $u^{\rm vdw}$, $\epsilon$, and $r$ are the same as in Equation \ref{eq:Mie}, $r_{\rm min}$ is the distance that corresponds to the minimum in the potential (i.e $u^{\rm vdw}(r_{\rm min})=-\epsilon$), $\alpha$ is a Buckingham exponential-6 parameter, and $r_{\rm max}$ is the smallest positive value for which $\frac{du^{\rm vdw}}{dr}=0$.
 
 % have three adjustable parameters while the LJ 12-6 potential only has two parameters.
 
-Previous work demonstrated that the UA LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for \textit{n}-alkanes \cite{Pareto_LJPQ,Mess4}. For this reason, the TraPPE-UA force field was primarily developed to agree with saturated liquid densities \cite{TraPPE}. By contrast, accurate prediction of both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range is possible by varying the repulsive exponent of the LJ potential (i.e. the Mie $\lambda$-6 potential). Typically, when parameterized to VLE data, the optimal value of $\lambda$ is greater than 12 with a corresponding increase in the well depth $(\epsilon)$. Specifically, for most hydrocarbons, the Potoff UA force field \cite{Mie,Potoff_branched} uses $\lambda = 16$ while the TAMie force field \cite{TAMie} uses $\lambda = 14$. Gordon also demonstrated that reliable viscosities can be obtained from a UA Mie $\lambda$-6 model for \textit{n}-alkanes by using $\lambda = 14$ and $\lambda = 20$ for the CH$_3$ and CH$_2$ sites, respectively (note the subtle difference in how Gordon defines the Mie $\lambda$-6 potential, a.k.a. ``mod-n-6'') \cite{Gordon2006}. 
+Previous work demonstrated that the UA LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for \textit{n}-alkanes \cite{Pareto_LJPQ,Mess4}. For this reason, the TraPPE-UA force field was primarily developed to agree with saturated liquid densities \cite{TraPPE}. By contrast, accurate prediction of both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range is possible by varying the repulsive exponent of the LJ potential (i.e. the Mie $\lambda$-6 potential). It is important to mention that, although an attractive exponent of 6 has a strong theoretical basis, $\lambda = 12$ is a historical artifact that was chosen primarily for computational purposes \cite{Allen1987}.
+
+Typically, when parameterized to VLE data, the optimal value of $\lambda$ is greater than 12 with a corresponding increase in the well depth $(\epsilon)$. Specifically, for most hydrocarbons, the Potoff UA force field \cite{Mie,Potoff_branched} uses $\lambda = 16$ while the TAMie force field \cite{TAMie} uses $\lambda = 14$. Gordon also demonstrated that reliable viscosities can be obtained from a UA Mie $\lambda$-6 model for \textit{n}-alkanes by using $\lambda = 14$ and $\lambda = 20$ for the CH$_3$ and CH$_2$ sites, respectively (note the subtle difference in how Gordon defines the Mie $\lambda$-6 potential, a.k.a. ``mod-n-6'') \cite{Gordon2006}. 
 %MRS2: don't make this a parenthetical. Full sentences generally shouldn't be.
 %RAM2: Alright, I admit that I use this tactic too often.
 It is interesting to note that Gordon and Galli{\'e}ro et al. report $\lambda$ values of 11 and 10, respectively, for UA methane when optimized with viscosity data \cite{Gordon2006,Galliero2005}.
@@ -332,7 +358,7 @@ It is interesting that Hayes et al. also highlights deficiencies in the repulsiv
 %MRS2: Suggest actually writing out the general Mie equation earlier in the intro,  just for concreteness in the introduction, then can refer back to it when defining specific potentials.  Couldn't hurt to put morse and buckingham, but not vital, since you don't really explore it.  
 %RAM2: I thought about this too, but it seemed strange to have an equation in the introduction.
 
-Recently, Kulakova et al. used Bayesian inference to conclude that experimental data for argon, specifically the radial distribution functions of liquid and vapor at varying temperatures and densities, support $\lambda$ values between 6 and 10, while quantum argon dimer energies support $\lambda$ values between 12 and 14 \cite{Kulakova2017}. They suggest that these larger values of $\lambda$ should not be used for liquid phase simulations. By contrast, two other studies of noble gases, including argon, support $\lambda \ge 12$ \cite{Galliero2005,Mick_Mie}. Specifically, Mick et al. reports a 13-6 potential for argon, while Galli{\'e}ro et al. states that the 12-6 potential is superior for argon than the 10-6, 14-6, 16-6, 18-6, and 20-6 potentials. The primary explanation for this discrepancy is the choice of experimental data. The conclusions from Kulakova et al. are based on the radial distribution function, while Galli{\'e}ro et al. used viscosity and pressure, and Mick et al. utilized VLE data.
+Recently, Kulakova et al. used Bayesian inference to conclude that experimental data for argon, specifically the liquid and vapor radial distribution functions at varying temperatures and densities, support $\lambda$ values between 6 and 10, while argon dimer \textit{ab initio} energies support $\lambda$ values between 12 and 14 \cite{Kulakova2017}. They suggest that these larger values of $\lambda$ should not be used for liquid phase simulations. By contrast, two other studies of noble gases, including argon, support $\lambda \ge 12$ \cite{Galliero2005,Mick_Mie}. Specifically, Mick et al. reports a 13-6 potential for argon, while Galli{\'e}ro et al. states that the 12-6 potential is superior for argon than the 10-6, 14-6, 16-6, 18-6, and 20-6 potentials. The primary explanation for this discrepancy is the choice of experimental data. The conclusions from Kulakova et al. are based on the radial distribution function, while Galli{\'e}ro et al. used viscosity and pressure, and Mick et al. utilized VLE data.
 
 Structural properties, such as the radial distribution function, and \textit{ab initio} calculations provide considerable insight into the true repulsive barrier \cite{Kulakova2017,Galliero2005}. However, the ``correct'' value of $\lambda$ does not guarantee adequate prediction of VLE and/or $PVT$ behavior. This is primarily because the Mie $\lambda$-6 potential is only an approximation to the real potential and, thus, it is not flexible enough to agree with both the repulsive and attractive regions. Instead, only the region that is most sensitive to the target experimental data will be adequately represented, which for VLE data is typically the effective-size, depth of the energy minimum, and the dispersive tail. Furthermore, the ``optimal'' $\lambda$ is not necessarily the ``true'' $\lambda$ because force fields use effective parameter sets that account for assumptions, such as pair-wise additivity (i.e. excluding three-, four-, etc. body interactions) or the lack of explicit hydrogens. For example, a UA Mie $\lambda$-6 potential is simply not capable of predicting VLE properties of ethane for $\lambda < 12$ (see Figures 1-2 of Reference \citenum{Mie}), despite theoretical evidence that the repulsive barrier should be softer than $\lambda = 12$.
 
@@ -478,7 +504,14 @@ A united-atom (UA) or anisotropic-united-atom (AUA) representation is used for e
 
 %MRS2: suggest figures of UA and AUA, AUA4 to show the difference for some representitive molecule
 %RAM2: Hmmm... I do not know the best way to do this. I have only depicted molecules once before in a publication. I used Gaussian, but the figures were not great. If you have a simple way to do this I would be interested.
-A fixed bond-length is used for each bond between UA or AUA sites. Although TAMie is an AUA force field, only the terminal CH$_3$ sites have a displacement in the interaction site. This convention is much simpler to implement than other AUA approaches (such as AUA4) where non-terminal (i.e. CH$_2$ and CH) interaction sites also have a displacement distance. For this reason, we do not attempt to simulate the AUA4 force field for any compounds containing CH$_2$ and CH interaction sites. For the compounds and force fields simulated, the anisotropic shift in a terminal interaction site (i.e. CH$_3$) is treated simply as a longer effective bond-length (see Table \ref{tab:bond-lengths}). The bond-length for all non-terminal sites is 0.154 nm, except for the Errington Exp-6 force field which uses 0.1535 nm for CH$_2$-CH$_2$ bonds.
+A fixed bond-length is used for each bond between UA or AUA sites. Although TAMie is an AUA force field, only the terminal CH$_3$ sites have a displacement in the interaction site. For example, Figure \ref{fig:AUA_isooctane} depicts both the UA and AUA representations of isooctane when only terminal CH$_3$ interaction sites are shifted from the carbon center. This convention is much simpler to implement than other AUA approaches (such as AUA4) where non-terminal (i.e. CH$_2$ and CH) interaction sites also have a displacement distance. For this reason, we do not attempt to simulate the AUA4 force field for any compounds containing CH$_2$ and CH interaction sites. For the compounds and force fields simulated, the anisotropic shift in a terminal interaction site (i.e. CH$_3$) is treated simply as a longer effective bond-length (see Table \ref{tab:bond-lengths}). The bond-length for all non-terminal sites is 0.154 nm, except for the Errington Exp-6 force field which uses 0.1535 nm for CH$_2$-CH$_2$ bonds.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=3.2in]{AUA_isooctane}
+	\caption{If only the terminal sites have an anisotropic displacement (e.g. TAMie), AUA force fields have the same complexity as UA force fields since the only difference is a longer effective bond-length for the CH$_3$ sites. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here.}
+	\label{fig:AUA_isooctane}
+\end{figure}
 
 \begin{table}[h!]
 %MRS2: suggest using two different notations for the two situations (not there vs more complicated) rather than just N/A for both.
@@ -514,13 +547,13 @@ A fixed bond-length is used for each bond between UA or AUA sites. Although TAMi
 %\end{table}
 
 The angle and dihedral energies are computed using the same functional forms for each force field. Angular bending interactions are evaluated using a harmonic potential:
-\begin{equation*}
+\begin{equation}
 u^{\rm bend} = \frac{k_\theta}{2} \left(\theta-\theta_0\right)^2
-\end{equation*}
+\end{equation}
 where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle, and $k_\theta$ is the harmonic force constant which is equal to 62500 K/rad$^2$ for all bonding angles. Dihedral torsional interactions are determined using a cosine series:
-\begin{equation*}
+\begin{equation}
 u^{\rm tors} = c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
-\end{equation*}
+\end{equation}
 where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants. The equilibrium bond angles and torsional parameters are found in Tables \ref{tab:angles}-\ref{tab:torsions}, respectively. Note that the Errington $c_i$ values for CH$_x$-CH$_2$-CH$_2$-CH$_y$ are a factor of two less than those reported in Table \ref{tab:torsions}. 
 %MRS2: note that there are multiple ways to represent the same torsion
 %(1-2-3-4 and 4-3-2-1), and in some case, the barriers are lower for torsional parameters
@@ -556,13 +589,18 @@ where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $
 \end{table}
 %MRS2: suggest putting the equation earlier for reference in the introduction, can rewrite it here if wanted.
 %RAM2: We should talk about this
-Non-bonded interaction energies and forces between sites located in two different molecules or separated by more than three bonds are calculated using either a Lennard-Jones 12-6, Mie $\lambda$-6, or Buckingham Exponential-6 potential. The Mie $\lambda$-6 potential is:
-\begin{equation} \label{eq:Mie}
-u^{\rm vdw}(\epsilon,\sigma,\lambda;r) = \left(\frac{\lambda}{\lambda - 6}\right)\left(\frac{\lambda}{6}\right)^{\frac{6}{\lambda - 6}} \epsilon \left[\left(\frac{\sigma}{r}\right)^\lambda - \left(\frac{\sigma}{r}\right)^6\right]
-\end{equation} 
-where $u^{\rm vdw}$ is the van der Waals interaction, $\sigma$ is the distance $(r)$ where $u^{\rm vdw} = 0$, $-\epsilon$ is the energy of the potential at the minimum $\left(\text{i.e. }u^{\rm vdw} = -\epsilon \text{ and } \frac{\partial u^{\rm vdw}}{\partial r} = 0 \text{ for } r=r_{\rm min} \right)$, and $\lambda$ is the repulsive exponent. 
-
-Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\lambda = 12$. Therefore, the LJ 12-6 potential can be considered a special subclass of the Mie $\lambda$-6 potential. It is important to mention that, although an attractive exponent of 6 has a strong theoretical basis, $\lambda = 12$ is a historical artifact that was chosen primarily for computational purposes \cite{Allen1987}. For the same reason (i.e. computational efficiency), a common practice to date is to use integer values of $\lambda$ in Equation \ref{eq:Mie}. The non-bonded force field parameters for TraPPE (and TraPPE-2), Potoff, AUA4, and TAMie are provided in Table \ref{tab:nonbonded params}.
+Non-bonded interaction energies and forces between sites located in two different molecules or separated by more than three bonds are calculated using either a Lennard-Jones 12-6, Mie $\lambda$-6, or Buckingham Exponential-6 potential (see Equations \ref{eq:Mie}-\ref{eq:Buckingham}). 
+%%%RAM2: Testing out having the equation in the introduction
+%The Mie $\lambda$-6 potential is:
+%\begin{equation} \label{eq:Mie}
+%u^{\rm vdw}(\epsilon,\sigma,\lambda;r) = \left(\frac{\lambda}{\lambda - 6}\right)\left(\frac{\lambda}{6}\right)^{\frac{6}{\lambda - 6}} \epsilon \left[\left(\frac{\sigma}{r}\right)^\lambda - \left(\frac{\sigma}{r}\right)^6\right]
+%\end{equation} 
+%where $u^{\rm vdw}$ is the van der Waals interaction, $\sigma$ is the distance $(r)$ where $u^{\rm vdw} = 0$, $-\epsilon$ is the energy of the potential at the minimum $\left(\text{i.e. }u^{\rm vdw} = -\epsilon \text{ and } \frac{\partial u^{\rm vdw}}{\partial r} = 0 \text{ for } r=r_{\rm min} \right)$, and $\lambda$ is the repulsive exponent. 
+%
+%Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\lambda = 12$. Therefore, the LJ 12-6 potential can be considered a special subclass of the Mie $\lambda$-6 potential. It is important to mention that, although an attractive exponent of 6 has a strong theoretical basis, $\lambda = 12$ is a historical artifact that was chosen primarily for computational purposes \cite{Allen1987}. For the same reason (i.e. computational efficiency), a common practice to date is to use integer values of $\lambda$ in Equation \ref{eq:Mie}. The non-bonded force field parameters for TraPPE (and TraPPE-2), Potoff, AUA4, and TAMie are provided in Table \ref{tab:nonbonded params}.
+%
+%
+The non-bonded LJ 12-6 or Mie $\lambda$-6 force field parameters for TraPPE, TraPPE-2, Potoff, AUA4, and TAMie are provided in Table \ref{tab:nonbonded params}. Note that, for computational purposes, a common practice to date is to use integer values of $\lambda$ in Equation \ref{eq:Mie}. 
 
 \begin{table}[h!]
 	\caption{Non-bonded (intermolecular) parameters for TraPPE \cite{TraPPE,Martin1999} (and TraPPE-2 \cite{TraPPEUA2}), Potoff \cite{Mie,Potoff_branched}, AUA4 \cite{AUA4,Nieto2008}, and TAMie \cite{TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parenthesis. The ethane specific parameters for TAMie are included in parenthesis.} \label{tab:nonbonded params}
@@ -634,15 +672,32 @@ Note that the Mie $\lambda$-6 potential reduces to the LJ 12-6 potential for $\l
 %	\end{center} 
 %\end{table}
 
-The Errington force field utilizes a Buckingham exponential-6 (Exp-6) model:
-\begin{equation} \label{eq:Buckingham}
-u^{\rm vdw}(\epsilon,r_{\rm min},\alpha;r) = 
-\begin{cases}
-\frac{\epsilon}{1-\frac{6}{\alpha}} \left[\frac{6}{\alpha} \exp\left(\alpha\left[1-\frac{r}{r_{\rm min}}\right]\right) - \left(\frac{r_{\rm min}}{r}\right)^6\right] & \text{for}\ r>r_{\rm max} \\
-\infty           & \text{for}\ r<r_{\rm max}
-\end{cases}
-\end{equation}
-where $u^{\rm vdw}$, $\epsilon$, and $r$ are the same as in Equation \ref{eq:Mie}, $r_{\rm min}$ is the distance that corresponds to the minimum in the potential (i.e $u^{\rm vdw}(r_{\rm min})=-\epsilon$), $\alpha$ is a Buckingham exponential-6 parameter, and $r_{\rm max}$ is the smallest positive value for which $\frac{du^{\rm vdw}}{dr}=0$. The Errington non-bonded parameters are found in Table \ref{tab:nonbonded Exp6}. (Note that Errington reported values for $\epsilon$, $\sigma$, and $\alpha$. We computed $r_{\rm min}$ and $r_{\rm max}$ to facilitate compatibility with Equation \ref{eq:Buckingham} and future validation of our results.)
+%%%RAM2: Moved to introduction
+%The Errington force field utilizes a Buckingham exponential-6 (Exp-6) model:
+%\begin{equation} \label{eq:Buckingham}
+%u^{\rm vdw}(\epsilon,r_{\rm min},\alpha;r) = 
+%\begin{cases}
+%\frac{\epsilon}{1-\frac{6}{\alpha}} \left[\frac{6}{\alpha} \exp\left(\alpha\left[1-\frac{r}{r_{\rm min}}\right]\right) - \left(\frac{r_{\rm min}}{r}\right)^6\right] & \text{for}\ r>r_{\rm max} \\
+%\infty           & \text{for}\ r<r_{\rm max}
+%\end{cases}
+%\end{equation}
+%where $u^{\rm vdw}$, $\epsilon$, and $r$ are the same as in Equation \ref{eq:Mie}, $r_{\rm min}$ is the distance that corresponds to the minimum in the potential (i.e $u^{\rm vdw}(r_{\rm min})=-\epsilon$), $\alpha$ is a Buckingham exponential-6 parameter, and $r_{\rm max}$ is the smallest positive value for which $\frac{du^{\rm vdw}}{dr}=0$. The Errington non-bonded parameters are found in Table \ref{tab:nonbonded Exp6}. (Note that Errington reported values for $\epsilon$, $\sigma$, and $\alpha$. We computed $r_{\rm min}$ and $r_{\rm max}$ to facilitate compatibility with Equation \ref{eq:Buckingham} and future validation of our results.)
+%
+%\begin{table}[h!]
+%	\caption{Non-bonded (intermolecular) parameters for Errington Exp-6 force field.} \label{tab:nonbonded Exp6}
+%	\begin{center}
+%		\begin{tabular}{|c|c|c|c|c|c|}
+%			\hline
+%			United-atom & $\epsilon$ (K) & $\sigma$ (nm) & $\alpha$ & $r_{\rm min}$ (nm) & $r_{\rm max}$ (nm)  \\ \hline
+%			CH$_3$ & 129.6  & 0.3679 & 16 & 0.4094 & 0.0574 \\ 
+%			CH$_2$ & 73.5 & 0.400 & 22 & 0.436 & 0.0221 \\ \hline
+%		\end{tabular}
+%	\end{center} 
+%\end{table}
+
+%The Errington force field utilizes a Buckingham exponential-6 (Exp-6) model. 
+
+The Errington Exp-6 non-bonded parameters are found in Table \ref{tab:nonbonded Exp6}. Note that Errington reported values for $\epsilon$, $\sigma$, and $\alpha$. We computed $r_{\rm min}$ and $r_{\rm max}$ to facilitate compatibility with Equation \ref{eq:Buckingham} and future validation of our results.
 
 \begin{table}[h!]
 	\caption{Non-bonded (intermolecular) parameters for Errington Exp-6 force field.} \label{tab:nonbonded Exp6}
@@ -725,7 +780,7 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1\%
 % I am going to change isopentane to isohexane so that it uses Potoff 'long', to have a better representation of compounds.
 
 
-Figure \ref{fig:IC_normal_alkanes} demonstrates that the existing literature force fields for \textit{n}-alkanes, while accurate for VLE, do not capture the correct $PVT$ behavior at high pressures, i.e. the  higher temperatures and highest isochore densities $(\rho_3$ and $\rho_4)$. Figure \ref{fig:IC_branched_alkanes} shows the same erroneous trend in $Z$ for branched alkanes. Note that the error in $Z$ at high temperatures is less obvious because these force fields are typically not as reliable at predicting VLE for branched alkanes as for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. That being said, it is clear in both Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} that none of the force fields adequately reproduces $Z$ over the entire temperature range, or the slope of $Z$ with respect to inverse $T$.
+Figure \ref{fig:IC_normal_alkanes} demonstrates that the existing literature force fields for \textit{n}-alkanes, while accurate for VLE, do not capture the correct $PVT$ behavior at high pressures $(P^{\rm high})$, i.e. the  higher temperatures and highest isochore densities $(\rho_3$ and $\rho_4)$. Figure \ref{fig:IC_branched_alkanes} shows the same erroneous trend in $Z$ for branched alkanes. Note that the error in $Z$ at high temperatures is less obvious because these force fields are typically not as reliable at predicting VLE for branched alkanes as for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. That being said, it is clear in both Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} that none of the force fields adequately reproduces $Z$ over the entire temperature range, or the slope of $Z$ with respect to inverse $T$.
 
 % Note that the error in the slope of $Z$ with respect to inverse $T$ is less obvious because these force fields are typically less reliable at VLE for branched alkanes than for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$.
 
@@ -749,7 +804,7 @@ clear systematic biases are observed for the LJ 12-6 potentials (TraPPE-UA and A
 %RAM2: True. The TraPPE-2 is not perfect. It is still outside of the REFPROP uncertainty. I have tried rewording this.
 %MRS2: maybe reverse the density ordering labeling? Intiuitively, one would expect rho_i+1 > rho_i.
 %RAM2: Done
-The one exception to this trend is the TraPPE-2 model for ethane, which has the most accurate prediction of the entire $PVT$ phase space simulated. Specifically, TraPPE-2 reproduces $Z$ to within the REFPROP uncertainties for all state points except at the two highest densities along the supercritical isotherm, i.e. $T=T^{IT}$ and $\rho = \rho_3$ or $\rho_4$. The average percent deviation (AD\%) relative to the REFPROP correlations is only 3\% for pressure at these state points, referred to as $P^{\rm high}$. 
+The one exception to this trend is the TraPPE-2 model for ethane, which has the most accurate prediction of the entire $PVT$ phase space simulated. Specifically, TraPPE-2 reproduces $Z$ to within the REFPROP uncertainties for all state points except at the two highest densities along the supercritical isotherm, i.e. $T=T^{IT}$ and $\rho = \rho_3$ or $\rho_4$. The average percent deviation (AD\%) relative to the REFPROP correlations is only 3\% for pressure at these state points $(P^{\rm high})$. 
 
 The performance of TraPPE-2 is somewhat surprising considering this force field has only three fitting parameters ($\epsilon$, $\sigma$, and the effective bond-length) while the TAMie model has these three parameters and an additional fitting parameter $(\lambda)$. It is important to note that TraPPE-2 uses a much longer effective bond-length of 0.230 nm while TAMie did not consider bond-lengths larger than 0.194 nm. Therefore, the fact that the TraPPE-2 force field extrapolates to high pressures better than TAMie suggests that, at high pressures, it is important to account for hydrogens either explicitly (AA model) or with a longer effective bond-length than that typically used for AUA models (see Table \ref{tab:bond-lengths}). It is also possible that a four parameter optimization, such as that used by TAMie, is overfit to the VLE data and would perform better if high pressure $PVT$ data were included in the parameterization.
 
@@ -799,7 +854,7 @@ The results presented in Section \ref{Case Study} demonstrate that none of the l
 %MRS2: what do you mean by ``equally probably'' here?
 %equally probable 
 %RAM2: Hopefully it is more clear now
-a feasible parameter set exists that adequately predicts VLE and $PVT$ behavior. By contrast, if none of the feasible $\epsilon$, $\sigma$, and $\lambda$ values is capable of simultaneously predicting VLE properties and $PVT$ behavior at high pressures, we can conclude that the UA Mie $\lambda$-6 potential (and Lennard-Jones 12-6 as a special case) is inadequate for this purpose and, therefore, should not be used when developing FEOS with molecular simulation results. 
+a feasible parameter set exists that adequately predicts VLE and $P^{\rm high}$. By contrast, if none of the feasible $\epsilon$, $\sigma$, and $\lambda$ values is capable of simultaneously predicting VLE properties and $PVT$ behavior at high pressures, we can conclude that the UA Mie $\lambda$-6 potential (and Lennard-Jones 12-6 as a special case) is inadequate for this purpose and, therefore, should not be used when developing FEOS with molecular simulation results. 
 %MRS2: do you want to qualify the above statement for high pressure.
 %RAM2: done
 %We perform this analysis only for \textit{n}-alkanes, because the CH$_3$ and CH$_2$ results suggest that a UA Mie $\lambda$-6 potential is not adequate and, therefore, we did not find it necessary to repeat this process for the CH and C interaction sites.
@@ -818,18 +873,29 @@ Bayesian inference is a rigorous approach to quantify if the UA Mie $\lambda$-6 
 We refer the reader to the literature for a thorough discussion of Bayesian statistics \cite{Bay_Deriv,Bay_MD,Bay_UQ,Wu2016,Kulakova2017}. In Section \ref{Bayesian Analysis}, we review some basic concepts of Bayes theorem, we define the posterior, likelihood, and prior distributions, and we discuss the Markov Chain Monte Carlo (MCMC) approach
 %MRS2: suggest addition below.
 for sampling from the posterior joint distribution of the parameters.
-As MCMC can be computationally burdensome, especially when coupled with molecular simulations, we use Multistate Bennett Acceptance Ratio (MBAR) as a 
-%MRS2: suggestion: I think it may be important to explicitly state that it's very good surrogate model, it's not just convenient. Justification for near exactness can be discussed in the presentation of MBAR.
-%RAM2: Assuming we have a good Neff we can say "nearly exact". Not sure if I want to bring that up though
-nearly exact
-surrogate model. MBAR reduces the computational cost by several orders of magnitude for determining the VLE properties ($\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) and $Z$ of the supercritical fluids and compressed liquids (see Section \ref{Surrogate Model}), 
+MCMC can be computationally burdensome, especially when molecular simulation is required to compute the likelihood. Section \ref{Surrogate Model} demonstrates how we utilize surrogate models to estimate $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$ for a given set of $\epsilon$, $\sigma$, and $\lambda$. The use of surrogate models reduces the computational cost of MCMC by several orders of magnitude. 
+% The surrogate models estimate $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$ for a given set of $\epsilon$, $\sigma$, and $\lambda$, which are required for MCMC. 
 %MRS2: suggest something like the below to be more explicit of how this is being done.
 %RAM2: Done
-which are required to evaluate the likelihood. 
+%which are required to evaluate the likelihood. 
 % and the model evidence (via the Bayes factor) given the data directly. 
 %Although sampling from discrete values is possible with MCMC,
 We implement this analysis for \textit{n}-alkanes to generate joint distributions of $\epsilon_{\rm CH_3}$-$\sigma_{\rm CH_3}$ and $\epsilon_{\rm CH_2}$-$\sigma_{\rm CH_2}$ for different values of $\lambda_{\rm CH_3}$ and $\lambda_{\rm CH_2}$, respectively.
 % quantifying the parameter uncertainty in the CH$_3$ and CH$_2$ interaction sites.
+
+%%%RAM2: Shortened this paragraph. I felt like it had too much detail that the reader is not ready for.
+%As MCMC can be computationally burdensome, especially when coupled with molecular simulations, we use Multistate Bennett Acceptance Ratio (MBAR) as a 
+%%MRS2: suggestion: I think it may be important to explicitly state that it's very good surrogate model, it's not just convenient. Justification for near exactness can be discussed in the presentation of MBAR.
+%%RAM2: Assuming we have a good Neff we can say "nearly exact". Not sure if I want to bring that up though
+%nearly exact
+%surrogate model. MBAR reduces the computational cost by several orders of magnitude for determining the VLE properties ($\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$) and $Z$ of the supercritical fluids and compressed liquids (see Section \ref{Surrogate Model}), 
+%%MRS2: suggest something like the below to be more explicit of how this is being done.
+%%RAM2: Done
+%which are required to evaluate the likelihood. 
+%% and the model evidence (via the Bayes factor) given the data directly. 
+%%Although sampling from discrete values is possible with MCMC,
+%We implement this analysis for \textit{n}-alkanes to generate joint distributions of $\epsilon_{\rm CH_3}$-$\sigma_{\rm CH_3}$ and $\epsilon_{\rm CH_2}$-$\sigma_{\rm CH_2}$ for different values of $\lambda_{\rm CH_3}$ and $\lambda_{\rm CH_2}$, respectively.
+%% quantifying the parameter uncertainty in the CH$_3$ and CH$_2$ interaction sites.
 
 %\begin{enumerate}
 %	\item We use Bayesian inference with MCMC to quantify the uncertainty in the force field parameters
@@ -1113,7 +1179,7 @@ A typical Markov Chain requires $O(10^4$--$10^5)$ Monte Carlo steps, where the l
 
 %Specifically, we implement surrogate models to estimate $\rho_{\rm l, MCMC}^{\rm sat}$, $P_{\rm v, MCMC}^{\rm sat}$ and $Z_{\rm MCMC}$. 
 
-We use a configuration-sampling-based surrogate model, where configurations are sampled using a small group of reference parameter sets $(\epsilon_{\rm ref}, \sigma_{\rm ref}$, and $\lambda_{\rm ref})$ \cite{Postdoc_1}. As discussed in our previous study, we use a single value of $\epsilon_{\rm ref}$ with nine evenly spaced $\sigma_{\rm ref}$ values for a fixed value of $\lambda_{\rm ref}$. Ensemble averages for the MCMC parameter sets $(\theta_{\rm MCMC})$ are estimated by reweighting the sampled reference configurations using Multistate Bennett Acceptance Ratio (MBAR) \cite{shirts-chodera:jcp:2008:mbar}. 
+We use a configuration-sampling-based surrogate model, where configurations are sampled using a small group of reference parameter sets $(\epsilon_{\rm ref}, \sigma_{\rm ref}$, and $\lambda_{\rm ref})$ \cite{Postdoc_1}. As discussed in our previous study, we use a single value of $\epsilon_{\rm ref}$ with nine evenly spaced $\sigma_{\rm ref}$ values for a fixed value of $\lambda_{\rm ref}$. Ensemble averages for the MCMC parameter sets $(\theta_{\rm MCMC})$ are estimated by reweighting the sampled reference configurations using Multistate Bennett Acceptance Ratio (MBAR) \cite{shirts-chodera:jcp:2008:mbar}. MBAR is a nearly exact surrogate model when there are a sufficient number of effective samples \cite{Postdoc_1}.
 
 The properties that are estimated using MBAR are the departure internal energy $(U^{\rm dep})$ and the compressibility factor $(Z)$. As discussed in Section \ref{Methods I}, Isothermal Isochoric Integration (ITIC) converts the MBAR estimated $U^{\rm dep}$ and $Z$ values at the 19 ITIC state points to saturation temperatures $(T^{\rm sat})$, saturated liquid densities $(\rho_{\rm l}^{\rm sat})$ and saturated vapor pressures $(P_{\rm v}^{\rm sat})$. This is important since $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are the data $(D)$ included in $L(\theta|D)$. Details for the implementation of MBAR and ITIC (MBAR-ITIC) is discussed elsewhere \cite{Postdoc_1}. 
 
@@ -1130,7 +1196,7 @@ We fit $\rho_{\rm l, ITIC}^{\rm sat}$ and $T^{\rm sat}_{\rm ITIC}$ to a combined
 \begin{equation} \label{Rectilinear Scale}
 \rho_{\rm l}^{\rm sat} = b_0 + b_1 (b_2 - T^{\rm sat}) + b_3 (b_2 - T^{\rm sat}) ^ {\beta}
 \end{equation}
-where $b_i$ are fitting parameters, and $\beta = 0.326$. $b_0$ and $b_2$ only provide rough estimates of the critical density $(\rho_c)$ and critical temperature $(T_c)$. More reliable estimates of the critical point require simultaneous fitting of $\rho_{\rm v, ITIC}^{\rm sat}$ to a similar expression, but this is unnecessary for our purposes since we are only including $\rho_{\rm l}^{\rm sat}$ in $D$. Note that Equations \ref{Antoine}-\ref{Rectilinear Scale} are only used to interpolate ITIC values, and not to extrapolate to higher or lower $T^{\rm sat}$. These equations are reliable over the limited temperature range studied $(0.45 < T_{\rm r} < 0.85)$, whereas a wider temperature range would require more flexible models \cite{Riedel}. 
+where $b_i$ are fitting parameters, and $\beta = 0.326$. $b_0$ and $b_2$ only provide rough estimates of the critical density $(\rho_c)$ and critical temperature $(T_c)$. More reliable estimates of the critical point require simultaneous fitting of $\rho_{\rm v, ITIC}^{\rm sat}$ to a similar expression, but this is unnecessary for our purposes since $D$ does not include the critical constants. Note that Equations \ref{Antoine}-\ref{Rectilinear Scale} are only used to interpolate ITIC values, and not to extrapolate to higher or lower $T^{\rm sat}$. These equations are reliable over the limited temperature range studied $(0.45 < T_{\rm r} < 0.85)$, whereas a wider temperature range would require more flexible models \cite{Riedel,Funke}. 
 
 In summary, MBAR, ITIC, and Equations \ref{Antoine}-\ref{Rectilinear Scale} enable prediction of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ at any $T^{\rm sat}$ for any $\epsilon$, $\sigma$, and $\lambda$ by performing direct NVT simulations with only a few reference parameter sets. In addition, since the Mie $\lambda$-6 potential is linear with respect to $r^{-6}$ and $r^{-\lambda}$ (see Equation \ref{eq:Mie}), we implement basis functions to efficiently recompute the energies and forces that are required for MBAR and ITIC (for details see Section SI.IV of Supporting Information from Reference \citenum{Postdoc_1} and Reference \citenum{naden:jctc:2016}). 
 %MRS2: also cite one of Levi's papers here.
@@ -1594,7 +1660,7 @@ Unfortunately, with the exception of \textit{ms2} \cite{ms2}, we are not aware o
 
 In addition, macroscopic properties, such as $Z$ and $U^{\rm dep}$ (with their respective derivatives), are more readily understood and visualized than $A_{xy}^{\rm dep}$. Also, it is easier to quantify their impact on process design than derivatives in the residual Helmholtz free energy. For example, as demonstrated by Thol et al., an inaccurate prediction of some $A_{xy}^{\rm dep}$ does not necessarily result in poor prediction of $PVT$ behavior or heat capacities \cite{Thol2016_siloxane_first}. For these reasons, we did not base our conclusions on the adequacy of the UA Mie $\lambda$-6 potential to predict $A_{xy}^{\rm dep}$.
 
-Instead, we have presented $Z$ and, by inspection, the slope of $Z$ with respect to $1/T$ at constant $\rho$. Since these properties are equivalent to Equations \ref{eq:Z}-\ref{eq:Z_IC}, respectively, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. However, we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ at constant $T$, which are equivalent to Equations \ref{eq:U}-\ref{eq:Z_IT}. Unfortunately, deficiencies are not as obvious for these properties due to the relatively large uncertainties in the REFPROP correlations, ca. 5\% and 10\% for $U^{\rm dep}$ and $\left(\frac{\partial U^{\rm dep}}{R_g \partial T}\right)_\rho$. Although these additional properties provide insight regarding $A_{10}^{\rm dep}$, $A_{20}^{\rm dep}$, and $A_{02}^{\rm dep}$, because the results are less conclusive they are provided only in Section \ref{Udep and Z_IT} of Supporting Information. Furthermore, the relationship between Equations \ref{eq:U}-\ref{eq:Z_IT} and the repulsive barrier, $\lambda$, is not obvious. By contrast, the observation that larger values of $\lambda$ over-predict $Z$ with increasing temperature is clear evidence that $\lambda > 12$ is not theoretically justified but, rather, is an empirical remedy that performs well for VLE.
+Instead, we have presented $Z$ and, by inspection, the slope of $Z$ with respect to $1/T$ at constant $\rho$. Since these properties are equivalent to Equations \ref{eq:Z}-\ref{eq:Z_IC}, respectively, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. However, we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ at constant $T$, which are equivalent to Equations \ref{eq:U}-\ref{eq:Z_IT}. Unfortunately, deficiencies are not as obvious for these properties due to the relatively large uncertainties in the REFPROP correlations, ca. 5\% and 10\% for $U^{\rm dep}$ and $\left(\frac{\partial U^{\rm dep}}{R_g \partial T}\right)_\rho$. Although these additional properties provide insight regarding $A_{10}^{\rm dep}$, $A_{20}^{\rm dep}$, $A_{01}^{\rm dep}$, and $A_{02}^{\rm dep}$, because the results are less conclusive they are provided only in Section \ref{Udep and Z_IT} of Supporting Information. Furthermore, the relationship between Equations \ref{eq:U}-\ref{eq:Z_IT} and the repulsive barrier, $\lambda$, is not obvious. By contrast, the observation that larger values of $\lambda$ over-predict $Z$ with increasing temperature is clear evidence that $\lambda > 12$ is not theoretically justified but, rather, is an empirical remedy that performs well for VLE.
 
 Future work should investigate more thoroughly the adequacy of UA Mie $\lambda$-6 (or other) force fields to predict $U^{\rm dep}$ and isochoric/isobaric heat capacities at high temperatures and pressures. For example, rigorous studies of this type have been performed on the single-site Lennard-Jones fluid \cite{Thol2016_LJ,Thol_LJTS,Rutkai2017}.  
 
