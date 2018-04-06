@@ -229,6 +229,12 @@ Richard~A. Messerly and Michael~R. Shirts.
 \newblock {\em Journal of Chemical Theory and Computation}, Pending
   publication., 2018.
 
+\bibitem{Mostafa2018}
+S.~Mostafa Razavi, Richard~A. Messerly, and J.~Richard Elliott.
+\newblock Coexistence calculation using the isothermal-isochoric integration
+  method.
+\newblock {\em Pending publication.}, 2018.
+
 \bibitem{Nieto2008}
 Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
   Ghoufi, Aur{\'e}lie Wender, , Anne Boutin, Bernard Rousseau, and Laurent
@@ -298,6 +304,12 @@ Levi~N. Naden and Michael~R Shirts.
   nonbonded parameter spaces using adaptive multistate reweighting.
 \newblock {\em Journal of Chemical Theory and Computation}, 12(4):1806--1823,
   2016.
+
+\bibitem{GUM}
+Barry~N. Taylor and Chris~E. Kuyatt.
+\newblock {NIST} guidelines for evaluating and expressing the uncertainty of
+  {NIST} measurement results cover.
+\newblock {\em {NIST} Technical Note 1297}, pages 1--9, 1994.
 
 \bibitem{RoundRobin}
 Michael Schappals, Andreas Mecklenfeld, Leif Kr{\"o}ger, Vitalie Botan, Andreas

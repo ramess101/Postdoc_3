@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  6 APR 2018 08:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  6 APR 2018 14:21
 entering extended mode
 **./VLE_PVT_UA_Mie_supporting_information.tex
 (VLE_PVT_UA_Mie_supporting_information.tex
@@ -1380,29 +1380,29 @@ Class achemso Warning: \bibliographystyle ignored on input line 87.
 (VLE_PVT_UA_Mie_supporting_information.aux)
 \openout1 = `VLE_PVT_UA_Mie_supporting_information.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 127.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 131.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 127.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1481,7 +1481,7 @@ G,.JBIG2,.JB2,.eps]
 )
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring ON on input line 127.
+Package hyperref Info: Link coloring ON on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1491,9 +1491,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 127.
-LaTeX Info: Redefining \pageref on input line 127.
-LaTeX Info: Redefining \nameref on input line 127.
+LaTeX Info: Redefining \ref on input line 131.
+LaTeX Info: Redefining \pageref on input line 131.
+LaTeX Info: Redefining \nameref on input line 131.
 
 (VLE_PVT_UA_Mie_supporting_information.out)
 (VLE_PVT_UA_Mie_supporting_information.out)
@@ -1515,22 +1515,22 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 )
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 127.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 127.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 131.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 127.
-LaTeX Font Info:    Try loading font information for U+msa on input line 127.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 131.
+LaTeX Font Info:    Try loading font information for U+msa on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 127.
+LaTeX Font Info:    Try loading font information for U+msb on input line 131.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1538,9 +1538,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathsf_int=\count299
 \c__siunitx_mathtt_int=\count300
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 129.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 133.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 137.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] [5] [6] [7] [
@@ -1551,7 +1551,7 @@ File: figures/IC_branched_alkanes_supporting_information.pdf Graphic file (type
  pdf)
  <use figures/IC_branched_alkanes_supporting_information.pdf>
 Package pdftex.def Info: figures/IC_branched_alkanes_supporting_information.pdf
- used on input line 393.
+ used on input line 397.
 (pdftex.def)             Requested size: 448.07378pt x 448.06937pt.
  [11 <./figures/IC_branched_alkanes_supporting_information.pdf>]
 <figures/MCMC_supporting_information.pdf, id=201, 1445.4pt x 2168.1pt>
@@ -1559,18 +1559,18 @@ File: figures/MCMC_supporting_information.pdf Graphic file (type pdf)
 
 <use figures/MCMC_supporting_information.pdf>
 Package pdftex.def Info: figures/MCMC_supporting_information.pdf used on input 
-line 408.
+line 412.
 (pdftex.def)             Requested size: 390.25755pt x 585.39484pt.
 
 
-LaTeX Warning: Float too large for page by 18.46481pt on input line 411.
+LaTeX Warning: Float too large for page by 18.46481pt on input line 415.
 
 <figures/MCMC_supporting_information_2.pdf, id=202, 1445.4pt x 722.7pt>
 File: figures/MCMC_supporting_information_2.pdf Graphic file (type pdf)
 
 <use figures/MCMC_supporting_information_2.pdf>
 Package pdftex.def Info: figures/MCMC_supporting_information_2.pdf used on inpu
-t line 417.
+t line 421.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
  [12] [13 <./figures/MCMC_supporting_information.pdf>]
 <figures/ITIC_validation_error_model.pdf, id=265, 1445.4pt x 867.24pt>
@@ -1578,7 +1578,7 @@ File: figures/ITIC_validation_error_model.pdf Graphic file (type pdf)
 
 <use figures/ITIC_validation_error_model.pdf>
 Package pdftex.def Info: figures/ITIC_validation_error_model.pdf used on input 
-line 430.
+line 434.
 (pdftex.def)             Requested size: 462.52756pt x 277.50923pt.
  [14 <./figures/MCMC_supporting_information_2.pdf>] [15 <./figures/ITIC_validat
 ion_error_model.pdf>] [16]
@@ -1586,16 +1586,16 @@ ion_error_model.pdf>] [16]
 File: figures/MCMC_Mie_ZIT_alkanes.pdf Graphic file (type pdf)
 
 <use figures/MCMC_Mie_ZIT_alkanes.pdf>
-Package pdftex.def Info: figures/MCMC_Mie_ZIT_alkanes.pdf used on input line 44
-7.
+Package pdftex.def Info: figures/MCMC_Mie_ZIT_alkanes.pdf used on input line 45
+1.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
 
 <figures/MCMC_Mie_UIC_alkanes.pdf, id=443, 1445.4pt x 1445.4pt>
 File: figures/MCMC_Mie_UIC_alkanes.pdf Graphic file (type pdf)
 
 <use figures/MCMC_Mie_UIC_alkanes.pdf>
-Package pdftex.def Info: figures/MCMC_Mie_UIC_alkanes.pdf used on input line 45
-8.
+Package pdftex.def Info: figures/MCMC_Mie_UIC_alkanes.pdf used on input line 46
+2.
 (pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
  [17] [18 <./figures/MCMC_Mie_ZIT_alkanes.pdf>] [19 <./figures/MCMC_Mie_UIC_alk
 anes.pdf>]
@@ -1605,21 +1605,21 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 56.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 469.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 469.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
 
 (VLE_PVT_UA_Mie_supporting_information.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 469.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 469.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
 Package rerunfilecheck Info: File `VLE_PVT_UA_Mie_supporting_information.out' h
 as not changed.
 (rerunfilecheck)             Checksum: 31DE30DD0066A5BB719268E87388797C;437.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 469.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
  ) 
 Here is how much of TeX's memory you used:
  31565 strings out of 493333
  628133 string characters out of 3139198
- 709952 words of memory out of 3000000
+ 709918 words of memory out of 3000000
  34564 multiletter control sequences out of 15000+200000
  39879 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
