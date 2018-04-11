@@ -17,7 +17,7 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \newlabel{FirstPage}{{}{1}{}{section*.1}{}}
-\@writefile{toc}{\contentsline {title}{Bayesian inference confirms unreliable extrapolation from vapor-liquid equilibria toward high pressures of united-atom force field}{1}{section*.2}}
+\@writefile{toc}{\contentsline {title}{Uncertainty quantification confirms unreliable extrapolation toward high pressures for united-atom Mie $\lambda $-6 force field}{1}{section*.2}}
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{section*.1}}
 \citation{LEMMON-RP91}
 \citation{Thol2016_LJ,Thol_LJTS,Rutkai2017,Lustig2015,Rutkai2015}
@@ -53,7 +53,7 @@
 \citation{Galliero2005,Mick_Mie}
 \citation{Kulakova2017,Galliero2005}
 \citation{Mie}
-\citation{LEMMON-RP91}
+\citation{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017,Lemmon2006,Blackham2017}
 \citation{GROMACS_2018}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Methods I}{7}{section*.4}}
 \newlabel{Methods I}{{II}{7}{}{section*.4}{}}
@@ -63,10 +63,11 @@
 \newlabel{Force Field}{{II\tmspace  +\thinmuskip {.1667em}B}{8}{}{section*.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit  {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference.}}{9}{figure.1}}
 \newlabel{fig:simulation_conditions}{{1}{9}{State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces If only the terminal sites have an anisotropic displacement (e.g. TAMie), AUA force fields have the same complexity as UA force fields since the only difference is a longer effective bond-length for the CH$_3$ sites. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here.}}{10}{figure.2}}
-\newlabel{fig:AUA_isooctane}{{2}{10}{If only the terminal sites have an anisotropic displacement (e.g. TAMie), AUA force fields have the same complexity as UA force fields since the only difference is a longer effective bond-length for the CH$_3$ sites. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here}{figure.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construct than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{10}{table.1}}
-\newlabel{tab:bond-lengths}{{I}{10}{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construct than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here.}}{10}{figure.2}}
+\newlabel{fig:AUA_isooctane}{{2}{10}{AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{10}{table.1}}
+\newlabel{tab:bond-lengths}{{I}{10}{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis}{table.1}{}}
+\citation{Exp6}
 \citation{TraPPE,Martin1999}
 \citation{TraPPEUA2}
 \citation{Mie,Potoff_branched}
@@ -84,8 +85,8 @@
 \citation{Allen1987}
 \citation{Mie}
 \citation{Exp6}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parenthesis. The ethane specific parameters for TAMie are included in parenthesis.}}{12}{table.4}}
-\newlabel{tab:nonbonded params}{{IV}{12}{Non-bonded (intermolecular) parameters for TraPPE \cite {TraPPE,Martin1999} (and TraPPE-2 \cite {TraPPEUA2}), Potoff \cite {Mie,Potoff_branched}, AUA4 \cite {AUA4,Nieto2008}, and TAMie \cite {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parenthesis. The ethane specific parameters for TAMie are included in parenthesis}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{12}{table.4}}
+\newlabel{tab:nonbonded params}{{IV}{12}{Non-bonded (intermolecular) parameters for TraPPE \cite {TraPPE,Martin1999} (and TraPPE-2 \cite {TraPPEUA2}), Potoff \cite {Mie,Potoff_branched}, AUA4 \cite {AUA4,Nieto2008}, and TAMie \cite {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses}{table.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Non-bonded (intermolecular) parameters for Errington Exp-6 force field.}}{12}{table.5}}
 \newlabel{tab:nonbonded Exp6}{{V}{12}{Non-bonded (intermolecular) parameters for Errington Exp-6 force field}{table.5}{}}
 \newlabel{eq:Lorentz-Berthelot_eps}{{5}{13}{}{equation.2.5}{}}
@@ -99,10 +100,10 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref  {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref  {tab:nonbonded params}).}}{15}{figure.4}}
 \newlabel{fig:IC_branched_alkanes}{{4}{15}{Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref {tab:nonbonded params})}{figure.4}{}}
 \citation{Bay_Deriv,Bay_MD,Bay_UQ,Wu2016,Kulakova2017}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Methods II}{17}{section*.8}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Uncertainty Quantification}{17}{section*.8}}
 \newlabel{Methods II}{{IV}{17}{}{section*.8}{}}
 \citation{Kulakova2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Bayesian Analysis}{18}{section*.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Bayesian Inference}{18}{section*.9}}
 \newlabel{Bayesian Analysis}{{IV\tmspace  +\thinmuskip {.1667em}A}{18}{}{section*.9}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Theory}{18}{section*.10}}
 \newlabel{Bayes Theorem}{{9}{18}{}{equation.4.9}{}}
@@ -223,29 +224,35 @@
 \bibcite{Hayes2004}{{30}{}{{}}{{}}}
 \bibcite{Kulakova2017}{{31}{}{{}}{{}}}
 \bibcite{Mick_Mie}{{32}{}{{}}{{}}}
-\bibcite{GROMACS_2018}{{33}{}{{}}{{}}}
-\bibcite{Mostafa_Diss}{{34}{}{{}}{{}}}
-\bibcite{Postdoc_1}{{35}{}{{}}{{}}}
-\bibcite{Mostafa2018}{{36}{}{{}}{{}}}
-\bibcite{Nieto2008}{{37}{}{{}}{{}}}
-\bibcite{Bay_Deriv}{{38}{}{{}}{{}}}
-\bibcite{Bay_MD}{{39}{}{{}}{{}}}
-\bibcite{Bay_UQ}{{40}{}{{}}{{}}}
-\bibcite{Wu2016}{{41}{}{{}}{{}}}
-\bibcite{TDE}{{42}{}{{}}{{}}}
-\bibcite{shirts-chodera:jcp:2008:mbar}{{43}{}{{}}{{}}}
-\bibcite{Riedel}{{44}{}{{}}{{}}}
-\bibcite{Funke}{{45}{}{{}}{{}}}
-\bibcite{naden:jctc:2016}{{46}{}{{}}{{}}}
-\bibcite{GUM}{{47}{}{{}}{{}}}
-\bibcite{RoundRobin}{{48}{}{{}}{{}}}
-\bibcite{Pareto_Deriv}{{49}{}{{}}{{}}}
-\bibcite{Pareto_ST}{{50}{}{{}}{{}}}
-\bibcite{Jeffreys2004}{{51}{}{{}}{{}}}
-\bibcite{Hajigeorgiou2016}{{52}{}{{}}{{}}}
-\bibcite{Kalos1972}{{53}{}{{}}{{}}}
-\bibcite{ms2}{{54}{}{{}}{{}}}
+\bibcite{Ethane2006}{{33}{}{{}}{{}}}
+\bibcite{Propane2009}{{34}{}{{}}{{}}}
+\bibcite{Butane2006}{{35}{}{{}}{{}}}
+\bibcite{Beckmueller2017}{{36}{}{{}}{{}}}
+\bibcite{Lemmon2006}{{37}{}{{}}{{}}}
+\bibcite{Blackham2017}{{38}{}{{}}{{}}}
+\bibcite{GROMACS_2018}{{39}{}{{}}{{}}}
+\bibcite{Mostafa_Diss}{{40}{}{{}}{{}}}
+\bibcite{Postdoc_1}{{41}{}{{}}{{}}}
+\bibcite{Mostafa2018}{{42}{}{{}}{{}}}
+\bibcite{Nieto2008}{{43}{}{{}}{{}}}
+\bibcite{Bay_Deriv}{{44}{}{{}}{{}}}
+\bibcite{Bay_MD}{{45}{}{{}}{{}}}
+\bibcite{Bay_UQ}{{46}{}{{}}{{}}}
+\bibcite{Wu2016}{{47}{}{{}}{{}}}
+\bibcite{TDE}{{48}{}{{}}{{}}}
+\bibcite{shirts-chodera:jcp:2008:mbar}{{49}{}{{}}{{}}}
+\bibcite{Riedel}{{50}{}{{}}{{}}}
+\bibcite{Funke}{{51}{}{{}}{{}}}
+\bibcite{naden:jctc:2016}{{52}{}{{}}{{}}}
+\bibcite{GUM}{{53}{}{{}}{{}}}
+\bibcite{RoundRobin}{{54}{}{{}}{{}}}
+\bibcite{Pareto_Deriv}{{55}{}{{}}{{}}}
+\bibcite{Pareto_ST}{{56}{}{{}}{{}}}
+\bibcite{Jeffreys2004}{{57}{}{{}}{{}}}
+\bibcite{Hajigeorgiou2016}{{58}{}{{}}{{}}}
+\bibcite{Kalos1972}{{59}{}{{}}{{}}}
+\bibcite{ms2}{{60}{}{{}}{{}}}
 \bibstyle{unsrt}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{LastBibItem}{{54}{43}{}{section*.22}{}}
-\newlabel{LastPage}{{}{43}{}{}{}}
+\newlabel{LastBibItem}{{60}{44}{}{section*.22}{}}
+\newlabel{LastPage}{{}{44}{}{}{}}
