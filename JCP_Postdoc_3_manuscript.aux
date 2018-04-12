@@ -37,11 +37,11 @@
 \citation{TAMie,Weidler2016}
 \citation{Herdes2015}
 \citation{Exp6}
-\newlabel{eq:Mie}{{1}{4}{}{equation.1.1}{}}
-\newlabel{eq:Buckingham}{{2}{4}{}{equation.1.2}{}}
 \citation{Pareto_LJPQ,Mess4}
 \citation{TraPPE}
 \citation{Allen1987}
+\newlabel{eq:Mie}{{1}{4}{}{equation.1.1}{}}
+\newlabel{eq:Buckingham}{{2}{4}{}{equation.1.2}{}}
 \citation{Mie,Potoff_branched}
 \citation{TAMie}
 \citation{Gordon2006}
@@ -59,10 +59,10 @@
 \newlabel{Methods I}{{II}{7}{}{section*.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Simulation Details}{7}{section*.5}}
 \citation{Mostafa_Diss,Postdoc_1,Mostafa2018}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Force field}{8}{section*.6}}
-\newlabel{Force Field}{{II\tmspace  +\thinmuskip {.1667em}B}{8}{}{section*.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit  {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference.}}{9}{figure.1}}
-\newlabel{fig:simulation_conditions}{{1}{9}{State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit  {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference.}}{8}{figure.1}}
+\newlabel{fig:simulation_conditions}{{1}{8}{State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit {n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Force field}{9}{section*.6}}
+\newlabel{Force Field}{{II\tmspace  +\thinmuskip {.1667em}B}{9}{}{section*.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here.}}{10}{figure.2}}
 \newlabel{fig:AUA_isooctane}{{2}{10}{AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated shifting of CH$_2$ and CH sites than that depicted here}{figure.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.}}{10}{table.1}}
@@ -85,48 +85,54 @@
 \citation{Allen1987}
 \citation{Mie}
 \citation{Exp6}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{12}{table.4}}
-\newlabel{tab:nonbonded params}{{IV}{12}{Non-bonded (intermolecular) parameters for TraPPE \cite {TraPPE,Martin1999} (and TraPPE-2 \cite {TraPPEUA2}), Potoff \cite {Mie,Potoff_branched}, AUA4 \cite {AUA4,Nieto2008}, and TAMie \cite {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses}{table.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Non-bonded (intermolecular) parameters for Errington Exp-6 force field.}}{12}{table.5}}
-\newlabel{tab:nonbonded Exp6}{{V}{12}{Non-bonded (intermolecular) parameters for Errington Exp-6 force field}{table.5}{}}
-\newlabel{eq:Lorentz-Berthelot_eps}{{5}{13}{}{equation.2.5}{}}
-\newlabel{eq:Lorentz-Berthelot_sig}{{6}{13}{}{equation.2.6}{}}
-\newlabel{eq:Lorentz-Berthelot_lam}{{7}{13}{}{equation.2.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Short distance forces increase and energy wells become more narrow with increasing $\lambda $ and $\alpha $. Panels a)-b) plot the reduced energy $(U^\star )$ and force $(F^\star )$ with respect to the reduced distance $(r^\star )$, where the energy and distance are scaled by $\epsilon $ and $r_{\rm  min}$, respectively.}}{12}{figure.3}}
+\newlabel{fig:UF_Mie_Exp6}{{3}{12}{Short distance forces increase and energy wells become more narrow with increasing $\lambda $ and $\alpha $. Panels a)-b) plot the reduced energy $(U^\star )$ and force $(F^\star )$ with respect to the reduced distance $(r^\star )$, where the energy and distance are scaled by $\epsilon $ and $r_{\rm min}$, respectively}{figure.3}{}}
+\newlabel{eq:Lorentz-Berthelot_eps}{{5}{12}{}{equation.2.5}{}}
+\newlabel{eq:Lorentz-Berthelot_sig}{{6}{12}{}{equation.2.6}{}}
+\newlabel{eq:Lorentz-Berthelot_lam}{{7}{12}{}{equation.2.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Non-bonded (intermolecular) parameters for TraPPE \cite  {TraPPE,Martin1999} (and TraPPE-2 \cite  {TraPPEUA2}), Potoff \cite  {Mie,Potoff_branched}, AUA4 \cite  {AUA4,Nieto2008}, and TAMie \cite  {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses.}}{13}{table.4}}
+\newlabel{tab:nonbonded params}{{IV}{13}{Non-bonded (intermolecular) parameters for TraPPE \cite {TraPPE,Martin1999} (and TraPPE-2 \cite {TraPPEUA2}), Potoff \cite {Mie,Potoff_branched}, AUA4 \cite {AUA4,Nieto2008}, and TAMie \cite {TAMie,Weidler2016} force fields. The ``short/long'' Potoff CH and C parameters are included in parentheses. The ethane specific parameters for TAMie are included in parentheses}{table.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Non-bonded (intermolecular) parameters for Errington Exp-6 force field.}}{13}{table.5}}
+\newlabel{tab:nonbonded Exp6}{{V}{13}{Non-bonded (intermolecular) parameters for Errington Exp-6 force field}{table.5}{}}
 \newlabel{eq:Lorentz-Berthelot_alpha}{{8}{13}{}{equation.2.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Case study}{13}{section*.7}}
-\newlabel{Case Study}{{III}{13}{}{section*.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho _0 < \rho _1 < \rho _2 < \rho _3 < \rho _4$. Panels a)-d) correspond to ethane, propane, \textit  {n}-butane, and \textit  {n}-octane, respectively. Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values. Simulation error bars are approximately one symbol size.}}{14}{figure.3}}
-\newlabel{fig:IC_normal_alkanes}{{3}{14}{Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho _0 < \rho _1 < \rho _2 < \rho _3 < \rho _4$. Panels a)-d) correspond to ethane, propane, \textit {n}-butane, and \textit {n}-octane, respectively. Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values. Simulation error bars are approximately one symbol size}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref  {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref  {tab:nonbonded params}).}}{15}{figure.4}}
-\newlabel{fig:IC_branched_alkanes}{{4}{15}{Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref {tab:nonbonded params})}{figure.4}{}}
+\citation{Ethane2006}
+\citation{Butane2006}
+\citation{Lemmon2006}
+\citation{Lemmon2006}
+\citation{Propane2009}
+\citation{Butane2006}
+\citation{Beckmueller2017}
+\citation{Lemmon2006}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Case study}{14}{section*.7}}
+\newlabel{Case Study}{{III}{14}{}{section*.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho ^{\rm  IC}_0 < \rho ^{\rm  IC}_1 < \rho ^{\rm  IC}_2 < \rho ^{\rm  IC}_3 < \rho ^{\rm  IC}_4$. Panels a)-d) correspond to ethane, propane, \textit  {n}-butane, and \textit  {n}-octane, respectively. Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values. Simulation error bars computed with block averaging are approximately one symbol size.}}{15}{figure.4}}
+\newlabel{fig:IC_normal_alkanes}{{4}{15}{Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho ^{\rm IC}_0 < \rho ^{\rm IC}_1 < \rho ^{\rm IC}_2 < \rho ^{\rm IC}_3 < \rho ^{\rm IC}_4$. Panels a)-d) correspond to ethane, propane, \textit {n}-butane, and \textit {n}-octane, respectively. Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values. Simulation error bars computed with block averaging are approximately one symbol size}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref  {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref  {tab:nonbonded params}).}}{16}{figure.5}}
+\newlabel{fig:IC_branched_alkanes}{{5}{16}{Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a)-d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref {fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref {tab:nonbonded params})}{figure.5}{}}
 \citation{Bay_Deriv,Bay_MD,Bay_UQ,Wu2016,Kulakova2017}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Uncertainty Quantification}{17}{section*.8}}
-\newlabel{Methods II}{{IV}{17}{}{section*.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Uncertainty Quantification}{18}{section*.8}}
+\newlabel{Methods II}{{IV}{18}{}{section*.8}{}}
 \citation{Kulakova2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Bayesian Inference}{18}{section*.9}}
-\newlabel{Bayesian Analysis}{{IV\tmspace  +\thinmuskip {.1667em}A}{18}{}{section*.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Theory}{18}{section*.10}}
-\newlabel{Bayes Theorem}{{9}{18}{}{equation.4.9}{}}
-\newlabel{Model Selection}{{10}{18}{}{equation.4.10}{}}
-\newlabel{Posterior Prediction}{{11}{18}{}{equation.4.11}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Application}{19}{section*.11}}
-\newlabel{Bayes Specific}{{12}{19}{}{equation.4.12}{}}
-\newlabel{Model Selection Specific}{{13}{19}{}{equation.4.13}{}}
-\newlabel{Bayes Factor}{{14}{19}{}{equation.4.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Bayesian Inference}{19}{section*.9}}
+\newlabel{Bayesian Analysis}{{IV\tmspace  +\thinmuskip {.1667em}A}{19}{}{section*.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Theory}{19}{section*.10}}
+\newlabel{Bayes Theorem}{{9}{19}{}{equation.4.9}{}}
+\newlabel{Model Selection}{{10}{19}{}{equation.4.10}{}}
+\newlabel{Posterior Prediction}{{11}{19}{}{equation.4.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Application}{20}{section*.11}}
+\newlabel{Bayes Specific}{{12}{20}{}{equation.4.12}{}}
+\newlabel{Model Selection Specific}{{13}{20}{}{equation.4.13}{}}
+\newlabel{Bayes Factor}{{14}{20}{}{equation.4.14}{}}
 \newlabel{Posterior Prediction Z}{{15}{20}{}{equation.4.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Implementation}{20}{section*.12}}
-\newlabel{eq:Acceptance}{{16}{20}{}{equation.4.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}Implementation}{21}{section*.12}}
+\newlabel{eq:Acceptance}{{16}{21}{}{equation.4.16}{}}
 \citation{Bay_MD}
-\citation{TDE}
-\citation{Mostafa_Diss,Mostafa2018,Postdoc_1}
-\newlabel{eq:Acceptance Assumptions}{{17}{21}{}{equation.4.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a)--b) plot the uncertainties for $\rho _{\rm  l}^{\rm  sat}$ and $P_{\rm  v}^{\rm  sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm  c}$). Also included are percent deviations between the experimental data for ethane, propane, \textit  {n}-butane, and \textit  {n}-octane relative to the REFPROP correlations.}}{22}{figure.5}}
-\newlabel{fig:Error_model}{{5}{22}{Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a)--b) plot the uncertainties for $\rho _{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Also included are percent deviations between the experimental data for ethane, propane, \textit {n}-butane, and \textit {n}-octane relative to the REFPROP correlations}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Surrogate Model}{22}{section*.13}}
-\newlabel{Surrogate Model}{{IV\tmspace  +\thinmuskip {.1667em}B}{22}{}{section*.13}{}}
 \citation{Postdoc_1}
 \citation{shirts-chodera:jcp:2008:mbar}
 \citation{Postdoc_1}
+\newlabel{eq:Acceptance Assumptions}{{17}{22}{}{equation.4.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Surrogate Model}{22}{section*.13}}
+\newlabel{Surrogate Model}{{IV\tmspace  +\thinmuskip {.1667em}B}{22}{}{section*.13}{}}
 \citation{Postdoc_1}
 \citation{Postdoc_1,Mostafa_Diss,Mostafa2018}
 \citation{Postdoc_1}
@@ -139,68 +145,72 @@
 \citation{Riedel,Funke}
 \citation{naden:jctc:2016}
 \citation{Postdoc_1}
-\newlabel{Antoine}{{22}{24}{}{equation.4.22}{}}
-\newlabel{Rectilinear Scale}{{23}{24}{}{equation.4.23}{}}
 \citation{TraPPE,Mie}
 \citation{GUM}
 \citation{RoundRobin}
-\citation{Mie}
+\newlabel{Antoine}{{22}{24}{}{equation.4.22}{}}
+\newlabel{Rectilinear Scale}{{23}{24}{}{equation.4.23}{}}
+\citation{Mostafa_Diss,Mostafa2018,Postdoc_1}
+\citation{TDE}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Results}{25}{section*.14}}
 \newlabel{Results}{{V}{25}{}{section*.14}{}}
+\citation{Mie}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a)--b) plot the uncertainties for $\rho _{\rm  l}^{\rm  sat}$ and $P_{\rm  v}^{\rm  sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm  c}$). Uncertainties are computed at the 95\% confidence level using the respective $s^2_{\rm  D}$ and $s^2_{\rm  SM}$ values. Also included are percent deviations between the experimental data used to compute the likelihood for ethane, propane, \textit  {n}-butane, and \textit  {n}-octane relative to the REFPROP correlations.}}{26}{figure.6}}
+\newlabel{fig:Error_model}{{6}{26}{Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a)--b) plot the uncertainties for $\rho _{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Uncertainties are computed at the 95\% confidence level using the respective $s^2_{\rm D}$ and $s^2_{\rm SM}$ values. Also included are percent deviations between the experimental data used to compute the likelihood for ethane, propane, \textit {n}-butane, and \textit {n}-octane relative to the REFPROP correlations}{figure.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Ethane}{26}{section*.15}}
 \newlabel{Ethane}{{V\tmspace  +\thinmuskip {.1667em}A}{26}{}{section*.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces MCMC sampled parameter sets for different values of $\lambda _{\rm  CH_3}$ ($\epsilon _{\rm  CH_3, MCMC}$ and $\sigma _{\rm  CH_3, MCMC}$) quantify the uncertainty in $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$. The Potoff parameter set is included as a reference for $\lambda _{\rm  CH_3} = 16$.}}{26}{figure.6}}
-\newlabel{fig:MCMC_ethane_parameter_space}{{6}{26}{MCMC sampled parameter sets for different values of $\lambda _{\rm CH_3}$ ($\epsilon _{\rm CH_3, MCMC}$ and $\sigma _{\rm CH_3, MCMC}$) quantify the uncertainty in $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$. The Potoff parameter set is included as a reference for $\lambda _{\rm CH_3} = 16$}{figure.6}{}}
 \citation{Pareto_Deriv,Pareto_LJPQ,Pareto_ST}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Robust posterior prediction propagates $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$ parameter uncertainties to $\rho _{\rm  l}^{\rm  sat}$ and $P_{\rm  v}^{\rm  sat}$. Panels a)--b) plot the percent deviation from REFPROP correlations for $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively. The upper and lower lines for each $\lambda $ correspond to the 95\% credible interval obtained from $QoI_{\rm  MCMC}$. Insets of Panels a)--b) are histograms of the MAPD\% in $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively. Experimental data used to compute the likelihood are included as black dots.}}{27}{figure.7}}
-\newlabel{fig:MCMC_ethane_VLE}{{7}{27}{Robust posterior prediction propagates $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$ parameter uncertainties to $\rho _{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. Panels a)--b) plot the percent deviation from REFPROP correlations for $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. The upper and lower lines for each $\lambda $ correspond to the 95\% credible interval obtained from $QoI_{\rm MCMC}$. Insets of Panels a)--b) are histograms of the MAPD\% in $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Inadequacies of the UA Mie $\lambda $-6 potential are observed in $Z$ for the two highest isochore densities $(\rho _3$ and $\rho _4)$ by propagating the uncertainties in $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$ for different values of $\lambda _{\rm  CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm  high}$, i.e. $P_{\rm  MCMC}$ for $\rho = \rho _3$--$\rho _4$ and $T = T^{\rm  IT}$. REFPROP uncertainty in $P^{\rm  high}$ is $\pm 1$\%.}}{28}{figure.8}}
-\newlabel{fig:MCMC_ethane_Phigh}{{8}{28}{Inadequacies of the UA Mie $\lambda $-6 potential are observed in $Z$ for the two highest isochore densities $(\rho _3$ and $\rho _4)$ by propagating the uncertainties in $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$ for different values of $\lambda _{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho _3$--$\rho _4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%}{figure.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces MCMC results confirm that the UA Mie $\lambda $-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$. Panels b)-c) plot the average deviation (AD\%) in $P^{\rm  high}$ with respect to MAPD\% of $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively.}}{29}{figure.9}}
-\newlabel{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto}{{9}{29}{MCMC results confirm that the UA Mie $\lambda $-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$. Panels b)-c) plot the average deviation (AD\%) in $P^{\rm high}$ with respect to MAPD\% of $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces MCMC sampled parameter sets for different values of $\lambda _{\rm  CH_3}$ ($\epsilon _{\rm  CH_3, MCMC}$ and $\sigma _{\rm  CH_3, MCMC}$) quantify the uncertainty in $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$. The Potoff parameter set is included as a reference for $\lambda _{\rm  CH_3} = 16$.}}{27}{figure.7}}
+\newlabel{fig:MCMC_ethane_parameter_space}{{7}{27}{MCMC sampled parameter sets for different values of $\lambda _{\rm CH_3}$ ($\epsilon _{\rm CH_3, MCMC}$ and $\sigma _{\rm CH_3, MCMC}$) quantify the uncertainty in $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$. The Potoff parameter set is included as a reference for $\lambda _{\rm CH_3} = 16$}{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Different trends for VLE properties with respect to temperature are observed depending on the value of $\lambda _{\rm  CH_3}$. Panels a)--b) plot the percent deviation from REFPROP correlations for $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively. Robust posterior prediction propagates $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$ parameter uncertainties to $\rho _{\rm  l}^{\rm  sat}$ and $P_{\rm  v}^{\rm  sat}$. The upper and lower lines for each $\lambda $ correspond to the 95\% credible interval obtained from $QoI_{\rm  MCMC}$. Insets of Panels a)--b) are histograms of the MAPD\% in $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively. Experimental data used to compute the likelihood are included as black dots.}}{28}{figure.8}}
+\newlabel{fig:MCMC_ethane_VLE}{{8}{28}{Different trends for VLE properties with respect to temperature are observed depending on the value of $\lambda _{\rm CH_3}$. Panels a)--b) plot the percent deviation from REFPROP correlations for $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Robust posterior prediction propagates $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$ parameter uncertainties to $\rho _{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The upper and lower lines for each $\lambda $ correspond to the 95\% credible interval obtained from $QoI_{\rm MCMC}$. Insets of Panels a)--b) are histograms of the MAPD\% in $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots}{figure.8}{}}
 \citation{Jeffreys2004}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Evidence (Bayes factor) in Panel a) supports $\lambda _{\rm  CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda _{\rm  CH_2} = 16$ over $\lambda _{\rm  CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit  {n}-butane, and \textit  {n}-octane. Note that all values are normalized with respect to $\lambda = 14$.}}{30}{figure.10}}
-\newlabel{fig:Bayes_Factors}{{10}{30}{Evidence (Bayes factor) in Panel a) supports $\lambda _{\rm CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda _{\rm CH_2} = 16$ over $\lambda _{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit {n}-butane, and \textit {n}-octane. Note that all values are normalized with respect to $\lambda = 14$}{figure.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Larger \textit  {n}-alkanes}{31}{section*.16}}
-\newlabel{Larger_nalkanes}{{V\tmspace  +\thinmuskip {.1667em}B}{31}{}{section*.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces MCMC sampled $\epsilon _{\rm  CH_2}$ and $\sigma _{\rm  CH_2}$ parameter sets result in large AD\% for $P^{\rm  high}$. Panels a) and b) correspond to $\lambda _{\rm  CH_2} = 16$ and $\lambda _{\rm  CH_2} = 14$, respectively. Contours are the AD\% in $P^{\rm  high}$ relative to the REFPROP correlations, where the ``REFPROP uncertainty'' region represents $\pm 1$\% deviation. Panel a) includes the Potoff parameter set as a reference for $\lambda _{\rm  CH_2} = 16$.}}{32}{figure.11}}
-\newlabel{fig:MCMC_Mie_14_16_propane_butane_octane}{{11}{32}{MCMC sampled $\epsilon _{\rm CH_2}$ and $\sigma _{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Panels a) and b) correspond to $\lambda _{\rm CH_2} = 16$ and $\lambda _{\rm CH_2} = 14$, respectively. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP correlations, where the ``REFPROP uncertainty'' region represents $\pm 1$\% deviation. Panel a) includes the Potoff parameter set as a reference for $\lambda _{\rm CH_2} = 16$}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Inadequacies of the UA Mie $\lambda $-6 potential are observed in $Z$ for the two highest isochore densities $(\rho ^{\rm  IC}_3$ and $\rho ^{\rm  IC}_4)$ by propagating the uncertainties in $\epsilon _{\rm  CH_3}$--$\sigma _{\rm  CH_3}$ for different values of $\lambda _{\rm  CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm  high}$, i.e. $P_{\rm  MCMC}$ for $\rho = \rho ^{\rm  IC}_3$--$\rho ^{\rm  IC}_4$ and $T = T^{\rm  IT}$. REFPROP uncertainty in $P^{\rm  high}$ is $\pm 1$\%.}}{29}{figure.9}}
+\newlabel{fig:MCMC_ethane_Phigh}{{9}{29}{Inadequacies of the UA Mie $\lambda $-6 potential are observed in $Z$ for the two highest isochore densities $(\rho ^{\rm IC}_3$ and $\rho ^{\rm IC}_4)$ by propagating the uncertainties in $\epsilon _{\rm CH_3}$--$\sigma _{\rm CH_3}$ for different values of $\lambda _{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho ^{\rm IC}_3$--$\rho ^{\rm IC}_4$ and $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces MCMC confirms that accurate prediction of VLE leads to large deviations in pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$. Panels b)-c) plot the average deviation (AD\%) in $P^{\rm  high}$ with respect to MAPD\% of $\rho _{\rm  l, MCMC}^{\rm  sat}$ and $P_{\rm  v, MCMC}^{\rm  sat}$, respectively.}}{30}{figure.10}}
+\newlabel{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto}{{10}{30}{MCMC confirms that accurate prediction of VLE leads to large deviations in pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$. Panels b)-c) plot the average deviation (AD\%) in $P^{\rm high}$ with respect to MAPD\% of $\rho _{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Evidence (Bayes factor) in Panel a) supports $\lambda _{\rm  CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda _{\rm  CH_2} = 16$ over $\lambda _{\rm  CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit  {n}-butane, and \textit  {n}-octane. Note that all values are normalized with respect to $\lambda = 14$.}}{31}{figure.11}}
+\newlabel{fig:Bayes_Factors}{{11}{31}{Evidence (Bayes factor) in Panel a) supports $\lambda _{\rm CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda _{\rm CH_2} = 16$ over $\lambda _{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit {n}-butane, and \textit {n}-octane. Note that all values are normalized with respect to $\lambda = 14$}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Larger \textit  {n}-alkanes}{32}{section*.16}}
+\newlabel{Larger_nalkanes}{{V\tmspace  +\thinmuskip {.1667em}B}{32}{}{section*.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces MCMC sampled $\epsilon _{\rm  CH_2}$ and $\sigma _{\rm  CH_2}$ parameter sets result in large AD\% for $P^{\rm  high}$. Panels a) and b) correspond to $\lambda _{\rm  CH_2} = 16$ and $\lambda _{\rm  CH_2} = 14$, respectively. Contours are the AD\% in $P^{\rm  high}$ relative to the REFPROP correlations, where the ``REFPROP uncertainty'' region represents $\pm 1$\% deviation. Panel a) includes the Potoff parameter set as a reference for $\lambda _{\rm  CH_2} = 16$.}}{33}{figure.12}}
+\newlabel{fig:MCMC_Mie_14_16_propane_butane_octane}{{12}{33}{MCMC sampled $\epsilon _{\rm CH_2}$ and $\sigma _{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Panels a) and b) correspond to $\lambda _{\rm CH_2} = 16$ and $\lambda _{\rm CH_2} = 14$, respectively. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP correlations, where the ``REFPROP uncertainty'' region represents $\pm 1$\% deviation. Panel a) includes the Potoff parameter set as a reference for $\lambda _{\rm CH_2} = 16$}{figure.12}{}}
 \citation{Thol_LJTS}
-\citation{Rowley1999,Rowley2001,Hayes2004}
-\citation{Mostafa_Diss,Hajigeorgiou2016,Kalos1972}
-\citation{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017,Rutkai2013,Thol2015}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion}{34}{section*.17}}
 \newlabel{Discussion}{{VI}{34}{}{section*.17}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Recommendations}{34}{section*.18}}
 \newlabel{Recommendations}{{VI\tmspace  +\thinmuskip {.1667em}A}{34}{}{section*.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Limitations}{34}{section*.19}}
-\newlabel{Limitations}{{VI\tmspace  +\thinmuskip {.1667em}B}{34}{}{section*.19}{}}
+\citation{Rowley1999,Rowley2001,Hayes2004}
+\citation{Mostafa_Diss,Hajigeorgiou2016,Kalos1972}
+\citation{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017,Rutkai2013,Thol2015}
 \citation{Thol2016_LJ,Rutkai2017,Lustig2015,Rutkai2013,Rutkai2015}
 \citation{Rutkai2015}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Limitations}{35}{section*.19}}
+\newlabel{Limitations}{{VI\tmspace  +\thinmuskip {.1667em}B}{35}{}{section*.19}{}}
+\newlabel{Residual Derivatives}{{24}{35}{}{equation.6.24}{}}
 \citation{ms2}
 \citation{Thol2016_siloxane_first}
-\newlabel{Residual Derivatives}{{24}{35}{}{equation.6.24}{}}
-\newlabel{eq:Z}{{25}{35}{}{equation.6.25}{}}
-\newlabel{eq:Z_IC}{{26}{35}{}{equation.6.26}{}}
-\newlabel{eq:U}{{27}{35}{}{equation.6.27}{}}
-\newlabel{eq:U_IC}{{28}{35}{}{equation.6.28}{}}
-\newlabel{eq:Z_IT}{{29}{35}{}{equation.6.29}{}}
+\newlabel{eq:Z}{{25}{36}{}{equation.6.25}{}}
+\newlabel{eq:Z_IC}{{26}{36}{}{equation.6.26}{}}
+\newlabel{eq:U}{{27}{36}{}{equation.6.27}{}}
+\newlabel{eq:U_IC}{{28}{36}{}{equation.6.28}{}}
+\newlabel{eq:Z_IT}{{29}{36}{}{equation.6.29}{}}
 \citation{Thol2016_LJ,Thol_LJTS,Rutkai2017}
 \citation{Kulakova2017,Wu2016}
 \@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusions}{37}{section*.20}}
 \newlabel{Conclusions}{{VII}{37}{}{section*.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{37}{section*.21}}
 \bibdata{JCP_Postdoc_3_manuscriptNotes,postdoc_references}
 \bibcite{LEMMON-RP91}{{1}{}{{}}{{}}}
 \bibcite{Thol2016_LJ}{{2}{}{{}}{{}}}
 \bibcite{Thol_LJTS}{{3}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgments}{38}{section*.21}}
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{38}{section*.22}}
 \bibcite{Rutkai2017}{{4}{}{{}}{{}}}
 \bibcite{Lustig2015}{{5}{}{{}}{{}}}
 \bibcite{Rutkai2015}{{6}{}{{}}{{}}}
 \bibcite{Rutkai2013}{{7}{}{{}}{{}}}
 \bibcite{Thol2016_siloxane_first}{{8}{}{{}}{{}}}
 \bibcite{Thol2016_siloxane}{{9}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{38}{section*.22}}
 \bibcite{Thol2017}{{10}{}{{}}{{}}}
 \bibcite{Thol2015}{{11}{}{{}}{{}}}
 \bibcite{TraPPE}{{12}{}{{}}{{}}}
