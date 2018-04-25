@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  12 APR 2018 09:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  25 APR 2018 13:11
 entering extended mode
 **./JCP_Postdoc_3_supporting_information.tex
 (JCP_Postdoc_3_supporting_information.tex
@@ -1374,9 +1374,6 @@ manuscript.aux on input line 78.
 
 (H:/Publications/Postdoc_3/JCP_Postdoc_3_manuscript.tex)
 (H:/Publications/Postdoc_3/JCP_Postdoc_3_manuscript.aux)
-
-Class achemso Warning: \bibliographystyle ignored on input line 87.
-
 (JCP_Postdoc_3_supporting_information.aux)
 \openout1 = `JCP_Postdoc_3_supporting_information.aux'.
 
@@ -1617,10 +1614,10 @@ s not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 469.
  ) 
 Here is how much of TeX's memory you used:
- 31570 strings out of 493333
- 628217 string characters out of 3139198
- 710245 words of memory out of 3000000
- 34568 multiletter control sequences out of 15000+200000
+ 31571 strings out of 493333
+ 628234 string characters out of 3139198
+ 710678 words of memory out of 3000000
+ 34569 multiletter control sequences out of 15000+200000
  39879 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,94p,10435b,734s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1633,10 +1630,10 @@ st, replaced by a fixed one
 pdfTeX warning (dest): name{equation.6.29} has been referenced but does not exi
 st, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.3} has been referenced but does not exist, r
+pdfTeX warning (dest): name{figure.4} has been referenced but does not exist, r
 eplaced by a fixed one
 
-pdfTeX warning (dest): name{figure.4} has been referenced but does not exist, r
+pdfTeX warning (dest): name{figure.5} has been referenced but does not exist, r
 eplaced by a fixed one
 
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKT
@@ -1652,7 +1649,7 @@ fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on JCP_Postdoc_3_supporting_information.pdf (20 pages, 933943 by
+Output written on JCP_Postdoc_3_supporting_information.pdf (20 pages, 933915 by
 tes).
 PDF statistics:
  755 PDF objects out of 1000 (max. 8388607)

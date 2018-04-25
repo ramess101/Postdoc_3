@@ -310,14 +310,6 @@ S.~Wu, P.~Angelikopoulos, C.~Papadimitriou, R.~Moser, and P.~Koumoutsakos.
 \newblock {\em Philosophical Transactions of the Royal Society of London A:
   Mathematical, Physical and Engineering Sciences}, 374(2060), 2016.
 
-\bibitem{TDE}
-Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
-  Chris Muzny.
-\newblock Thermodata engine {(TDE):} software implementation of the dynamic
-  data evaluation concept.
-\newblock {\em Journal of Chemical Information and Modeling}, 45(4):816--838,
-  2005.
-
 \bibitem{shirts-chodera:jcp:2008:mbar}
 Michael~R. Shirts and John~D. Chodera.
 \newblock Statistically optimal analysis of samples from multiple equilibrium
@@ -360,6 +352,14 @@ Michael Schappals, Andreas Mecklenfeld, Leif Kr{\"o}ger, Vitalie Botan, Andreas
   from models with internal degrees of freedom.
 \newblock {\em Journal of Chemical Theory and Computation}, 13(9):4270--4280,
   2017.
+
+\bibitem{TDE}
+Michael Frenkel, Robert~D. Chirico, Vladimir Diky, Xinjian Yan, Qian Dong, and
+  Chris Muzny.
+\newblock Thermodata engine {(TDE):} software implementation of the dynamic
+  data evaluation concept.
+\newblock {\em Journal of Chemical Information and Modeling}, 45(4):816--838,
+  2005.
 
 \bibitem{Pareto_Deriv}
 K.~St{\"o}bener, P.~Klein, S.~Reiser, M.~Horsch, K.-H. Kufer, and H.~Hasse.
