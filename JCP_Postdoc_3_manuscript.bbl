@@ -256,6 +256,14 @@ M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
 \newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}, 2018.
 
+\bibitem{GROMACS_note}
+GROMACS non-bonded tail corrections assume that the long-range contribution
+  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. The
+  small error introduced with this approximation does not affect our results.
+  For this reason, although it is straightforward to include the $r^{-\lambda}$
+  contribution, we did not attempt to modify the GROMACS default tail
+  correction values.
+
 \bibitem{Mostafa_Diss}
 Seyed~Mostafa Razavi.
 \newblock Optimization of a transferable shifted force field for interfaces and

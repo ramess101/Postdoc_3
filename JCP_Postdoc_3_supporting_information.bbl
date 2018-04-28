@@ -35,22 +35,26 @@ Razavi,~S.~M. Optimization of a Transferable Shifted Force Field for Interfaces
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Messerly \latin{et~al.}(2018)Messerly, Razavi, and Shirts]{Postdoc_1}
-Messerly,~R.~A.; Razavi,~S.~M.; Shirts,~M.~R. \emph{Journal of Chemical Theory
-  and Computation} \textbf{2018}, \emph{Pending publication.}\relax
+Messerly,~R.~A.; Razavi,~S.~M.; Shirts,~M.~R. Configuration-Sampling-Based
+  Surrogate Models for Rapid Parameterization of Non-bonded Interactions.
+  \emph{Journal of Chemical Theory and Computation} \textbf{2018},
+  \emph{Pending publication.}\relax
 \mciteBstWouldAddEndPunctfalse
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Razavi \latin{et~al.}(2018)Razavi, Messerly, and Elliott]{Mostafa2018}
-Razavi,~S.~M.; Messerly,~R.~A.; Elliott,~J.~R. \emph{The Journal of Chemical
+Razavi,~S.~M.; Messerly,~R.~A.; Elliott,~J.~R. Coexistence Calculation Using
+  the Isothermal-Isochoric Integration Method. \emph{The Journal of Chemical
   Physics.} \textbf{2018}, \emph{Pending publication.}\relax
 \mciteBstWouldAddEndPunctfalse
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Martin and Siepmann(1998)Martin, and Siepmann]{TraPPE}
-Martin,~M.~G.; Siepmann,~J.~I. \emph{The Journal of Physical Chemistry B}
-  \textbf{1998}, \emph{102}, 2569--2577\relax
+Martin,~M.~G.; Siepmann,~J.~I. Transferable potentials for phase equilibria. 1.
+  {United-atom} description of n-alkanes. \emph{The Journal of Physical
+  Chemistry B} \textbf{1998}, \emph{102}, 2569--2577\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -67,8 +71,10 @@ Eggimann,~B. \latin{et~al.}  {T-UA No. 2 ethane. TraPPE Validation Database,
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
 \EndOfBibitem
 \bibitem[Potoff and Bernard-Brunel(2009)Potoff, and Bernard-Brunel]{Mie}
-Potoff,~J.~J.; Bernard-Brunel,~D.~A. \emph{The Journal of Physical Chemistry B}
-  \textbf{2009}, \emph{113}, 14725--14731\relax
+Potoff,~J.~J.; Bernard-Brunel,~D.~A. Mie Potentials for Phase Equilibria
+  Calculations: {Applications} to Alkanes and Perfluoroalkanes. \emph{The
+  Journal of Physical Chemistry B} \textbf{2009}, \emph{113},
+  14725--14731\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
@@ -76,8 +82,9 @@ Potoff,~J.~J.; Bernard-Brunel,~D.~A. \emph{The Journal of Physical Chemistry B}
 \bibitem[Mick \latin{et~al.}(2017)Mick, Soroush~Barhaghi, Jackman, Schwiebert,
   and Potoff]{Potoff_branched}
 Mick,~J.~R.; Soroush~Barhaghi,~M.; Jackman,~B.; Schwiebert,~L.; Potoff,~J.~J.
-  \emph{Journal of Chemical \& Engineering Data} \textbf{2017}, \emph{62},
-  1806--1818\relax
+  Optimized Mie Potentials for Phase Equilibria: Application to Branched
+  Alkanes. \emph{Journal of Chemical \& Engineering Data} \textbf{2017},
+  \emph{62}, 1806--1818\relax
 \mciteBstWouldAddEndPuncttrue
 \mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
 {\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax

@@ -61,7 +61,7 @@
 	\addFileDependency{#1.aux}%
 }
 
-\myexternaldocument{H:/Publications/Postdoc_3/JCP_Postdoc_3_supporting_information}
+\myexternaldocument{JCP_Postdoc_3_supporting_information}
 
 %\SectionNumbersOn
 
@@ -504,7 +504,7 @@ Four normal and four branched alkanes of varying chain-length and degree of bran
 Molecular dynamics simulations for this study are performed in the $NVT$ ensemble (constant number of molecules, $N$, constant volume, $V$, and constant temperature, $T$) using GROMACS version 2018 \cite{GROMACS_2018}. Each simulation uses the Velocity Verlet integrator with a 2 fs time-step, 1.4 nm cut-off 
 %MRS3: shifted, switched? abrupt? abrupt is not very physical.
 %RAM3: But the abrupt cut-off is how the TraPPE, Potoff, etc. force fields were parameterized. A shifted or switched would dramatically change the results
-for non-bonded interactions with tail corrections for energy and pressure, Nos{\'e}-Hoover thermostat with a time constant of 1 ps, and fixed bond-lengths 
+for non-bonded interactions with tail corrections for energy and pressure \cite{GROMACS_note}, Nos{\'e}-Hoover thermostat with a time constant of 1 ps, and fixed bond-lengths 
 %MRS3: deleted.
 %are 
 constrained using LINCS with a LINCS-order of eight. Coulombic interactions are not computed as none of the force fields require partial charges for the compounds studied. The equilibration time is 0.1 ns for ethane and propane, 0.2 ns for \textit{n}-butane, and 0.5 ns for all other compounds. The production time is 1 ns for ethane, 2 ns for propane and \textit{n}-butane, and 4 ns for all other compounds. Replicate simulations are performed for \textit{n}-octane to validate that a single MD run of this length agrees with the average of several replicates, to within the combined uncertainty. A system size of 400 molecules is used for ethane, propane, and \textit{n}-butane, while all other compounds use 800 molecules. 
