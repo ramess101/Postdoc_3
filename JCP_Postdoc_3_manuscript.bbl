@@ -345,11 +345,12 @@ Levi~N. Naden and Michael~R Shirts.
 \newblock {\em Journal of Chemical Theory and Computation}, 12(4):1806--1823,
   2016.
 
-\bibitem{GUM}
-Barry~N. Taylor and Chris~E. Kuyatt.
-\newblock {NIST} guidelines for evaluating and expressing the uncertainty of
-  {NIST} measurement results cover.
-\newblock {\em {NIST} Technical Note 1297}, pages 1--9, 1994.
+\bibitem{Patrone2016}
+Paul~N. Patrone, Andrew Dienstfrey, Andrea~R. Browning, Samuel Tucker, and
+  Stephen Christensen.
+\newblock Uncertainty quantification in molecular dynamics studies of the glass
+  transition temperature.
+\newblock {\em Polymer}, 87:246 -- 259, 2016.
 
 \bibitem{RoundRobin}
 Michael Schappals, Andreas Mecklenfeld, Leif Kr{\"o}ger, Vitalie Botan, Andreas
