@@ -161,7 +161,7 @@ Richard~A. Messerly, Thomas A.~Knotts IV, and W.~Vincent Wilding.
 
 \bibitem{Allen1987}
 M.~P. Allen and D.~J. Tildesley.
-\newblock {\em Computer simulation of liquids}.
+\newblock {\em {Computer Simulation of Liquids}}.
 \newblock Clarendon Press ; Oxford University Press, Oxford England New York,
   1987.
 
@@ -258,11 +258,12 @@ M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
 
 \bibitem{GROMACS_note}
 GROMACS non-bonded tail corrections assume that the long-range contribution
-  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. The
-  small error introduced with this approximation does not significantly affect
-  our results. For this reason, although it is straightforward to include the
-  $r^{-\lambda}$ contribution, we did not attempt to modify the GROMACS default
-  tail correction values.
+  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. By
+  comparing the GROMACS output with other (slower) simulation packages, we
+  verified that the small error introduced with this approximation does not
+  significantly affect our results. For this reason, although it is
+  straightforward to include the $r^{-\lambda}$ contribution, we did not
+  attempt to modify the GROMACS default tail correction values.
 
 \bibitem{Mostafa_Diss}
 Seyed~Mostafa Razavi.
@@ -281,7 +282,7 @@ Richard~A. Messerly, S.~Mostafa Razavi, and Michael~R. Shirts.
 S.~Mostafa Razavi, Richard~A. Messerly, and J.~Richard Elliott.
 \newblock Coexistence calculation using the isothermal-isochoric integration
   method.
-\newblock {\em The Journal of Chemical Physics.}, Pending publication., 2018.
+\newblock Pending publication., 2018.
 
 \bibitem{Nieto2008}
 Carlos Nieto-Draghi, Anthony Bocahut, Beno{\^i}t Creton, Pascal Have, Aziz
@@ -387,7 +388,7 @@ Stephan Werth, Katrin St{\"o}bener, Peter Klein, Karl-Heinz Kufer, Martin
 
 \bibitem{Jeffreys2004}
 Harold Jeffreys.
-\newblock {\em The theory of probability. Third edition}.
+\newblock {\em {The Theory of Probability. Third edition}}.
 \newblock Clarendon Press: Oxford, 2004.
 
 \bibitem{Hajigeorgiou2016}
