@@ -265,6 +265,16 @@ GROMACS non-bonded tail corrections assume that the long-range contribution
   straightforward to include the $r^{-\lambda}$ contribution, we did not
   attempt to modify the GROMACS default tail correction values.
 
+\bibitem{Hoover1985}
+William~G. Hoover.
+\newblock Canonical dynamics: {E}quilibrium phase-space distributions.
+\newblock {\em Physical Review A}, 31:1695--1697, Mar 1985.
+
+\bibitem{Hess1998}
+Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
+\newblock Lincs: A linear constraint solver for molecular simulations.
+\newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
+
 \bibitem{Mostafa_Diss}
 Seyed~Mostafa Razavi.
 \newblock Optimization of a transferable shifted force field for interfaces and
