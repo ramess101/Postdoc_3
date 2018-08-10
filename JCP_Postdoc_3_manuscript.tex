@@ -299,7 +299,9 @@ An accurate understanding of the relationship between pressure $(P)$,
 density ($\rho$), and temperature $(T)$ and caloric properties 
 %MRS3: looks a little weird to give symbols for everything but heat capacity.
 %RAM3: removed, since I could mention a lot of other derivative properties
-(such as internal energy, $U$) for a given compound is essential for designing industrial chemical processes. Fundamental equations of state (FEOS), such as those based on the Helmholtz free energy, are a powerful approach for estimating $P \rho T$ behavior and caloric properties. For example, the National Institute of Standards and Technology (NIST) Reference Fluid Properties (REFPROP) currently provides FEOS for approximately one hundred fifty chemical species \cite{LEMMON-RP91}. Unfortunately, most compounds do not have sufficient (reliable) experimental data covering a wide range of pressures, densities, and temperatures to develop a highly-accurate FEOS. Since FEOS are semi-empirical and have $50$ to $100$ fitting parameters, the FEOS predictions can result in large errors at temperatures and pressures that are significantly higher than those used in parameterizing the FEOS, which are typically near or below the critical temperature and pressure. Therefore, improvement in an FEOS at high temperatures and pressures necessitates additional data for those conditions.
+(such as internal energy $U$) for a given compound is essential for designing industrial chemical processes. Fundamental equations of state (FEOS), such as those based on the Helmholtz free energy, are a powerful approach for estimating $P \rho T$ behavior and caloric properties. For example, the National Institute of Standards and Technology (NIST) Reference Fluid Properties (REFPROP) currently provides FEOS for approximately one hundred fifty chemical species \cite{LEMMON-RP91}. Unfortunately, most compounds do not have sufficient 
+%MRS4; I removed the parenthesis on reliable, unnecessary and confusing.
+reliable experimental data covering a wide range of pressures, densities, and temperatures to develop a highly-accurate FEOS. Since FEOS are semi-empirical and have $50$ to $100$ fitting parameters, the FEOS predictions can result in large errors at temperatures and pressures that are significantly higher than those used in parameterizing the FEOS, which are typically near or below the critical temperature and pressure. Therefore, improvement in an FEOS at high temperatures and pressures necessitates additional data for those conditions.
 % using an FEOS to extrapolate to temperatures and pressures that are significantly higher than those used in parameterizing the FEOS can result in large errors
 % Most compounds do not have sufficient reliable experimental data over a wide enough region of phase space. 
 %However, Thol et al. demonstrated that molecular simulation results at high temperatures and pressures can be used to supplement experimental data when developing fundamental equations of state \cite{Thol2016_siloxane}.
@@ -330,7 +332,11 @@ For example, it was demonstrated that VLE-optimized force fields for small compo
 REFPROP
 validity for the respective compounds, so that we can assume the REFPROP correlations are reliable.
 
-The most accurate force fields for estimating hydrocarbon VLE properties, such as $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, are the Transferable Potentials for Phase Equilibria (TraPPE) \cite{TraPPE,Martin1999} (and, especially, the recent TraPPE-2 \cite{TraPPEUA2}), Errington \cite{Exp6}, fourth generation anisotropic-united-atom (AUA4) \cite{AUA4,Bourasseau2002}, Potoff \cite{Mie,Potoff_branched}, and Transferable anisotropic Mie potential (TAMie) \cite{TAMie,Weidler2016}. Note that each is either an united-atom (UA) or an anisotropic-united-atom (AUA) force field. In contrast with the more computationally expensive all-atom (AA) approach, both UA and AUA models group the hydrogen interaction sites with their neighboring carbon atom. Although an AA force field should yield more accurate VLE results, it is much easier to locate the ``true'' optimal parameter set for UA and AUA force fields since fewer (highly correlated) parameters are optimized simultaneously.
+The most accurate force fields for estimating hydrocarbon VLE properties, such as $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, are the Transferable Potentials for Phase Equilibria (TraPPE) \cite{TraPPE,Martin1999} (and, especially, the recent TraPPE-2 \cite{TraPPEUA2}), Errington \cite{Exp6}, fourth generation anisotropic-united-atom (AUA4) \cite{AUA4,Bourasseau2002}, Potoff \cite{Mie,Potoff_branched}, and Transferable anisotropic Mie potential (TAMie) \cite{TAMie,Weidler2016}. Note that each is either an united-atom (UA) or an anisotropic-united-atom (AUA) force field. In contrast with the more computationally expensive all-atom (AA) approach, both UA and AUA models group the hydrogen interaction sites with their neighboring carbon atom. Although an AA force field 
+%MRS5: tweaking.
+%should yield 
+should in princible be able to yield
+more accurate VLE results, it is much easier to locate the ``true'' optimal parameter set for UA and AUA force fields since fewer (highly correlated) parameters are optimized simultaneously.
 
 % Although, in theory, an AA force field could yield more accurate VLE results, from a parameterization standpoint, it is much easier to ensure that a global minimum is obtained when parameterizing UA and AUA force fields since fewer (highly correlated) parameters are optimized simultaneously.
 
@@ -377,7 +383,10 @@ The three-parameter Mie $\lambda$-6 and Exp-6 potentials are more flexible than 
 
 % have three adjustable parameters while the LJ 12-6 potential only has two parameters.
 
-Previous work demonstrated that the UA LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for \textit{n}-alkanes \cite{Pareto_LJPQ,Mess4}. For this reason, the TraPPE-UA force field was primarily developed to agree with $\rho_{\rm l}^{\rm sat}$ (and the critical temperature, $T_{\rm c}$) \cite{TraPPE}. By contrast, accurate prediction of both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range is possible by varying the repulsive exponent of the LJ potential (i.e. the Mie $\lambda$-6 potential). It is important to mention that, although an attractive exponent of 6 has a strong theoretical basis, $\lambda = 12$ (LJ 12-6) is a historical artifact that was chosen primarily for computational purposes (see pages $18$, $140$ to $143$ of Reference \citenum{Allen1987}).
+Previous work demonstrated that the UA LJ 12-6 potential cannot adequately estimate both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for \textit{n}-alkanes \cite{Pareto_LJPQ,Mess4}. For this reason, the TraPPE-UA force field was primarily developed to agree with $\rho_{\rm l}^{\rm sat}$ (and the critical temperature, $T_{\rm c}$) \cite{TraPPE}. By contrast, accurate prediction of both $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ over a wide temperature range is possible by varying the repulsive exponent of the LJ potential (i.e. the Mie $\lambda$-6 potential). 
+%MRS5: unneeded.
+%It is important to mention that, 
+Although an attractive exponent of 6 has a strong theoretical basis, $\lambda = 12$ (LJ 12-6) is a historical artifact that was chosen primarily for computational purposes (see pages $18$, $140$ to $143$ of Reference \citenum{Allen1987}).
 
 Typically, when parameterized to VLE data, the optimal value of $\lambda$ is greater than 12 with a corresponding increase in the well depth $(\epsilon)$. Specifically, for most hydrocarbons, the Potoff UA force field \cite{Mie,Potoff_branched} uses $\lambda = 16$ while the TAMie force field \cite{TAMie} uses $\lambda = 14$. Gordon also demonstrated that reliable viscosities can be obtained from a UA Mie $\lambda$-6 model for \textit{n}-alkanes by using $\lambda = 14$ and $\lambda = 20$ for the CH$_3$ and CH$_2$ sites, respectively (note the subtle difference in how Gordon defines the Mie $\lambda$-6 potential, a.k.a. ``mod-n-6'') \cite{Gordon2006}. 
 %MRS2: don't make this a parenthetical. Full sentences generally shouldn't be.
@@ -517,7 +526,7 @@ Four normal and four branched alkanes of varying chain-length and degree of bran
 %MRS2: how is the vdw truncated?  I would suggest distributing the input files in supporting information as part of best practices.
 %RAM2: How specific do you think I should be for discussing vdw cut-offs?
 %RAM2: I plan on including input files.
-Molecular dynamics simulations for this study are performed in the $NVT$ ensemble (constant number of molecules, $N$, constant volume, $V$, and constant temperature, $T$) using GROMACS version 2018 \cite{GROMACS_2018}. Each simulation uses the Velocity Verlet integrator with a 2 fs time-step, 1.4 nm cut-off 
+Molecular dynamics simulations for this study are performed in the $NVT$ ensemble (constant number of molecules, $N$, constant volume, $V$, and constant temperature, $T$) using GROMACS version 2018 \cite{GROMACS_2018}. Each simulation uses the velocity Verlet integrator with a 2 fs time-step, 1.4 nm cut-off 
 %MRS3: shifted, switched? abrupt? abrupt is not very physical.
 %RAM3: But the abrupt cut-off is how the TraPPE, Potoff, etc. force fields were parameterized. A shifted or switched would dramatically change the results
 for non-bonded interactions with tail corrections for energy and pressure, Nos{\'e}-Hoover thermostat with a thermostat time constant of 1 ps \cite{Hoover1985}, and fixed bond-lengths 
@@ -847,7 +856,7 @@ The purpose of this case study is to demonstrate that the existing UA and AUA fo
 
 %Note that Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} include a constant 1\% uncertainty in the REFPROP correlations for all compounds at all state points. This choice was made for simplicity. In fact, the percent uncertainty in $\rho$ is typically only 1\% for the supercritical isotherm while it decreases near saturation to a value $\le 0.2$\%. Furthermore, the reported supercritical isotherm uncertainty is only 1\% for ethane \cite{Ethane2006}, \textit{n}-butane \cite{Butane2006}, isohexane \cite{LEMMON-RP91}, and neopentane \cite{LEMMON-RP91}. REFPROP uncertainties for propane \cite{Propane2009}, isobutane \cite{Butane2006}, and \textit{n}-octane \cite{Beckmueller2017} are only 0.1, 0.4, and 0.5\%, respectively, while isooctane does not have a reported uncertainty.   
 
-Note that Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} include a constant 1~\% uncertainty in the REFPROP correlations for all compounds at all state points. This is a conservative estimate as the reported REFPROP uncertainty for $\rho$ is typically only 1~\% at $T^{\rm IT}$ while it decreases near $T^{\rm sat}$ to a value $\le 0.2$~\%. Furthermore, only ethane \cite{Ethane2006}, \textit{n}-butane \cite{Butane2006}, isohexane \cite{Lemmon2006}, and neopentane \cite{Lemmon2006} have a reported uncertainty of 1~\% at $T^{\rm IT}$. REFPROP uncertainties for propane \cite{Propane2009}, isobutane \cite{Butane2006}, and \textit{n}-octane \cite{Beckmueller2017} are actually 0.1~\%, 0.4~\%, and 0.5~\%, respectively, while isooctane \cite{Lemmon2006} does not have a reported uncertainty. 
+Note that Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} include a constant 1\% uncertainty in the REFPROP correlations for all compounds at all state points. This is a conservative estimate as the reported REFPROP uncertainty for $\rho$ is typically only 1\% at $T^{\rm IT}$ while it decreases near $T^{\rm sat}$ to a value $\le 0.2$\%. Furthermore, only ethane \cite{Ethane2006}, \textit{n}-butane \cite{Butane2006}, isohexane \cite{Lemmon2006}, and neopentane \cite{Lemmon2006} have a reported uncertainty of 1\% at $T^{\rm IT}$. REFPROP uncertainties for propane \cite{Propane2009}, isobutane \cite{Butane2006}, and \textit{n}-octane \cite{Beckmueller2017} are actually 0.1\%, 0.4\%, and 0.5\%, respectively, while isooctane \cite{Lemmon2006} does not have a reported uncertainty. 
 
 %Note that we assign a constant 1\% uncertainty to the REFPROP correlations for all compounds at all state points. However, the reported percent uncertainties in $\rho$ actually decrease near saturation to a value $\le 0.2$\%. The 1\% uncertainty is truly only representative of the REFPROP uncertainty for the supercritical isotherm. Furthermore, some compounds have slightly lower reported percent uncertainties. Specifically,  The percent uncertainty at  Therefore, the 1\% uncertainty is a conservative estimate for some compounds. decrease near saturation,   decreases slightly with increasing temperature. The REFPROP ethane uncertainty 
 
@@ -866,12 +875,12 @@ Note that Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} incl
 	\centering
 	\includegraphics[width=6.4in]{IC_normal_alkanes_all_models}
 %MRS3: probably should explicitly give the colors along with the rhos.
-	\caption{Compressibility factors $(Z)$ along isochores for \textit{n}-alkanes. Most force fields are accurate at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Different symbol shapes correspond to the various force fields. Densities are distinguished by color, increase vertically, and are labeled such that $\rho^{\rm IC}_0 < \rho^{\rm IC}_1 < \rho^{\rm IC}_2 < \rho^{\rm IC}_3 < \rho^{\rm IC}_4$. Panels a) to d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively.
+	\caption{Compressibility factors $(Z)$ along isochores for \textit{n}-alkanes. Most force fields are accurate at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Different symbol shapes correspond to the various force fields, with legend in subplot a). Densities are distinguished by color, increase vertically, and are labeled such that $\rho^{\rm IC}_0 < \rho^{\rm IC}_1 < \rho^{\rm IC}_2 < \rho^{\rm IC}_3 < \rho^{\rm IC}_4$. Panels a) to d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively.
 % This was outdated information. I have removed the error bars for clarity.
 % TraPPE and Potoff simulation results are depicted using open circles and squares, respectively, with error bars representing two times the standard deviation of the fluctuations from a single simulation. 
 %MRS2: could also add it's approximately a 95% confidence interval.  Also, when you say standard deviation of the fluctuations from a single simulation, do you mean the standard error in the mean? Standard deviation in fluctuations from a simulation are larger than the estimated error in the mean by a factor of (Nsamples-1)^-1/2.
 %RAM2: Yes, my error bars over-estimated the uncertainty, and they were still only one symbol size. So I decided to be less explicit since the error bars are really quite small. 
-Solid lines represent REFPROP correlations, with dashed lines representing a 1~\% uncertainty in REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017}. Simulation error bars computed with block averaging are approximately one symbol size.}
+Solid lines represent REFPROP correlations, with dashed lines representing a 1\% uncertainty in REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017}. Simulation error bars computed with block averaging are approximately one symbol size.}
 	\label{fig:IC_normal_alkanes}
 \end{figure}
 %}
@@ -897,7 +906,11 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1~\
 Figure \ref{fig:IC_normal_alkanes} demonstrates that the existing literature force fields for \textit{n}-alkanes, while accurate for VLE $(Z \approx 0)$, do not capture the correct $P \rho T$ behavior at high pressures $(P^{\rm high})$, i.e. $Z$ at the higher temperatures $(T > T^{\rm sat})$ and highest isochore densities $(\rho^{\rm IC}_3$ and $\rho^{\rm IC}_4)$. 
 %MRS3: I wonder ``if correct $P \rho T$ behavior at high pressures $(P^{\rm high})$'', should be made more specific. 
 %RAM3: Made it a little more specific
-Figure \ref{fig:IC_branched_alkanes} shows the same erroneous trend in $Z$ for branched alkanes. Note that the error in $Z$ at high temperatures is less obvious because these force fields are typically not as reliable at predicting VLE for branched alkanes as for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. That being said, it is clear in both Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} that none of the force fields adequately reproduces $Z$ over the entire temperature range, or the slope of $Z$ with respect to inverse $T$.
+Figure \ref{fig:IC_branched_alkanes} shows the same erroneous trend in $Z$ for branched alkanes. Note that the error in $Z$ at high temperatures is less obvious because these force fields are typically not as reliable at predicting VLE for branched alkanes as for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$. 
+%MRS5: tweaked to remove colloquialism.
+%That being said,
+However, 
+it is clear in both Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} that none of the force fields adequately reproduces $Z$ over the entire temperature range, or the slope of $Z$ with respect to inverse $T$.
 
 % Note that the error in the slope of $Z$ with respect to inverse $T$ is less obvious because these force fields are typically less reliable at VLE for branched alkanes than for \textit{n}-alkanes, i.e. notice the large deviations at $Z \approx 0$.
 
@@ -929,7 +942,7 @@ the LJ 12-6 and Mie $\lambda$-6 potentials under- and over-predict $Z$ at high p
 %RAM2: True. The TraPPE-2 is not perfect. It is still outside of the REFPROP uncertainty. I have tried rewording this.
 %MRS2: maybe reverse the density ordering labeling? Intiuitively, one would expect rho_i+1 > rho_i.
 %RAM2: Done
-The one exception to this trend is the TraPPE-2 model for ethane, which has the most accurate prediction of the entire $P \rho T$ phase space simulated. Specifically, TraPPE-2 reproduces the REFPROP $Z$ to within 1~\% for all state points except at $P^{\rm high}$, where the average percent deviation (AD\%) relative to the REFPROP correlations is still only 3~\%.
+The one exception to this trend is the TraPPE-2 model for ethane, which has the most accurate prediction of the entire $P \rho T$ phase space simulated. Specifically, TraPPE-2 reproduces the REFPROP $Z$ to within 1\% for all state points except at $P^{\rm high}$, where the average percent deviation (AD\%) relative to the REFPROP correlations is still only 3\%.
 
 %the two highest densities along the supercritical isotherm, i.e. $T=T^{IT}$ and $\rho = \rho^{\rm IC}_3$ or $\rho^{\rm IC}_4$. The average percent deviation (AD\%) relative to the REFPROP correlations is only 3\% for pressure at these state points $(P^{\rm high})$. 
 
@@ -961,7 +974,10 @@ Specifically, we perform a Bayesian uncertainty quantification analysis to deter
 
 
 
-%Although the TAMie potential uses a softer repulsive exponent than Potoff (14 instead of 16), it consistently over-predicts the pressure for supercritical fluids and compressed liquids. The same is true for the Errington Exp-6 model. By contrast, the TraPPE-2 potential provides extremely reliable estimates of $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and the P$\rho$T behavior at high pressures and temperatures. Although the TraPPE-2 model is only available for ethane and ethylene, these results suggest that at extreme pressures either an AUA or AA model should be used to better account for the hydrogens. That being said, alternative functional forms, such as the extended Lennard-Jones, should also be considered.
+%Although the TAMie potential uses a softer repulsive exponent than Potoff (14 instead of 16), it consistently over-predicts the pressure for supercritical fluids and compressed liquids. The same is true for the Errington Exp-6 model. By contrast, the TraPPE-2 potential provides extremely reliable estimates of $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and the P$\rho$T behavior at high pressures and temperatures. Although the TraPPE-2 model is only available for ethane and ethylene, these results suggest that at extreme pressures either an AUA or AA model should be used to better account for the hydrogens, 
+%MRS5: Tweaked to remove colloquialism.  Also, add citation?
+%That being said, alternative functional forms, such as the extended Lennard-Jones, should also be considered.
+or even other functional forms, such as the extended Lennard-Jones, should also be considered.
 
 % although the 12-6 potential is too soft and the 16-6 potential is too hard, the optimal exponent i
 
@@ -1008,7 +1024,7 @@ a feasible parameter set exists that adequately predicts VLE and $P^{\rm high}$.
 Bayesian inference is a rigorous approach to determine all feasible $\epsilon$, $\sigma$, and $\lambda$ parameter sets.
 % quantify if the UA Mie $\lambda$-6 potential is ``adequate''. 
 %In order to rigorously quantify if the UA Mie $\lambda$-6 potential is ``adequate'', we perform a Bayesian inference analysis. 
-We refer the reader to the literature for a thorough discussion of Bayesian statistics \cite{Bay_Deriv,Bay_MD,Bay_UQ,Wu2016,Kulakova2017}. In Section \ref{Bayesian Analysis}, we review some basic concepts of Bayes theorem, define the posterior, likelihood, and prior distributions, and discuss the Markov Chain Monte Carlo (MCMC) approach
+We refer the reader to the literature for a thorough discussion of Bayesian statistics \cite{Bay_Deriv,Bay_MD,Bay_UQ,Wu2016,Kulakova2017}. In Section \ref{Bayesian Analysis}, we review some basic concepts of Bayes' theorem, define the posterior, likelihood, and prior distributions, and discuss the Markov Chain Monte Carlo (MCMC) approach
 %MRS2: suggest addition below.
 for sampling from the posterior joint distribution of the parameters.
 MCMC can be computationally burdensome, especially when molecular simulation is required to compute the likelihood. For this reason, we utilize surrogate models to reduce the computational cost of MCMC by several orders of magnitude. Section \ref{Surrogate Model} demonstrates how these surrogate models estimate $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$, and $Z$ for a given set of $\epsilon$, $\sigma$, and $\lambda$.
@@ -1052,7 +1068,7 @@ We implement this analysis for \textit{n}-alkanes to generate joint distribution
 %\subsection{Bayesian Analysis} \label{Bayesian Analysis}
 %
 %Bayesian inference is used to quantify the uncertainty in the non-bonded parameters $(\epsilon$ and $\sigma)$ and to determine the evidence for different values of $\lambda$. 
-%Bayes theorem states that
+%Bayes' theorem states that
 %\begin{equation} \label{Bayes Theorem}
 %Pr(\theta|D) = \frac{Pr(D|\theta)Pr(\theta)}{Pr(D)}
 %\end{equation}
@@ -1085,7 +1101,7 @@ We implement this analysis for \textit{n}-alkanes to generate joint distribution
 \subsubsection{Theory}
 
 %Bayesian inference is used to quantify the uncertainty in the non-bonded parameters $(\epsilon$ and $\sigma)$ and to determine the evidence for different values of $\lambda$. 
-Bayes theorem states
+Bayes' theorem states
 \begin{equation} \label{Bayes Theorem}
 Pr(\theta|D,M) = \frac{Pr(D|\theta,M)Pr(\theta|M)}{Pr(D|M)}
 \end{equation}
@@ -1098,7 +1114,9 @@ The ``model evidence'' is used in model selection, by computing the probability 
 \begin{equation} \label{Model Selection}
 Pr(M|D) = \frac{Pr(D|M)Pr(M)}{Pr(D)}
 \end{equation}
-where $Pr(M)$ is the ``model prior'', $Pr(D)$ is a normalization constant, and $Pr(M|D)$ is the ``model posterior''. The ratio of $Pr(M|D)$ between two different models $(M_i$ and $M_j)$, known as the Bayes factor $(K_{ij})$, provides the relative probability of models $M_i$ and $M_j$. 
+where $Pr(M)$ is the ``model prior'', $Pr(D)$ is a normalization constant, and $Pr(M|D)$ is the ``model posterior''. The ratio of $Pr(M|D)$ between two different models $(M_i$ and $M_j)$, known as the Bayes factor $(K_{ij})$, provides the relative probability of models $M_i$ and $M_j$, 
+%MRS5: added for specificity.
+given the data $D$. 
 
 The parameter uncertainty propagates when estimating another quantity of interest $(QoI)$, which may or may not be included in $D$, according to \cite{Kulakova2017}:
 \begin{equation} \label{Posterior Prediction}
@@ -1141,8 +1159,7 @@ where in this context $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are arr
 %where the ``model evidence'', $Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)$ in Equation \ref{Model Selection Specific}, for different values of $\lambda$ is determined by integrating the numerator of Equation \ref{Bayes Specific} for all values of $\epsilon$ and $\sigma$. (Note that if we instead sampled from the three-dimensional $(\epsilon, \sigma$, and $\lambda)$ distribution, this would be viewed as marginalizing with respect to $\lambda$.)
 
 To compute the Bayes factor between two values of $\lambda$ 
-%MRS2: added
-(i.e. two different models, $M$), we assume that the prior evidence is equal for all positive values of $\epsilon$, $\sigma$, and $\lambda$ (within a feasible range). Specifically, we use bounded uniform prior distributions for $Pr(\epsilon,\sigma|\lambda)$ in Equation \ref{Bayes Specific} and $Pr(\lambda)$ in Equation \ref{Model Selection Specific}, where the lower bound is 0 and the upper bound is an order of magnitude greater than the literature values for $\epsilon$, $\sigma$, and $\lambda$. Due to the large amount of information contained in the data, $D$, the use of a uniform prior does not impact our results, i.e. the data ``overwhelms'' the prior.
+(i.e. between different models, $M_i$ and $M_j$), we assume that the prior evidence is equal for all positive values of $\epsilon$, $\sigma$, and $\lambda$ (within a feasible range). Specifically, we use bounded uniform prior distributions for $Pr(\epsilon,\sigma|\lambda)$ in Equation \ref{Bayes Specific} and $Pr(\lambda)$ in Equation \ref{Model Selection Specific}, where the lower bound is 0 and the upper bound is an order of magnitude greater than the literature values for $\epsilon$, $\sigma$, and $\lambda$. Due to the large amount of information contained in the data, $D$, the use of a uniform prior does not impact our results, i.e. the data ``overwhelms'' the prior.
 %MRS2: need to discuss the justification for this choice, and whether it makes a difference. Also, are you literally making it uniform over an unbounded range, or a bounded range of reasonable values?  In practice, this can be equivalent to assuming the densities are zero outside the MCMC sampled region. Should justify the choice to not use other priors, i.e. jeffress, etc.
 %RAM2: Basically it doesn't matter because we have so much data that is highly sensitive to rhol, Psat, etc.
 One advantage of using a uniform prior is that the Bayes factor, $K_{ij}$, depends completely on the likelihood:
@@ -1161,7 +1178,7 @@ Pr(Z|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) = \int Pr(Z|\epsilon,\s
 \end{equation}
 Similar expressions exist for $Pr(\rho_{\rm l}^{\rm sat}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$ and $Pr(P_{\rm v}^{\rm sat}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$, where posterior prediction allows for uncertainty estimates in $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ at any temperature, not just those included in $D$. 
 
-%Note that $\theta$ does not include $\lambda$, since $\lambda$ is used as the distinction between models $(M)$. For clarity, we rewrite Bayes theorem for the specific case studied and use this notation moving forward
+%Note that $\theta$ does not include $\lambda$, since $\lambda$ is used as the distinction between models $(M)$. For clarity, we rewrite Bayes' theorem for the specific case studied and use this notation moving forward
 %\begin{equation} \label{Bayes Specific}
 %Pr(\epsilon,\sigma|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) = \frac{Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\epsilon,\sigma,\lambda)Pr(\epsilon,\sigma|\lambda)}{Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)}
 %\end{equation}
@@ -1292,7 +1309,10 @@ The integration required for robust posterior prediction (see Equations \ref{Pos
 Because MCMC moves are accepted based on Equation \ref{eq:Acceptance} and the denominator in Equation \ref{Bayes Specific} (i.e. $Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)$) does not depend on $\epsilon$ and $\sigma$, the acceptance probability is independent of $Pr(\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat}|\lambda)$. 
 %MRS2: is uniform actually non-informative?  It has scale information (if there are ranges), which I think you may be implicitly including, unles the probability distributions are proven not to diverge when integrated over all sigma,epsilon.  This may confuse people since you say both non-informative and uniform.
 %RAM2: I will get some feedback from the Bayesian people
-Also, as mentioned previously, we use a ``weakly informative prior'' such that the acceptance probability is independent of $Pr(\epsilon,\sigma|\lambda)$.
+%
+%MRS5:suggested rephrasing
+%Also, as mentioned previously, we use a ``weakly informative prior'' such that the acceptance probability is independent of $Pr(\epsilon,\sigma|\lambda)$.
+Also, as mentioned previously, we use a weakly informative uniform prior, over larger than feasible range. The uniformity of the prior means that the acceptance probability is independent of $Pr(\epsilon,\sigma|\lambda)$.
 %Specifically, $Pr(\epsilon,\sigma|\lambda)$ is uniform for all feasible values of $\epsilon$ and $\sigma$, i.e. the lower bound for the distribution is 0 (K or nm) and the upper bound is an order of magnitude larger than literature values for $\epsilon$ and $\sigma$.
 %  with a lower bound of 0 and an upper bound that is an order of magnitude larger than feasible values for $\epsilon$ and $\sigma$. 
 %conservative lower and upper bound. for all values of $\epsilon$, $\sigma$, and $\lambda$ greater than 0. that is at least an order of magnitude larger than any feasible value for $\epsilon$, $\sigma$, and $\lambda$.
@@ -1383,7 +1403,15 @@ A typical Markov Chain requires $O(10^4$ to $10^5)$ Monte Carlo steps, where the
 
 \subsubsection{Multistate Bennett Acceptance Ratio}
 
-We use a configuration-sampling-based surrogate model, where configurations are sampled using a small group of reference parameter sets $(\theta_{\rm ref}$, consisting of $\epsilon_{\rm ref}, \sigma_{\rm ref}$, and $\lambda_{\rm ref})$ \cite{Postdoc_1}. Specifically, $NVT$ ensemble averages for the MCMC parameter sets $(\theta_{\rm MCMC})$ are estimated by reweighting the sampled reference configurations using Multistate Bennett Acceptance Ratio (MBAR) \cite{shirts-chodera:jcp:2008:mbar}. MBAR is a nearly exact surrogate model when a sufficient number of configurations sampled by $\theta_{\rm ref}$ are similar to those that would be sampled with direct simulation of $\theta$, resulting in a non-zero MBAR weight for such configurations (see discussion on number of effective samples in Reference \citenum{Postdoc_1}). For this purpose, we use a single value of $\epsilon_{\rm ref}$ with nine evenly spaced $\sigma_{\rm ref}$ values for a fixed value of $\lambda_{\rm ref} = \lambda$ \cite{Postdoc_1}.  
+We use a configuration-sampling-based surrogate model, where configurations are sampled using a small group of reference parameter sets $(\theta_{\rm ref}$, consisting of $\epsilon_{\rm ref}, \sigma_{\rm ref}$, and $\lambda_{\rm ref})$ \cite{Postdoc_1}. Specifically, $NVT$ ensemble averages for the MCMC parameter sets $(\theta_{\rm MCMC})$ are estimated by reweighting the sampled reference configurations using Multistate Bennett Acceptance Ratio (MBAR) \cite{shirts-chodera:jcp:2008:mbar}. MBAR is a nearly exact surrogate model when a sufficient number of configurations sampled by $\theta_{\rm ref}$ are similar to those that would be sampled with direct simulation of $\theta$,
+%MRS5: not quite true; you could have one large and N-1 very small weights, and it would be bad.  Suggested text, may be a bit off, edit as you see fit. Also, reader might not know what 'MBAR weight'' means
+% resulting in a non-zero MBAR weight for such configurations 
+which can be easily verified by statistical measures that identify if the weighted importance of these configurations with the parameters $\theta$ become too close to zero.
+(see discussion on number of effective samples in Reference \citenum{Postdoc_1}). For this purpose, we use a single value of $\epsilon_{\rm ref}$ with nine evenly spaced $\sigma_{\rm ref}$ values for 
+%MRS5: clarified.
+%a 
+each
+fixed value of $\lambda_{\rm ref} = \lambda$ \cite{Postdoc_1}.  
 
 %MBAR is a nearly exact surrogate model for $\theta$ when a sufficient number of configurations sampled by $\theta_{\rm ref}$ have a non-zero weight, i.e. are similar to the configurations that would be sampled with $\theta$ (see discussion on number of effective samples in Reference \citenum{Postdoc_1}).
 
@@ -1395,7 +1423,9 @@ We use a configuration-sampling-based surrogate model, where configurations are 
 
 \subsubsection{Isothermal isochoric integration}
 
-The properties that are estimated using MBAR are the departure internal energy $(U^{\rm dep})$ and the compressibility factor $(Z)$. 
+The properties that are estimated using MBAR are the 
+%MRS5: do you want to define departure internal energy briefly here to avoid issues with the reviewer?
+departure internal energy $(U^{\rm dep})$ and the compressibility factor $(Z)$. 
 %As discussed in Section \ref{Methods I}, 
 Isothermal isochoric integration (ITIC) converts the MBAR estimated $U^{\rm dep}$ and $Z$ values at the 19 ITIC state points to saturation temperatures $(T^{\rm sat})$, saturated liquid densities $(\rho_{\rm l}^{\rm sat})$, saturated vapor densities $(\rho_{\rm v}^{\rm sat})$, and saturated vapor pressures $(P_{\rm v}^{\rm sat})$. This is important since $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are the data $(D)$ included in $L(\theta|D)$. Details for the combined implementation of MBAR and ITIC (MBAR-ITIC) is discussed elsewhere \cite{Postdoc_1}. 
 
@@ -1457,13 +1487,13 @@ with those reported in the literature for the respective force fields obtained u
 %MRS3: I suggest this paragraph be moved to the end of the surrogate model section for more clarity.
 %RAM3: Previously I did have it at the end of the Surrogate model section. I thought it fit a little better here. I will look at this again though.
 
-As shown in Figure \ref{fig:Error_model}, the surrogate model uncertainty $(u_{\rm SM}$, reported at the 95~\% confidence level) for $\rho_{\rm l}^{\rm sat}$ is 0.3~\% up to $0.75 T_{\rm c}$ and increases linearly to 1.5~\% at the maximum $T^{\rm sat}$. The surrogate model uncertainty for $P_{\rm v}^{\rm sat}$ is 20~\% at the minimum $T_{\rm sat}$ and decreases linearly to 7~\% at $0.6 T_{\rm c}$, where it remains constant for higher temperatures. Note that these are conservative estimates of $u_{\rm SM}$, where other studies suggest smaller uncertainties in MBAR and ITIC \cite{Mostafa_Diss,Mostafa2018,Postdoc_1}. In fact, for the compounds investigated in this study, these uncertainties are much larger than the experimental uncertainties ($u_{\rm D}$, at the 95~\% confidence level) \cite{TDE} and, therefore, the size of the parameter space sampled by MCMC depends almost entirely on $u_{\rm SM}$. The use of a conservative $u_{\rm SM}$ model is intentional in this regard, namely, so that the $\theta_{\rm MCMC}$ sampled points represent practically all of the feasible $\epsilon$ and $\sigma$ parameter sets (for a given $\lambda$) optimized with $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. 
+As shown in Figure \ref{fig:Error_model}, the surrogate model uncertainty $(u_{\rm SM}$, reported at the 95\% confidence level) for $\rho_{\rm l}^{\rm sat}$ is 0.3\% up to $0.75 T_{\rm c}$ and increases linearly to 1.5\% at the maximum $T^{\rm sat}$. The surrogate model uncertainty for $P_{\rm v}^{\rm sat}$ is 20\% at the minimum $T_{\rm sat}$ and decreases linearly to 7\% at $0.6 T_{\rm c}$, where it remains constant for higher temperatures. Note that these are conservative estimates of $u_{\rm SM}$, where other studies suggest smaller uncertainties in MBAR and ITIC \cite{Mostafa_Diss,Mostafa2018,Postdoc_1}. In fact, for the compounds investigated in this study, these uncertainties are much larger than the experimental uncertainties ($u_{\rm D}$, at the 95\% confidence level) \cite{TDE} and, therefore, the size of the parameter space sampled by MCMC depends almost entirely on $u_{\rm SM}$. The use of a conservative $u_{\rm SM}$ model is intentional in this regard, namely, so that the $\theta_{\rm MCMC}$ sampled points represent practically all of the feasible $\epsilon$ and $\sigma$ parameter sets (for a given $\lambda$) optimized with $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. 
 
 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=6.4in]{Error_model_alkanes}
-	\caption{Uncertainty assessment. Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a) and b) plot the uncertainties for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Uncertainties are computed at the 95~\% confidence level using the respective $s^2_{\rm D}$ and $s^2_{\rm SM}$ values. Also included are percent deviations between the REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017} and the experimental data used in Equation \ref{eq:Likelihood normal distribution} to compute the likelihood for ethane, propane, \textit{n}-butane, and \textit{n}-octane (from the Thermodynamics Research Center, TRC, source data). \cite{TDE} }
+	\caption{Uncertainty assessment. Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a) and b) plot the uncertainties for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Uncertainties are computed at the 95\% confidence level using the respective $s^2_{\rm D}$ and $s^2_{\rm SM}$ values. Also included are percent deviations between the REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017} and the experimental data used in Equation \ref{eq:Likelihood normal distribution} to compute the likelihood for ethane, propane, \textit{n}-butane, and \textit{n}-octane (from the Thermodynamics Research Center, TRC, source data). \cite{TDE} }
 	\label{fig:Error_model}
 \end{figure}
 
@@ -1632,6 +1662,7 @@ Figures \ref{fig:MCMC_ethane_parameter_space}-\ref{fig:MCMC_Mie_13_14_15_16_17_1
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{MCMC_ethane_parameter_space}
+%MRS5: suggest instead of ``MCMC sampled parameter sets'' saying something like ``Probability distribution of parameter sets sampled by MCMC'', i.e. what the meaning is.  
 	\caption{MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$). $\epsilon_{\rm CH_3}$ is strongly correlated with $\lambda_{\rm CH_3}$ and $\sigma_{\rm CH_3}$, while $\sigma_{\rm CH_3}$ and $\lambda_{\rm CH_3}$ are only weakly correlated. The Potoff parameter set is included as a reference for $\lambda_{\rm CH_3} = 16$. \cite{Mie} } 
 	\label{fig:MCMC_ethane_parameter_space}
 \end{figure}
@@ -1647,7 +1678,7 @@ Figures \ref{fig:MCMC_ethane_VLE}-\ref{fig:MCMC_ethane_Phigh} compare the perfor
 %RAM3: I think it is clearer now
 %MRS3: I'm also not clear that this is a great opening line to the caption. IS the main point of the graph that uncertainties propagate? 
 %RAM3: Not exactly. The main purpose is that we observe some trends in the error.
-	\caption{Ethane VLE properties with respect to temperature for $\lambda_{\rm CH_3} = 13$ to $18$. Different trends are observed depending on the value of $\lambda_{\rm CH_3}$. Panels a) and b) plot the percent deviation from REFPROP values \cite{LEMMON-RP91,Ethane2006} for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Robust posterior prediction propagates the joint parameter uncertainties from $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The upper and lower lines for each $\lambda$ correspond to the 95~\% credible interval obtained from $QoI_{\rm MCMC}$.  Insets of Panels a) and b) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots. \cite{TDE} }
+	\caption{Ethane VLE properties with respect to temperature for $\lambda_{\rm CH_3} = 13$ to $18$. Different trends are observed depending on the value of $\lambda_{\rm CH_3}$. Panels a) and b) plot the percent deviation from REFPROP values \cite{LEMMON-RP91,Ethane2006} for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Robust posterior prediction propagates the joint parameter uncertainties from $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The upper and lower lines for each $\lambda$ correspond to the 95\% credible interval obtained from $QoI_{\rm MCMC}$.  Insets of Panels a) and b) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots. \cite{TDE} }
 	%MRS2: is the spread in exprimental data at each T the experimental uncertainty? I'm not entirely sure only one property is being predicted, meaning the spread is noise in a single obserbable.
 	%RAM2: The experimental data are just included to give a sense for the goodness of fit. Is your point that I should not include them? 
 	\label{fig:MCMC_ethane_VLE}
@@ -1662,7 +1693,7 @@ while $\lambda_{\rm CH_3} = 15$ and $16$ have the best trend for $P_{\rm v}^{\rm
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{MCMC_ethane_Phigh}
-	\caption{Ethane isochore results for $\lambda_{\rm CH_3} = 13$ to $18$. Inadequacies of the UA Mie $\lambda$-6 potential are observed in $Z$ for the two highest isochore densities $(\rho^{\rm IC}_3$ and $\rho^{\rm IC}_4)$ by propagating the joint uncertainties in $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ for different values of $\lambda_{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho^{\rm IC}_3$ and $\rho^{\rm IC}_4$ at $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$~\%. \cite{LEMMON-RP91,Ethane2006} }
+	\caption{Ethane isochore results for $\lambda_{\rm CH_3} = 13$ to $18$. Inadequacies of the UA Mie $\lambda$-6 potential are observed in $Z$ for the two highest isochore densities $(\rho^{\rm IC}_3$ and $\rho^{\rm IC}_4)$ by propagating the joint uncertainties in $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ for different values of $\lambda_{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho^{\rm IC}_3$ and $\rho^{\rm IC}_4$ at $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$\%. \cite{LEMMON-RP91,Ethane2006} }
 	\label{fig:MCMC_ethane_Phigh}
 \end{figure} 
 
@@ -1688,7 +1719,7 @@ In Panel a), notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$
 Finally, and most importantly for our purposes, Figure \ref{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto} Panels b) and c) demonstrate the 
 %MRS3: is depreciation the right word? Lowering in value? 
 %RAM3: Reworded
-increase in MAPD\% for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ that accompanies more accurate prediction of $P^{\rm high}$. For example, although $\lambda_{\rm CH_3} = 15$, $16$, and $17$ are the best values based on VLE data, they over-predict $P^{\rm high}$ by around 10~\%, 14~\%, and 18~\%, respectively. By contrast, while $\lambda_{\rm CH_3} = 13$ is the most accurate for $P^{\rm high}$, the MAPD\% for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are $4$ and $40$ times larger than the respective minimum MAPD\%. These results support the fundamental claim of this work, namely, that the UA Mie $\lambda$-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. 
+increase in MAPD\% for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ that accompanies more accurate prediction of $P^{\rm high}$. For example, although $\lambda_{\rm CH_3} = 15$, $16$, and $17$ are the best values based on VLE data, they over-predict $P^{\rm high}$ by around 10\%, 14\%, and 18\%, respectively. By contrast, while $\lambda_{\rm CH_3} = 13$ is the most accurate for $P^{\rm high}$, the MAPD\% for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ are $4$ and $40$ times larger than the respective minimum MAPD\%. These results support the fundamental claim of this work, namely, that the UA Mie $\lambda$-6 potential cannot adequately predict both VLE and high pressures for supercritical fluids and compressed liquids. 
 
 %MRS:
 %To statistically verify this statement, 
@@ -1778,7 +1809,7 @@ Specifically, we observe that improved accuracy in predicting VLE requires a lar
 	\includegraphics[width=6.4in]{MCMC_Mie_14_16_propane_butane_octane}
 %MRS2: is blue missing on lam=14? Make sure in same order, maybe make more translucent.
 %RAM2: lam=14 did not have results for octane yet. I have those running right now. Should be done by April 2.
-	\caption{High pressure performance of $\lambda_{\rm CH_2} = 16$ (Panel a) and $16$ (Panel b) for propane, \textit{n}-butane, and \textit{n}-octane. MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP values, where the ``REFPROP uncertainty'' region represents $\pm 1$~\% deviation \cite{LEMMON-RP91,Propane2009,Butane2006,Beckmueller2017}. Panel a) includes the Potoff parameter set as a reference for $\lambda_{\rm CH_2} = 16$. \cite{Mie} }
+	\caption{High pressure performance of $\lambda_{\rm CH_2} = 16$ (Panel a) and $16$ (Panel b) for propane, \textit{n}-butane, and \textit{n}-octane. MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP values, where the ``REFPROP uncertainty'' region represents $\pm 1$\% deviation \cite{LEMMON-RP91,Propane2009,Butane2006,Beckmueller2017}. Panel a) includes the Potoff parameter set as a reference for $\lambda_{\rm CH_2} = 16$. \cite{Mie} }
 	\label{fig:MCMC_Mie_14_16_propane_butane_octane}
 \end{figure} 
 
@@ -1807,8 +1838,8 @@ Also, note that the uncertainty in the parameters is largest for propane and sma
 Most importantly, for the purposes of this study, the contours in Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane} demonstrate that 
 %For the purposes of this study, it is important to focus on the contours in Figure \ref{fig:MCMC_Mie_14_16_propane_butane_octane}, which correspond to AD\% in $P^{\rm high}$. 
 %Notice that 
-the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets have a strong positive bias (i.e. large AD\%) in $P^{\rm high}$. Specifically, $\lambda_{\rm CH_2} = 16$ and $\lambda_{\rm CH_2} = 14$ have AD\% of approximately $16$~\% to $21$~\% and $10$~\% to $15$~\%, respectively, much greater than the REFPROP uncertainty of around $1$~\%. 
-Furthermore, because the 0~\% contour is roughly parallel to the MCMC region and found at much lower $\epsilon_{\rm CH_2}$ values, it is necessary to sacrifice considerable accuracy in $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ in order to accurately predict $P^{\rm high}$. 
+the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets have a strong positive bias (i.e. large AD\%) in $P^{\rm high}$. Specifically, $\lambda_{\rm CH_2} = 16$ and $\lambda_{\rm CH_2} = 14$ have AD\% of approximately $16$\% to $21$\% and $10$\% to $15$\%, respectively, much greater than the REFPROP uncertainty of around $1$\%. 
+Furthermore, because the 0\% contour is roughly parallel to the MCMC region and found at much lower $\epsilon_{\rm CH_2}$ values, it is necessary to sacrifice considerable accuracy in $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ in order to accurately predict $P^{\rm high}$. 
 It is interesting that, for corresponding values of $\lambda$, the AD\% for these larger \textit{n}-alkanes is higher than that of ethane. This suggests that longer chain-lengths, with a UA Mie $\lambda$-6 force field, exacerbate the erroneous $Z$ trend at high pressures.
 
 % for the UA Mie $\lambda$-6 potential   
@@ -1936,10 +1967,13 @@ we recommend further investigation of alternative potentials with a softer repul
 %
 %We would like to emphasize that, although we did not use $d^n a^{\rm r}$ for our analysis, including higher order derivatives of the residual Helmholtz free energy from molecular simulation has significant advantages for developing FEOS as it eliminates redundant information found in traditional macroscopic properties \cite{Thol2016_LJ,Thol_LJTS,Rutkai2017,Lustig2015,Rutkai2013,Rutkai2015}. Since $Z$ and $U^{\rm dep}$ depend on only a single derivative and are readily available for most simulation packages, we chose to investigate these properties.
 
-This section discusses limitations to the primary conclusion from this study, namely, that UA Mie $\lambda$-6 force fields parameterized with VLE data should not be used to develop fundamental equations of state for normal and branched alkanes. The main limitation is that the poor extrapolation at high pressures is based solely on the trend of $Z$ with respect to inverse temperature. By contrast, the simulation values that are typically included in hybrid data sets are derivatives of the residual (or departure) Helmholtz free energy with respect to inverse temperature and/or density \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017,Rutkai2013,Thol2015}:
+This section discusses limitations to the primary conclusion from this study, namely, that UA Mie $\lambda$-6 force fields parameterized with VLE data should not be used to develop fundamental equations of state for normal and branched alkanes. The main limitation is that the poor extrapolation at high pressures is based solely on the trend of $Z$ with respect to inverse temperature. 
+%MRS5: this section seems somewhat unmovtivated from the rest of the study.  Consider removing or connecting it more stronglyto what came before?  It kind of comes around to it at the end, but is not well motivated at the beginning.
+By contrast, the simulation values that are typically included in hybrid data sets are derivatives of the residual (or departure) Helmholtz free energy with respect to inverse temperature and/or density \cite{Thol2016_siloxane_first,Thol2016_siloxane,Thol2017,Rutkai2013,Thol2015}:
 \begin{equation} \label{Residual Derivatives}
 A_{xy}^{\rm dep} R_gT \equiv (1/T)^x\rho^y \frac{\partial^{x+y}A^{\rm dep}}{\partial(1/T)^x \partial \rho^y}
 \end{equation}
+%MRS5: should more explicitly specify what x and y can be in the above deriviatives more explicitly. I mean it's T and P, but make that explicit. 
 We would like to emphasize the advantage of using $A_{xy}^{\rm dep}$ for developing FEOS, as this approach eliminates redundant information found in traditional macroscopic properties \cite{Thol2016_LJ,Rutkai2017,Lustig2015,Rutkai2013,Rutkai2015}. For example, the following expressions demonstrate the interdependency of the properties we computed, namely, $Z$ and $U^{\rm dep}$ with their derivatives along isochores and isotherms \cite{Rutkai2015}:
 \begin{equation} \label{eq:Z}
 Z = 1 + A_{01}^{\rm dep}
@@ -1965,16 +1999,19 @@ In addition, macroscopic properties, such as $Z$ and $U^{\rm dep}$ (with their r
 %RAM3: Should have used \citenum not \cite
 Reference \citenum{Thol2016_siloxane_first}, an inaccurate prediction of some $A_{xy}^{\rm dep}$ does not necessarily result in poor prediction of $P \rho T$ behavior or heat capacities. For these reasons, we did not base our conclusions on the adequacy of the UA Mie $\lambda$-6 potential to predict $A_{xy}^{\rm dep}$.
 
-Instead, we have presented $Z$ and, by inspection, the slope of $Z$ with respect to $1/T$ at constant $\rho$. Since these properties are equivalent to Equations \ref{eq:Z}-\ref{eq:Z_IC}, respectively, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. However, we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ at constant $T$, which are equivalent to Equations \ref{eq:U}-\ref{eq:Z_IT}. Unfortunately, deficiencies are not as obvious for these properties due to the relatively large uncertainties in the REFPROP correlations, ca. 5~\% and 10~\% for $U^{\rm dep}$ and $\left(\frac{\partial U^{\rm dep}}{R_g \partial T}\right)_\rho$. Although these additional properties provide insight regarding $A_{10}^{\rm dep}$, $A_{20}^{\rm dep}$, $A_{01}^{\rm dep}$, and $A_{02}^{\rm dep}$, because the results are less conclusive they are provided only in Section \ref{Udep and Z_IT} of Supporting Information. Furthermore, the relationship between Equations \ref{eq:U}-\ref{eq:Z_IT} and the repulsive barrier, $\lambda$, is not obvious. By contrast, the observation that larger values of $\lambda$ over-predict $Z$ with increasing $T$ and $\rho$ is clear evidence that $\lambda > 12$ is not theoretically justified but, rather, is an empirical remedy that performs well for VLE.
+Instead, we have presented $Z$ and, by inspection, the slope of $Z$ with respect to $1/T$ at constant $\rho$. Since these properties are equivalent to Equations \ref{eq:Z}-\ref{eq:Z_IC}, respectively, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. However, we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ at constant $T$, which are equivalent to Equations \ref{eq:U}-\ref{eq:Z_IT}. Unfortunately, deficiencies are not as obvious for these properties due to the relatively large uncertainties in the REFPROP correlations, ca. 5\% and 10\% for $U^{\rm dep}$ and $\left(\frac{\partial U^{\rm dep}}{R_g \partial T}\right)_\rho$. Although these additional properties provide insight regarding $A_{10}^{\rm dep}$, $A_{20}^{\rm dep}$, $A_{01}^{\rm dep}$, and $A_{02}^{\rm dep}$, because the results are less conclusive they are provided only in Section \ref{Udep and Z_IT} of Supporting Information. Furthermore, the relationship between Equations \ref{eq:U}-\ref{eq:Z_IT} and the repulsive barrier, $\lambda$, is not obvious. By contrast, the observation that larger values of $\lambda$ over-predict $Z$ with increasing $T$ and $\rho$ is clear evidence that $\lambda > 12$ is not theoretically justified but, rather, is an empirical remedy that performs well for VLE.
 
 Future work should investigate more thoroughly the adequacy of UA Mie $\lambda$-6 (or other) force fields to predict $U^{\rm dep}$ and isochoric/isobaric heat capacities at high temperatures and pressures. For example, rigorous studies of this type have been performed on the single-site Lennard-Jones fluid \cite{Thol2016_LJ,Thol_LJTS,Rutkai2017}.  
+%MRS5: can you draw conclusions on these properties based on findings in the paper?
 
+%MRS5: is this really a limitation?  The 2nd part of this paragraph says it doesn't matter in this case, so perhaps better to discuss it in terms how in OTHER cases, a hierarchical model might be neeed.
 Another limitation is that we utilize a single layer Bayes model as opposed to a hierarchical model, where the posterior is proportional to multiple priors that depend on the parameters from different levels of the hierarchy (for a more detailed discussion see References \citenum{Kulakova2017,Wu2016}). Wu et al. demonstrated the need for hierarchical models when the data set, $D$, contains discrepancies, i.e. internal inconsistencies. 
 %MRS3: why is it important?  Can you be more precise? What do you mean by discrepancies in the data set?
 %RAM3: Provided a short explanation
 Fortunately, since we use a conservative estimate for the surrogate model uncertainty, i.e. $u_{\rm SM} \gg u_{\rm D}$, any discrepancies in the VLE data should not affect the parameter uncertainties. 
 
 %MRS3: not clear you've defined what you mean by hierarchical approach.  This paragrph is rather unclear, and will be worse for people without a lot of familiarity with Bayesian inference.
+%MRS5: I still wonder how much this paragraph is needed; to some extent, it's speculation that isn't really necessary for this paper.
 %RAM3: True, this discussion was mainly intended for those that are familiar with Bayesian inference. I do not think I have the space or capability to explain hierarchical models in simple terms. So I am just trying to explain why they would be needed. But I tried to provide a brief explanation
 The hierarchical approach is also useful when accounting for model inadequacies, i.e. when the force field is not capable of representing multiple data types. A hierarchical method should thus be favored if determining the parameter uncertainty when simultaneously considering $\rho_{\rm l}^{\rm sat}$, $P_{\rm v}^{\rm sat}$ and $P^{\rm high}$. Furthermore, a hierarchical model should be used if the parameters are not transferable between molecules, i.e. if the CH$_2$ parameters were different for propane, \textit{n}-butane, and \textit{n}-octane. However, the hierarchical approach is unnecessary for our purposes, since the transferable UA Mie $\lambda$-6 force field for \textit{n}-alkanes is capable of reproducing $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$, which are the only properties included in $D$. 
 
@@ -2013,7 +2050,12 @@ The hierarchical approach is also useful when accounting for model inadequacies,
 %\frac{\partial U^{\rm dep}}{R_g \partial T}_\rho = -A_{20}^{\rm dep} 
 %\end{equation}
 
-%The conclusion regarding the adequacy of the UA Mie $\lambda$-6 potential at high pressures has been based on the trends observed for $Z$ along the isochores. In other words, we have focused on Equations \ref{eq:Z}-\ref{eq:Z_IC}, namely, $Z$ and the slope of $Z$ with respect to $(1/T)$ with constant $\rho$. Therefore, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. That being said, we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ for constant $T$.  of 
+%The conclusion regarding the adequacy of the UA Mie $\lambda$-6 potential at high pressures has been based on the trends observed for $Z$ along the isochores. In other words, we have focused on Equations \ref{eq:Z}-\ref{eq:Z_IC}, namely, $Z$ and the slope of $Z$ with respect to $(1/T)$ with constant $\rho$. Therefore, we have indirectly focused on only two of the Helmholtz derivatives, namely, $A_{01}^{\rm dep}$ and $A_{11}^{\rm dep}$. 
+%MRS5: tweak to remove colloquialism
+%That being said,
+However, 
+we also observed some deviations in $U^{\rm dep}$, the slope of $U^{\rm dep}$ with respect to $T$ at constant $\rho$, and the slope of $Z$ with respect to $\rho$ for constant $T$.  of 
+%MRS5: did something get cut off here?
 %
 %This was done because the pressure at high densities is intimately related to the repulsive barrier.
 %
