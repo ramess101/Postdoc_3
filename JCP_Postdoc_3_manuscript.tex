@@ -70,8 +70,9 @@
 
 %\bibliographystyle{apsrevlong}
 %\bibliographystyle{apsrev}
-%\bibliographystyle{unsrt}
-\bibliographystyle{abbrv}
+\bibliographystyle{unsrt}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{ieeetr}
 
 % italicized boldface for math (e.g. vectors)
 \newcommand{\bfv}[1]{{\mbox{\boldmath{$#1$}}}}
@@ -519,10 +520,12 @@ Four normal and four branched alkanes of varying chain-length and degree of bran
 Molecular dynamics simulations for this study are performed in the $NVT$ ensemble (constant number of molecules, $N$, constant volume, $V$, and constant temperature, $T$) using GROMACS version 2018 \cite{GROMACS_2018}. Each simulation uses the Velocity Verlet integrator with a 2 fs time-step, 1.4 nm cut-off 
 %MRS3: shifted, switched? abrupt? abrupt is not very physical.
 %RAM3: But the abrupt cut-off is how the TraPPE, Potoff, etc. force fields were parameterized. A shifted or switched would dramatically change the results
-for non-bonded interactions with tail corrections for energy and pressure \cite{GROMACS_note}, Nos{\'e}-Hoover thermostat with a thermostat time constant of 1 ps \cite{Hoover1985}, and fixed bond-lengths 
+for non-bonded interactions with tail corrections for energy and pressure, Nos{\'e}-Hoover thermostat with a thermostat time constant of 1 ps \cite{Hoover1985}, and fixed bond-lengths 
 %MRS3: deleted.
 %are 
-constrained using LINear Constraint Solver (LINCS) with a LINCS-order of eight \cite{Hess1998}. Coulombic interactions are not computed as none of the force fields require partial charges for the compounds studied. The equilibration time is 0.1 ns for ethane and propane, 0.2 ns for \textit{n}-butane, and 0.5 ns for all other compounds. The production time is 1 ns for ethane, 2 ns for propane and \textit{n}-butane, and 4 ns for all other compounds. Replicate simulations are performed for \textit{n}-octane to validate that a single MD run of this length agrees with the average of several replicates, to within the combined uncertainty. A system size of 400 molecules is used for ethane, propane, and \textit{n}-butane, while all other compounds use 800 molecules. 
+constrained using LINear Constraint Solver (LINCS) with a LINCS-order of eight \cite{Hess1998,Hess2008}. Note that GROMACS non-bonded tail corrections assume that the long-range contribution from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. A comparison between the energies and pressures obtained with GROMACS and other (slower) simulation packages verified that the small error introduced with this approximation does not significantly affect our results. For this reason, we did not attempt to modify the GROMACS default tail correction values to include the $r^{-\lambda}$ contribution. Also, Coulombic interactions are not computed as none of the force fields require partial charges for the compounds studied.
+
+The equilibration time is 0.1 ns for ethane and propane, 0.2 ns for \textit{n}-butane, and 0.5 ns for all other compounds. The production time is 1 ns for ethane, 2 ns for propane and \textit{n}-butane, and 4 ns for all other compounds. Replicate simulations are performed for \textit{n}-octane to validate that a single MD run of this length agrees with the average of several replicates, to within the combined uncertainty. A system size of 400 molecules is used for ethane, propane, and \textit{n}-butane, while all other compounds use 800 molecules. 
 %MRS3: I would provide the actual ascii files, not put them in a PDF.  That makes them very hard to use.
 %RAM3: That was my plan. I should not have included a section for this.
 Example input files are provided as Supporting Information.
@@ -542,9 +545,11 @@ Simulations are performed along a supercritical isotherm (with a reduced tempera
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{simulation_conditions}
-	\caption{State points simulated for each compound studied. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit{n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference.}
+	\caption{State points simulated for ethane, propane, \textit{n}-butane, \textit{n}-octane, isobutane, isohexane, isooctane, and neopentane. A total of 19 simulations are performed: nine densities along the supercritical isotherm and two temperatures along five liquid density isochores. Filled symbols and solid lines correspond to \textit{n}-alkanes, while empty symbols and dashed lines correspond to branched alkanes. The REFPROP saturation curve for each compound is included as a reference. \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017,Lemmon2006,Blackham2017} }
 	\label{fig:simulation_conditions}
 \end{figure}
+
+%
 
 %The state points depicted in Figure \ref{fig:simulation_conditions} correspond to the recommended conditions for the isothermal isochoric integration (ITIC) algorithm \cite{Mostafa_Diss,Postdoc_1}. 
 %ITIC converts the departure internal energies $(U^{\rm dep})$ and compressibility factors $(Z)$ obtained at the 19 state points to saturated VLE properties, namely, $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$.
@@ -593,14 +598,14 @@ we do not attempt to simulate the AUA4 force field for any compounds containing 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{AUA_isooctane}
-	\caption{AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 representation of isooctane requires a more complicated displacement of CH$_2$ and CH sites than that depicted here.}
+	\caption{Comparison between AUA and UA representations of isooctane. AUA force fields have the same complexity as UA force fields if only the terminal (CH$_3$) sites have an anisotropic displacement, i.e. a longer effective bond-length. Note that the AUA4 approach requires a more complicated displacement of CH$_2$ and CH sites than that depicted here. \cite{AUA4} } 
 	\label{fig:AUA_isooctane}
 \end{figure}
 
 \begin{table}[h!]
 %MRS2: suggest using two different notations for the two situations (not there vs more complicated) rather than just N/A for both.
 %RAM2: Yeah, I had that originally but then I tried to get too concise.
-	\caption{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 and TraPPE-2 denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.} \label{tab:bond-lengths}
+	\caption{Effective bond-lengths in units of nm for terminal (CH$_3$) UA or AUA interaction sites. Empty table entries for Exp-6 \cite{Exp6} and TraPPE-2 \cite{TraPPEUA2} denote that the force field does not contain the corresponding interaction site type. Empty table entries in AUA4 \cite{AUA4} arise because this force field uses a more complicated construction than the simple effective bond-length approach. Specifically, AUA4 requires CH$_2$ and CH interaction sites that are not along the C-C bond axis.} \label{tab:bond-lengths}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
@@ -634,17 +639,19 @@ The angle and dihedral energies are computed using the same functional forms for
 \begin{equation}
 u^{\rm bend} = \frac{k_\theta}{2} \left(\theta-\theta_0\right)^2
 \end{equation}
-where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle, and $k_\theta$ is the harmonic force constant which is equal to 62500 K/rad$^2$ for all bonding angles. Dihedral torsional interactions are determined using a cosine series:
+where $u^{\rm bend}$ is the bending energy, $\theta$ is the instantaneous bond angle, $\theta_0$ is the equilibrium bond angle (see Table \ref{tab:angles}), and $k_\theta$ is the harmonic force constant with $k_\theta/k_{\rm B} = 62500$ K/rad$^2$ for all bonding angles, where $k_{\rm B}$ is the Boltzmann constant. 
+
+Dihedral torsional interactions are determined using a cosine series:
 \begin{equation}
 u^{\rm tors} = c_0 + c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
 \end{equation}
-where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants. The equilibrium bond angles and torsional parameters are found in Tables \ref{tab:angles}-\ref{tab:torsions}, respectively. Note that the Errington $c_i$ values \cite{Exp6} for CH$_x$-CH$_2$-CH$_2$-CH$_y$ are a factor of two less than those reported in Table \ref{tab:torsions}. 
+where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants (see Table \ref{tab:torsions}). Note that the Errington $c_i$ values for CH$_x$-CH$_2$-CH$_2$-CH$_y$ are a factor of two less than those reported in Table \ref{tab:torsions}. \cite{Exp6}
 %MRS2: note that there are multiple ways to represent the same torsion
 %(1-2-3-4 and 4-3-2-1), and in some case, the barriers are lower for torsional parameters
 %because the torsion is applied to both representations.  Is that the case at all in any of these?
 %RAM2: We should talk about this. I have copied the torsions exactly as they are presented in the literature for the force field developers.
 \begin{table}[h!]
-	\caption{Equilibrium bond angles $(\theta_0)$. $x$ and $y$ are values between 0-3.} \label{tab:angles}
+	\caption{Equilibrium bond angles $(\theta_0)$.\cite{Martin1999} $x$ and $y$ are values between 0-3.} \label{tab:angles}
 	\begin{center}%MRS: would it be more clear with x and y take all values between 0 and 3?
 		\begin{tabular}{|c|c|}
 			\hline
@@ -658,11 +665,11 @@ where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $
 \end{table}
 
 \begin{table}[h!]
-	\caption{Fourier constants $(c_i)$ in units of K. $x$ and $y$ are values between 0-3.} \label{tab:torsions}
+	\caption{Fourier constants $(c_i/k_{\rm B})$ in units of K.\cite{Martin1999} $x$ and $y$ are values between 0-3.} \label{tab:torsions}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			Torsion sites & $c_0$ & $c_1$ & $c_2$ & $c_3$ \\ \hline
+			Torsion sites & $c_0/k_{\rm B}$ & $c_1/k_{\rm B}$ & $c_2/k_{\rm B}$ & $c_3/k_{\rm B}$ \\ \hline
 			CH$_x$-CH$_2$-CH$_2$-CH$_y$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
             CH$_x$-CH$_2$-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
             CH$_x$-CH$_2$-C-CH$_y$ & 0.0 & 0.0 & 0.0 & 461.29 \\
@@ -679,7 +686,7 @@ Non-bonded interaction energies and forces between sites located in two differen
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=6.4in]{UF_Mie_Exp6}
-	\caption{Short distance forces increase and energy wells become more narrow with increasing $\lambda$ and $\alpha$. Panels a) and b) plot the reduced energy $(U^\star)$ and force $(F^\star)$ with respect to the reduced distance $(r^\star)$, where the energy and distance are scaled by $\epsilon$ and $r_{\rm min}$, respectively.}
+	\caption{Comparison between Equations \ref{eq:Mie} and \ref{eq:Buckingham}. Short distance forces increase and energy wells become more narrow with increasing $\lambda$ and $\alpha$. Panels a) and b) plot the reduced energy $(U^\star)$ and force $(F^\star)$ with respect to the reduced distance $(r^\star)$, where the energy and distance are scaled by $\epsilon$ and $r_{\rm min}$, respectively.}
 	\label{fig:UF_Mie_Exp6}
 \end{figure}
 
@@ -704,7 +711,7 @@ The ethane specific parameters for TAMie are included in parentheses.} \label{ta
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
 			\multicolumn{1}{|c}{} & \multicolumn{3}{|c}{TraPPE  (TraPPE-2)} & \multicolumn{3}{|c|}{Potoff (S/L)}  \\ \hline
-			United-atom & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ & $\epsilon$ (K) & $\sigma$ (nm) & $\lambda$ \\ \hline
+			United-atom & $\epsilon/k_{\rm B}$ (K) & $\sigma$ (nm) & $\lambda$ & $\epsilon/k_{\rm B}$ (K) & $\sigma$ (nm) & $\lambda$ \\ \hline
 			CH$_3$ & 98 (134.5)  & 0.375 (0.352) & 12 & 121.25 & 0.3783 & 16  \\ 
 			CH$_2$ & 46 & 0.395 & 12 & 61 & 0.399 & 16 \\ 
 			CH & 10 & 0.468 & 12 & 15 (15/14) & 0.46 (0.47/0.47) & 16\\
@@ -796,11 +803,11 @@ The ethane specific parameters for TAMie are included in parentheses.} \label{ta
 The Errington Exp-6 non-bonded parameters are found in Table \ref{tab:nonbonded Exp6}. Note that Errington reported values for $\epsilon$, $\sigma$, and $\alpha$. We computed $r_{\rm min}$ and $r_{\rm max}$ to facilitate compatibility with Equation \ref{eq:Buckingham} and future validation of our results.
 
 \begin{table}[h!]
-	\caption{Non-bonded (intermolecular) parameters for Errington Exp-6 force field.} \label{tab:nonbonded Exp6}
+	\caption{Non-bonded (intermolecular) parameters for Errington Exp-6 force field. \cite{Exp6} } \label{tab:nonbonded Exp6}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
-			United-atom & $\epsilon$ (K) & $\sigma$ (nm) & $\alpha$ & $r_{\rm min}$ (nm) & $r_{\rm max}$ (nm)  \\ \hline
+			United-atom & $\epsilon/k_{\rm B}$ (K) & $\sigma$ (nm) & $\alpha$ & $r_{\rm min}$ (nm) & $r_{\rm max}$ (nm)  \\ \hline
 			CH$_3$ & 129.6  & 0.3679 & 16 & 0.4094 & 0.0574 \\ 
 			CH$_2$ & 73.5 & 0.400 & 22 & 0.436 & 0.0221 \\ \hline
 		\end{tabular}
@@ -859,12 +866,12 @@ Note that Figures \ref{fig:IC_normal_alkanes}-\ref{fig:IC_branched_alkanes} incl
 	\centering
 	\includegraphics[width=6.4in]{IC_normal_alkanes_all_models}
 %MRS3: probably should explicitly give the colors along with the rhos.
-	\caption{Compressibility factors $(Z)$ along isochores agree at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Densities are distinguished by color, increase vertically, and are labeled such that $\rho^{\rm IC}_0 < \rho^{\rm IC}_1 < \rho^{\rm IC}_2 < \rho^{\rm IC}_3 < \rho^{\rm IC}_4$.  Panels a) to d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively.
+	\caption{Compressibility factors $(Z)$ along isochores for \textit{n}-alkanes. Most force fields are accurate at saturation $(Z \approx 0)$ but deviate strongly at higher pressures. Different symbol shapes correspond to the various force fields. Densities are distinguished by color, increase vertically, and are labeled such that $\rho^{\rm IC}_0 < \rho^{\rm IC}_1 < \rho^{\rm IC}_2 < \rho^{\rm IC}_3 < \rho^{\rm IC}_4$. Panels a) to d) correspond to ethane, propane, \textit{n}-butane, and \textit{n}-octane, respectively.
 % This was outdated information. I have removed the error bars for clarity.
 % TraPPE and Potoff simulation results are depicted using open circles and squares, respectively, with error bars representing two times the standard deviation of the fluctuations from a single simulation. 
 %MRS2: could also add it's approximately a 95% confidence interval.  Also, when you say standard deviation of the fluctuations from a single simulation, do you mean the standard error in the mean? Standard deviation in fluctuations from a simulation are larger than the estimated error in the mean by a factor of (Nsamples-1)^-1/2.
 %RAM2: Yes, my error bars over-estimated the uncertainty, and they were still only one symbol size. So I decided to be less explicit since the error bars are really quite small. 
-Solid lines represent REFPROP correlations, with dashed lines representing a 1~\% uncertainty in REFPROP values. Simulation error bars computed with block averaging are approximately one symbol size.}
+Solid lines represent REFPROP correlations, with dashed lines representing a 1~\% uncertainty in REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017}. Simulation error bars computed with block averaging are approximately one symbol size.}
 	\label{fig:IC_normal_alkanes}
 \end{figure}
 %}
@@ -878,7 +885,7 @@ Solid lines represent REFPROP correlations, with dashed lines representing a 1~\
 %RAM2: Repeated the legend
 	\centering
 	\includegraphics[width=6.4in]{IC_branched_alkanes_all_models}
-	\caption{Compressibility factors $(Z)$ along isochores for branched alkanes are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a) to d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref{fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref{tab:nonbonded params}).}
+	\caption{Compressibility factors $(Z)$ along isochores for branched alkanes. Force fields are not as accurate as normal alkanes at saturation $(Z \approx 0)$ and deviate strongly at higher pressures. Panels a) to d) correspond to isobutane, isohexane, isooctane, and neopentane, respectively. Symbols, lines, uncertainties, and formatting are the same as those in Figure \ref{fig:IC_normal_alkanes}. The Potoff results for isobutane and neopentane use the ``short'' parameters, while isohexane and isooctane use the ``long'' parameters (see Table \ref{tab:nonbonded params}). \cite{Potoff_branched} }
 	\label{fig:IC_branched_alkanes}
 \end{figure}
 
@@ -1187,7 +1194,7 @@ Markov Chain Monte Carlo (MCMC) is the traditional approach for numerically samp
 where $\alpha$ is the acceptance probability, $\epsilon_i$ and $\sigma_i$ are the previous parameter set, $\epsilon_{i+1}$ and $\sigma_{i+1}$ are the proposed parameter set, and $Q$ is the proposal distribution from which $\epsilon_{i+1}$ and $\sigma_{i+1}$ are sampled. In this study, 
 $Q$ is a bi-variate normal distribution with mean equal to $\epsilon_i$ and $\sigma_i$, variance of $s^2_\epsilon$ and $s^2_\sigma$, and a covariance of 0.
 
-The amount to which $\epsilon$ or $\sigma$ is varied for each MCMC step (the difference between $\epsilon_{i+1}$ and $\epsilon_i$ or between $\sigma_{i+1}$ and $\sigma_i$) depends on $Q$, specifically, on $s^2_\epsilon$ and $s^2_\sigma$. These parameters ($s^2_\epsilon$ and $s^2_\sigma$) are tuned such that approximately $\frac{1}{3}$ of the moves are accepted, i.e. if the acceptance rate of MCMC moves is less than $\frac{1}{3}$ then $s^2_\epsilon$ or $s^2_\sigma$ is decreased and vice versa. This ``tuning'' period (also referred to as a ``burn-in'' period) is followed by a production period where $s^2_\epsilon$ and $s^2_\sigma$ do not change. 
+The amount to which $\epsilon$ or $\sigma$ is varied for each MCMC step (the difference between $\epsilon_{i+1}$ and $\epsilon_i$ or between $\sigma_{i+1}$ and $\sigma_i$) depends on $Q$, specifically, on $s^2_\epsilon$ and $s^2_\sigma$. These parameters ($s^2_\epsilon$ and $s^2_\sigma$) are tuned such that approximately $\frac{1}{3}$ of the moves are accepted, i.e. $s^2_\epsilon$ and $s^2_\sigma$ are decreased if the acceptance rate of MCMC moves is less than $\frac{1}{3}$, and vice-versa. This ``tuning'' period (also referred to as a ``burn-in'' period) is followed by a production period where $s^2_\epsilon$ and $s^2_\sigma$ do not change. 
 
 Since $\epsilon_{i+1}$ and $\sigma_{i+1}$ are highly correlated with $\epsilon_i$ and $\sigma_i$, it is important to ``thin'' the MCMC $\epsilon$ and $\sigma$ parameter sets ($\epsilon_{\rm MCMC}$ and $\sigma_{\rm MCMC}$), i.e. every $j^{\rm th}$ parameter set is stored. Section \ref{MCMC Example} of Supporting Information provides an MCMC example with some details (i.e. number of steps for burn-in and production, frequency that $s^2_\epsilon$ and $s^2_\sigma$ are updated, resulting acceptance rates, etc.).
 
@@ -1297,7 +1304,7 @@ Furthermore, $Q$ is chosen to be symmetric such that the $Q$ terms in the numera
 \alpha = \min\left(1,\frac{L(\epsilon_{i+1},\sigma_{i+1}|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)}{L(\epsilon_i,\sigma_i|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)}\right)
 \end{equation} 
 %For this reason, we discuss in some detail how we calculate $L(\epsilon,\sigma,|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$.  
-The likelihood, $L(\epsilon,\sigma,|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$, is calculated from a normal distribution
+The likelihood, $L(\epsilon,\sigma,|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda)$, is calculated from a normal distribution:
 %\begin{equation} \label{eq:Likelihood normal distribution}
 %L(\epsilon,\sigma,|\rho_{\rm l}^{\rm sat},P_{\rm v}^{\rm sat},\lambda) = \prod_{D=\rho_{\rm l}^{\rm sat}} \frac{1}{\sqrt{2 \pi s^2_{\rm D,SM}}} \exp\left(\frac{-(\rho_{\rm l,SM}^{\rm sat}(\epsilon,\sigma,\lambda) -\rho_{\rm l,D}^{\rm sat} )^2}{2 s^2_{\rm D,SM}}\right) \prod_{D=P_{\rm v}^{\rm sat}} \frac{1}{\sqrt{2 \pi s^2_{\rm D,SM}}} \exp\left(\frac{-(P_{\rm v,SM}^{\rm sat}(\epsilon,\sigma,\lambda) -P_{\rm v,D}^{\rm sat} )^2}{2 s^2_{\rm D,SM}}\right)
 %\end{equation}
@@ -1374,6 +1381,8 @@ A typical Markov Chain requires $O(10^4$ to $10^5)$ Monte Carlo steps, where the
 
 %Specifically, we implement surrogate models to estimate $\rho_{\rm l, MCMC}^{\rm sat}$, $P_{\rm v, MCMC}^{\rm sat}$ and $Z_{\rm MCMC}$. 
 
+\subsubsection{Multistate Bennett Acceptance Ratio}
+
 We use a configuration-sampling-based surrogate model, where configurations are sampled using a small group of reference parameter sets $(\theta_{\rm ref}$, consisting of $\epsilon_{\rm ref}, \sigma_{\rm ref}$, and $\lambda_{\rm ref})$ \cite{Postdoc_1}. Specifically, $NVT$ ensemble averages for the MCMC parameter sets $(\theta_{\rm MCMC})$ are estimated by reweighting the sampled reference configurations using Multistate Bennett Acceptance Ratio (MBAR) \cite{shirts-chodera:jcp:2008:mbar}. MBAR is a nearly exact surrogate model when a sufficient number of configurations sampled by $\theta_{\rm ref}$ are similar to those that would be sampled with direct simulation of $\theta$, resulting in a non-zero MBAR weight for such configurations (see discussion on number of effective samples in Reference \citenum{Postdoc_1}). For this purpose, we use a single value of $\epsilon_{\rm ref}$ with nine evenly spaced $\sigma_{\rm ref}$ values for a fixed value of $\lambda_{\rm ref} = \lambda$ \cite{Postdoc_1}.  
 
 %MBAR is a nearly exact surrogate model for $\theta$ when a sufficient number of configurations sampled by $\theta_{\rm ref}$ have a non-zero weight, i.e. are similar to the configurations that would be sampled with $\theta$ (see discussion on number of effective samples in Reference \citenum{Postdoc_1}).
@@ -1383,6 +1392,8 @@ We use a configuration-sampling-based surrogate model, where configurations are 
 % $\sigma \approx \sigma_{\rm ref}$ and $\lambda \approx \lambda_{\rm ref}$ \cite{Postdoc_1}.
 
 % there are a sufficient number of effective samples \cite{Postdoc_1}.
+
+\subsubsection{Isothermal isochoric integration}
 
 The properties that are estimated using MBAR are the departure internal energy $(U^{\rm dep})$ and the compressibility factor $(Z)$. 
 %As discussed in Section \ref{Methods I}, 
@@ -1429,6 +1440,8 @@ In total, this methodology reduces the computational cost for computing $L(\thet
 
 %since the total non-bonded energy is separable into contributions from the $r^{-6}$ and $r^{-\lambda}$ terms (see Equation \ref{eq:Mie}),
 
+\subsubsection{Uncertainty model}
+
 Quantifying the surrogate model variance $(s^2_{\rm SM})$ 
 %, i.e. the standard deviation or variance due to the MBAR, ITIC, and Equations \ref{Antoine}-\ref{Rectilinear Scale} methodology, 
 is essential for evaluating $L(\theta|D)$. While only a brief description is provided here, details are found in Section \ref{Error Model} of Supporting Information. Rather than performing a rigorous statistical assessment of MBAR, ITIC, and Equations \ref{Antoine}-\ref{Rectilinear Scale}, we use an empirical approach for estimating $s^2_{\rm SM}$. Specifically, we compute the deviation between the surrogate model estimates of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ for TraPPE-UA and Potoff 
@@ -1444,13 +1457,13 @@ with those reported in the literature for the respective force fields obtained u
 %MRS3: I suggest this paragraph be moved to the end of the surrogate model section for more clarity.
 %RAM3: Previously I did have it at the end of the Surrogate model section. I thought it fit a little better here. I will look at this again though.
 
-As shown in Figure \ref{fig:Error_model}, the surrogate model uncertainty $(u_{\rm SM}$, reported at the 95~\% confidence level) for $\rho_{\rm l}^{\rm sat}$ is 0.3~\% up to $0.75 T_{\rm c}$ and increases linearly to 1.5~\% at the maximum $T^{\rm sat}$. The surrogate model uncertainty for $P_{\rm v}^{\rm sat}$ is 20~\% at the minimum $T_{\rm sat}$ and decreases linearly to 7~\% at $0.6 T_{\rm c}$, where it remains constant for higher temperatures. Note that these are conservative estimates of $u_{\rm SM}$, where other studies suggest smaller uncertainties in MBAR and ITIC \cite{Mostafa_Diss,Mostafa2018,Postdoc_1}. In fact, for the compounds investigated in this study, these uncertainties are much larger than the experimental uncertainties $(u_{\rm D})$ \cite{TDE} and, therefore, the size of the parameter space sampled by MCMC depends almost entirely on $u_{\rm SM}$. The use of a conservative $u_{\rm SM}$ model is intentional in this regard, namely, so that the $\theta_{\rm MCMC}$ sampled points represent practically all of the feasible $\epsilon$ and $\sigma$ parameter sets (for a given $\lambda$) optimized with $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. 
+As shown in Figure \ref{fig:Error_model}, the surrogate model uncertainty $(u_{\rm SM}$, reported at the 95~\% confidence level) for $\rho_{\rm l}^{\rm sat}$ is 0.3~\% up to $0.75 T_{\rm c}$ and increases linearly to 1.5~\% at the maximum $T^{\rm sat}$. The surrogate model uncertainty for $P_{\rm v}^{\rm sat}$ is 20~\% at the minimum $T_{\rm sat}$ and decreases linearly to 7~\% at $0.6 T_{\rm c}$, where it remains constant for higher temperatures. Note that these are conservative estimates of $u_{\rm SM}$, where other studies suggest smaller uncertainties in MBAR and ITIC \cite{Mostafa_Diss,Mostafa2018,Postdoc_1}. In fact, for the compounds investigated in this study, these uncertainties are much larger than the experimental uncertainties ($u_{\rm D}$, at the 95~\% confidence level) \cite{TDE} and, therefore, the size of the parameter space sampled by MCMC depends almost entirely on $u_{\rm SM}$. The use of a conservative $u_{\rm SM}$ model is intentional in this regard, namely, so that the $\theta_{\rm MCMC}$ sampled points represent practically all of the feasible $\epsilon$ and $\sigma$ parameter sets (for a given $\lambda$) optimized with $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. 
 
 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=6.4in]{Error_model_alkanes}
-	\caption{Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a) and b) plot the uncertainties for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Uncertainties are computed at the 95~\% confidence level using the respective $s^2_{\rm D}$ and $s^2_{\rm SM}$ values. Also included are percent deviations between the experimental data used to compute the likelihood for ethane, propane, \textit{n}-butane, and \textit{n}-octane relative to the REFPROP correlations.}
+	\caption{Uncertainty assessment. Experimental (TDE) uncertainties are negligible compared to surrogate model uncertainties. Panels a) and b) plot the uncertainties for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to reduced temperature (absolute temperature divided by the REFPROP $T_{\rm c}$). Uncertainties are computed at the 95~\% confidence level using the respective $s^2_{\rm D}$ and $s^2_{\rm SM}$ values. Also included are percent deviations between the REFPROP values \cite{LEMMON-RP91,Ethane2006,Propane2009,Butane2006,Beckmueller2017} and the experimental data used in Equation \ref{eq:Likelihood normal distribution} to compute the likelihood for ethane, propane, \textit{n}-butane, and \textit{n}-octane (from the Thermodynamics Research Center, TRC, source data). \cite{TDE} }
 	\label{fig:Error_model}
 \end{figure}
 
@@ -1517,7 +1530,11 @@ As shown in Figure \ref{fig:Error_model}, the surrogate model uncertainty $(u_{\
 
 %MRS2: how hard would it be to do the full 4 parameter model?  I'm guessing it's because doing all the basis functions is harder?  Maybe be more explicit as to 1) the cost and 2) why you think it doesn't matter (i.e. it's OK to force the other models to use ethane parameters).  From my perspective, the difference between the 4 parameter and 2,2 parameter model is extremely interesting and may show us when we get results we don't expect. 
 %RAM2: It would not be too difficult, but I don't think it is necessary considering the primary purpose of this text. 
-In this section, we use MCMC and the aforementioned surrogate models to determine the parameter uncertainty in CH$_3$ and CH$_2$ interaction sites of \textit{n}-alkanes. Since the common practice is to limit $\lambda$ to integer values (see Section \ref{Force Field}), we perform several independent MCMC runs using a single, fixed, integer value of $\lambda$. The Bayesian inference analysis for CH$_3$ and CH$_2$ sites is performed sequentially. Specifically, rather than sampling from a four-dimensional parameter space (i.e. $\epsilon_{\rm CH_3}$, $\epsilon_{\rm CH_2}$, $\sigma_{\rm CH_3}$, and $\sigma_{\rm CH_2}$ for a given value of $\lambda_{\rm CH_3}$ and $\lambda_{\rm CH_2}$), we implement a pair of two-dimensional MCMC runs by assuming the CH$_3$ parameters from ethane are transferable to propane, \textit{n}-butane, and \textit{n}-octane. 
+In this section, we use MCMC and the aforementioned surrogate models to determine the parameter uncertainty in CH$_3$ and CH$_2$ interaction sites of \textit{n}-alkanes. As the simulation results of branched alkanes are significantly less accurate than those of \textit{n}-alkanes for both VLE and high pressure properties (cf. Figures \ref{fig:IC_normal_alkanes} and \ref{fig:IC_branched_alkanes}), we do not investigate the uncertainties of CH and C interaction sites. 
+
+%Furthermore,  the conclusions presented herein for \textit{n}-alkanes are expected to be similar to t apply to branched alkanes as well.
+
+Since the common practice is to limit $\lambda$ to integer values (see Section \ref{Force Field}), we perform several independent MCMC runs using a single, fixed, integer value of $\lambda$. The Bayesian inference analysis for CH$_3$ and CH$_2$ sites is performed sequentially. Specifically, rather than sampling from a four-dimensional parameter space (i.e. $\epsilon_{\rm CH_3}$, $\epsilon_{\rm CH_2}$, $\sigma_{\rm CH_3}$, and $\sigma_{\rm CH_2}$ for a given value of $\lambda_{\rm CH_3}$ and $\lambda_{\rm CH_2}$), we implement a pair of two-dimensional MCMC runs by assuming the CH$_3$ parameters from ethane are transferable to propane, \textit{n}-butane, and \textit{n}-octane. 
 %MRS3: may need to remind people later that this second run is done, and that it's done with fixed CH3.  That gets a little lost later in the paper. 
 %RAM3: OK. I will try to make that clear later on.
 
@@ -1615,7 +1632,7 @@ Figures \ref{fig:MCMC_ethane_parameter_space}-\ref{fig:MCMC_Mie_13_14_15_16_17_1
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{MCMC_ethane_parameter_space}
-	\caption{MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$) quantify the joint uncertainty in $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$. The Potoff parameter set is included as a reference for $\lambda_{\rm CH_3} = 16$.} 
+	\caption{MCMC sampled parameter sets for different values of $\lambda_{\rm CH_3}$ ($\epsilon_{\rm CH_3, MCMC}$ and $\sigma_{\rm CH_3, MCMC}$). $\epsilon_{\rm CH_3}$ is strongly correlated with $\lambda_{\rm CH_3}$ and $\sigma_{\rm CH_3}$, while $\sigma_{\rm CH_3}$ and $\lambda_{\rm CH_3}$ are only weakly correlated. The Potoff parameter set is included as a reference for $\lambda_{\rm CH_3} = 16$. \cite{Mie} } 
 	\label{fig:MCMC_ethane_parameter_space}
 \end{figure}
 %MRS3: are useful isn't a good topic sentence, because it doesn't say what they are useful for.  Better to say what they are useful for.
@@ -1630,7 +1647,7 @@ Figures \ref{fig:MCMC_ethane_VLE}-\ref{fig:MCMC_ethane_Phigh} compare the perfor
 %RAM3: I think it is clearer now
 %MRS3: I'm also not clear that this is a great opening line to the caption. IS the main point of the graph that uncertainties propagate? 
 %RAM3: Not exactly. The main purpose is that we observe some trends in the error.
-	\caption{Different trends for VLE properties with respect to temperature are observed depending on the value of $\lambda_{\rm CH_3}$. Panels a) and b) plot the percent deviation from REFPROP correlations for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Robust posterior prediction propagates the joint parameter uncertainties from $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The upper and lower lines for each $\lambda$ correspond to the 95~\% credible interval obtained from $QoI_{\rm MCMC}$.  Insets of Panels a) and b) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots.}
+	\caption{Ethane VLE properties with respect to temperature for $\lambda_{\rm CH_3} = 13$ to $18$. Different trends are observed depending on the value of $\lambda_{\rm CH_3}$. Panels a) and b) plot the percent deviation from REFPROP values \cite{LEMMON-RP91,Ethane2006} for $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Robust posterior prediction propagates the joint parameter uncertainties from $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ to $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$. The upper and lower lines for each $\lambda$ correspond to the 95~\% credible interval obtained from $QoI_{\rm MCMC}$.  Insets of Panels a) and b) are histograms of the MAPD\% in $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively. Experimental data used to compute the likelihood are included as black dots. \cite{TDE} }
 	%MRS2: is the spread in exprimental data at each T the experimental uncertainty? I'm not entirely sure only one property is being predicted, meaning the spread is noise in a single obserbable.
 	%RAM2: The experimental data are just included to give a sense for the goodness of fit. Is your point that I should not include them? 
 	\label{fig:MCMC_ethane_VLE}
@@ -1645,7 +1662,7 @@ while $\lambda_{\rm CH_3} = 15$ and $16$ have the best trend for $P_{\rm v}^{\rm
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=3.2in]{MCMC_ethane_Phigh}
-	\caption{Inadequacies of the UA Mie $\lambda$-6 potential are observed in $Z$ for the two highest isochore densities $(\rho^{\rm IC}_3$ and $\rho^{\rm IC}_4)$ by propagating the joint uncertainties in $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ for different values of $\lambda_{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho^{\rm IC}_3$ and $\rho^{\rm IC}_4$ at $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$~\%.}
+	\caption{Ethane isochore results for $\lambda_{\rm CH_3} = 13$ to $18$. Inadequacies of the UA Mie $\lambda$-6 potential are observed in $Z$ for the two highest isochore densities $(\rho^{\rm IC}_3$ and $\rho^{\rm IC}_4)$ by propagating the joint uncertainties in $\epsilon_{\rm CH_3}$ and $\sigma_{\rm CH_3}$ for different values of $\lambda_{\rm CH_3}$. The inset plots the distribution of average deviation (AD\%) in $P^{\rm high}$, i.e. $P_{\rm MCMC}$ for $\rho = \rho^{\rm IC}_3$ and $\rho^{\rm IC}_4$ at $T = T^{\rm IT}$. REFPROP uncertainty in $P^{\rm high}$ is $\pm 1$~\%. \cite{LEMMON-RP91,Ethane2006} }
 	\label{fig:MCMC_ethane_Phigh}
 \end{figure} 
 
@@ -1663,7 +1680,7 @@ In Panel a), notice the trade-off between the MAPD\% of $\rho_{\rm l}^{\rm sat}$
 	\includegraphics[width=2.5in]{MCMC_Mie_13_14_15_16_17_18_ethane_Pareto}
 %MRS3: maybe a bit more specific a figure caption first sentence?  In what way do they show that?  Pareto fronts show that?
 %RAM3: Hopefully this is more clear
-	\caption{MCMC confirms that accurate prediction of VLE leads to large deviations in pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$. Panels b) and c) plot the average deviation (AD\%) in $P^{\rm high}$ with respect to MAPD\% of $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively.}
+	\caption{Overall performance of $\lambda_{\rm CH_3} = 13$ to $18$ for ethane. MCMC confirms that accurate prediction of VLE leads to large deviations in pressures for supercritical fluids and compressed liquids. Panel a) plots the mean absolute percent deviation (MAPD\%) of $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$. Panels b) and c) plot the average deviation (AD\%) in $P^{\rm high}$ with respect to MAPD\% of $\rho_{\rm l, MCMC}^{\rm sat}$ and $P_{\rm v, MCMC}^{\rm sat}$, respectively.}
 	\label{fig:MCMC_Mie_13_14_15_16_17_18_ethane_Pareto}
 \end{figure} 
 
@@ -1695,7 +1712,7 @@ Figure \ref{fig:Bayes_Factors} shows that UA Mie $\lambda$-6 potentials cannot p
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=4.8in]{Evidence_Mie_CH3_CH2}
-	\caption{Evidence (Bayes factor) in Panel a) supports $\lambda_{\rm CH_3} =15 $ or $16$, while evidence in Panel b) strongly supports $\lambda_{\rm CH_2} = 16$ over $\lambda_{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit{n}-butane, and \textit{n}-octane. Note that all values are normalized with respect to $\lambda = 14$.}
+	\caption{Bayes Factor (evidence) for different values of $\lambda_{\rm CH_3}$ (Panel a) and $\lambda_{\rm CH_2}$ (Panel b). Evidence supports $\lambda_{\rm CH_3} =15 $ or $16$ and $\lambda_{\rm CH_2} = 16$ over $\lambda_{\rm CH_2} = 14$. CH$_3$ values depend only on ethane while CH$_2$ values are based on propane, \textit{n}-butane, and \textit{n}-octane. Note that all values are normalized with respect to $\lambda = 14$.}
 	\label{fig:Bayes_Factors}
 \end{figure}
 
@@ -1735,7 +1752,7 @@ In addition, there is ``very strong'' evidence that the 18-6 potential is not ju
 
 %$\left(\frac{3.6 \text{ or } 3.5}{1.0 \text{ or } 0.8} > 3.5\right)$
 
-It is important to mention that these Bayes factors depend primarily on the VLE data and the $s^2_{\rm D,SM}$ model used to compute $L(\theta|D)$. We use a very conservative error model for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ (see Figure \ref{fig:Error_model}) so that our MCMC samples cover a large region of parameter space. This is done primarily to demonstrate that the UA Mie $\lambda$-6 is inadequate for predicting VLE and $P^{\rm high}$. However, a less conservative error model would provide more convincing evidence regarding the optimal $\lambda$ value based solely on VLE data. 
+It is important to mention that these Bayes factors depend primarily on the VLE data and the $s^2_{\rm D,SM}$ model used to compute $L(\theta|D)$. We use a very conservative uncertainty model for $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ (see Figure \ref{fig:Error_model}) so that our MCMC samples cover a large region of parameter space. This is done primarily to demonstrate that the UA Mie $\lambda$-6 is inadequate for predicting VLE and $P^{\rm high}$. However, a less conservative uncertainty model would provide more convincing evidence regarding the optimal $\lambda$ value based solely on VLE data. 
 
 Also, ITIC is limited to $T^{\rm sat} < 0.85 T_{\rm c}$. Therefore, it is possible that the optimal value of $\lambda_{\rm CH_3}$ could be deduced (i.e. larger Bayes factors) if higher temperature VLE data were included (say from 260 to 290 K). Based on the observed bias in $\rho_{\rm l}^{\rm sat}$ at higher temperatures (240 to 260 K) for $\lambda_{\rm CH_3} = 14$, it appears that higher temperature VLE data would strengthen the counter evidence against the 14-6 potential. It is unclear whether higher temperature data would support the 15-6 or 16-6 potential, although the optimal $\lambda_{\rm CH_3}$ is likely a non-integer value between 15 and 16. 
 %MRS2: could just say, some other method such as GCMC may be necessary to access the VLE range of $0.85 T_{\rm c} < T^{\rm sat} < 0.95 T_{\rm c}$.  Don't need to describe future work.
@@ -1761,9 +1778,11 @@ Specifically, we observe that improved accuracy in predicting VLE requires a lar
 	\includegraphics[width=6.4in]{MCMC_Mie_14_16_propane_butane_octane}
 %MRS2: is blue missing on lam=14? Make sure in same order, maybe make more translucent.
 %RAM2: lam=14 did not have results for octane yet. I have those running right now. Should be done by April 2.
-	\caption{MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Panels a) and b) correspond to $\lambda_{\rm CH_2} = 16$ and $\lambda_{\rm CH_2} = 14$, respectively. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP correlations, where the ``REFPROP uncertainty'' region represents $\pm 1$~\% deviation. Panel a) includes the Potoff parameter set as a reference for $\lambda_{\rm CH_2} = 16$.}
+	\caption{High pressure performance of $\lambda_{\rm CH_2} = 16$ (Panel a) and $16$ (Panel b) for propane, \textit{n}-butane, and \textit{n}-octane. MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets result in large AD\% for $P^{\rm high}$. Contours are the AD\% in $P^{\rm high}$ relative to the REFPROP values, where the ``REFPROP uncertainty'' region represents $\pm 1$~\% deviation \cite{LEMMON-RP91,Propane2009,Butane2006,Beckmueller2017}. Panel a) includes the Potoff parameter set as a reference for $\lambda_{\rm CH_2} = 16$. \cite{Mie} }
 	\label{fig:MCMC_Mie_14_16_propane_butane_octane}
 \end{figure} 
+
+%Panels a) and b) correspond to $\lambda_{\rm CH_2} = 16$ and $\lambda_{\rm CH_2} = 14$, respectively.
 
 %Figure \ref{fig:MCMC_Mie16_propane_butane_octane} presents the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets with $\lambda_{\rm CH_2} = 16$. Notice that the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets overlap considerably for propane, \textit{n}-butane, and \textit{n}-octane. This supports the common assumption of transferability of CH$_2$ parameters between different \textit{n}-alkanes. Note that the uncertainty in the parameters is largest for propane and smallest for \textit{n}-octane. This suggests that, as expected, the sensitivity of $\rho_{\rm l}^{\rm sat}$ and $P_{\rm v}^{\rm sat}$ with respect to the CH$_2$ parameters increases with increasing number of CH$_2$ interaction sites. Also, notice that the Potoff parameter set is within the MCMC sample region. More importantly, for the purposes of this manuscript, the MCMC sampled $\epsilon_{\rm CH_2}$ and $\sigma_{\rm CH_2}$ parameter sets have $P^{\rm high}$ AAD\% $\approx 16$-$23$, while the REFPROP uncertainty in $P^{\rm high}$ is estimated to be around $1$\%.
 

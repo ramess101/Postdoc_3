@@ -17,7 +17,7 @@ Monika Thol, G{\'a}bor Rutkai, Andreas K{\"o}ster, Rolf Lustig, Roland Span,
 Monika Thol, G{\'a}bor Rutkai, Roland Span, Jadran Vrabec, and Rolf Lustig.
 \newblock Equation of state for the {Lennard-Jones} truncated and shifted model
   fluid.
-\newblock {\em International Journal of Thermophysics}, 36(1):25--43, Jan 2015.
+\newblock {\em International Journal of Thermophysics}, 36(1):25--43, 2015.
 
 \bibitem{Rutkai2017}
 G{\'a}bor Rutkai, Monika Thol, Roland Span, and Jadran Vrabec.
@@ -177,7 +177,7 @@ Guillaume Galli{\'e}ro, Christian Boned, Antoine Baylaucq, and
 \newblock Molecular dynamics comparative study of {Lennard-Jones}
   $\ensuremath{\alpha}$-6 and exponential $\ensuremath{\alpha}$-6 potentials:
   Application to real simple fluids (viscosity and pressure).
-\newblock {\em Phys. Rev. E}, 73:061201, Jun 2006.
+\newblock {\em Phys. Rev. E}, 73:061201, 2006.
 
 \bibitem{Rowley1999}
 Richard~L. Rowley and Tapani Pakkanen.
@@ -256,24 +256,22 @@ M.J. Abraham, D.~van~der Spoel, E.~Lindahl, B.Hess, and the GROMACS~development
   team.
 \newblock {\em GROMACS User Manual version 2018, www.gromacs.org (2018)}, 2018.
 
-\bibitem{GROMACS_note}
-GROMACS non-bonded tail corrections assume that the long-range contribution
-  from the $r^{-\lambda}$ term is negligible compared to the $r^{-6}$ term. By
-  comparing the GROMACS output with other (slower) simulation packages, we
-  verified that the small error introduced with this approximation does not
-  significantly affect our results. For this reason, although it is
-  straightforward to include the $r^{-\lambda}$ contribution, we did not
-  attempt to modify the GROMACS default tail correction values.
-
 \bibitem{Hoover1985}
 William~G. Hoover.
 \newblock Canonical dynamics: {E}quilibrium phase-space distributions.
-\newblock {\em Physical Review A}, 31:1695--1697, Mar 1985.
+\newblock {\em Physical Review A}, 31:1695--1697, 1985.
 
 \bibitem{Hess1998}
 Berk Hess, Henk Bekker, Herman J.~C. Berendsen, and Johannes G. E.~M. Fraaije.
-\newblock Lincs: A linear constraint solver for molecular simulations.
+\newblock {LINCS}: A linear constraint solver for molecular simulations.
 \newblock {\em Journal of Computational Chemistry}, 18(12):1463--1472, 1998.
+
+\bibitem{Hess2008}
+Berk Hess.
+\newblock {P-LINCS: A} parallel linear constraint solver for molecular
+  simulation.
+\newblock {\em Journal of Chemical Theory and Computation}, 4(1):116--122,
+  2008.
 
 \bibitem{Mostafa_Diss}
 Seyed~Mostafa Razavi.
@@ -285,8 +283,8 @@ Seyed~Mostafa Razavi.
 Richard~A. Messerly, S.~Mostafa Razavi, and Michael~R. Shirts.
 \newblock Configuration-sampling-based surrogate models for rapid
   parameterization of non-bonded interactions.
-\newblock {\em Journal of Chemical Theory and Computation}, Pending
-  publication., 2018.
+\newblock {\em Journal of Chemical Theory and Computation}, 14(6):3144--3162,
+  2018.
 
 \bibitem{Mostafa2018}
 S.~Mostafa Razavi, Richard~A. Messerly, and J.~Richard Elliott.
