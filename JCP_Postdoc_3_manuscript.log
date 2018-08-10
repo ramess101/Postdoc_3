@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.11)  4 AUG 2018 17:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.11)  4 AUG 2018 16:51
 entering extended mode
 **./JCP_Postdoc_3_manuscript.tex
 (JCP_Postdoc_3_manuscript.tex
@@ -1453,339 +1453,931 @@ Package xr Info: IMPORTING LABELS FROM JCP_Postdoc_3_supporting_information.aux
 (JCP_Postdoc_3_supporting_information.tex)
 (JCP_Postdoc_3_supporting_information.aux)
 Class revtex4-1 Info: Unrecognized array package. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 109.
+lass! (Proceeding with fingers crossed.) on input line 108.
 
 Class revtex4-1 Warning: Repair the float package.
 
 Class revtex4-1 Info: Patching unrecognized longtable package. (Proceeding with
- fingers crossed) on input line 109.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 109
+ fingers crossed) on input line 108.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 108
 .
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 109.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 109.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 109.
-(JCP_Postdoc_3_manuscript.aux)
-\openout1 = `JCP_Postdoc_3_manuscript.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 109.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 108.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 108.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 108.
+(JCP_Postdoc_3_manuscript.aux
+! Undefined control sequence.
+l.22 \abx@aux@refcontext
+                        {nty/global//global/global}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 109.
+! LaTeX Error: Missing \begin{document}.
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
-File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-)
-ABD: EveryShipout initializing macros
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
-i"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
-\scratchdimen=\dimen314
-\scratchbox=\box97
-\nofMPsegments=\count330
-\nofMParguments=\count331
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count332
-\MPscratchDim=\dimen315
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
-\everyMPtoPDFconversion=\toks42
-)
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
-ase.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \abx@aux@refcontext{n
+                          ty/global//global/global}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
-\AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 109.
+! Undefined control sequence.
+l.30 \abx@aux@cite
+                  {LEMMON-RP91}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
-y"
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+! Undefined control sequence.
+l.31 \abx@aux@segm
+                  {0}{0}{LEMMON-RP91}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitle
-string.sty"
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
-)
-\c@section@level=\count335
-)
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
- (JCP_Postdoc_3_manuscript.out) (JCP_Postdoc_3_manuscript.out)
-\@outlinefile=\write6
-\openout6 = `JCP_Postdoc_3_manuscript.out'.
+! Undefined control sequence.
+l.33 \abx@aux@cite
+                  {Thol2016_LJ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.33 \abx@aux@cite{Thol2016_
+                            LJ}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-*************************************************
-* siunitx warning: "moved-cellspace-column"
-* 
-* Column type for cellspace package moved to 'C'.
-*************************************************
-
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translat
-or-basic-dictionary-English.dict"
-Dictionary: translator-basic-dictionary, Language: English 
-)
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-abb
-reviations.cfg"
-File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-)
-Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 109.
-\openout3 = `JCP_Postdoc_3_manuscriptNotes.bib'.
-
-\c__siunitx_mathsf_int=\count336
-LaTeX Font Info:    Try loading font information for U+msa on input line 109.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 ("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 ("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count337
-LaTeX Font Info:    Try loading font information for T1+phv on input line 197.
+! Extra }, or forgotten $.
+l.33 \abx@aux@cite{Thol2016_LJ}
+                               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-("C:\Users\ram9\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 197.
+! Undefined control sequence.
+l.34 \abx@aux@segm
+                  {0}{0}{Thol2016_LJ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.36 \abx@aux@cite
+                  {Thol_LJTS}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 197.
+! Undefined control sequence.
+l.37 \abx@aux@segm
+                  {0}{0}{Thol_LJTS}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.39 \abx@aux@cite
+                  {Rutkai2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\lambda' on input line 197.
+! Undefined control sequence.
+l.40 \abx@aux@segm
+                  {0}{0}{Rutkai2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.42 \abx@aux@cite
+                  {Lustig2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 197.
+! Undefined control sequence.
+l.43 \abx@aux@segm
+                  {0}{0}{Lustig2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[1{C:/Users/ram9/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+! Undefined control sequence.
+l.45 \abx@aux@cite
+                  {Rutkai2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package hyperref Warning: Ignoring empty anchor on input line 199.
+! Undefined control sequence.
+l.46 \abx@aux@segm
+                  {0}{0}{Rutkai2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 293.
-[2] [3] [4] [5] [6]
-Overfull \hbox (16.79655pt too wide) in paragraph at lines 510--511
-\T1/ppl/m/n/12 sen to rep-re-sent a di-verse set of the nor-mal and branched al
-ka-nes avail-able in REFPROP.$[]$ 
- []
+! Undefined control sequence.
+l.48 \abx@aux@cite
+                  {Rutkai2013}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[7] <figures/simulation_conditions.pdf, id=248, 722.7pt x 722.7pt>
-File: figures/simulation_conditions.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.49 \abx@aux@segm
+                  {0}{0}{Rutkai2013}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/simulation_conditions.pdf>
-Package pdftex.def Info: figures/simulation_conditions.pdf used on input line 5
-42.
-(pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
- [8 <./figures/simulation_conditions.pdf>]
+! Undefined control sequence.
+l.51 \abx@aux@cite
+                  {Thol2016_siloxane_first}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-pdfTeX warning: pdflatex.exe (file ./figures/AUA_isooctane.pdf): PDF inclusion:
- found PDF version <1.7>, but at most version <1.5> allowed
-<figures/AUA_isooctane.pdf, id=318, 1300.86pt x 679.33798pt>
-File: figures/AUA_isooctane.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.52 \abx@aux@segm
+                  {0}{0}{Thol2016_siloxane_first}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/AUA_isooctane.pdf>
-Package pdftex.def Info: figures/AUA_isooctane.pdf used on input line 593.
-(pdftex.def)             Requested size: 231.26378pt x 120.76215pt.
+! Undefined control sequence.
+l.54 \abx@aux@cite
+                  {Thol2016_siloxane}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.55 \abx@aux@segm
+                  {0}{0}{Thol2016_siloxane}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! Undefined control sequence.
+l.57 \abx@aux@cite
+                  {Thol2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[9] [10 <./figures/AUA_isooctane.pdf>]
-<figures/UF_Mie_Exp6.pdf, id=347, 1445.4pt x 722.7pt>
-File: figures/UF_Mie_Exp6.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.58 \abx@aux@segm
+                  {0}{0}{Thol2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/UF_Mie_Exp6.pdf>
-Package pdftex.def Info: figures/UF_Mie_Exp6.pdf used on input line 679.
-(pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
+! Undefined control sequence.
+l.60 \abx@aux@cite
+                  {Thol2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.61 \abx@aux@segm
+                  {0}{0}{Thol2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! Undefined control sequence.
+l.63 \abx@aux@segm
+                  {0}{0}{Thol2016_siloxane_first}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[11]
+! Undefined control sequence.
+l.65 \abx@aux@segm
+                  {0}{0}{Thol2016_siloxane}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! Undefined control sequence.
+l.67 \abx@aux@segm
+                  {0}{0}{Thol2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[12 <./figures/UF_Mie_Exp6.pdf>] [13]
-<figures/IC_normal_alkanes_all_models.pdf, id=473, 1445.4pt x 1445.4pt>
-File: figures/IC_normal_alkanes_all_models.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.69 \abx@aux@segm
+                  {0}{0}{Thol2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/IC_normal_alkanes_all_models.pdf>
-Package pdftex.def Info: figures/IC_normal_alkanes_all_models.pdf used on input
- line 858.
-(pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
+! Undefined control sequence.
+l.72 \abx@aux@segm
+                  {0}{0}{Rutkai2013}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<figures/IC_branched_alkanes_all_models.pdf, id=474, 1445.4pt x 1445.4pt>
-File: figures/IC_branched_alkanes_all_models.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.74 \abx@aux@cite
+                  {TraPPE}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/IC_branched_alkanes_all_models.pdf>
-Package pdftex.def Info: figures/IC_branched_alkanes_all_models.pdf used on inp
-ut line 878.
-(pdftex.def)             Requested size: 462.52756pt x 462.5154pt.
- [14] [15 <./figures/IC_normal_alkanes_all_models.pdf>] [16 <./figures/IC_branc
-hed_alkanes_all_models.pdf>]
-[17]
-LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 1076.
- [18] [19] [20] [21] [22] [23] [24]
-<figures/Error_model_alkanes.pdf, id=862, 1445.4pt x 722.7pt>
-File: figures/Error_model_alkanes.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.75 \abx@aux@segm
+                  {0}{0}{TraPPE}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/Error_model_alkanes.pdf>
-Package pdftex.def Info: figures/Error_model_alkanes.pdf used on input line 144
-0.
-(pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
- [25]
-<figures/MCMC_ethane_parameter_space.pdf, id=878, 722.7pt x 722.7pt>
-File: figures/MCMC_ethane_parameter_space.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.77 \abx@aux@cite
+                  {Martin1999}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/MCMC_ethane_parameter_space.pdf>
-Package pdftex.def Info: figures/MCMC_ethane_parameter_space.pdf used on input 
-line 1605.
-(pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
- [26 <./figures/Error_model_alkanes.pdf>] <figures/MCMC_ethane_VLE.pdf, id=964,
- 1445.4pt x 722.7pt>
-File: figures/MCMC_ethane_VLE.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.78 \abx@aux@segm
+                  {0}{0}{Martin1999}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/MCMC_ethane_VLE.pdf>
-Package pdftex.def Info: figures/MCMC_ethane_VLE.pdf used on input line 1616.
-(pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
+! Undefined control sequence.
+l.80 \abx@aux@cite
+                  {TraPPEUA2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<figures/MCMC_ethane_Phigh.pdf, id=967, 722.7pt x 722.7pt>
-File: figures/MCMC_ethane_Phigh.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.81 \abx@aux@segm
+                  {0}{0}{TraPPEUA2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/MCMC_ethane_Phigh.pdf>
-Package pdftex.def Info: figures/MCMC_ethane_Phigh.pdf used on input line 1635.
+! Undefined control sequence.
+l.83 \abx@aux@cite
+                  {Exp6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-(pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
- [27 <./figures/MCMC_ethane_parameter_space.pdf>] [28 <./figures/MCMC_ethane_VL
-E.pdf>]
-<figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf, id=1126, 722.7pt x 2168.
-1pt>
-File: figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf Graphic file (type p
-df)
- <use figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf>
-Package pdftex.def Info: figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf u
-sed on input line 1651.
-(pdftex.def)             Requested size: 180.67499pt x 542.02368pt.
+! Undefined control sequence.
+l.84 \abx@aux@segm
+                  {0}{0}{Exp6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+! Undefined control sequence.
+l.86 \abx@aux@cite
+                  {AUA4}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Float too large for page by 25.48308pt on input line 1656.
+! Undefined control sequence.
+l.87 \abx@aux@segm
+                  {0}{0}{AUA4}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[29 <./figures/MCMC_ethane_Phigh.pdf>] [30 <./figures/MCMC_Mie_13_14_15_16_17_1
-8_ethane_Pareto.pdf>]
-<figures/Evidence_Mie_CH3_CH2.pdf, id=1262, 1445.4pt x 722.7pt>
-File: figures/Evidence_Mie_CH3_CH2.pdf Graphic file (type pdf)
+! Undefined control sequence.
+l.89 \abx@aux@cite
+                  {Bourasseau2002}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-<use figures/Evidence_Mie_CH3_CH2.pdf>
-Package pdftex.def Info: figures/Evidence_Mie_CH3_CH2.pdf used on input line 16
-85.
-(pdftex.def)             Requested size: 346.89621pt x 173.4405pt.
- [31 <./figures/Evidence_Mie_CH3_CH2.pdf>]
-<figures/MCMC_Mie_14_16_propane_butane_octane.pdf, id=1308, 1445.4pt x 722.7pt>
-File: figures/MCMC_Mie_14_16_propane_butane_octane.pdf Graphic file (type pdf)
-<use figures/MCMC_Mie_14_16_propane_butane_octane.pdf>
-Package pdftex.def Info: figures/MCMC_Mie_14_16_propane_butane_octane.pdf used 
-on input line 1749.
-(pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
- [32] [33 <./figures/MCMC_Mie_14_16_propane_butane_octane.pdf>] [34] [35] [36] 
-[37]
-(JCP_Postdoc_3_manuscript.bbl [38] [39] [40] [41] [42] [43] [44]) [45]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2082.
+! Undefined control sequence.
+l.90 \abx@aux@segm
+                  {0}{0}{Bourasseau2002}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-(JCP_Postdoc_3_manuscript.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2082.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2082.
+! Undefined control sequence.
+l.92 \abx@aux@cite
+                  {Mie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Package rerunfilecheck Info: File `JCP_Postdoc_3_manuscript.out' has not change
-d.
-(rerunfilecheck)             Checksum: AE15A140E060EB6BBE7981DC452FD631;1439.
- ) 
+! Undefined control sequence.
+l.93 \abx@aux@segm
+                  {0}{0}{Mie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.95 \abx@aux@cite
+                  {Potoff_branched}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.96 \abx@aux@segm
+                  {0}{0}{Potoff_branched}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.98 \abx@aux@cite
+                  {TAMie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.99 \abx@aux@segm
+                  {0}{0}{TAMie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.101 \abx@aux@cite
+                   {Weidler2016}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.102 \abx@aux@segm
+                   {0}{0}{Weidler2016}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.104 \abx@aux@cite
+                   {Herdes2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.105 \abx@aux@segm
+                   {0}{0}{Herdes2015}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.107 \abx@aux@segm
+                   {0}{0}{Exp6}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.111 \abx@aux@cite
+                   {Pareto_LJPQ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.112 \abx@aux@segm
+                   {0}{0}{Pareto_LJPQ}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.114 \abx@aux@cite
+                   {Mess4}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.115 \abx@aux@segm
+                   {0}{0}{Mess4}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.117 \abx@aux@segm
+                   {0}{0}{TraPPE}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.120 \abx@aux@segm
+                   {0}{0}{Mie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.122 \abx@aux@segm
+                   {0}{0}{Potoff_branched}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.124 \abx@aux@segm
+                   {0}{0}{TAMie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.126 \abx@aux@cite
+                   {Gordon2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.127 \abx@aux@segm
+                   {0}{0}{Gordon2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.129 \abx@aux@segm
+                   {0}{0}{Gordon2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.131 \abx@aux@cite
+                   {Galliero2005}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.132 \abx@aux@segm
+                   {0}{0}{Galliero2005}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.135 \abx@aux@cite
+                   {Rowley1999}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.136 \abx@aux@segm
+                   {0}{0}{Rowley1999}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.138 \abx@aux@cite
+                   {Rowley2001}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.139 \abx@aux@segm
+                   {0}{0}{Rowley2001}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.141 \abx@aux@cite
+                   {Hayes2004}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.142 \abx@aux@segm
+                   {0}{0}{Hayes2004}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.144 \abx@aux@cite
+                   {Kulakova2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.145 \abx@aux@segm
+                   {0}{0}{Kulakova2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.147 \abx@aux@segm
+                   {0}{0}{Galliero2005}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.149 \abx@aux@cite
+                   {Mick_Mie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.150 \abx@aux@segm
+                   {0}{0}{Mick_Mie}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.152 \abx@aux@segm
+                   {0}{0}{Kulakova2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.154 \abx@aux@segm
+                   {0}{0}{Galliero2005}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.157 \abx@aux@segm
+                   {0}{0}{LEMMON-RP91}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.159 \abx@aux@cite
+                   {Ethane2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.160 \abx@aux@segm
+                   {0}{0}{Ethane2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.162 \abx@aux@cite
+                   {Propane2009}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.163 \abx@aux@segm
+                   {0}{0}{Propane2009}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.165 \abx@aux@cite
+                   {Butane2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.166 \abx@aux@segm
+                   {0}{0}{Butane2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.168 \abx@aux@cite
+                   {Beckmueller2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.169 \abx@aux@segm
+                   {0}{0}{Beckmueller2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.171 \abx@aux@cite
+                   {Lemmon2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.172 \abx@aux@segm
+                   {0}{0}{Lemmon2006}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.174 \abx@aux@cite
+                   {Blackham2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.175 \abx@aux@segm
+                   {0}{0}{Blackham2017}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.177 \abx@aux@cite
+                   {GROMACS_2018}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.178 \abx@aux@segm
+                   {0}{0}{GROMACS_2018}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.180 \abx@aux@cite
+                   {GROMACS_note}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.181 \abx@aux@segm
+                   {0}{0}{GROMACS_note}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.183 \abx@aux@cite
+                   {Hoover1985}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.184 \abx@aux@segm
+                   {0}{0}{Hoover1985}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.186 \abx@aux@cite
+                   {Hess1998}
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 31854 strings out of 493323
- 639900 string characters out of 3130449
- 684611 words of memory out of 3000000
- 34763 multiletter control sequences out of 15000+200000
- 565843 words of font info for 94 fonts, out of 3000000 for 9000
+ 30089 strings out of 493323
+ 609342 string characters out of 3130449
+ 657176 words of memory out of 3000000
+ 33279 multiletter control sequences out of 15000+200000
+ 532734 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,69p,10423b,1139s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.5} has been referenced but does not exist
-, replaced by a fixed one
+ 62i,3n,69p,10423b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-{C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C
-:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mex10.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ram9/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ram9/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ra
-m9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr6.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr8.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/ram9/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ram9/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/ram9/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/ram9
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/User
-s/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><
-C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
-.pfb><C:/Users/ram9/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on JCP_Postdoc_3_manuscript.pdf (45 pages, 2071791 bytes).
-PDF statistics:
- 1581 PDF objects out of 1728 (max. 8388607)
- 186 named destinations out of 1000 (max. 500000)
- 249 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
