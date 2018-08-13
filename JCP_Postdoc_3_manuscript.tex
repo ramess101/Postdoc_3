@@ -653,40 +653,40 @@ Dihedral torsional interactions are determined using a cosine series:
 \begin{equation}
 u^{\rm tors} = c_0 + c_1 [1+\cos{\phi}] + c_2 [1-\cos{2\phi}] + c_3 [1+\cos{3\phi}]
 \end{equation}
-where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_i$ are the Fourier constants (see Table \ref{tab:torsions}). Note that the Errington $c_i$ values for CH$_x$-CH$_2$-CH$_2$-CH$_y$ are a factor of two less than those reported in Table \ref{tab:torsions}. \cite{Exp6}
+where $u^{\rm tors}$ is the torsional energy, $\phi$ is the dihedral angle and $c_n$ are the Fourier constants (see Table \ref{tab:torsions}). Note that the Errington $c_n$ values for CH$_i$-CH$_2$-CH$_2$-CH$_j$ are a factor of two less than those reported in Table \ref{tab:torsions}. \cite{Exp6}
 %MRS2: note that there are multiple ways to represent the same torsion
 %(1-2-3-4 and 4-3-2-1), and in some case, the barriers are lower for torsional parameters
 %because the torsion is applied to both representations.  Is that the case at all in any of these?
 %RAM2: We should talk about this. I have copied the torsions exactly as they are presented in the literature for the force field developers.
 \begin{table}[h!]
-	\caption{Equilibrium bond angles $(\theta_0)$.\cite{Martin1999} $x$ and $y$ are values between 0-3.} \label{tab:angles}
+	\caption{Equilibrium bond angles $(\theta_0)$.\cite{Martin1999} CH$_i$ and CH$_j$ are CH$_3$, CH$_2$, CH, or C sites.} \label{tab:angles}
 	\begin{center}%MRS: would it be more clear with x and y take all values between 0 and 3?
 		\begin{tabular}{|c|c|}
 			\hline
 			Bending sites & $\theta_0$ (degrees) \\ \hline
-			CH$_x$-CH$_2$-CH$_y$ & 114.0 \\ 
-			CH$_x$-CH-CH$_y$ & 112.0 \\ 
-			CH$_x$-C-CH$_y$ & 109.5 \\  
+			CH$_i$-CH$_2$-CH$_j$ & 114.0 \\ 
+			CH$_i$-CH-CH$_j$ & 112.0 \\ 
+			CH$_i$-C-CH$_j$ & 109.5 \\  
 			\hline
 		\end{tabular}
 	\end{center} 
 \end{table}
 
 \begin{table}[h!]
-	\caption{Fourier constants $(c_i/k_{\rm B})$ in units of K.\cite{Martin1999} $x$ and $y$ are values between 0-3.} \label{tab:torsions}
+	\caption{Fourier constants $(c_n/k_{\rm B})$ in units of K.\cite{Martin1999} CH$_i$ and CH$_j$ are CH$_3$, CH$_2$, CH, or C sites.} \label{tab:torsions}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
 			Torsion sites & $c_0/k_{\rm B}$ & $c_1/k_{\rm B}$ & $c_2/k_{\rm B}$ & $c_3/k_{\rm B}$ \\ \hline
-			CH$_x$-CH$_2$-CH$_2$-CH$_y$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
-            CH$_x$-CH$_2$-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
-            CH$_x$-CH$_2$-C-CH$_y$ & 0.0 & 0.0 & 0.0 & 461.29 \\
+			CH$_i$-CH$_2$-CH$_2$-CH$_j$ & 0.0 & 355.03 & -68.19 & 791.32 \\ 
+            CH$_i$-CH$_2$-CH-CH$_j$ & -251.06 & 428.73 & -111.85 & 441.27 \\
+            CH$_i$-CH$_2$-C-CH$_j$ & 0.0 & 0.0 & 0.0 & 461.29 \\
 			\hline
 		\end{tabular}
 	\end{center} 
 \end{table}
 %RAM: Not actually used in this study
-%CH$_x$-CH-CH-CH$_y$ & -251.06 & 428.73 & -111.85 & 441.27 \\
+%CH$_i$-CH-CH-CH$_j$ & -251.06 & 428.73 & -111.85 & 441.27 \\
 %MRS2: suggest putting the equation earlier for reference in the introduction, can rewrite it here if wanted.
 %RAM2: We should talk about this
 Non-bonded interaction energies and forces between sites located in two different molecules or separated by more than three bonds are calculated using either a Lennard-Jones 12-6, Mie $\lambda$-6, or Buckingham Exponential-6 potential (see Equations \ref{eq:Mie}-\ref{eq:Buckingham}). Figure \ref{fig:UF_Mie_Exp6} compares the energy and force of the LJ 12-6, Mie 9-6, Mie 16-6, and Exp-6 (for $\alpha = 16$ and $22$) using the same values of $\epsilon$ and $r_{\rm min}$.
