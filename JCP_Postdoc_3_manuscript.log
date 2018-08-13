@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  13 AUG 2018 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.9)  13 AUG 2018 15:57
 entering extended mode
 **./JCP_Postdoc_3_manuscript.tex
 (JCP_Postdoc_3_manuscript.tex
@@ -1529,7 +1529,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10 <./figures/AUA_isooctane.pdf>] [11]
-<figures/UF_Mie_Exp6.pdf, id=384, 1445.4pt x 722.7pt>
+<figures/UF_Mie_Exp6.pdf, id=385, 1445.4pt x 722.7pt>
 File: figures/UF_Mie_Exp6.pdf Graphic file (type pdf)
 
 <use figures/UF_Mie_Exp6.pdf>
@@ -1543,7 +1543,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12 <./figures/UF_Mie_Exp6.pdf>] [13]
-<figures/IC_normal_alkanes_all_models.pdf, id=504, 1445.4pt x 1445.4pt>
+<figures/IC_normal_alkanes_all_models.pdf, id=505, 1445.4pt x 1445.4pt>
 File: figures/IC_normal_alkanes_all_models.pdf Graphic file (type pdf)
 
 <use figures/IC_normal_alkanes_all_models.pdf>
@@ -1554,7 +1554,7 @@ Package pdftex.def Info: figures/IC_normal_alkanes_all_models.pdf used on input
 
 LaTeX Warning: Float too large for page by 9.42322pt on input line 884.
 
-<figures/IC_branched_alkanes_all_models.pdf, id=511, 1445.4pt x 1445.4pt>
+<figures/IC_branched_alkanes_all_models.pdf, id=512, 1445.4pt x 1445.4pt>
 File: figures/IC_branched_alkanes_all_models.pdf Graphic file (type pdf)
 
 <use figures/IC_branched_alkanes_all_models.pdf>
@@ -1567,7 +1567,7 @@ hed_alkanes_all_models.pdf>]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 1097.
  [19] [20] [21] [22] [23] [24] [25]
-<figures/Error_model_alkanes.pdf, id=912, 1445.4pt x 722.7pt>
+<figures/Error_model_alkanes.pdf, id=913, 1445.4pt x 722.7pt>
 File: figures/Error_model_alkanes.pdf Graphic file (type pdf)
 
 <use figures/Error_model_alkanes.pdf>
@@ -1575,14 +1575,14 @@ Package pdftex.def Info: figures/Error_model_alkanes.pdf used on input line 149
 1.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
  [26]
-<figures/MCMC_ethane_parameter_space.pdf, id=936, 722.7pt x 722.7pt>
+<figures/MCMC_ethane_parameter_space.pdf, id=937, 722.7pt x 722.7pt>
 File: figures/MCMC_ethane_parameter_space.pdf Graphic file (type pdf)
 
 <use figures/MCMC_ethane_parameter_space.pdf>
 Package pdftex.def Info: figures/MCMC_ethane_parameter_space.pdf used on input 
 line 1660.
 (pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
- [27 <./figures/Error_model_alkanes.pdf>] <figures/MCMC_ethane_VLE.pdf, id=1026
+ [27 <./figures/Error_model_alkanes.pdf>] <figures/MCMC_ethane_VLE.pdf, id=1027
 , 1445.4pt x 722.7pt>
 File: figures/MCMC_ethane_VLE.pdf Graphic file (type pdf)
 
@@ -1590,7 +1590,7 @@ File: figures/MCMC_ethane_VLE.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/MCMC_ethane_VLE.pdf used on input line 1672.
 (pdftex.def)             Requested size: 462.52756pt x 231.25769pt.
 
-<figures/MCMC_ethane_Phigh.pdf, id=1035, 722.7pt x 722.7pt>
+<figures/MCMC_ethane_Phigh.pdf, id=1036, 722.7pt x 722.7pt>
 File: figures/MCMC_ethane_Phigh.pdf Graphic file (type pdf)
 
 <use figures/MCMC_ethane_Phigh.pdf>
@@ -1599,7 +1599,7 @@ Package pdftex.def Info: figures/MCMC_ethane_Phigh.pdf used on input line 1691.
 (pdftex.def)             Requested size: 231.26378pt x 231.25769pt.
  [28 <./figures/MCMC_ethane_parameter_space.pdf>] [29 <./figures/MCMC_ethane_VL
 E.pdf>]
-<figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf, id=1196, 722.7pt x 2168.
+<figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf, id=1197, 722.7pt x 2168.
 1pt>
 File: figures/MCMC_Mie_13_14_15_16_17_18_ethane_Pareto.pdf Graphic file (type p
 df)
@@ -1613,7 +1613,7 @@ LaTeX Warning: Float too large for page by 47.14418pt on input line 1712.
 
 [30 <./figures/MCMC_ethane_Phigh.pdf>] [31 <./figures/MCMC_Mie_13_14_15_16_17_1
 8_ethane_Pareto.pdf>]
-<figures/Evidence_Mie_CH3_CH2.pdf, id=1333, 1445.4pt x 722.7pt>
+<figures/Evidence_Mie_CH3_CH2.pdf, id=1334, 1445.4pt x 722.7pt>
 File: figures/Evidence_Mie_CH3_CH2.pdf Graphic file (type pdf)
 
 <use figures/Evidence_Mie_CH3_CH2.pdf>
@@ -1621,7 +1621,7 @@ Package pdftex.def Info: figures/Evidence_Mie_CH3_CH2.pdf used on input line 17
 41.
 (pdftex.def)             Requested size: 346.89621pt x 173.4405pt.
  [32 <./figures/Evidence_Mie_CH3_CH2.pdf>]
-<figures/MCMC_Mie_14_16_propane_butane_octane.pdf, id=1378, 1445.4pt x 722.7pt>
+<figures/MCMC_Mie_14_16_propane_butane_octane.pdf, id=1379, 1445.4pt x 722.7pt>
 File: figures/MCMC_Mie_14_16_propane_butane_octane.pdf Graphic file (type pdf)
 <use figures/MCMC_Mie_14_16_propane_butane_octane.pdf>
 Package pdftex.def Info: figures/MCMC_Mie_14_16_propane_butane_octane.pdf used 
@@ -1643,7 +1643,7 @@ d.
 Here is how much of TeX's memory you used:
  31008 strings out of 493333
  613084 string characters out of 3139198
- 659626 words of memory out of 3000000
+ 659638 words of memory out of 3000000
  33901 multiletter control sequences out of 15000+200000
  39211 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1680,9 +1680,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program
 Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on JCP_Postdoc_3_manuscript.pdf (46 pages, 2086620 bytes).
+Output written on JCP_Postdoc_3_manuscript.pdf (46 pages, 2086676 bytes).
 PDF statistics:
- 1664 PDF objects out of 1728 (max. 8388607)
+ 1665 PDF objects out of 1728 (max. 8388607)
  190 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
